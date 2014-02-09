@@ -1,0 +1,385 @@
+
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+
+  /*-------- Slide show-------------*/
+
+
+.carousel-caption {
+   font-size: 24px;
+}
+
+.carousel-caption h4 {
+   font-size: 32px;
+}
+
+
+#home_myCarousel  .item {
+   height: 400px; /*medium size as default*/
+}
+
+#home_myCarousel .carousel-caption {
+  font-size: 18px;
+  text-align: left;
+  width: 250;
+
+  
+  bottom: 74px;
+  right: 28px;
+  left: 118;
+  text-shadow:none;
+
+}
+
+
+#home_myCarousel h4 {
+  
+  text-align: left;
+  font-size:50px;
+  padding-bottom:15px;
+  
+}
+
+
+#home_slide1 {
+   background: url('../images/ni_carousel_medium_01.jpg') top center no-repeat;
+}
+
+#home_slide2 {
+   background: url('../images/ni_carousel_medium_02.jpg') top center no-repeat;
+}
+
+#home_slide3 {
+   background: url('../images/ni_carousel_medium_03.jpg') top center no-repeat;
+}
+
+.carousel-indicators {
+   
+   left: 15%;
+   
+   text-align: left;
+   
+}
+.carousel-control.left {
+
+background-image: none;
+
+}
+
+.carousel-control.right {
+
+background-image: none;
+
+}
+
+.alert h4 {
+margin-top: 0;
+color: inherit;
+text-align: left;
+}
+
+.alert p {
+  font-size:16px;
+  font-family:arial;
+}
+
+
+ /*-------- Timeline------------*/
+
+
+ #timeline-quicklinks {
+      margin-top:20px;
+   }
+
+   #timeline {
+   width: 100%;
+   margin: 0px;
+
+   }
+
+   #issues li p {
+   width: 600px;
+   font-family: sans-serif;
+   
+   }
+
+   #issues li h1 {
+ 
+   margin-right: 287px;
+   
+   }
+
+ /*-------- Quicklinks------------*/
+
+ #home_quick_links a.list-group-item .list-group-item-heading {
+
+text-align: left;
+
+}
+
+#home_quick_links a.list-group-item {
+
+   margin-bottom:5px;
+
+}
+
+#home_quick_links .list-group-item {
+
+background-color: #ffebbd;
+border-color: #ffebbd;
+}
+
+#home_quick_links a.list-group-item.active  {
+
+background-color: #97bf28;
+border-color: #97bf28;
+}
+
+#home_quick_links a.list-group-item .list-group-item-heading {
+   display:inline-block;
+}
+
+#home_quick_links .fa-play {
+   float:right;
+   color:#333333;
+}
+
+#home_quick_links a.list-group-item.active .fa-play {
+   color:#fff;
+}
+
+
+/*-------- Program Highlights------------*/
+
+#home_program_highlights img {
+   width:100%;
+}
+
+#home-btn-services {
+   background-color: #97bf28;
+   color:#fff;
+   border-radius:0px;
+}
+
+#home-btn-woman{
+   background-color: #ed83a9;
+   color:#fff;
+   border-radius:0px;
+}
+
+
+#home-btn-aboriginal {
+   background-color: #b08ec1;
+   color:#fff;
+   border-radius:0px;
+
+}
+
+#home-btn-drug {
+   background-color: #f3ab35;
+   color:#fff;
+   border-radius:0px;
+
+}
+
+.home_ph_item {
+    margin-bottom:20px;
+   }
+
+
+/* --------------------------------------
+   About
+   -------------------------------------- */
+
+
+#about_content_image {
+   background: url('../images/about_header.jpg') top center no-repeat;
+   height:329px;
+}
+
+#about_nav {
+	margin-top:30px;
+}
+
+
+#about_nav a.list-group-item .list-group-item-heading {
+
+text-align: left;
+font-size:12px;
+
+}
+
+#about_nav a.list-group-item {
+
+   margin-bottom:5px;
+
+}
+
+#about_nav .list-group-item {
+
+background-color: #ffebbd;
+border-color: #ffebbd;
+}
+
+#about_nav a.list-group-item.active  {
+
+background-color: #97bf28;
+border-color: #97bf28;
+}
+
+#about_nav a.list-group-item .list-group-item-heading {
+   display:inline-block;
+}
+
+#about_nav .fa-play {
+   float:right;
+   color:#333333;
+}
+
+#about_nav a.list-group-item.active .fa-play {
+   color:#fff;
+}
+
+
+/* --------------------------------------
+   Media Quary
+   -------------------------------------- */
+
+@media (min-width: 1201px) {
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+
+	#home_myCarousel .item {
+	   height: 432px; /*medium size as default*/
+	}
+
+	#home_slide1 {
+	   background: url('../images/ni_carousel_large_01.jpg') top center no-repeat;
+	}
+
+	#home_slide2 {
+	      background: url('../images/ni_carousel_large_02.jpg') top center no-repeat;
+	}
+
+	#home_slide3 {
+	      background: url('../images/ni_carousel_large_03.jpg') top center no-repeat;
+	} 
+}
+
+@media screen and (max-width: 1024px) {
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+
+	
+    #home_myCarousel .carousel-caption {
+    
+    left: 83px !important;
+    font-size:16px !important;
+    width:231px !important;
+    top:63 !important;
+    
+
+    }
+
+    .carousel-indicators {
+    left: 17%;
+
+    }
+
+    #home_myCarousel h4 {
+
+    font-size: 37px;
+
+
+}
+
+@media (max-width: 769px) {
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+
+
+   #home_myCarousel .carousel-caption {
+    
+    left: 83px;
+    font-size:16px;
+    width:231px;
+    top:63;
+    
+
+  }
+
+  #home_myCarousel h4 {
+
+  font-size: 43px;
+
+  }
+
+  
+}
+
+
+@media (max-width: 480px) {
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+
+
+  #home_myCarousel .item {
+     height: 463px; /*small size as default*/
+  }
+
+  #home_slide1 {
+     background: url('../images/carousel_xs_small_01.jpg') top center no-repeat;
+  }
+
+  #home_slide2 {
+     background: url('../images/carousel_xs_small_02.jpg') top center no-repeat;
+  }
+
+  #home_slide3 {
+     background: url('../images/carousel_xs_small_03.jpg') top center no-repeat;
+  }
+
+
+  #home_myCarousel .carousel-caption {
+    
+    text-align:left !important;
+    top:255 !important;
+    width:200px !important;
+   
+    font-size:14px !important;
+    
+
+  }
+
+  .carousel-indicators {
+  left: 30%;
+
+
+  bottom: 0;
+  }
+
+  #home_myCarousel h4 {
+    
+    text-align: left;
+    font-size:30px;
+    padding-bottom:5px;
+
+    
+  }
+
+
+  
+}
+
+
+
