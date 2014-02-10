@@ -92,7 +92,8 @@
 					<li >
 						<a href="#">
 							<i class="fa fa-phone">
-								<p>&nbsp; 807-223-8201</p>
+								<p id="master_call_number">&nbsp; 807-223-8201</p>
+								<p id="master_call_us">Call Us</p>
 							</i>
 								
 							
@@ -102,7 +103,7 @@
 					<li >
 						<a href="#">
 							<i class="fa fa-dollar">
-								<p>&nbsp; Donate</p>
+								<p id="master_donate">&nbsp; Donate</p>
 							</i>
 						</a>
 					</li>
@@ -110,7 +111,7 @@
 					<li >
 						<a href="#">
 							<i class="fa fa-map-marker">
-								<p>&nbsp; Location</p>
+								<p id="master_location">&nbsp; Location</p>
 							</i>
 						</a>
 					</li>
@@ -131,7 +132,7 @@
 			<div class="clear"></div>
 
 
-						<nav class="navbar navbar-default">
+				<nav class="navbar navbar-default">
 				<div class="container">
 
 				<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
@@ -146,27 +147,30 @@
 				<div class="nav-collapse collapse navbar-responsive-collapse" id="master_collapse_main_nav">
 					<ul class="nav navbar-nav" id="master_main_nav">
 						<li class="active">
-							<a href="#">Home</a>
+							<a href="index.html">Home</a>
 						</li>
 						
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <strong class="caret"></strong></a>
+						    <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        About <b class="caret"></b>
+						    </a>
 							
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#"> Public Report </a>
+									<a tabindex="-1" href="#"> Public Report </a>
 								</li>
 
 								<li>
-									<a href="#"> Meet the Board </a>
+									<a tabindex="-1" href="#about_tab2" data-toggle="tab"> Meet the Board </a>
+									
 								</li>
 
 								<li>
-									<a href="#"> Strategic Plan</a>
+									<a tabindex="-1" href="#"> Strategic Plan</a>
 								</li>
 
 								<li>
-									<a href="#"> Donate Now</a>
+									<a tabindex="-1" href="#"> Donate Now</a>
 								</li>
 
 
@@ -175,28 +179,30 @@
 						</li> <!-- end of about -->
 						
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Patients & Visitors <strong class="caret"></strong></a>
+							<a href="about.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Patients & Visitors<b class="caret"></b>
+						    </a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#"> Patient Relations </a>
+									<a tabindex="-1" href="#"> Patient Relations </a>
 								</li>
 
 								<li>
-									<a href="#"> Planning Your Stay </a>
+									<a tabindex="-1" href="#"> Planning Your Stay </a>
 								</li>
 								<li>
-									<a href="#"> Visiting the Hospital </a>
-								</li>
-
-								<li>
-									<a href="#"> Patient Email </a>
+									<a tabindex="-1" href="#"> Visiting the Hospital </a>
 								</li>
 
 								<li>
-									<a href="#"> Identify your symptom </a>
+									<a tabindex="-1" href="#"> Patient Email </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Identify your symptom </a>
 								</li>
 								<li>
-									<a href="#"> e-card </a>
+									<a tabindex="-1" href="#"> e-card </a>
 								</li>
 
 								<li class="divider"></li>
@@ -205,10 +211,10 @@
 								</li>
 
 								<li>
-									<a href="#"> View Your Appointment</a>
+									<a tabindex="-1" href="#"> View Your Appointment</a>
 								</li>
 								<li>
-									<a href="#"> Book Your Appointment</a>
+									<a tabindex="-1" href="#"> Book Your Appointment</a>
 								</li>
 
 
@@ -217,40 +223,42 @@
 						</li> <!-- end of Patients & Visitors  -->
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs & Services <strong class="caret"></strong></a>
+							<a href="about.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Programs & Services<b class="caret"></b>
+						    </a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#"> Diagnostic Imaging </a>
+									<a tabindex="-1" href="#"> Diagnostic Imaging </a>
 								</li>
 
 								<li>
-									<a href="#"> Emergency </a>
+									<a tabindex="-1" href="#"> Emergency </a>
 								</li>
 
 								<li>
-									<a href="#"> Food Services </a>
+									<a tabindex="-1" href="#"> Food Services </a>
 								</li>
 
 								<li>
-									<a href="#"> Inpatient Services </a>
+									<a tabindex="-1" href="#"> Inpatient Services </a>
 								</li>
 								<li>
-									<a href="#"> Laboratory </a>
-								</li>
-
-								<li>
-									<a href="#"> Mental Health and Addictions</a>
+									<a tabindex="-1" href="#"> Laboratory </a>
 								</li>
 
 								<li>
-									<a href="#"> Oncology </a>
+									<a tabindex="-1" href="#"> Mental Health and Addictions</a>
 								</li>
 
 								<li>
-									<a href="#"> Rehabilitation Services</a>
+									<a tabindex="-1" href="#"> Oncology </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Rehabilitation Services</a>
 								</li>
 								<li>
-									<a href="#"> Sexual Assault/Domestic Violence Care and Treatment</a>
+									<a tabindex="-1" href="#"> Sexual Assault/Domestic Violence Care and Treatment</a>
 								</li>
 
 								
@@ -258,21 +266,23 @@
 						</li> <!-- end of Programs & Services  -->
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Careers <strong class="caret"></strong></a>
+							<a href="about.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Career<b class="caret"></b>
+						    </a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#"> Allied Health Professionals</a>
+									<a tabindex="-1" href="#"> Allied Health Professionals</a>
 								</li>
 
 								<li>
-									<a href="#"> Human Resources </a>
+									<a tabindex="-1" href="#"> Human Resources </a>
 								</li>
 								<li>
-									<a href="#"> Pharmacy</a>
+									<a tabindex="-1" href="#"> Pharmacy</a>
 								</li>
 
 								<li>
-									<a href="#"> Other</a>
+									<a tabindex="-1" href="#"> Other</a>
 								</li>
 								<li class="divider"></li>
 								<li class="dropdown-header">
@@ -280,7 +290,7 @@
 								</li>
 
 								<li>
-									<a href="#"> View Your Appointment</a>
+									<a tabindex="-1" href="#"> View Your Appointment</a>
 								</li>
 								
 
@@ -291,13 +301,15 @@
 						</li> <!-- end of Careers  -->
 
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <strong class="caret"></strong></a>
+							<a href="about.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Contact<b class="caret"></b>
+						    </a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="#"> Location </a>
+									<a tabindex="-1" href="#"> Location </a>
 								</li>
 								<li>
-									<a href="#"> Department  </a>
+									<a tabindex="-1" href="#"> Department  </a>
 								</li>
 
 								
@@ -328,33 +340,33 @@
 					
 					<div class="tabbable">
 						<ul class="nav nav-tabs">
-							<li class="active"><a href="#tab1" data-toggle="tab">Public Report</a></li>
-							<li><a href="#tab2" data-toggle="tab">Meet the Board</a></li>
-							<li><a href="#tab3" data-toggle="tab">Strategic Plan</a></li>
-							<li><a href="#tab4" data-toggle="tab">Donate Now</a></li>
+							<li class="active"><a href="#about_tab1" data-toggle="tab">Public Report</a></li>
+							<li><a href="#about_tab2" data-toggle="tab">Meet the Board</a></li>
+							<li><a href="#about_tab3" data-toggle="tab">Strategic Plan</a></li>
+							<li><a href="#about_tab4" data-toggle="tab">Donate Now</a></li>
 						</ul>
 						<div class="tab-content">
-							<div class="tab-pane active" id="tab1">
+							<div class="tab-pane active" id="about_tab1">
 								
 								
 								<p>Public Report</p>
 							</div><!-- end tab-pane -->
 							
-							<div class="tab-pane" id="tab2">
+							<div class="tab-pane" id="about_tab2">
 								<p>
 									Meet the board
 								</p>
 								
 							</div><!-- end tab-pane -->
 
-							<div class="tab-pane" id="tab3">
+							<div class="tab-pane" id="about_tab3">
 								<p>
 									Strategic Plan
 								</p>
 								
 							</div><!-- end tab-pane -->
 
-							<div class="tab-pane" id="tab4">
+							<div class="tab-pane" id="about_tab4">
 								<p>
 									Donate Now
 								</p>
@@ -490,10 +502,16 @@
             setTimeout('$("#messageSent").hide();$("#master_login_form").slideUp("slow")', 2000);
         }
     </script>
+   
 	
 	<!-- Bootstrap JS -->
 
 	<script src="js/bootstrap.min.js"></script>
+
+	<!--  hover JS -->
+
+
+    <script src="js/hover-dropdown.js"></script>
 
 	<!-- 	timeliner JS -->
  <script src="js/jquery.timelinr-0.9.54.js"></script> 

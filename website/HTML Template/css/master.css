@@ -145,9 +145,18 @@ legend{
 
    }
 
-   #master_sub_nav li a p {
+   #master_call_number{
     display:inline-block;
    }
+
+   #master_donate{
+    display:inline-block;
+   }
+
+   #master_location{
+    display:inline-block;
+   }
+
 
    #master_search {
       margin-top:8px;
@@ -326,6 +335,10 @@ font-size: 14px;
        z-index:1001
     }
 
+    #master_call_us {
+      display:none;
+    }
+
   
 }
 
@@ -347,6 +360,10 @@ font-size: 14px;
     .navbar-brand {
     margin-top: 30px;
     } 
+
+    #master_call_us {
+      display:none;
+    }
 
 
 }
@@ -462,6 +479,10 @@ font-size: 14px;
     font-size: 18px;
   }
 
+ #master_call_us {
+      display:none !important;
+  }
+
   
 }
 
@@ -479,6 +500,7 @@ font-size: 14px;
     height: 32px;
     top:0;
     right:0;
+
     
     margin-right:0px;
     background-color:#7cd0dc; 
@@ -488,9 +510,10 @@ font-size: 14px;
   #master_sub_nav li:nth-child(1) a {
     float: right;
     display: inline-block;
-    text-align: right;
-    margin-right: 28px;
+    text-align: center;
+    /*margin-right: 28px;*/
     color: #fff;
+    width: 18em;
    
   }
 
@@ -505,7 +528,7 @@ font-size: 14px;
   }
 
    #master_sub_nav li:nth-child(1) a p {
-    font-size:18px;
+    font-size:15px;
    }
  
   #master_sub_nav li:nth-child(2) {
@@ -598,6 +621,14 @@ width: 200px;
   text-align: center;
   margin-top:20px;
 
+  }
+
+  #master_call_number {
+    display:none !important;
+  }
+
+   #master_call_us {
+      display:inline-block !important;
   }
    
   
