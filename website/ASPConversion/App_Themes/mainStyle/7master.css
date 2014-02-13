@@ -1,0 +1,664 @@
+
+
+/* --------------------------------------
+   Master page -- by Jacqueline
+   -------------------------------------- */
+
+body {
+      font-family: 'Nunito', sans-serif;
+      font-size:16px;
+      background-color: #faf6f3;
+
+   }
+
+ 
+
+
+
+/* --------------------------------------
+   Header
+   -------------------------------------- */
+
+.navbar-brand {
+margin-top: -21px;
+
+
+}
+
+.navbar-brand {
+  max-width:500px;
+}
+
+.navbar-brand img {
+  width: 250px;
+}
+
+
+#master_login
+{
+   position: absolute;
+   float: right;
+   right: 0px;
+   margin-right: 132px;
+
+   /*z-index: 1000;*/
+}
+
+#master_login_form
+{
+  
+  height: auto;
+  width: 100%;
+  display: none;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+
+}
+
+#cph_header_NavigationMenu .dropdown-header a, #cph_header_NavigationMenu .dropdown-header a {
+    color: #999; 
+}
+
+#cph_header_NavigationMenu .dropdown-header a:focus, #cph_header_NavigationMenu .dropdown-header a:hover {
+    background-color: white; 
+    background-image: none; 
+    color: #999; 
+}
+
+
+
+#master_login_form fieldset
+{
+    padding: 5px 20px;
+    border:none;
+}
+
+#master_login_form label
+{
+    display:block;
+    color:#333;
+}      
+
+#master_login_form input[type=text]
+{
+    display:block;
+    border:solid 1px #4d3a24;
+    width:100%;
+    margin-bottom:10px;
+    height:24px;
+}
+
+#master_login_form textarea
+{
+    display:block;
+    border:solid 1px #4d3a24;
+    width:100%;
+    margin-bottom:10px;
+}
+
+#master_login_form input[type=submit] {
+background-color: #f3ab35;
+color: #fff;
+padding: 5px;
+border: none;
+margin-bottom: 15px;
+}
+
+#master_login_form input[type=reset]
+{
+  background-color: #f3ab35;
+  color: #fff;
+  padding: 5px;
+  border: none;
+}
+#master_contactLink p {
+background-color: #f3ab35;
+width: 100%;
+text-align: center;
+padding: 5px 108px;
+display: block;
+cursor: pointer;
+color: white;
+}
+
+legend{
+   color:#333;
+   padding-top: 20px;
+   margin-bottom:20px;
+}
+
+
+
+
+   .clear {
+      clear:both;
+   }
+
+
+   /* start */
+
+   
+   #master_sub_nav  {
+     
+      text-decoration:none;
+      list-style-type: none;
+      margin-top:90px;
+
+   }
+
+   #master_sub_nav li  {
+      display:inline;
+      font-size:18px;
+        margin-right:20px;
+      
+    
+   }
+
+   #master_sub_nav li a {
+      color:#545554;
+
+   }
+
+   #master_call_number{
+    display:inline-block;
+   }
+
+   #master_donate{
+    display:inline-block;
+   }
+
+   /* end*/
+
+
+   #master_location{
+    display:inline-block;
+   }
+
+
+   #master_search {
+      margin-top:8px;
+   }
+
+  #searchInput {
+      width: 200px;
+      height:33px;
+   }
+
+   .btn-default {
+   color: #ffffff;
+   background-color: #7bceda;
+   border-color: #7bceda;
+   }
+
+   #master_sub_nav ul {
+text-decoration: none;
+list-style-type: none;
+margin-top: 90px;
+}
+
+#cph_header_master_sub_nav ul {
+    text-decoration: none;
+list-style-type: none;
+margin-top: 90px;
+}
+
+
+   #master_sub_nav .fa-phone:before{
+   content: "\f095";
+   background-color: #97bf28;
+   color: #fff;
+   padding: 6px 10px;
+   border-radius: 50px;
+   font-size: 21px;
+   }
+
+    #master_sub_nav .fa-dollar:before {
+   content: "\f155";
+   background-color: #ed83a9;
+   color: #fff;
+   padding: 5px 11px;
+   border-radius: 50px;
+   font-size: 21px;
+   }
+
+    #master_sub_nav .fa-map-marker:before {
+   content: "\f041";
+   background-color: #af8ec1;
+   color: #fff;
+   padding: 5px 11px;
+   border-radius: 50px;
+   font-size: 21px;
+   }
+
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+
+#master_main_nav > li > a {
+ 
+   padding: 15px;
+   margin-right: 73px;
+}
+
+.navbar {
+
+background-color: #535453;
+margin-top: 20px;
+
+margin-bottom: 0px;
+border-radius: 0px;
+
+
+}
+
+#master_collapse_main_nav {
+  
+width: auto;
+margin:0 auto;
+
+
+
+}
+
+#master_main_nav > li > a {
+color:#fff;
+font-size: 14px;
+}
+
+
+
+
+
+
+/* --------------------------------------
+   Footer Styles
+   -------------------------------------- */
+
+  
+
+   footer {
+   background: #00aae0;
+   color: #fff;
+   margin-top:60px;
+   padding: 26px 0;
+   }
+
+   footer h6 {
+      text-align:left;
+      padding-bottom:20px;
+      border-bottom:solid 1px;
+
+   }
+
+   footer ul {
+      list-style-type:none;
+     
+   }
+
+    footer ul li a {
+      
+      color:#fff;
+      font-size:12px;
+   }
+
+   footer span {
+       font-size:12px;
+   }
+
+    footer ul li {
+    display: block; 
+    padding: 4px 0px 0 0;     
+   }
+
+        footer ul li i.fa {
+            float:left;
+            font-size: 8px;
+            padding: 5px 8px 0 0;
+        }
+
+   #master_footer2 {
+      background-color: #7cd0dc;
+      padding:20px;
+      margin-top: 0px;
+   }
+
+   #master_footer2 #home-copyright {
+      color:#333;
+      display:inline-block;
+   }
+
+   #master_footer2 #home-ontario {
+      display: inline-block;
+   }
+
+   #master_footer2 #home-ontario img {
+      float:right;
+      width:15%;
+   }
+
+   #master_footer2 #home-copyright, #master_footer2 #home-ontario {
+      vertical-align: middle;
+   } 
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+
+/* Large desktop */
+
+@media (min-width: 1201px) {
+
+  
+
+   .nav-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    }
+
+    #master_login {
+    
+       z-index:1001
+    }
+
+    #master_call_us {
+      display:none;
+    }
+
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+ 
+ 
+
+    #master_sub_nav {
+    margin-top: 20px;
+    }
+
+    #master_login {
+    margin-left:20px;
+    margin-right: 53px;
+     z-index:1001
+    }
+
+    .navbar-brand {
+    margin-top: 30px;
+    } 
+
+    #master_call_us {
+      display:none;
+    }
+
+
+}
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 769px) {
+
+   #master_sub_nav {
+  width: 27%;
+  margin-top: -123px;
+  }
+
+   #master_login {
+    right:0px;
+    margin-right:0px;
+    
+    width:50%;
+    z-index:1001 !important;
+    white-space: nowrap;
+  
+  }
+
+  .navbar-brand {
+  margin-top: 13px;
+  } 
+
+  .navbar {
+
+  margin-top: -280px;
+  left: 0;
+
+  width: 50%;
+  min-height: 32px;
+  background-color:#97bf28;
+  position: absolute;
+  z-index:1001;
+  margin-top: 0;
+  top: 0;
+
+  }
+
+  .navbar-toggle{
+    top: 4px;
+    right: 10px;
+    width: 39px;
+    height: 24px;
+    padding: 4px 8px;
+    border: 1px solid #FFFFFF;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color:#ffffff;
+  }
+
+  .navbar-brand {
+    text-align:left;
+    margin-left:0px;
+    margin-top: 38px;
+  }
+
+ 
+
+  .fa {
+    line-height: 2;
+  }
+
+  #master_search {
+  margin-bottom: 31px;
+  padding-right: 51px;
+  }
+
+  
+
+  #master_navbar_p {
+    color:#fff;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    display: inline-block !important;
+    width: 93%;
+  }
+
+  #master_sub_nav .fa-phone:before {
+  font-size: 16px;
+  padding: 5px 7px;
+  }
+
+  #master_sub_nav .fa-dollar:before {
+  font-size: 16px;
+  padding: 5px 9px;
+
+  }
+
+  #master_sub_nav .fa-map-marker:before {
+  font-size: 16px;
+  padding: 5px 9px;
+
+  }
+
+
+  #master_sub_nav li {
+  font-size: 17px;
+  }
+
+  #master_contactLink .fa {
+    
+  line-height: 0;
+
+  }
+
+  #master_contactLink:before {
+    font-size: 18px;
+  }
+
+ #master_call_us {
+      display:none !important;
+  }
+
+  
+}
+
+
+/* Portrait & landscape phone */
+
+@media (max-width: 480px) {
+
+ 
+
+  #master_sub_nav li:nth-child(1) {
+
+    position:absolute;
+    width: 100%;
+    height: 32px;
+    top:0;
+    right:0;
+
+    
+    margin-right:0px;
+    background-color:#7cd0dc; 
+
+  }
+
+  #master_sub_nav li:nth-child(1) a {
+    float: right;
+    display: inline-block;
+    text-align: center;
+    /*margin-right: 28px;*/
+    color: #fff;
+    width: 18em;
+   
+  }
+
+  #master_sub_nav .fa-phone:before {
+    border-radius:0px;
+    background-color:transparent;
+     right:0;
+     font-size:19px;
+     padding-top:0px;
+ 
+
+  }
+
+   #master_sub_nav li:nth-child(1) a p {
+    font-size:15px;
+   }
+ 
+  #master_sub_nav li:nth-child(2) {
+    display:none;
+
+  }
+
+  #master_sub_nav .fa-map-marker:before{
+    border-radius: 0px;
+    position:absolute;
+    width:3.5em;
+    padding: 0;
+    text-align: center;
+    top:0;
+    left: 111;
+    background-color:#00aae0; 
+    z-index: 230;
+    height: 32px; 
+  }
+
+
+  #master_sub_nav li:nth-child(3) a p {
+    display:none;
+  }
+  #master_login_p {
+    display:none !important;
+  }
+
+  #master_navbar_p{
+    display:none !important;
+  }
+
+  .navbar {
+  width: 3.5em;
+
+  }
+
+  .navbar-nav {
+    margin-top: 33px;
+  }
+
+  .nav > li {
+      background-color: #97bf28;
+width: 200px;
+  }
+
+  .navbar-toggle {
+    /*right: 185px;*/
+  }
+
+
+
+  .carousel-indicators {
+  left: 30%;
+
+
+  bottom: 0;
+  }
+
+  #master_contactLink p{
+    
+    padding: 16px 22px;
+    width: 3.5em;
+  }
+
+  #master_contactLink:before {
+    margin-left:-3px;
+  }
+
+  #master_login {
+    
+    width: 3.5em;;
+    left: 36;
+  }
+
+
+  #master_login_form {
+  height: auto;
+  width: 300%;
+  display: none;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+  }
+
+  #master_search {
+    display:none;
+  }
+
+  .navbar-brand {
+  text-align: center;
+  margin-top:20px;
+
+  }
+
+  #master_call_number {
+    display:none !important;
+  }
+
+   #master_call_us {
+      display:inline-block !important;
+  }
+   
+  
+}
