@@ -74,24 +74,13 @@
 
                     <asp:HyperLink runat="server" CssClass="navbar-brand" ImageUrl="App_Themes/images/logo.png" NavigateUrl="#" />
 
-                    <!-- 
-                    <div id="master_sub_nav" class="pull-right">
-                    <asp:Menu runat="server" ID="sub_nav" CssClass="pull-right">
-                        <Items>
-                            <asp:MenuItem Text="<a href='#'><i class='fa fa-phone'><p id='P1'>&nbsp; 807-223-8201</p></i></a>" /> 
-                            <asp:MenuItem Text="<a href='#'><i class='fa fa-dollar'><p id='master_donate'>&nbsp; Donate</p></i></a>" /> 
-                            <asp:MenuItem Text="<a href='#'><i class='fa fa-map-marker'><p id='master_location'>&nbsp; Location</p></i></a>" /> 
-                        </Items>
-                    </asp:Menu>
-                        </div> --> 
-
-
+                   
                     <ul class="pull-right" id="master_sub_nav">
                         <li>
                             <a href="#">
                                 <i class="fa fa-phone">
                                     <p id="master_call_number">&nbsp; 807-223-8201</p>
-                                    <p id="master_call_us">Call Us</p>
+                                    
                                 </i>
 
 
@@ -152,10 +141,10 @@
                                             <Items>
                                                 <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
                                                 <asp:MenuItem Text="About" NavigateUrl="#">
-                                                    <asp:MenuItem Text="Public Report" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Meet the Board" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Strategic Plan" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Donate Now" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Public Report" NavigateUrl="About.aspx?tabIndex=1" />
+                                                    <asp:MenuItem Text="Meet the Board" NavigateUrl="About.aspx?tabIndex=2" />
+                                                    <asp:MenuItem Text="Strategic Plan" NavigateUrl="About.aspx?tabIndex=3" />
+                                                    <asp:MenuItem Text="Donate Now" NavigateUrl="About.aspx?tabIndex=4" />
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Patients & Visitors" NavigateUrl="#">
                                                     <asp:MenuItem Text="Patients Relations" NavigateUrl="#"/>
