@@ -19,6 +19,15 @@ body {
    Header
    -------------------------------------- */
 
+
+
+#cph_header_NavigationMenu ul li a {
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
 .navbar-brand {
 margin-top: -21px;
 
@@ -572,7 +581,7 @@ font-size: 14px;
     padding: 0;
     text-align: center;
     top:0;
-    left: 111;
+    left: 111px;
     background-color:#00aae0; 
     z-index: 230;
     height: 32px; 
@@ -619,7 +628,7 @@ width: 200px;
 
   #master_contactLink p{
     
-    padding: 16px 22px;
+    padding: 5px 22px;
     width: 3.5em;
   }
 
@@ -629,8 +638,8 @@ width: 200px;
 
   #master_login {
     
-    width: 3.5em;;
-    left: 36;
+    width: 3.5em;
+    left: 36px;
   }
 
 

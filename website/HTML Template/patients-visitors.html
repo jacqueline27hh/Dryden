@@ -1,0 +1,551 @@
+<html>
+<head>
+	<title>Dryden Reginal Health Center</title>
+	<meta name="description" content="">
+
+	<!-- Mobile viewport optimized -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+
+	<!-- Font Awesome -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- timeline plugin & css -->
+		<link rel="stylesheet" href="css/timeline.css" media="screen" />
+
+
+	<!-- Master & Custom main CSS -->
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/master.css" rel="stylesheet">
+
+	<!-- font face -->
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+
+
+
+	<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		
+
+
+</head>
+<body id="body">
+	
+
+	<div class="container" id="main">
+		<div class="container" id="header">
+
+			<div id="master_login" >
+                <div id="master_login_form">
+                        <form action ="contact.php" method="Post" name="contact" id="contact" >
+                            <fieldset>
+                            	 <legend>Login</legend>
+                                 <label for="Username">Username</label>
+                                <input id="username" type="text" required autofocus>
+                                <label for="Password">Password</label>
+                                <input id="Password" type="text" required autofocus>
+                                 <input type="submit"  id="submit2" value="Submit" onclick="closeForm()">
+                                <input type="reset" id="reset2" value="Reset"><br>
+
+
+                                <legend>Register Now</legend>
+                                <label for="Name">Name *</label>
+                                <input id="name" type="text" required autofocus>
+                                <label for="Email">Email address *</label>
+                                <input id="Email" type="text" required autofocus>
+                                <label for="Message">Your message *</label>
+                                <textarea id="Message" rows="3" cols="20" required ></textarea>
+                                <input type="submit"  id="submit" value="Submit" onclick="closeForm()">
+                                <input type="reset" id="reset" value="Reset"><br>
+
+
+                            </fieldset>
+                       </form>
+                 </div><!-- close #contactform -->
+                
+             
+                    <div id="master_contactLink">
+                        <p><span  id="master_login_p">Login | Register</span> <i class="fa fa-user"></i></p>
+                    </div> 
+			</div><!-- close #contactFormContainer --> 
+
+			
+
+
+			
+
+			<div class="clear"></div>
+
+
+			<a class="navbar-brand" href="/"><img src="images/logo.png" alt="Your logo"></a>
+
+
+
+			
+
+				<ul class="pull-right" id="master_sub_nav">
+					<li >
+						<a href="#">
+							<i class="fa fa-phone">
+								<p id="master_call_number">&nbsp; 807-223-8201</p>
+								<p id="master_call_us">Call Us</p>
+							</i>
+								
+							
+						</a>
+					</li>
+
+					<li >
+						<a href="#">
+							<i class="fa fa-dollar">
+								<p id="master_donate">&nbsp; Donate</p>
+							</i>
+						</a>
+					</li>
+
+					<li >
+						<a href="#">
+							<i class="fa fa-map-marker">
+								<p id="master_location">&nbsp; Location</p>
+							</i>
+						</a>
+					</li>
+						
+				</ul>
+			<div class="clear"></div>
+
+
+			<form class="navbar-form pull-right" id="master_search">
+				<input type="text" class="form-control" placeholder ="Serch this site..." id="searchInput">
+							
+					<button type="submit" class="btn btn-default">
+						<span class="glyphicon glyphicon-search" >
+						</span>
+					</button>
+			</form><!-- end navbar-form -->
+
+			<div class="clear"></div>
+
+
+				<nav class="navbar navbar-default">
+				<div class="container">
+
+				<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<p class="hidden-lg hidden-md hidden-sm" id="master_navbar_p">Menu</p>
+
+
+
+				<div class="nav-collapse collapse navbar-responsive-collapse" id="master_collapse_main_nav">
+					<ul class="nav navbar-nav" id="master_main_nav">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						
+						<li class="dropdown">
+						    <a href="pv.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        About<b class="caret"></b>
+						    </a>
+							
+							<ul class="dropdown-menu">
+								<li>
+									<a tabindex="-1" href="#"> Public Report </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#pv_tab2" data-toggle="tab"> Meet the Board </a>
+									
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Strategic Plan</a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Donate Now</a>
+								</li>
+
+
+							
+							</ul><!-- end drop down menu -->
+						</li> <!-- end of pv -->
+						
+						<li class="dropdown active">
+							<a href="pv.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Patients & Visitors<b class="caret"></b>
+						    </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a tabindex="-1" href="#"> Patient Relations </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Planning Your Stay </a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#"> Visiting the Hospital </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Patient Email </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Identify your symptom </a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#"> e-card </a>
+								</li>
+
+								<li class="divider"></li>
+								<li class="dropdown-header">
+									Patient Login Required
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> View Your Appointment</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#"> Book Your Appointment</a>
+								</li>
+
+
+								
+							</ul><!-- end drop down menu -->
+						</li> <!-- end of Patients & Visitors  -->
+
+						<li class="dropdown">
+							<a href="pv.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Programs & Services<b class="caret"></b>
+						    </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a tabindex="-1" href="#"> Diagnostic Imaging </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Emergency </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Food Services </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Inpatient Services </a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#"> Laboratory </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Mental Health and Addictions</a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Oncology </a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Rehabilitation Services</a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#"> Sexual Assault/Domestic Violence Care and Treatment</a>
+								</li>
+
+								
+							</ul><!-- end drop down menu -->
+						</li> <!-- end of Programs & Services  -->
+
+						<li class="dropdown">
+							<a href="pv.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Career<b class="caret"></b>
+						    </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a tabindex="-1" href="#"> Allied Health Professionals</a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Human Resources </a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#"> Pharmacy</a>
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> Other</a>
+								</li>
+								<li class="divider"></li>
+								<li class="dropdown-header">
+									Doctor Login Required
+								</li>
+
+								<li>
+									<a tabindex="-1" href="#"> View Your Appointment</a>
+								</li>
+								
+
+
+
+								
+							</ul><!-- end drop down menu -->
+						</li> <!-- end of Careers  -->
+
+						<li class="dropdown">
+							<a href="pv.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+						        Contact<b class="caret"></b>
+						    </a>
+							<ul class="dropdown-menu">
+								<li>
+									<a tabindex="-1" href="#"> Location </a>
+								</li>
+								<li>
+									<a tabindex="-1" href="#"> Department  </a>
+								</li>
+
+								
+
+								
+							</ul><!-- end drop down menu -->
+						</li> <!-- end of Careers  -->
+					</ul> <!-- end navbar-nav -->
+
+				</div><!-- nav-collapse -->
+
+				</div><!-- end container -->
+
+			</nav>
+
+		</div><!-- end header -->
+
+		<div id="master_content">
+		
+			<div id="pv_content_image">
+			
+			</div> <!-- end pv_content_image-->
+
+			<div class="row">
+
+				
+				<div class="col-xs-12" id="pv_nav">
+					
+					<div class="tabbable">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#pv_tab1" data-toggle="tab">Identify Your Symptom</a></li>
+							<li><a href="#pv_tab2" data-toggle="tab">e-card</a></li>
+							<li><a href="#pv_tab3" data-toggle="tab">View Your Appointment</a></li>
+							<li><a href="#pv_tab4" data-toggle="tab">Book Your Appointment</a></li>
+							<li><a href="#pv_tab5" data-toggle="tab">Search for a Doctor</a></li>
+							<li><a href="#pv_tab6" data-toggle="tab">Patient Survey</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="pv_tab1">
+								
+								
+								<p>Identify Your Symptom</p>
+							</div><!-- end tab-pane -->
+							
+							<div class="tab-pane" id="pv_tab2">
+								<p>
+									e-card
+								</p>
+								
+							</div><!-- end tab-pane -->
+
+							<div class="tab-pane" id="pv_tab3">
+								<p>
+									View Your Appointment
+								</p>
+								
+							</div><!-- end tab-pane -->
+
+							<div class="tab-pane" id="pv_tab4">
+								<p>
+									Book Your Appointment
+								</p>
+								
+							</div><!-- end tab-pane -->
+							<div class="tab-pane" id="pv_tab5">
+								<p>
+									Search for a Doctor
+								</p>
+								
+							</div><!-- end tab-pane -->
+							<div class="tab-pane" id="pv_tab6">
+								<p>
+									Patient Survey
+								</p>
+								
+							</div><!-- end tab-pane -->
+						</div><!-- end tab-content -->
+					</div><!-- end tabbable -->
+				</div><!-- end col-sm-12 -->
+			</div> <!-- end row -->
+		
+		</div><!-- master_content -->
+
+		
+
+
+		
+	</div> <!-- end main -->
+
+
+	<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+					<h6>pv</h6>
+					<ul class="unstyled">
+							<li><i class="fa fa-play"> </i><a href="#">Public Report</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Meet the Board</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Strategic Plan</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Donate Now</a></li>
+						</ul>
+					</div><!-- end col-sm-2 -->
+					
+					<div class="col-sm-2">
+						<h6>Patients & Visitors</h6>
+						<ul class="unstyled">
+							<li><i class="fa fa-play"> </i><a href="#">Patient Relations</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Planning Your Stay</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Visiting the Hospital</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Patient Email</a></li>
+						</ul>
+					</div><!-- end col-sm-2 -->
+
+					<div class="col-sm-3">
+						<h6>Program & Services</h6>
+						<ul class="unstyled">
+							<li><i class="fa fa-play"> </i><a href="#">Diagnostic Imaging</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Emergency</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Food Services</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Inpatient Services</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Laboratory</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Mental Health and Addictions</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Oncology</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Rehabilitation Services</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Sexual Assault/Domestic Violence 
+							Care and Treatment</a></li>
+						</ul>
+					</div><!-- end col-sm-4 -->
+					
+					<div class="col-sm-2">
+						<h6>Career</h6>
+						<ul class="unstyled">
+							<li><i class="fa fa-play"> </i><a href="#">Allied Health Professionals</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Human Resources</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Pharmacy</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Volunteers</a></li>
+							<li><i class="fa fa-play"> </i><a href="#">Other</a></li>
+						</ul>
+					</div><!-- end col-sm-2 -->
+					
+					<div class="col-sm-3">
+						<h6>Contact</h6>
+						<p>
+							Address:58 Goodall Street <br />
+							Dryden, Ontario, P8N 2Z6 <br />
+							P:807-223-8200,  <br />
+							TTY:807-223-8295, <br />
+							F:807-223-2370 <br />
+						</p>
+					</div><!-- end col-sm-2 -->
+				</div><!-- end row -->
+
+				
+			</div><!-- end container -->
+
+
+		</footer>
+		<footer id="master_footer2">
+		<div class="container">
+			<div class="col-sm-12" id="footer-bottom">
+				<div id="home-copyright">
+					&copy; Dryden Reginal Health Centre
+				</div>
+				<div id="home-ontario">
+					<img src="images/home-ontario-logo.png" alt="Ontario Health Logo">
+
+				</div>
+			</div>
+		</div>
+		</footer>
+
+
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+
+
+
+
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+
+	  <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#master_contactLink").click(function()
+            {
+                if ($("#master_login_form").is(":hidden"))
+                {
+                    $("#master_login_form").slideDown("slow");
+                }
+                else
+                {
+                    $("#master_login_form").slideUp("slow");
+                }
+            });
+        });
+
+        function closeForm()
+        {
+            $("#messageSent").show("slow");
+            setTimeout('$("#messageSent").hide();$("#master_login_form").slideUp("slow")', 2000);
+        }
+    </script>
+   
+	
+	<!-- Bootstrap JS -->
+
+	<script src="js/bootstrap.min.js"></script>
+
+	<!--  hover JS -->
+
+
+    <script src="js/hover-dropdown.js"></script>
+
+	<!-- 	timeliner JS -->
+ <script src="js/jquery.timelinr-0.9.54.js"></script> 
+		
+		
+		<script> 
+		$(function(){
+			$().timelinr({
+				arrowKeys: 'true'
+			})
+		});
+	 	</script> 
+
+<!-- Custom JS  -->
+
+	<script src="includes/js/script.js"></script>
+
+
+
+
+
+</body>
+</html>

@@ -221,6 +221,113 @@ border-color: #97bf28;
 }
 
 /* --------------------------------------
+  Patients & Visitors
+   -------------------------------------- */
+
+#pv_content_image {
+   background: url('../images/patient-image.jpg') top center no-repeat;
+   height:329px;
+}
+
+#pv_nav {
+  /*margin-top:30px;*/
+  padding:20px;
+}
+#pv_nav ul li a {
+  color:#838383;
+}
+
+#pv_nav p {
+  padding: 20px;
+  font-size: 14px;
+}
+
+#pv_nav .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color:#fff;
+  background-color:#7BCEDA;
+}
+
+#pv_nav .nav-tabs > li:nth-child(3).active > a, .nav-tabs > li:nth-child(3).active > a:hover, .nav-tabs > li:nth-child(3).active > a:focus {
+  color:#fff;
+  background-color:#00AAE0;
+}
+
+#pv_nav .nav-tabs > li:nth-child(4).active > a, .nav-tabs > li:nth-child(4).active > a:hover, .nav-tabs > li:nth-child(4).active > a:focus {
+  color:#fff;
+  background-color:#00AAE0;
+}
+#pv_nav .nav-tabs > li:nth-child(5).active > a, .nav-tabs > li:nth-child(5).active > a:hover, .nav-tabs > li:nth-child(5).active > a:focus {
+  color:#fff;
+  background-color:#00AAE0;
+}
+#pv_nav .nav-tabs > li:nth-child(6).active > a, .nav-tabs > li:nth-child(6).active > a:hover, .nav-tabs > li:nth-child(6).active > a:focus {
+  color:#fff;
+  background-color:#00AAE0;
+}
+
+/* --------------------------------------
+  Programs & Services
+   -------------------------------------- */
+
+#ps_content_image {
+   background: url('../images/service_header.jpg') top center no-repeat;
+   height:329px;
+}
+
+#ps_nav {
+  /*margin-top:30px;*/
+  padding:20px;
+}
+#ps_nav ul li a {
+  color:#838383;
+}
+
+#ps_nav p {
+  padding: 20px;
+  font-size: 14px;
+}
+
+#ps_nav .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color:#fff;
+  background-color:#00AAE0;
+}
+
+/* --------------------------------------
+  Career
+   -------------------------------------- */
+
+#career_content_image {
+   background: url('../images/career-image.jpg') top center no-repeat;
+   height:329px;
+}
+
+#career_nav {
+  /*margin-top:30px;*/
+  padding:20px;
+}
+#career_nav ul li a {
+  color:#838383;
+}
+
+#career_nav p {
+  padding: 20px;
+  font-size: 14px;
+}
+
+#career_nav .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color:#fff;
+  background-color:#AF8EC1;
+}
+
+#career_nav .nav-tabs > li:nth-child(3).active > a, .nav-tabs > li:nth-child(3).active > a:hover, .nav-tabs > li:nth-child(3).active > a:focus {
+  color:#fff;
+  background-color:#ED83A9;
+}
+
+
+
+
+/* --------------------------------------
    Contact
    -------------------------------------- */
 
@@ -252,6 +359,8 @@ border-color: #97bf28;
   color:#fff;
   background-color:#f3ab35;
 }
+
+
 
 
 
@@ -402,9 +511,50 @@ border-color: #97bf28;
     width: 100%;
    }
 
+   /* --------------------------------------
+  Patient & Visitors
+   -------------------------------------- */
+
+    #pv_nav .nav > li {
+    background-color:#fff;
+    width: 100%;
+   }
+
+  /* --------------------------------------
+  Patient & Visitors
+   -------------------------------------- */
+
+    #ps_nav .nav > li {
+    background-color:#fff;
+    width: 100%;
+   }
+
+
+    /* --------------------------------------
+  Carrer
+   -------------------------------------- */
+
+    #career_nav .nav > li {
+    background-color:#fff;
+    width: 100%;
+   }
+
+   /* --------------------------------------
+  Contact
+   -------------------------------------- */
+
+ 
+
+    #contact_nav .nav > li {
+    background-color:#fff;
+    width: 100%;
+   }
 
   
 }
+
+
+
 
 
 
