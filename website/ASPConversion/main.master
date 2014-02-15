@@ -152,47 +152,48 @@
                                             <Items>
                                                 <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
                                                 <asp:MenuItem Text="About" NavigateUrl="#">
-                                                    <asp:MenuItem Text="Public Report" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Public Reports" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Meet the Board" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Strategic Plan" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Mission Statement" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Donate Now" NavigateUrl="#" />
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Patients & Visitors" NavigateUrl="#">
-                                                    <asp:MenuItem Text="Patients Relations" NavigateUrl="#"/>
-                                                    <asp:MenuItem Text="Planning your Stay" NavigateUrl="#"/>
+                                                    <asp:MenuItem Text="Accessibility" NavigateUrl="#"/>
+                                                    <asp:MenuItem Text="Planning Your Stay" NavigateUrl="#"/>
                                                     <asp:MenuItem Text="Visiting the Hospital" NavigateUrl="#"/>
-                                                    <asp:MenuItem Text="Patiet Email" NavigateUrl="#"/>
-                                                    <asp:MenuItem Text="Identify Your Symptom" NavigateUrl="#"/>
-                                                    <asp:MenuItem Text="e-card" NavigateUrl="#"/>
-                                                    <asp:MenuItem Selectable="false" /> 
+                                                    <asp:MenuItem Text="Parking" NavigateUrl="#"/>
+                                                    <asp:MenuItem Text="Patiet Feedback" NavigateUrl="#"/>
+                                                    <asp:MenuItem Text="Identify Your Symptoms" NavigateUrl="#"/>
+                                                    <asp:MenuItem Text="E-card" NavigateUrl="#"/>
+                                                    <asp:MenuItem Selectable="false" />
                                                     <asp:MenuItem Text="Patient Login Required" Selectable="false" /> 
-									                <asp:MenuItem Text="View Your Appointment" NavigateUrl="#"/>
-                                                    <asp:MenuItem Text="Book Your Appointment" NavigateUrl="#"/>
+									                <asp:MenuItem Text="View Your Appointments" NavigateUrl="#"/>
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Programs & Services" ToolTip="Movies">
-                                                    <asp:MenuItem Text="Diagonistic Imaging" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Emergency" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Food Services" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Diagonistic Imaging Services" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Emergency Services" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Inpatient Services" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Laboratory" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Outpatient Services" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Laboratory Services" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Food Services" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Mental Health & Addiction" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Oncology" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Mental Health & Addiction Services" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Oncology Services" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Rehabilitation Services" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Sexual Assault/Domestic Violence Care and Treatment" NavigateUrl="#" />
                                                 </asp:MenuItem>
-                                                <asp:MenuItem Text="Career" ToolTip="Movies">
-                                                    <asp:MenuItem Text="Allied Health Professionals" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Human Resources" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Pharmacy" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Other" NavigateUrl="#" />
+                                                <asp:MenuItem Text="Careers" ToolTip="Movies">
+                                                    <asp:MenuItem Text="Employment Opportunities" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="How To Apply" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Why Work Here" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Volunteer Program" NavigateUrl="#" />
                                                     <asp:MenuItem Selectable="false" />
                                                     <asp:MenuItem Text="Doctor Login Required" Selectable="false" />
-                                                    <asp:MenuItem Text="View Your Appointment" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="View Your Appointments" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Book An Appointment" NavigateUrl="#" />
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Contact" ToolTip="Movies">
-                                                    <asp:MenuItem Text="Contact" NavigateUrl="#" />
-                                                    <asp:MenuItem Text="Location Department" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Location" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Mailing List" NavigateUrl="#" />
+                                                    <asp:MenuItem Text="Contact Us" NavigateUrl="#" />
                                                 </asp:MenuItem>
                                             </Items>
                                         </asp:Menu>
@@ -223,9 +224,9 @@
 
                             <asp:Menu runat="server" ID="mnu1" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Public Report</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Public Reports</a>" />
                                     <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Meet the Board</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Strategic Plan</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Mission Statement</a>" />
                                     <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Donate Now</a>" /> 
                                 </Items>
                             </asp:Menu>
@@ -237,10 +238,11 @@
 
                              <asp:Menu runat="server" ID="Menu2" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Patient Relations</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Accessibility</a>" />
                                     <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Planning Your Stay</a>" />
                                     <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Visiting the Hospital</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Patient Email</a>" /> 
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Parking</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>E-card</a>" /> 
                                 </Items>
                             </asp:Menu>
 
@@ -248,19 +250,19 @@
                         <!-- end col-sm-2 -->
 
                         <div class="col-sm-3">
-                            <h6>Program & Services</h6>
+                            <h6>Programs & Services</h6>
 
                             <asp:Menu runat="server" ID="Menu3" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Diagnostic Imaging</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Emergency</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Diagnostic Imaging Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Emergency Services</a>" />
                                     <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Food Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Inpatient Services</a>" /> 
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Laboratory</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Mental Health and Addictions</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Oncology</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Rehabilitation Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Sexual Assault/Domestic Violence Care</a>" /> 
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Inpatient Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Outpatient Services</a>" /> 
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Laboratory Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Mental Health and Addictions Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Oncology Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Rehabilitation Services</a>" /> 
                                 </Items>
                             </asp:Menu>
 
@@ -268,15 +270,14 @@
                         <!-- end col-sm-4 -->
 
                         <div class="col-sm-2">
-                            <h6>Career</h6>
+                            <h6>Careers</h6>
 
                              <asp:Menu runat="server" ID="Menu1" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Allied Health Professionals</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Human Resources</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Pharmacy</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Volunteers</a>" /> 
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Other</a>" /> 
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Employment Opportunities</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>How To Apply</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Why Work Here</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Volunteer Program</a>" /> 
                                 </Items>
                             </asp:Menu>
                         </div>
