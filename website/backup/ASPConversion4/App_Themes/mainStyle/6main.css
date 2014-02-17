@@ -1,0 +1,1017 @@
+﻿
+
+
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+
+/*--------------Slide Show STARTS here---------------*/
+
+
+
+
+.carousel-caption {
+   font-size: 24px;
+}
+
+.carousel-caption h4 {
+   font-size: 32px;
+}
+
+
+#home_myCarousel  .item {
+   height: 400px; /*medium size as default*/
+}
+
+#home_myCarousel .carousel-caption {
+  font-size: 18px;
+  text-align: left;
+  width: 250px;
+  bottom: 74px;
+  right: 28px;
+  left: 118px;
+  text-shadow:none;
+
+}
+
+
+#home_myCarousel h4 {
+  
+  text-align: left;
+  font-size:50px;
+  padding-bottom:15px;
+  
+}
+
+
+#home_slide1 {
+   background: url('../images/ni_carousel_medium_01.jpg') top center no-repeat;
+}
+
+#home_slide2 {
+   background: url('../images/ni_carousel_medium_02.jpg') top center no-repeat;
+}
+
+#home_slide3 {
+   background: url('../images/ni_carousel_medium_03.jpg') top center no-repeat;
+}
+
+.carousel-indicators {
+   
+   left: 15%;
+   
+   text-align: left;
+   
+}
+.carousel-control.left {
+
+background-image: none;
+
+}
+
+.carousel-control.right {
+
+background-image: none;
+
+}
+
+/*--------------Slide Show ENDS here---------------*/
+
+/*--------------Alert Show STARTS here---------------*/
+
+.alert h4 {
+margin-top: 0;
+color: inherit;
+text-align: left;
+}
+
+.alert p {
+  font-size:16px;
+  font-family:arial;
+}
+
+/*--------------Alert Show Ends here---------------*/
+
+
+/*--------------Timeline STARTS here---------------*/
+
+
+ #timeline-quicklinks {
+      margin-top:20px;
+   }
+
+   #timeline {
+   width: 100%;
+   margin: 0px;
+
+   }
+
+   #issues li p {
+   width: 600px;
+   font-family: sans-serif;
+   
+   }
+
+   #issues li h1 {
+ 
+   margin-right: 287px;
+   
+   }
+/*--------------Timeline ENDS here---------------*/
+
+ /*-------- Quicklinks STARTS here------------*/
+
+ #home_quick_links a.list-group-item .list-group-item-heading {
+
+text-align: left;
+
+}
+
+#home_quick_links a.list-group-item {
+
+   margin-bottom:5px;
+
+}
+
+#home_quick_links .list-group-item {
+
+background-color: #ffebbd;
+border-color: #ffebbd;
+}
+
+#home_quick_links a.list-group-item.active  {
+
+background-color: #97bf28;
+border-color: #97bf28;
+}
+
+#home_quick_links a.list-group-item .list-group-item-heading {
+   display:inline-block;
+}
+
+#home_quick_links .fa-play {
+   float:right;
+   color:#333333;
+}
+
+#home_quick_links a.list-group-item.active .fa-play {
+   color:#fff;
+}
+
+ /*-------- Quicklinks ENDS Here------------*/
+
+
+/*-------- Program Highlights STARTS Here------------*/
+
+#home_program_highlights img {
+   width:100%;
+}
+
+#home_btn_services {
+   background-color: #97bf28;
+   color:#fff;
+   border-radius:0px;
+}
+
+#home_btn_woman{
+   background-color: #ed83a9;
+   color:#fff;
+   border-radius:0px;
+}
+
+
+#home_btn_aboriginal {
+   background-color: #b08ec1;
+   color:#fff;
+   border-radius:0px;
+
+}
+
+#home_btn_drug {
+   background-color: #f3ab35;
+   color:#fff;
+   border-radius:0px;
+
+}
+
+.home_ph_item {
+    margin-bottom:20px;
+   }
+
+/*-------- Program Highlights ENDS Here------------*/
+
+
+
+/* --------------------------------------
+   About
+   -------------------------------------- */
+
+
+#about_content_image {
+   background: url('../images/about_header.jpg') top center no-repeat;
+   height:329px;
+}
+
+#about_nav {
+	/*margin-top:30px;*/
+  padding:20px;
+}
+
+#about_nav ul li a {
+	color:#838383;
+}
+
+#about_nav p {
+	padding: 20px;
+	font-size: 14px;
+}
+
+
+
+#cph_main_about_nav_menu a.static {
+    padding:5px 7px;
+    color:#545554;
+    margin-right:20px;
+    background-color:#eee;
+
+}
+
+#cph_main_about_nav_menu a.static.selected {
+    background-color:#97bf28;
+    color:#fff;
+    padding:5px;
+}
+
+/*--------------Donate STARTS here---------------*/
+
+/*--------------Donate ENDS here---------------*/
+
+
+/* --------------------------------------
+  Patients & Visitors
+   -------------------------------------- */
+
+#pv_content_image {
+   background: url('../images/patient-image.jpg') top center no-repeat;
+   height:329px;
+}
+
+#pv_nav {
+  /*margin-top:30px;*/
+  padding:20px;
+}
+#pv_nav ul li a {
+  color:#838383;
+}
+
+#pv_nav p {
+  padding: 20px;
+  font-size: 14px;
+}
+
+#cph_main_pv_nav_menu a.static {
+    padding:5px;
+    color:#545554;
+    margin-right:10px;
+   background-color:#eee;
+
+}
+
+#cph_main_pv_nav_menu a.static.selected {
+    background-color:#7cd0dc;
+    color:#fff;
+    padding:5px;
+}
+
+/*--------------Patient Feedbacks Program STARTS here---------------*/
+
+/*--------------Patient Feedbacks  Program ENDS here---------------*/
+
+
+/*--------------Identify Your Symptom Program STARTS here---------------*/
+
+/*--------------Identify Your Symptom Program ENDS here---------------*/
+
+
+/*--------------Ecard Program STARTS here---------------*/
+
+/*--------------Ecard Symptom Program ENDS here---------------*/
+
+
+/*--------------View Your Appointments STARTS here---------------*/
+
+/*--------------View Your Appointments ENDS here---------------*/
+
+
+/*--------------Book Your Appointments STARTS here---------------*/
+
+/*--------------Book Your Appointments ENDS here---------------*/
+
+
+
+/* --------------------------------------
+  Programs & Services
+   -------------------------------------- */
+
+
+#ps_content_image {
+   background: url('../images/service_header.jpg') top center no-repeat;
+   height:329px;
+}
+
+#ps_nav {
+  /*margin-top:30px;*/
+  padding:20px;
+}
+#ps_nav ul li a {
+  color:#838383;
+}
+
+#ps_nav p {
+  padding: 20px;
+  font-size: 14px;
+}
+
+#cph_main_ps_nav_menu a.static {
+    padding:5px;
+    color:#545554;
+    margin-right:15px;
+    background-color:#eee;
+
+}
+
+#cph_main_ps_nav_menu a.static.selected {
+    background-color:#00aae0;
+    color:#fff;
+    padding:5px;
+}
+
+/*--------------ER Wait Time Program STARTS here---------------*/
+
+/*--------------ER Wait Time Program ENDS here---------------*/
+
+
+
+/* --------------------------------------
+  Career
+   -------------------------------------- */
+
+#career_content_image {
+   background: url('../images/career-image.jpg') top center no-repeat;
+   height:329px;
+}
+
+#career_nav {
+  /*margin-top:30px;*/
+  padding:20px;
+}
+#career_nav ul li a {
+  color:#838383;
+}
+
+#career_nav p {
+  padding: 20px;
+  font-size: 14px;
+}
+
+#cph_main_career_nav_menu a.static {
+    padding:5px;
+    color:#545554;
+    margin-right:15px;
+    background-color:#eee;
+
+}
+
+#cph_main_career_nav_menu a.static.selected {
+    background-color:#b08ec1;
+    color:#fff;
+    padding:5px;
+}
+
+/*--------------Volunteer Program STARTS here---------------*/
+
+/*--------------Volunteer Program ENDS here---------------*/
+
+/*--------------View Your Appointments Program STARTS here---------------*/
+
+/*--------------View Your Appointments Program ENDS here---------------*/
+
+
+
+/* --------------------------------------
+   Contact
+   -------------------------------------- */
+
+#contact_content_image {
+   background: url('../images/contact_header.jpg') top center no-repeat;
+   height:329px;
+}
+
+
+#contact_nav {
+ /* margin-top:30px;*/
+ padding:20px;
+ 
+}
+
+#contact_nav ul li a {
+  color:#838383;
+}
+
+#contact_nav p  {
+  
+  font-size: 14px;
+  padding: 20px;
+}
+
+
+
+
+
+#cph_main_contact_nav_menu a.static {
+    padding:5px;
+    color:#545554;
+    margin-right:20px;
+    background-color:#eee;
+
+}
+
+#cph_main_contact_nav_menu a.static.selected {
+    background-color:#f3ab35;
+    color:#fff;
+    padding:5px;
+}
+
+
+/*--------------Location STARTS here---------------*/
+
+/*--------------Location ENDS here---------------*/
+
+
+/*--------------Mailing List STARTS here---------------*/
+
+/*--------------Mailing List ENDS here---------------*/
+
+
+/*--------------Contact STARTS here---------------*/
+
+/*--------------Contact ENDS here---------------*/
+
+
+
+
+/* --------------------------------------
+   Media Quary
+   -------------------------------------- */
+
+@media (min-width: 1201px) {
+
+
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+  /*--------------Slide show STARTS here---------------*/
+
+	#home_myCarousel .item {
+	   height: 432px; /*medium size as default*/
+	}
+
+	#home_slide1 {
+	   background: url('../images/ni_carousel_large_01.jpg') top center no-repeat;
+	}
+
+	#home_slide2 {
+	      background: url('../images/ni_carousel_large_02.jpg') top center no-repeat;
+	}
+
+	#home_slide3 {
+	      background: url('../images/ni_carousel_large_03.jpg') top center no-repeat;
+	}
+  /*--------------Slide show ENDS here---------------*/
+
+/*--------------Alert show STARTS here---------------*/
+/*--------------Alert show ENDS here---------------*/
+
+/*--------------Timeline STARTS here---------------*/
+/*--------------Timeline show ENDS here---------------*/
+
+/* --------------------------------------
+  About
+-------------------------------------- */
+
+
+/*--------------Donate STARTS here---------------*/
+
+/*--------------Donate ENDS here---------------*/
+
+
+/* --------------------------------------
+  Patients & Visitors
+-------------------------------------- */
+
+/*--------------Patient Feedbacks Program STARTS here---------------*/
+
+/*--------------Patient Feedbacks  Program ENDS here---------------*/
+
+
+/*--------------Identify Your Symptom Program STARTS here---------------*/
+
+/*--------------Identify Your Symptom Program ENDS here---------------*/
+
+
+/*--------------Ecard Program STARTS here---------------*/
+
+/*--------------Ecard Symptom Program ENDS here---------------*/
+
+
+/*--------------View Your Appointments STARTS here---------------*/
+
+/*--------------View Your Appointments ENDS here---------------*/
+
+
+/*--------------Book Your Appointments STARTS here---------------*/
+
+/*--------------Book Your Appointments ENDS here---------------*/
+
+/* --------------------------------------
+  Programs & Services
+-------------------------------------- */
+
+
+ /*--------------ER Waittime Program STARTS here---------------*/
+
+/*--------------ER Waittime Program ENDS here---------------*/
+
+
+
+ /* --------------------------------------
+       Career
+ -------------------------------------- */
+
+
+
+ /*--------------Volunteer Program STARTS here---------------*/
+
+/*--------------Volunteer Program ENDS here---------------*/
+
+/*--------------View Your Appointments Program STARTS here---------------*/
+
+/*--------------View Your Appointments Program ENDS here---------------*/
+
+
+
+/* --------------------------------------
+       Contact
+-------------------------------------- */
+
+
+/*--------------Location STARTS here---------------*/
+
+/*--------------Location ENDS here---------------*/
+
+
+/*--------------Mailing List STARTS here---------------*/
+
+/*--------------Mailing List ENDS here---------------*/
+
+
+/*--------------Contact STARTS here---------------*/
+
+/*--------------Contact ENDS here---------------*/ 
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+    /* --------------------------------------
+   Home
+   -------------------------------------- */
+  
+     /*--------------Slide show STARTS here---------------*/
+ 
+
+
+    #home_myCarousel .carousel-caption {
+        left: 83px !important;
+        font-size: 16px !important;
+        width: 231px !important;
+        top: 63px !important;
+    }
+
+    .carousel-indicators {
+        left: 17%;
+    }
+
+    #home_myCarousel h4 {
+        font-size: 37px;
+    }
+
+    /*--------------Slide show ENDS here---------------*/
+
+    /*--------------Alert STARS here---------------*/
+    /*--------------Alert ENDS here---------------*/
+
+     /*--------------Timeline STARS here---------------*/
+    /*--------------Timeline ENDS here---------------*/
+
+/* --------------------------------------
+  About
+-------------------------------------- */
+
+
+/*--------------Donate STARTS here---------------*/
+
+/*--------------Donate ENDS here---------------*/
+
+
+/* --------------------------------------
+  Patients & Visitors
+-------------------------------------- */
+
+/*--------------Patient Feedbacks Program STARTS here---------------*/
+
+/*--------------Patient Feedbacks  Program ENDS here---------------*/
+
+
+/*--------------Identify Your Symptom Program STARTS here---------------*/
+
+/*--------------Identify Your Symptom Program ENDS here---------------*/
+
+
+/*--------------Ecard Program STARTS here---------------*/
+
+/*--------------Ecard Symptom Program ENDS here---------------*/
+
+
+/*--------------View Your Appointments STARTS here---------------*/
+
+/*--------------View Your Appointments ENDS here---------------*/
+
+
+/*--------------Book Your Appointments STARTS here---------------*/
+
+/*--------------Book Your Appointments ENDS here---------------*/
+
+
+/* --------------------------------------
+  Programs & Services
+-------------------------------------- */
+
+
+ /*--------------ER Waittime Program STARTS here---------------*/
+
+/*--------------ER Waittime Program ENDS here---------------*/
+
+
+ /* --------------------------------------
+       Career
+ -------------------------------------- */
+
+
+ /*--------------Volunteer Program STARTS here---------------*/
+
+/*--------------Volunteer Program ENDS here---------------*/
+
+/*--------------View Your Appointments Program STARTS here---------------*/
+
+/*--------------View Your Appointments Program ENDS here---------------*/
+
+
+ /* --------------------------------------
+       Contact
+ -------------------------------------- */
+/*--------------Location STARTS here---------------*/
+
+/*--------------Location ENDS here---------------*/
+
+
+/*--------------Mailing List STARTS here---------------*/
+
+/*--------------Mailing List ENDS here---------------*/
+
+
+/*--------------Contact STARTS here---------------*/
+
+/*--------------Contact ENDS here---------------*/ 
+}
+
+@media (max-width: 769px) {
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+
+/*--------------Slide Show STARTS here---------------*/
+
+
+   #home_myCarousel .carousel-caption {
+    
+    left: 83px;
+    font-size:16px;
+    width:231px;
+    top:63px;
+    
+
+  }
+
+  #home_myCarousel h4 {
+
+  font-size: 43px;
+
+  }
+/*--------------Slide Show ENDS here---------------*/
+
+/*--------------Alerts STARTS here---------------*/
+/*--------------Alerts ENDS here---------------*/
+
+/*--------------Timeline STARTS here---------------*/
+/*--------------Timeline ENDS here---------------*/
+
+
+/* --------------------------------------
+  About
+-------------------------------------- */
+
+
+/*--------------Donate STARTS here---------------*/
+
+/*--------------Donate ENDS here---------------*/
+
+
+/* --------------------------------------
+  Patients & Visitors
+-------------------------------------- */
+
+/*--------------Patient Feedbacks Program STARTS here---------------*/
+
+/*--------------Patient Feedbacks  Program ENDS here---------------*/
+
+
+/*--------------Identify Your Symptom Program STARTS here---------------*/
+
+/*--------------Identify Your Symptom Program ENDS here---------------*/
+
+
+/*--------------Ecard Program STARTS here---------------*/
+
+/*--------------Ecard Symptom Program ENDS here---------------*/
+
+
+/*--------------View Your Appointments STARTS here---------------*/
+
+/*--------------View Your Appointments ENDS here---------------*/
+
+
+/*--------------Book Your Appointments STARTS here---------------*/
+
+/*--------------Book Your Appointments ENDS here---------------*/
+/* --------------------------------------
+  Programs & Services
+-------------------------------------- */
+
+ /*--------------ER Waittime Program STARTS here---------------*/
+
+/*--------------ER Waittime Program ENDS here---------------*/
+
+
+   /* --------------------------------------
+       Career
+ -------------------------------------- */
+
+
+ /*--------------Volunteer Program STARTS here---------------*/
+
+/*--------------Volunteer Program ENDS here---------------*/
+
+/*--------------View Your Appointments Program STARTS here---------------*/
+
+/*--------------View Your Appointments Program ENDS here---------------*/
+
+
+/* --------------------------------------
+       Contact
+ -------------------------------------- */
+/*--------------Location STARTS here---------------*/
+
+/*--------------Location ENDS here---------------*/
+
+
+/*--------------Mailing List STARTS here---------------*/
+
+/*--------------Mailing List ENDS here---------------*/
+
+
+/*--------------Contact STARTS here---------------*/
+
+/*--------------Contact ENDS here---------------*/ 
+
+
+}
+
+
+@media (max-width: 480px) {
+
+/* --------------------------------------
+   Home
+   -------------------------------------- */
+/*--------------Slide Show STARTS here---------------*/
+
+
+
+  #home_myCarousel .item {
+     height: 463px; /*small size as default*/
+  }
+
+  #home_slide1 {
+     background: url('../images/carousel_xs_small_01.jpg') top center no-repeat;
+  }
+
+  #home_slide2 {
+     background: url('../images/carousel_xs_small_02.jpg') top center no-repeat;
+  }
+
+  #home_slide3 {
+     background: url('../images/carousel_xs_small_03.jpg') top center no-repeat;
+  }
+
+
+  #home_myCarousel .carousel-caption {
+    
+    text-align:left !important;
+    top:255px !important;
+    width:200px !important;
+   
+    font-size:14px !important;
+    
+
+  }
+
+  .carousel-indicators {
+  left: 30%;
+
+
+  bottom: 0;
+  }
+
+  #home_myCarousel h4 {
+    
+    text-align: left;
+    font-size:30px;
+    padding-bottom:5px;
+  }
+  /*--------------Slide Show ENDS here---------------*/
+
+  /*--------------Alert STARTS here---------------*/
+  /*--------------Alert ENDS here---------------*/
+
+   /*--------------Timeline STARTS here---------------*/
+  /*--------------Timeline ENDS here---------------*/
+
+  /* --------------------------------------
+  About
+   -------------------------------------- */
+    #cph_main_about_nav_menu ul li {
+    background-color:#fff;
+    width: 100%;
+    padding: 11px;
+    margin: 0px;
+    }
+
+   #cph_main_about_nav_menu a.static.selected {
+    padding: 11px;
+    margin: 0px;
+    }
+
+
+
+/*--------------Donate STARTS here---------------*/
+
+/*--------------Donate ENDS here---------------*/
+
+
+
+   /* --------------------------------------
+  Patients & Visitors
+   -------------------------------------- */
+    #cph_main_pv_nav_menu ul li {
+    background-color:#fff;
+    width: 100%;
+    padding: 11px;
+    margin: 0px;
+    }
+
+   #cph_main_pv_nav_menu a.static.selected {
+    padding: 11px;
+    margin: 0px;
+    }
+
+/*--------------Patient Feedbacks Program STARTS here---------------*/
+
+/*--------------Patient Feedbacks  Program ENDS here---------------*/
+
+
+/*--------------Identify Your Symptom Program STARTS here---------------*/
+
+/*--------------Identify Your Symptom Program ENDS here---------------*/
+
+
+/*--------------Ecard Program STARTS here---------------*/
+
+/*--------------Ecard Symptom Program ENDS here---------------*/
+
+
+/*--------------View Your Appointments STARTS here---------------*/
+
+/*--------------View Your Appointments ENDS here---------------*/
+
+
+/*--------------Book Your Appointments STARTS here---------------*/
+
+/*--------------Book Your Appointments ENDS here---------------*/
+
+  /* --------------------------------------
+  Programs & Services
+   -------------------------------------- */
+    #cph_main_ps_nav_menu ul li {
+    background-color:#fff;
+    width: 100%;
+    padding: 11px;
+    margin: 0px;
+    }
+
+   #cph_main_ps_nav_menu a.static.selected {
+    padding: 11px;
+    margin: 0px;
+    }
+
+/*--------------ER Waittime Program STARTS here---------------*/
+
+/*--------------ER Waittime Program ENDS here---------------*/
+
+  /* --------------------------------------
+  Career
+   -------------------------------------- */
+    #cph_main_career_nav_menu ul li {
+    background-color:#fff;
+    width: 100%;
+    padding: 11px;
+    margin: 0px;
+    }
+
+   #cph_main_career_nav_menu a.static.selected {
+    padding: 11px;
+    margin: 0px;
+    }
+
+
+ /*--------------Volunteer Program STARTS here---------------*/
+
+/*--------------Volunteer Program ENDS here---------------*/
+
+/*--------------View Your Appointments Program STARTS here---------------*/
+
+/*--------------View Your Appointments Program ENDS here---------------*/
+
+
+  /* --------------------------------------
+  Contact
+   -------------------------------------- */
+
+  
+
+   #cph_main_contact_nav_menu ul li {
+    background-color:#fff;
+    width: 100%;
+    padding: 11px;
+    margin: 0px;
+    }
+
+   #cph_main_contact_nav_menu a.static.selected {
+    padding: 11px;
+    margin: 0px;
+    }
+
+
+/*--------------Location STARTS here---------------*/
+
+/*--------------Location ENDS here---------------*/
+
+
+/*--------------Mailing List STARTS here---------------*/
+
+/*--------------Mailing List ENDS here---------------*/
+
+
+/*--------------Contact STARTS here---------------*/
+
+/*--------------Contact ENDS here---------------*/ 
+  
+}
+
+
+
+
+
