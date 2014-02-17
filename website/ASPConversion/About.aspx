@@ -13,43 +13,60 @@
 
 			<div class="row">
 
+                 <asp:Label runat="server" ID="lbl_test"></asp:Label>
 
 				<div class="col-xs-12" id="about_nav">
 
 					<div class="tabbable">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#about_tab1" data-toggle="tab">Public Report</a></li>
-							<li><a href="#about_tab2" data-toggle="tab">Meet the Board</a></li>
-							<li><a href="#about_tab3" data-toggle="tab">Strategic Plan</a></li>
-							<li><a href="#about_tab4" data-toggle="tab">Donate Now</a></li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane active" id="about_tab1">
 
+                        <asp:ScriptManager runat="server" ID="scm_main" /> 
+                        
 
-								<p>Public Report</p>
-							</div><!-- end tab-pane -->
+                        
 
-							<div class="tab-pane" id="about_tab2">
-								<p>
+                    <div class="tab-content">
+
+                        <asp:UpdatePanel ID="up_main" runat="server">
+                            <ContentTemplate>
+
+                                <asp:Menu ID="nav_menu"  runat="server" CssClass="nav nav-tabs" Orientation="Horizontal" 
+                                    OnMenuItemClick="switchTabs" StaticSelectedStyle-CssClass="active">
+                            <Items>
+                                <asp:MenuItem Text="Public Report" Selected="true" Value="0" />
+                                <asp:MenuItem Text="Meet the Board" Value="1" />
+                                <asp:MenuItem Text="Mission Statement" Value="2" />
+                                <asp:MenuItem Text="Donate Now" Value="3" /> 
+                            </Items>
+                        </asp:Menu>
+
+                               
+
+                                   <asp:MultiView ID="mv_tabs" runat="server" ActiveViewIndex="0" > 
+                                <asp:View ID="view1" runat="server">
+                                    <p>Public Report</p>
+                                </asp:View>
+                                <asp:View ID="view2" runat="server">
+                                    <p>
 									Meet the board
 								</p>
-
-							</div><!-- end tab-pane -->
-
-							<div class="tab-pane" id="about_tab3">
-								<p>
-									Strategic Plan
+                                </asp:View>
+                                <asp:View ID="view3" runat="server">
+                                    <p>
+									Mission Statement
 								</p>
-
-							</div><!-- end tab-pane -->
-
-							<div class="tab-pane" id="about_tab4">
-								<p>
+                                </asp:View>
+                                <asp:View ID="view4" runat="server">
+                                    <p>
 									Donate Now
 								</p>
-
-							</div><!-- end tab-pane -->
+                                </asp:View>
+                            </asp:MultiView>
+                    
+                           </ContentTemplate>
+                        </asp:UpdatePanel>
+					
+						
+                        
 						</div><!-- end tab-content -->
 					</div><!-- end tabbable -->
 				</div><!-- end col-sm-12 -->

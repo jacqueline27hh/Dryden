@@ -10,5 +10,18 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        string urlPost = HttpContext.Current.Request.Url.AbsoluteUri;
+        string[] indexNum  = urlPost.Split('=');
+        if (indexNum.Length > 1)
+        {
+           mv_tabs.ActiveViewIndex = Convert.ToInt32(indexNum[1]);
+           nav_menu.FindItem(indexNum[1]).Selected = true;  
+        }
+        
+    }
+
+    protected void switchTabs(object sender, EventArgs e)
+    {
+        mv_tabs.ActiveViewIndex = Convert.ToInt32(nav_menu.SelectedValue);
     }
 }
