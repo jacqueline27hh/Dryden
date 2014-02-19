@@ -1,0 +1,105 @@
+#admin_body{
+  font-size: 1rem; 
+  background-color:#535453;
+}
+
+
+#admin_dashboard {
+
+  background-color:#eee;
+
+}
+
+#admin_d_image img {
+  width: 90%;
+/* background-color:#e3e7eb;*/
+ padding: 14px 18px;
+ 
+}
+
+#admin_d_sidebar {
+  margin-top: 26px;
+
+}
+
+#admin_d_sidebar ul {
+  background-color: #97bf28;
+}
+
+#admin_d_sidebar ul li {
+  text-align:left;
+}
+
+#admin_d_sidebar ul li a {
+  padding: 20px;
+  color:#fff;
+}
+
+#admin_d_sidebar ul li a:hover {
+  background-color:#535453;
+}
+
+#admin_d_sidebar .fa-2x  {
+  width:40px;
+}
+
+#admin_profile {
+  margin-top:11px;
+  font-size: 1.1rem;
+}
+
+#admin_profile li a {
+  font-size:14px;
+}
+
+
+
+#admin_d_sidebar .nav-sidebar {
+
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.5rem; 
+}
+
+#admin_d_sidebar .nav-sidebar > li {
+  font-size: 1.3rem;
+  padding: 0; }
+
+/*.nav-sidebar-collapse ul {
+  display: inline; }
+  
+.nav-sidebar-collapse ul li {
+    width: 20%; }*/
+
+#admin_body .navbar {
+    margin-top:0px;
+}
+
+
+
+@media (min-width: 768px) {
+
+
+#admin_d_sidebar {
+  width: 18%;
+}
+
+
+
+#admin_dashboard i {
+  padding-right: 1rem; }
+
+}
+
+#admin_dashboard .navbar-header {
+
+margin-top: 37px;
+}
+
+
+@media only screen and (max-width: 480px) {
+ #admin_dashboard  .btnWrapper.col-xs-3 {
+    width: 19%; } 
+  }
+
+

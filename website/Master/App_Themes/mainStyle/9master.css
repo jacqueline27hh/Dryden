@@ -29,7 +29,7 @@ body {
 }
 
 .navbar-brand {
-margin-top: -21px;
+margin-top: -49px;
 
 
 }
@@ -49,6 +49,7 @@ margin-top: -21px;
    float: right;
    right: 0px;
    margin-right: 132px;
+   top:0;
 
    /*z-index: 1000;*/
 }
@@ -151,7 +152,7 @@ legend{
      
       text-decoration:none;
       list-style-type: none;
-      margin-top:90px;
+      margin-top:22px;
 
    }
 
@@ -257,6 +258,7 @@ margin-top: 20px;
 
 margin-bottom: 0px;
 border-radius: 0px;
+min-height: 50px;
 
 
 }
@@ -403,6 +405,11 @@ font-size: 14px;
       display:none;
     }
 
+    .navbar-toggle {
+
+    display: block;
+    }
+
 
 }
 
@@ -412,12 +419,13 @@ font-size: 14px;
 
    #master_sub_nav {
   width: 27%;
-  margin-top: -123px;
+  margin-top: 0px;
   }
 
    #master_login {
     right:0px;
     margin-right:0px;
+    top: 0;
     
     width:50%;
     z-index:1001 !important;
@@ -435,7 +443,7 @@ font-size: 14px;
   left: 0;
 
   width: 50%;
-  min-height: 32px;
+  min-height: 16px;
   background-color:#97bf28;
   position: absolute;
   z-index:1001;
@@ -446,11 +454,14 @@ font-size: 14px;
 
   .navbar-toggle{
     top: 4px;
-    right: 10px;
+    right: 6px;
     width: 39px;
-    height: 24px;
-    padding: 4px 8px;
+    height: 21px;
+    padding: 0px 8px;
     border: 1px solid #FFFFFF;
+    margin-top:0px;
+    float:left;
+   
   }
 
   .navbar-toggle .icon-bar {
