@@ -11,7 +11,7 @@
 
         <div class="row" id="admin_header_wrapper">
         <asp:Label ID="admin_lbl_header" runat="server" Text="Google Map API" CssClass="col-lg-9 admin_header"/>
-        <asp:LinkButton ID="admin_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="Contact.aspx?tabIndex=0" />
+        <asp:LinkButton ID="admin_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="~/Contact.aspx?tabIndex=0" />
         </div>
         
 
