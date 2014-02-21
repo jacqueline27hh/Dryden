@@ -1,3 +1,8 @@
+
+/* --------------------------------------
+   Master Dashboard
+   -------------------------------------- */
+/*--------------Header STARTS here---------------*/
 #admin_body{
   font-size: 1rem; 
   background-color:#535453;
@@ -12,13 +17,23 @@
 
 #admin_d_image img {
   width: 90%;
-/* background-color:#e3e7eb;*/
  padding: 14px 18px;
- 
+ margin-top:37px; 
 }
 
+#admin_profile {
+  margin-top:11px;
+  font-size: 1.1rem;
+}
+
+#admin_profile li a {
+  font-size:14px;
+}
+
+/*--------------Header ENDS here---------------*/
+/*--------------Nav STARTS here---------------*/
 #admin_d_sidebar {
-  margin-top: 26px;
+  margin-top: 14px;
 
 }
 
@@ -43,17 +58,6 @@
   width:40px;
 }
 
-#admin_profile {
-  margin-top:11px;
-  font-size: 1.1rem;
-}
-
-#admin_profile li a {
-  font-size:14px;
-}
-
-
-
 #admin_d_sidebar .nav-sidebar {
 
   margin-bottom: 20px;
@@ -65,41 +69,184 @@
   font-size: 1.3rem;
   padding: 0; }
 
-/*.nav-sidebar-collapse ul {
-  display: inline; }
-  
-.nav-sidebar-collapse ul li {
-    width: 20%; }*/
+
 
 #admin_body .navbar {
     margin-top:0px;
 }
+/*--------------NAV ENDS here---------------*/
+
+/* --------------------------------------
+   Alert
+   -------------------------------------- */
+#cph_admin_d_alert_lbl_header {
+    /*background-color:#f3ab35;*/
+    color:white;
+    font-size:36px;
+    /*padding: 5px 30px 5px 10px;*/
+}
+
+#cph_admin_d_alert_view_changes {
+    font-size: 20px;
+background-color: #f3ab35;
+color: #fff;
+padding: 5px 10px 5px 15px;
+}
+
+#alert_title_td {
+    padding-right:50px;
+
+}
+#alert_title_td, #alert_message_td{
+    vertical-align:top;
+}
+
+.alert_textarea {
+    width:200px;
+}
+
+input[type="text"].alert_up_title {
+    width:200px;
+}
 
 
+#cph_admin_d_alert_pnl_all legend {
+    color:#fff;
+}
 
-@media (min-width: 768px) {
-
-
-#admin_d_sidebar {
-  width: 18%;
+#cph_admin_d_alert_pnl_insert legend {
+    color:#fff;
+}
+.admin_form {
+    color:#fff;
+    margin-top: 49px;
+    margin-left: 49px;
 }
 
 
 
-#admin_dashboard i {
-  padding-right: 1rem; }
-
+input {
+    color:#535453;
 }
 
-#admin_dashboard .navbar-header {
-
-margin-top: 37px;
+textarea {
+    width:50%;
+    min-height:200px;
+    color:#535453;
+    font-size:12px;
 }
+
+input[type="text"] {
+    width: 50%;
+min-height: 27px;
+}
+
+input[type="submit"] {
+    padding: 7px 18px;
+    background-color: #97bf28;
+    border: 0px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.admin_label {
+    font-size:14px;
+}
+
+.admin_form table {
+    font-size:14px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+ /* --------------------------------------
+   Master Dashboard
+-------------------------------------- */
+
+/*--------------Header STARTS here---------------*/
+
+
+    #admin_dashboard .navbar-brand {
+    margin-top: 0px;
+    }
+    #admin_dashboard .navbar-toggle {
+    visibility:hidden;
+    }
+
+    #admin_body .navbar {
+    width: 100%;
+    }
+    #admin_d_image img {
+     margin-top:0px;
+    }
+/*--------------Header ENDS here---------------*/
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    /* --------------------------------------
+   Master Dashboard
+   -------------------------------------- */
+/*--------------Header STARTS here---------------*/
+
+    #admin_dashboard .navbar-toggle {
+    top: 43px;
+    width: 50px;
+    height: 33px;
+    padding: 0px 12px;
+    }
+
+    #admin_dashboard i {
+      padding-right: 1rem; }
+
+    #admin_dashboard .navbar-header {
+    margin-top: 0px;
+    }
+/*--------------Header ENDS here---------------*/
+/*--------------NAV STARTS here---------------*/
+
+    #admin_dashboard .navbar-toggle {
+    visibility:visible;
+    }
+
+    #admin_d_sidebar {
+      width: 33%;
+    }
+/*--------------NAV ENDS here---------------*/
+
+    
+}
+
+
 
 
 @media only screen and (max-width: 480px) {
+
+/* --------------------------------------
+   Master Dashboard
+-------------------------------------- */
+/*--------------Header STARTS here---------------*/
  #admin_dashboard  .btnWrapper.col-xs-3 {
-    width: 19%; } 
+    width: 19%; }
+ #admin_profile > li {
+     background-color: transparent;
+    }
+/*--------------Header ENDS here---------------*/
+/*--------------NAV STARTS here---------------*/
+
+ #admin_dashboard .navbar-toggle {
+    top: 26px;
+    width: 43px;
+    height: 33px;
+    padding: 0px 8px;
+    }
+/*--------------NAV ENDS here---------------*/
+
+
   }
 
 
