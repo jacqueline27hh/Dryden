@@ -159,9 +159,8 @@
                                                     <asp:MenuItem Text="Identify Your Symptoms" NavigateUrl="patient-visitor.aspx?tabIndex=4"/>
                                                     <asp:MenuItem Text="E-card" NavigateUrl="patient-visitor.aspx?tabIndex=5"/>
                                                     <asp:MenuItem Selectable="false" />
-                                                    <asp:MenuItem Text="Patient Login Required" Selectable="false" />
-									                <asp:MenuItem Text="View Your Appointments" NavigateUrl="patient-visitor.aspx?tabIndex=6"/>
-                                                    <asp:MenuItem Text="Book Your Appointments" NavigateUrl="patient-visitor.aspx?tabIndex=7"/>
+                                     
+									            
                                                 </asp:MenuItem>
 
                                                 <asp:MenuItem Text="Programs & Services" ToolTip="Movies" NavigateUrl="~/program-service.aspx">
@@ -175,12 +174,10 @@
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Careers" ToolTip="Movies" NavigateUrl="~/Career.aspx">
                                                     <asp:MenuItem Text="Employment Opportunities" NavigateUrl="Career.aspx?tabIndex=0" />
-                                                    <asp:MenuItem Text="How To Apply" NavigateUrl="Career.aspx?tabIndex=1" />
+                                                    <asp:MenuItem Text="Apply for Career" NavigateUrl="Career.aspx?tabIndex=1" />
                                                     <asp:MenuItem Text="Why Work Here" NavigateUrl="Career.aspx?tabIndex=2" />
                                                     <asp:MenuItem Text="Volunteer Program" NavigateUrl="Career.aspx?tabIndex=3" />
-                                                    <asp:MenuItem Selectable="false" />
-                                                    <asp:MenuItem Text="Doctor Login Required" Selectable="false" />
-                                                    <asp:MenuItem Text="View Your Appointments" NavigateUrl="Career.aspx?tabIndex=4" />
+  
                                                     
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Contact" ToolTip="Movies" NavigateUrl="~/Contact.aspx">

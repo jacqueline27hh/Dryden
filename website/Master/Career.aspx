@@ -33,10 +33,10 @@
                                         <Items>
                                             <asp:MenuItem Text="Employment Opportunities" Selected="true" Value="0" />
                                             
-                                            <asp:MenuItem Text="How To Apply" Value="1" />
+                                            <asp:MenuItem Text="Apply for Career" Value="1" />
                                             <asp:MenuItem Text="Why Work Here" Value="2" />
                                             <asp:MenuItem Text="Volunteer Program" Value="3" />
-                                            <asp:MenuItem Text="View Your Appointments" Value="4" />
+                                     
                                             
         
 
@@ -58,7 +58,7 @@
                                         </asp:View>
                                         <asp:View ID="view3" runat="server">
                                             <p>
-                                                Why Work Here
+                                                Apply for Career
                                                
 							
                                             </p>
@@ -69,12 +69,7 @@
 							
                                             </p>
                                         </asp:View>
-                                        <asp:View ID="view5" runat="server">
-                                            <p>
-                                               View Your Appointments
-							
-                                            </p>
-                                        </asp:View>
+                                     
 
                                         
                                      

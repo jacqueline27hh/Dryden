@@ -24,7 +24,7 @@
 
                 <div class="navbar-brand col-xs-7 col-sm-8" id="admin_d_image">
                     <a href="home.aspx">
-                        <img src="App_Themes/images/logo1.png" alt="DRHC Logo" width="100" /></a>
+                        <img src="../App_Themes/images/logo1.png" alt="DRHC Logo" width="100" /></a>
                 </div>
 
                 <div class="btnWrapper col-xs-3 col-sm-2 visible-xs">
@@ -66,39 +66,40 @@
 
         <div class="row">
 
-            <div class="row col-lg-3 row-offcanvas row-offcanvas-left">
+            <div class="row col-sm-3 row-offcanvas row-offcanvas-left">
 
 
                 <div class="sidebar-offcanvas" id="admin_d_sidebar">
 
                     <ul class="nav nav-sidebar placeholders">
-                        <li><a href="tripDashboard.html"><i class="fa fa-search fa-2x"></i>Search Feature</a></li>
+                        <li><a href="search.aspx"><i class="fa fa-search fa-2x"></i>Search Feature</a></li>
+                    
 
-                        <li><a href="#"><i class="fa fa-picture-o fa-2x"></i>Image Slider</a></li>
+                        <li><a href="imageslider.aspx"><i class="fa fa-picture-o fa-2x"></i>Image Slider</a></li>
 
-                        <li><a href="#"><i class="fa fa-warning fa-2x"></i>Alert!</a></li>
+                        <li><a href="alert.aspx"><i class="fa fa-warning fa-2x"></i>Alert!</a></li>
 
-                        <li><a href="#"><i class="fa fa-archive fa-2x"></i>News & Event</a></li>
+                        <li><a href="news-event.aspx"><i class="fa fa-archive fa-2x"></i>News & Event</a></li>
 
-                        <li><a href="#"><i class="fa fa-dollar fa-2x"></i>Donate Now</a></li>
+                        <li><a href="donate.aspx"><i class="fa fa-dollar fa-2x"></i>Donate Now</a></li>
 
-                        <li><a href="#"><i class="fa fa-envelope-o fa-2x"></i>Send E-Card</a></li>
+                        <li><a href="ecard.aspx"><i class="fa fa-envelope-o fa-2x"></i>Send E-Card</a></li>
 
-                        <li><a href="#"><i class="fa fa-tags fa-2x"></i>Patient Survey</a></li>
+                        <li><a href="patients_survey.aspx"><i class="fa fa-tags fa-2x"></i>Patient Survey</a></li>
 
-                        <li><a href="#"><i class="fa fa-check fa-2x"></i>Symptom Checker</a></li>
+                        <li><a href="symptomChecker.aspx"><i class="fa fa-check fa-2x"></i>Symptom Checker</a></li>
 
-                        <li><a href="#"><i class="fa fa-clock-o fa-2x"></i>ER Wait Time</a></li>
+                        <li><a href="erWaitTime.aspx"><i class="fa fa-clock-o fa-2x"></i>ER Wait Time</a></li>
 
-                        <li><a href="#"><i class="fa fa-folder-open-o fa-2x"></i>Apply for Career</a></li>
+                        <li><a href="career.aspx"><i class="fa fa-folder-open-o fa-2x"></i>Apply for Career</a></li>
 
-                        <li><a href="#"><i class="fa fa-pencil fa-2x"></i>Volunteer Opportunities</a></li>
+                        <li><a href="volunteer_opp.aspx"><i class="fa fa-pencil fa-2x"></i>Volunteer Opportunities</a></li>
 
-                        <li><a href="#"><i class="fa fa-map-marker fa-2x"></i>Google maps API</a></li>
+                        <li><a href="googlemap.aspx"><i class="fa fa-map-marker fa-2x"></i>Google maps API</a></li>
 
-                        <li><a href="#"><i class="fa fa-list-ul fa-2x"></i>Mailing List</a></li>
+                        <li><a href="mailingList.aspx"><i class="fa fa-list-ul fa-2x"></i>Mailing List</a></li>
 
-                        <li><a href="#"><i class="fa fa-phone fa-2x"></i>Contact</a></li>
+                        <li><a href="admincontact.aspx"><i class="fa fa-phone fa-2x"></i>Contact</a></li>
                     </ul>
                 </div>
                 <!--/span-->

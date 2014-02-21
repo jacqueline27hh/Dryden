@@ -1,17 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin.master" AutoEventWireup="true" CodeFile="admin_alert.aspx.cs" Inherits="admin_alert" Theme="mainStyle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin.master" AutoEventWireup="true" CodeFile="alert.aspx.cs" Inherits="admin_alert" Theme="mainStyle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_admin_d" runat="Server">
 
-    <div class="col-lg-8 admin_form">
-
+    <div class="col-sm-8 admin_form">
+   
        
 
         <div class="row" id="alert_header_wrapper">
-        <asp:Label ID="alert_lbl_header" runat="server" Text="Alert Admin" CssClass="col-lg-9"/>
-        <asp:LinkButton ID="alert_view_changes" CssClass="col-lg-2" runat="server" Text="<i class='fa fa-eye'></i> View Live" />
+        <asp:Label ID="alert_lbl_header" runat="server" Text="Alert Admin" CssClass="col-lg-9 admin_header"/>
+        <asp:LinkButton ID="alert_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="~/Home.aspx"/>
         </div>
         <asp:Panel ID="alert_pnl_insert" runat="server" GroupingText="Insert Alert">
 

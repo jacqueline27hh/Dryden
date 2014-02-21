@@ -30,6 +30,11 @@
   font-size:14px;
 }
 
+#admin_profile .fa {
+  padding:10px;
+
+}
+
 /*--------------Header ENDS here---------------*/
 /*--------------Nav STARTS here---------------*/
 #admin_d_sidebar {
@@ -77,46 +82,14 @@
 /*--------------NAV ENDS here---------------*/
 
 /* --------------------------------------
-   Alert
+   Global Style
    -------------------------------------- */
-#cph_admin_d_alert_lbl_header {
-    /*background-color:#f3ab35;*/
-    color:white;
-    font-size:36px;
-    /*padding: 5px 30px 5px 10px;*/
-}
-
-#cph_admin_d_alert_view_changes {
-    font-size: 20px;
-background-color: #f3ab35;
-color: #fff;
-padding: 5px 10px 5px 15px;
-}
-
-#alert_title_td {
-    padding-right:50px;
-
-}
-#alert_title_td, #alert_message_td{
-    vertical-align:top;
-}
 
 .alert_textarea {
     width:200px;
 }
 
-input[type="text"].alert_up_title {
-    width:200px;
-}
 
-
-#cph_admin_d_alert_pnl_all legend {
-    color:#fff;
-}
-
-#cph_admin_d_alert_pnl_insert legend {
-    color:#fff;
-}
 .admin_form {
     color:#fff;
     margin-top: 49px;
@@ -124,17 +97,10 @@ input[type="text"].alert_up_title {
 }
 
 
-
 input {
     color:#535453;
 }
 
-textarea {
-    width:50%;
-    min-height:200px;
-    color:#535453;
-    font-size:12px;
-}
 
 input[type="text"] {
     width: 50%;
@@ -156,6 +122,63 @@ input[type="submit"] {
 .admin_form table {
     font-size:14px;
 }
+
+/* --------------------------------------
+   Image Slider
+   -------------------------------------- */
+
+
+/* --------------------------------------
+   Alert
+   -------------------------------------- */
+
+.admin_header {
+   
+    color:white;
+    font-size:36px;
+ 
+}
+
+.admin_view_live {
+    font-size: 20px;
+background-color: #f3ab35;
+color: #fff;
+padding: 5px 10px 5px 15px;
+}
+
+#alert_title_td {
+    padding-right:50px;
+
+}
+
+#cph_admin_d_alert_pnl_insert textarea {
+    width:50%;
+    min-height:200px;
+    color:#535453;
+    font-size:12px;
+}
+
+
+#cph_admin_d_alert_rpt_all_alert_btn_update_0 {
+    padding-right:19px;
+
+    }
+#alert_title_td, #alert_message_td{
+    vertical-align:top;
+}
+input[type="text"].alert_up_title {
+    width:200px;
+}
+
+
+#cph_admin_d_alert_pnl_all legend {
+    color:#fff;
+}
+
+#cph_admin_d_alert_pnl_insert legend {
+    color:#fff;
+}
+
 
 
 

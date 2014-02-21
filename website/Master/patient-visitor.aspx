@@ -39,8 +39,7 @@
                                             <asp:MenuItem Text="Identify Your Symptoms" Value="4" />
                                             <asp:MenuItem Text="E-card" Value="5" />
         
-                                            <asp:MenuItem Text="View Your Appointments" Value="6" />
-                                            <asp:MenuItem Text="Book Your Appointments" Value="7" />
+                                            
                                           
                                         </Items>
                                     </asp:Menu>
@@ -81,18 +80,7 @@
 							
                                             </p>
                                         </asp:View>
-                                        <asp:View ID="view7" runat="server">
-                                            <p>
-                                              View Your Appointments
-							
-                                            </p>
-                                        </asp:View>
-                                        <asp:View ID="view8" runat="server">
-                                            <p>
-                                              Book Your Appointments
-							
-                                            </p>
-                                        </asp:View>
+                                       
                                      
                                     </asp:MultiView>
 
