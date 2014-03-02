@@ -24,7 +24,7 @@
                             <div id="form_contact">
                                 <!-- switch to Repeater or something later, as this form should not use div as
                         a wrap and should be database driven.  More on this during the database conversion -->
-                                <%--<asp:Login ID="lgn_main" runat="server">
+                               <%-- <asp:Login ID="lgn_main" runat="server">
                                     <LayoutTemplate>--%>
                                         <fieldset>
                                             <legend>Login</legend>
@@ -35,23 +35,28 @@
                                             <asp:Button runat="server" ID="btn_submit" Text="Submit" OnClientClick="closeForm();" ValidationGroup="login" />
                                             <asp:Button runat="server" ID="btn_reset" Text="Reset" CausesValidation="false" /><br />
                                         </fieldset>
-                                 <%--   </LayoutTemplate>
+                                   <%-- </LayoutTemplate>
                                 </asp:Login>--%>
+                                
+                               <%-- <asp:CreateUserWizard ID="cuw_newUser" runat="server" ContinueDestinationPageUrl="Admin/admin.aspx">
+                            
+                                    <LayoutTemplate>--%>
+                                        <fieldset>
+                                            <legend>Register Now</legend>
 
-                                <fieldset>
-                                    <legend>Register Now</legend>
-
-                                    <asp:Label ID="lbl_name" runat="server" Text="Name *" AssociatedControlID="txt_name" />
-                                    <asp:TextBox ID="txt_name" runat="server" ValidationGroup="contact" />
-                                    <asp:RequiredFieldValidator runat="server" ID="rfv_name" ControlToValidate="txt_name" />
-                                    <asp:Label ID="lbl_email" runat="server" Text="Email address *" AssociatedControlID="txt_email" />
-                                    <asp:TextBox ID="txt_email" runat="server" ValidationGroup="contact" />
-                                    <asp:Label ID="lbl_msg" runat="server" Text="Your Message *" AssociatedControlID="txt_msg" />
-                                    <asp:TextBox ID="txt_msg" runat="server" TextMode="MultiLine" ValidationGroup="contact" />
-                                    <asp:Button runat="server" ID="btn_submitM" Text="Submit" OnClientClick="closeForm();" ValidationGroup="contact" />
-                                    <asp:Button runat="server" ID="btn_resetM" Text="Reset" CausesValidation="false" />
-                                    <br />
-                                </fieldset>
+                                            <asp:Label ID="lbl_name" runat="server" Text="Name *" AssociatedControlID="txt_name" />
+                                            <asp:TextBox ID="txt_name" runat="server" ValidationGroup="contact" />
+                                            <asp:RequiredFieldValidator runat="server" ID="rfv_name" ControlToValidate="txt_name" />
+                                            <asp:Label ID="lbl_email" runat="server" Text="Email address *" AssociatedControlID="txt_email" />
+                                            <asp:TextBox ID="txt_email" runat="server" ValidationGroup="contact" />
+                                            <asp:Label ID="lbl_msg" runat="server" Text="Your Message *" AssociatedControlID="txt_msg" />
+                                            <asp:TextBox ID="txt_msg" runat="server" TextMode="MultiLine" ValidationGroup="contact" />
+                                            <asp:Button runat="server" ID="btn_submitM" Text="Submit" OnClientClick="closeForm();" ValidationGroup="contact" />
+                                            <asp:Button runat="server" ID="btn_resetM" Text="Reset" CausesValidation="false" />
+                                            <br />
+                                        </fieldset>
+                                   <%-- </LayoutTemplate>
+                                </asp:CreateUserWizard>--%>
                             </div>
 
 

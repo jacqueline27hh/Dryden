@@ -49,6 +49,18 @@
                                     <asp:MultiView ID="mv_tabs" runat="server" ActiveViewIndex="0">
                                         <asp:View ID="view1" runat="server">
                                             <p>Employment Opportunities</p>
+                                            <table>
+                                                <tr>
+                                                    <th>Job Title</th>
+                                                    <th>Description</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><asp:Label ID="lbl_jtitle" runat="server" Text='<%#Bind("title") %>' /></td>
+                                                    <td><asp:Label ID="lbl_jdesc" runat="server" Text='<%#Bind("description") %>' /></td>
+                                                    <td><asp:Label ID="lbl_jdate" runat="server" Text='<%#Bind("last_date_apply") %>' /></td>
+                                                </tr>
+                                            </table>
                                         </asp:View>
                                         <asp:View ID="view2" runat="server">
                                             <p>
