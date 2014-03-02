@@ -24,8 +24,8 @@
                             <div id="form_contact">
                                 <!-- switch to Repeater or something later, as this form should not use div as
                         a wrap and should be database driven.  More on this during the database conversion -->
-                                <asp:Login ID="lgn_main" runat="server">
-                                    <LayoutTemplate>
+                                <%--<asp:Login ID="lgn_main" runat="server">
+                                    <LayoutTemplate>--%>
                                         <fieldset>
                                             <legend>Login</legend>
                                             <asp:Label ID="lbl_username" runat="server" Text="Username" AssociatedControlID="txt_username" />
@@ -35,8 +35,8 @@
                                             <asp:Button runat="server" ID="btn_submit" Text="Submit" OnClientClick="closeForm();" ValidationGroup="login" />
                                             <asp:Button runat="server" ID="btn_reset" Text="Reset" CausesValidation="false" /><br />
                                         </fieldset>
-                                    </LayoutTemplate>
-                                </asp:Login>
+                                 <%--   </LayoutTemplate>
+                                </asp:Login>--%>
 
                                 <fieldset>
                                     <legend>Register Now</legend>
