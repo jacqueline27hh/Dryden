@@ -106,7 +106,7 @@
     <asp:Label ID="lbl_title" runat="server" Text="Upload your Resume" /><br />
     <asp:Label ID="lblresume" runat="server" Text="Resume" />
     <asp:TextBox ID="txtresume" runat="server" />
-    <asp:Button ID="btnbrowse" runat="server" Text="Browse" CssClass="" />
+    <asp:Button ID="btnbrowse" runat="server" Text="Browse" />
     <br />
     <asp:Label ID="lblavailable" runat="server" Text="Availability" />
     <asp:CheckBoxList ID="chk_availability" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
