@@ -76,10 +76,51 @@
                                             </p>
                                         </asp:View>
                                         <asp:View ID="view4" runat="server">
-                                            <p>
-                                               Volunteer Program
+                                           
 							
-                                            </p>
+                                            
+                                                                              <asp:Label ID="lblfname" runat="server" Text="First Name" AssociatedControlID="txtfname" />
+    <asp:TextBox ID="txtfname" runat="server" />
+    <br /><br />
+    <asp:Label ID="lbllname" runat="server" Text="Last Name" AssociatedControlID="txtlname" />
+    <asp:TextBox ID="txtlname" runat="server" />
+    <br /><br />
+    <asp:Label ID="lblage" runat="server" Text="Age" AssociatedControlID="txtage" />
+    <asp:TextBox ID="txtage" runat="server" />
+    <br /><br />
+    <asp:Label ID="lblgender" runat="server" Text="Gender" />
+    <asp:RadioButtonList ID="rdb_gender" RepeatColumns="2" RepeatDirection="Horizontal" runat="server">
+        <asp:ListItem Text="Male" />
+        <asp:ListItem Text="Female" />
+    </asp:RadioButtonList>
+    <br /><br />
+    <asp:Label ID="lblcontact" runat="server" Text="Contact No" AssociatedControlID="txtcontact" />
+    <asp:TextBox ID="txtcontact" runat="server" />
+    <br /><br />
+    <asp:Label ID="lblemail" runat="server" Text="E-mail" AssociatedControlID="txtemail" />
+    <asp:TextBox ID="txtemail" runat="server" />
+    <br /><br />
+    <asp:Label ID="lblschool" runat="server" Text="High School" AssociatedControlID="txtschool" />
+    <asp:TextBox ID="txtschool" runat="server" />
+    <br /><br />
+    <asp:Label ID="lbl_title" runat="server" Text="Upload your Resume" /><br />
+    <asp:Label ID="lblresume" runat="server" Text="Resume" />
+    <asp:TextBox ID="txtresume" runat="server" />
+    <asp:Button ID="btnbrowse" runat="server" Text="Browse" CssClass="" />
+    <br />
+    <asp:Label ID="lblavailable" runat="server" Text="Availability" />
+    <asp:CheckBoxList ID="chk_availability" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+        <asp:ListItem Text="Monday" />
+        <asp:ListItem Text="Tuesday" />
+        <asp:ListItem Text="Wednesday" />
+        <asp:ListItem Text="Thursday" />
+        <asp:ListItem Text="Friday" />
+        <asp:ListItem Text="Saturday" />
+        <asp:ListItem Text="Sunday" />
+    </asp:CheckBoxList>
+    <br /><br />
+  <%--  <asp:Button ID="btnapply" runat="server" OnClick="subapply"/>
+    <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
                                         </asp:View>
                                      
 
