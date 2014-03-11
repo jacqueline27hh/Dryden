@@ -6,61 +6,38 @@
       
 	<div class="container" id="main">
 		
-	<div class="carousel slide" id="home_myCarousel">
-			<!-- Indicators -->
+	  <asp:SqlDataSource runat="server" ID="sds_carousel" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [Imageslider]" />     
 
-    
-			<ol class="carousel-indicators">
-					<li class="active" data-slide-to="0" data-target="#home_myCarousel"></li>
-					<li data-slide-to="1" data-target="#home_myCarousel"></li>
-					<li data-slide-to="2" data-target="#home_myCarousel"></li>
-			</ol> 
+           <asp:DetailsView runat="server" ID="dv_sliders" DataSourceID="sds_carousel" AutoGenerateRows="False" DataKeyNames="Id"
+                     AllowPaging="false" GridLines="None" PageIndex="0">
+                    <Fields>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                            <div id="display">
+                                <ul id="slideshow">
+                                    <li class="slide">
+                                         <asp:Image runat="server" ID="img1" ImageUrl='<%#Eval("imageurl1") %>' CssClass="active" /> 
+                                         
+                                    </li>
+                                    <li class="slide">
+                                         <asp:Image runat="server" ID="img2" ImageUrl='<%#Eval("imageurl2") %>' /> 
+                                      
+                                    </li>
+                                    <li class="slide">
+                                         <asp:Image runat="server" ID="img3" ImageUrl='<%#Eval("imageurl3") %>' />
+                                    </li> />
+                                    </li>
 
-			<!-- Wrapper for slides -->
-			<div class ="carousel-inner">
-				
-				<div class="item active" id="home_slide1">
-					<div class="carousel-caption">
-						<h4>We <br/> Care</h4>
-						
-                        <asp:Label runat="server" ID="lbl_carouselText" Text="Direct trade disrupt yr, chambray letterpress trust fund before they sold out" /> 
+                                 </ul>
+                                </div>
+
+                                    <span id="slide_prev">  Prev </span>
+                                    <span id="slide_next"> Next  </span>
                       
-						
-
-					</div> <!-- end carousel-caption -->
-				</div> <!-- end item -->
-
-				<div class="item" id="home_slide2">
-					<div class="carousel-caption">
-						<h4>Community<br/> Driven</h4>
-
-                        <asp:Label runat="server" ID="lbl_carouselCaption" Text="Direct trade disrupt yr, chambray letterpress trust fund before they sold out" /> 
-                       
-						
-
-					</div> <!-- end carousel-caption -->
-				</div> <!-- end item -->
-
-				<div class="item" id="home_slide3">
-					<div class="carousel-caption">
-						<h4>Personal Cares</h4>
-
-                        <asp:Label runat="server" ID="lbl_carouselCaption2" Text="Direct trade disrupt yr, chambray letterpress trust fund before they sold out" /> 
-		
-
-					</div> <!-- end carousel-caption -->
-				</div> <!-- end item -->
-
-			</div><!-- carousel-inner -->
-
-           <script type="text/javascript">
-               $("a.left").attr("data-slide", "prev");
-           </script>
-
-			<!-- Controls -->
-                <asp:HyperLink ID="hl_carouselleft" runat="server" NavigateUrl="#home_myCarousel" CssClass="left carousel-control" Text="<span class='icon-prev'></span>" /> 
-		        <asp:HyperLink ID="hl_carouselright" runat="server" NavigateUrl="#home_myCarousel" CssClass="right carousel-control" Text="<span class='icon-next'></span>" /> 	
-		</div><!-- end home_myCarousel -->
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Fields>
+                 </asp:DetailsView>
 
 		<div class="row" id="home_alert">
 				<div class="col-12">

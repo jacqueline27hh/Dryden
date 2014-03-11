@@ -362,7 +362,7 @@
 
         <!-- Custom JS  -->
 
-        <script src="includes/js/script.js"></script>
+        <script src="js/script.js"></script>
 
     </form>
 </body>
