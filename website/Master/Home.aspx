@@ -72,9 +72,14 @@
 						
                         <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> --> 
 						
-						<h4><i class="fa fa-warning"></i>Alert!</h4>
+						<asp:Repeater ID="rpt_display_alert" runat="server">
+                            <ItemTemplate>
+                                <h4><i class="fa fa-warning"></i><%#Eval("Title") %></h4>
 
-                        <asp:Label runat="server" ID="lbl_alert" Text="H1N1 virus returns, triggering flu vaccine warning. The H1N1 virus will appear to most people like the regular flu. Most people will recover. But hospitalizations and death are possible and with H1N1 that's most likely for young people with chronic conditions. " /> 
+                        <asp:Label runat="server" ID="lbl_alert" Text='<%#Eval("Message") %>' /> 
+                            </ItemTemplate>
+						</asp:Repeater>
+                        
 				
 					</div><!-- end alert -->
 					
