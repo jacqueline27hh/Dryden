@@ -48,7 +48,8 @@
 
                                     <asp:MultiView ID="mv_tabs" runat="server" ActiveViewIndex="0">
                                         <asp:View ID="view1" runat="server">
-                                            <p>Employment Opportunities</p>
+                                            <h1>Employment Opportunities</h1>
+                                            <br />
                                             <%--<asp:Table ID="tbl_jobs" runat="server" CellPadding="20" HorizontalAlign="Center" GridLines="Both">
                                                 <asp:TableRow>
                                                     <asp:TableHeaderCell>Job ID</asp:TableHeaderCell>
@@ -68,6 +69,7 @@
                                             <table border="1">
                                                 <thead>
                                                     <tr>
+                                                        <th><asp:Label ID="lbl_jobid" runat="server" Text="Job ID" /></th>
                                                         <th><asp:Label ID="lbl_job" runat="server" Text="Title" /></th>
                                                         <th><asp:Label ID="lbl_description" runat="server" Text="Description" /></th>
                                                         <th><asp:Label ID="lbl_date" runat="server" Text="Last Date To Apply" /></th>
@@ -78,6 +80,7 @@
                                                     <asp:Repeater ID="rpt_all" runat="server">
                                                         <ItemTemplate>
                                                             <tr>
+                                                                <td><%#Eval("id") %></td>
                                                                 <td><%#Eval("title") %></td>
                                                                 <td><%#Eval("description") %></td>
                                                                 <td><%#Eval("last_date_apply") %></td>
@@ -90,26 +93,45 @@
                                         </asp:View>
 <!--************************************ View 2 ************************************-->
                                         <asp:View ID="view2" runat="server">
-                                            <p>Apply for Career</p>
+                                            <h1>Apply for Career</h1>
                                             <asp:Label ID="lbl_msg" runat="server" />
                                             <br />
+                                            <asp:Label ID="lbl_jobidI" runat="server" Text="Job ID" AssociatedControlID="ddl_jobids" />
+                                            <asp:DropDownList ID="ddl_jobids" runat="server">
+                                                <asp:ListItem>1</asp:ListItem>
+                                                <asp:ListItem>2</asp:ListItem>
+                                                <asp:ListItem>3</asp:ListItem>
+                                            </asp:DropDownList>
+                                            <br /><br />
                                             <asp:Label ID="lbl_fnameI" runat="server" Text="First Name" AssociatedControlID="txt_fnameI" />
                                             <asp:TextBox ID="txt_fnameI" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_fnameI" runat="server" Text="*Required" ControlToValidate="txt_fnameI" ValidationGroup="insert" />
-                                            <br />
+                                            <br /><br />
                                             <asp:Label ID="lbl_lnameI" runat="server" Text="Last Name" AssociatedControlID="txt_lnameI" />
                                             <asp:TextBox ID="txt_lnameI" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_lnameI" runat="server" Text="*Required" ControlToValidate="txt_lnameI" ValidationGroup="insert" />
-                                            <br />
+                                            <br /><br />
                                             <asp:Label ID="lbl_emailI" runat="server" Text="Email" AssociatedControlID="txt_emailI" />
                                             <asp:TextBox ID="txt_emailI" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_emailI" runat="server" Text="*Required" ControlToValidate="txt_emailI" ValidationGroup="insert" />
-                                            <br />
+                                            <br /><br />
                                             <asp:Label ID="lbl_phoneI" runat="server" Text="Phone Number" AssociatedControlID="txt_phoneI" />
                                             <asp:TextBox ID="txt_phoneI" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_phoneI" runat="server" Text="*Required" ControlToValidate="txt_phoneI" ValidationGroup="insert" />
+                                            <br /><br />
+                                            <asp:Label ID="lbl_cvr" runat="server" Text="Upload your cover letter and resume" />
+                                            <br /><br />
+                                            <asp:Label ID="lbl_cv" runat="server" Text="Attached cover letter" />
+                                            <asp:FileUpload id="ful_cv" runat="server" />
+                                            <br /><br />
+                                            <asp:Label ID="lbl_resume" runat="server" Text="Attach resume" />
+                                            <asp:FileUpload id="ful_resume" runat="server" />
+                                            <br /><br />
+                                            <asp:Label ID="lbl_amsg" runat="server" Text="Leave a message" />
                                             <br />
-                                            <asp:Button ID="btn_insert" runat="server" Text="Insert" ValidationGroup="insert" />
+                                            <asp:TextBox id="txt_msg" TextMode="multiline" Columns="50" Rows="5" runat="server" />
+                                            <br /><br />
+                                            <asp:Button ID="btn_insert" runat="server" Text="Apply" ValidationGroup="insert" />
                                             <%--<asp:Button ID="btn_insert" runat="server" Text="Insert" CommandName="Insert" OnCommand="subInsert" ValidationGroup="insert" />--%>
                                         </asp:View>
 
