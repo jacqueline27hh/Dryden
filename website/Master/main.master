@@ -24,7 +24,7 @@
                             <div id="form_contact">
                                 <!-- switch to Repeater or something later, as this form should not use div as
                         a wrap and should be database driven.  More on this during the database conversion -->
-<<<<<<< HEAD
+
                                 <asp:Login ID="lgn_main" runat="server" DestinationPageUrl="~/Default.aspx">
                                     <LayoutTemplate>
                                         <fieldset>
@@ -43,7 +43,7 @@
                                <%-- <asp:CreateUserWizard ID="cuw_newUser" runat="server" ContinueDestinationPageUrl="Admin/admin.aspx">
                             
                                     <LayoutTemplate>--%>
-                                        <fieldset>
+                                        <%--<fieldset>
                                             <legend>Register Now</legend>
 
                                             <asp:Label ID="lbl_name" runat="server" Text="Name *" AssociatedControlID="txt_name" />
@@ -56,11 +56,11 @@
                                             <asp:Button runat="server" ID="btn_submitM" Text="Submit" OnClientClick="closeForm();" ValidationGroup="contact" />
                                             <asp:Button runat="server" ID="btn_resetM" Text="Reset" CausesValidation="false" />
                                             <br />
-                                        </fieldset>
+                                        </fieldset>--%>
                                    <%-- </LayoutTemplate>
                                 </asp:CreateUserWizard>--%>
 =======
-                               <asp:Login ID="lgn_main" runat="server" DestinationPageUrl="~/Default.aspx">
+                              <%-- <asp:Login ID="lgn_main" runat="server" DestinationPageUrl="~/Default.aspx">
                                     <LayoutTemplate>
                                         <fieldset>
                                             <legend>Login</legend>
@@ -72,7 +72,7 @@
                                             <asp:Button runat="server" ID="btn_reset" Text="Reset" CausesValidation="false" /><br />
                                         </fieldset>
                                     </LayoutTemplate>
-                                </asp:Login>
+                                </asp:Login>--%>
           
 >>>>>>> FETCH_HEAD
                             </div>
