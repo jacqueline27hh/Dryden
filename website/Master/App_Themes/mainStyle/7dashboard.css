@@ -72,7 +72,10 @@
 
 #admin_d_sidebar .nav-sidebar > li {
   font-size: 1.3rem;
-  padding: 0; }
+  padding: 0;
+
+  
+}
 
 
 
@@ -239,6 +242,10 @@ input[type="text"].alert_up_title {
     #admin_d_sidebar {
       width: 33%;
     }
+
+  .row-offcanvas-left{
+    z-index: 1000;
+  }
 /*--------------NAV ENDS here---------------*/
 
     

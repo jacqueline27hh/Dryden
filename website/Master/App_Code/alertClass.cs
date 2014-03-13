@@ -20,7 +20,7 @@ public class alertClass
         return allAlerts;
         
     }
-    public bool commitInsert(string _Title, string _Message)
+    public bool commitInsert(string _Title, string _Message, DateTime _date)
     {
         alertDataContext objAlertDC = new alertDataContext();
         using (objAlertDC)
@@ -28,6 +28,7 @@ public class alertClass
             Alert objNewAlert = new Alert();
             objNewAlert.Title = _Title;
             objNewAlert.Message = _Message;
+            objNewAlert.Date = _date;
 
             objAlertDC.Alerts.InsertOnSubmit(objNewAlert);
             objAlertDC.SubmitChanges();
@@ -60,4 +61,15 @@ public class alertClass
             return true;
         }
     }
+
+    //This function gets the most recent alert for public side
+
+    public IQueryable<Alert> getRecentAlerts()
+    {
+        alertDataContext objAlertDC = new alertDataContext();
+        var recentAlerts = objAlertDC.Alerts.OrderByDescending(x => x.Date).Take(1);
+        return recentAlerts;
+    }
+
+
 }

@@ -9,9 +9,54 @@
 /*--------------Slide Show STARTS here---------------*/
 
 
+#display {
+    width:1135px;
+    overflow: hidden;    
+    float:left; 
+    border:0px;
+    padding:0px; 
+}
+
+#slideshow {
+    width: 3410px;
+    height:430px; 
+    list-style: none; 
+    margin:0px;
+    padding:0px;
+    position: relative;
+    left: 0; 
+    float:left; 
+}
 
 
-.carousel-caption {
+
+.slide {
+    width:1135px;
+    height: 430px; 
+    border:1px solid blue; 
+    float: left; 
+    display:inline; 
+    border:0px;
+    padding:0px; 
+}
+
+
+    .slide img {
+        width:1135px;
+        height:430px; 
+        float: left; 
+        border:0px;
+        padding:0px; 
+    }
+
+    .slide span {
+        width:150px;
+        height:400px;
+        float: left; 
+    }
+
+
+/*.carousel-caption {
    font-size: 24px;
 }
 
@@ -21,10 +66,10 @@
 
 
 #home_myCarousel  .item {
-   height: 400px; /*medium size as default*/
-}
+   height: 400px; /*medium size as default
+} */
 
-#home_myCarousel .carousel-caption {
+/*#home_myCarousel .carousel-caption {
   font-size: 18px;
   text-align: left;
   width: 250px;
@@ -47,9 +92,9 @@
 
 #home_slide1 {
    background: url('../images/ni_carousel_medium_01.jpg') top center no-repeat;
-}
+}*/
 
-#home_slide2 {
+/*#home_slide2 {
    background: url('../images/ni_carousel_medium_02.jpg') top center no-repeat;
 }
 
@@ -74,7 +119,7 @@ background-image: none;
 
 background-image: none;
 
-}
+}*/*/
 
 /*--------------Slide Show ENDS here---------------*/
 
@@ -390,6 +435,11 @@ border-color: #97bf28;
 }
 
 /*--------------Volunteer Program STARTS here---------------*/
+
+#cph_main_btnbrowse {
+    padding: 7px 18px;
+    background-color: #b08ec1;
+}
 
 /*--------------Volunteer Program ENDS here---------------*/
 

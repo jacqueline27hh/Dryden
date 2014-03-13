@@ -21,7 +21,7 @@ public partial class admin_alert : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Insert":
-                _strMessage(objAlert.commitInsert(alert_txt_titleI.Text, alert_txt_messageI.Text), "insert");
+                _strMessage(objAlert.commitInsert(alert_txt_titleI.Text, alert_txt_messageI.Text, DateTime.Now), "insert");
                 _subRebind();
                 break;
             case "Update":
