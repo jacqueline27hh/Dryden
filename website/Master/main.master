@@ -59,7 +59,7 @@
                                         </fieldset>--%>
                                    <%-- </LayoutTemplate>
                                 </asp:CreateUserWizard>--%>
-=======
+
                               <%-- <asp:Login ID="lgn_main" runat="server" DestinationPageUrl="~/Default.aspx">
                                     <LayoutTemplate>
                                         <fieldset>
@@ -74,7 +74,6 @@
                                     </LayoutTemplate>
                                 </asp:Login>--%>
           
->>>>>>> FETCH_HEAD
                             </div>
 
 

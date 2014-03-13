@@ -68,7 +68,7 @@
                                             <table border="1">
                                                 <thead>
                                                     <tr>
-                                                        <th><asp:Label ID="lbl_title" runat="server" Text="Title" /></th>
+                                                        <th><asp:Label ID="lbl_job" runat="server" Text="Title" /></th>
                                                         <th><asp:Label ID="lbl_description" runat="server" Text="Description" /></th>
                                                         <th><asp:Label ID="lbl_date" runat="server" Text="Last Date To Apply" /></th>
                                                         <th>&nbsp;</th>
@@ -81,7 +81,7 @@
                                                                 <td><%#Eval("title") %></td>
                                                                 <td><%#Eval("description") %></td>
                                                                 <td><%#Eval("last_date_apply") %></td>
-                                                                <td><asp:Button ID="btn_apply" runat="server" Text="Apply" OnClick="subView" /></td>
+                                                                <td><asp:Button ID="btn_apply" runat="server" Text="Apply" /></td>
                                                             </tr>
                                                         </ItemTemplate>
                                                     </asp:Repeater>
