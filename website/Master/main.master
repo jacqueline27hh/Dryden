@@ -24,19 +24,20 @@
                             <div id="form_contact">
                                 <!-- switch to Repeater or something later, as this form should not use div as
                         a wrap and should be database driven.  More on this during the database conversion -->
-                               <%-- <asp:Login ID="lgn_main" runat="server">
-                                    <LayoutTemplate>--%>
+                                <asp:Login ID="lgn_main" runat="server" DestinationPageUrl="~/Default.aspx">
+                                    <LayoutTemplate>
                                         <fieldset>
                                             <legend>Login</legend>
-                                            <asp:Label ID="lbl_username" runat="server" Text="Username" AssociatedControlID="txt_username" />
-                                            <asp:TextBox ID="txt_username" runat="server" ValidationGroup="login" />
-                                            <asp:Label ID="lbl_password" runat="server" Text="Password" AssociatedControlID="txt_password" />
-                                            <asp:TextBox runat="server" ID="txt_password" ValidationGroup="login" />
-                                            <asp:Button runat="server" ID="btn_submit" Text="Submit" OnClientClick="closeForm();" ValidationGroup="login" />
+                                            <asp:Label ID="lbl_username" runat="server" Text="Username" AssociatedControlID="username" />
+                                            <asp:TextBox ID="UserName" runat="server" ValidationGroup="login" />
+                                            <asp:Label ID="lbl_password" runat="server" Text="Password" AssociatedControlID="password" />
+                                            <asp:TextBox runat="server" ID="Password" ValidationGroup="login" TextMode="Password" />
+                                            <asp:Button runat="server" ID="Login" CommandName="Login" Text="Submit" ValidationGroup="login" />
                                             <asp:Button runat="server" ID="btn_reset" Text="Reset" CausesValidation="false" /><br />
                                         </fieldset>
-                                   <%-- </LayoutTemplate>
-                                </asp:Login>--%>
+                                     </LayoutTemplate>
+                                </asp:Login>
+
                                 
                                <%-- <asp:CreateUserWizard ID="cuw_newUser" runat="server" ContinueDestinationPageUrl="Admin/admin.aspx">
                             

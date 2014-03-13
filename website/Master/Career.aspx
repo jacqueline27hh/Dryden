@@ -49,28 +49,73 @@
                                     <asp:MultiView ID="mv_tabs" runat="server" ActiveViewIndex="0">
                                         <asp:View ID="view1" runat="server">
                                             <p>Employment Opportunities</p>
-                                            <table>
-                                                <tr>
-                                                    <th>Job Title</th>
-                                                    <th>Description</th>
-                                                    <th>Date</th>
-                                                </tr>
-                                                <tr>
-                                                    <td><asp:Label ID="lbl_jtitle" runat="server" Text='<%#Bind("title") %>' /></td>
-                                                    <td><asp:Label ID="lbl_jdesc" runat="server" Text='<%#Bind("description") %>' /></td>
-                                                    <td><asp:Label ID="lbl_jdate" runat="server" Text='<%#Bind("last_date_apply") %>' /></td>
-                                                </tr>
+                                            <%--<asp:Table ID="tbl_jobs" runat="server" CellPadding="20" HorizontalAlign="Center" GridLines="Both">
+                                                <asp:TableRow>
+                                                    <asp:TableHeaderCell>Job ID</asp:TableHeaderCell>
+                                                    <asp:TableHeaderCell>Job Title</asp:TableHeaderCell>
+                                                    <asp:TableHeaderCell>Description</asp:TableHeaderCell>
+                                                    <asp:TableHeaderCell>Date</asp:TableHeaderCell>
+                                                    <asp:TableHeaderCell>&nbsp;</asp:TableHeaderCell>
+                                                </asp:TableRow>
+                                                <asp:TableRow>
+                                                    <asp:TableCell><asp:Label ID="lbl_jid" runat="server" Text='<%#Eval("id") %>' /></asp:TableCell>
+                                                    <asp:TableCell><asp:Label ID="lbl_jtitle" runat="server" Text='<%#Eval("title") %>' /></asp:TableCell>
+                                                    <asp:TableCell><asp:Label ID="lbl_jdesc" runat="server" Text='<%#Eval("description") %>' /></asp:TableCell>
+                                                    <asp:TableCell><asp:Label ID="lbl_jdate" runat="server" Text='<%#Eval("last_date_apply") %>' /></asp:TableCell>
+                                                    <asp:TableCell><asp:Button ID="btn_apply" runat="server" Text="Apply Now" /></asp:TableCell>
+                                                </asp:TableRow>
+                                            </asp:Table>--%>
+                                            <table border="1">
+                                                <thead>
+                                                    <tr>
+                                                        <th><asp:Label ID="lbl_title" runat="server" Text="Title" /></th>
+                                                        <th><asp:Label ID="lbl_description" runat="server" Text="Description" /></th>
+                                                        <th><asp:Label ID="lbl_date" runat="server" Text="Last Date To Apply" /></th>
+                                                        <th>&nbsp;</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <asp:Repeater ID="rpt_all" runat="server">
+                                                        <ItemTemplate>
+                                                            <tr>
+                                                                <td><%#Eval("title") %></td>
+                                                                <td><%#Eval("description") %></td>
+                                                                <td><%#Eval("last_date_apply") %></td>
+                                                                <td><asp:Button ID="btn_apply" runat="server" Text="Apply" OnClick="subView" /></td>
+                                                            </tr>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
+                                                </tbody>
                                             </table>
                                         </asp:View>
+<!--************************************ View 2 ************************************-->
                                         <asp:View ID="view2" runat="server">
-                                            <p>
-                                               
-								               How To Apply
-                                            </p>
+                                            <p>Apply for Career</p>
+                                            <asp:Label ID="lbl_msg" runat="server" />
+                                            <br />
+                                            <asp:Label ID="lbl_fnameI" runat="server" Text="First Name" AssociatedControlID="txt_fnameI" />
+                                            <asp:TextBox ID="txt_fnameI" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_fnameI" runat="server" Text="*Required" ControlToValidate="txt_fnameI" ValidationGroup="insert" />
+                                            <br />
+                                            <asp:Label ID="lbl_lnameI" runat="server" Text="Last Name" AssociatedControlID="txt_lnameI" />
+                                            <asp:TextBox ID="txt_lnameI" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_lnameI" runat="server" Text="*Required" ControlToValidate="txt_lnameI" ValidationGroup="insert" />
+                                            <br />
+                                            <asp:Label ID="lbl_emailI" runat="server" Text="Email" AssociatedControlID="txt_emailI" />
+                                            <asp:TextBox ID="txt_emailI" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_emailI" runat="server" Text="*Required" ControlToValidate="txt_emailI" ValidationGroup="insert" />
+                                            <br />
+                                            <asp:Label ID="lbl_phoneI" runat="server" Text="Phone Number" AssociatedControlID="txt_phoneI" />
+                                            <asp:TextBox ID="txt_phoneI" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_phoneI" runat="server" Text="*Required" ControlToValidate="txt_phoneI" ValidationGroup="insert" />
+                                            <br />
+                                            <asp:Button ID="btn_insert" runat="server" Text="Insert" ValidationGroup="insert" />
+                                            <%--<asp:Button ID="btn_insert" runat="server" Text="Insert" CommandName="Insert" OnCommand="subInsert" ValidationGroup="insert" />--%>
                                         </asp:View>
+
                                         <asp:View ID="view3" runat="server">
                                             <p>
-                                                Apply for Career
+                                                Why Work Here
                                                
 							
                                             </p>

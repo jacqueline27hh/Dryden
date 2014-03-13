@@ -11,4 +11,9 @@ public partial class main : System.Web.UI.MasterPage
     {
         //txt_username.Focus(); 
     }
+
+    protected void subLogin(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
+    }
 }
