@@ -14,15 +14,15 @@ public partial class _Default : System.Web.UI.Page
         if (Roles.IsUserInRole(user.UserName, "Admin"))
         {
             // Here is the page where to redirect 
-            Response.Redirect("Admin-Dashboard/Admin.aspx");
+            Response.Redirect("~/Admin-Dashboard/search.aspx");
         }
         else if (Roles.IsUserInRole(user.UserName, "Patient"))
         {
-            Response.Redirect("Patient-Dashboard/Patient.aspx");
+            Response.Redirect("~/Patient-Dashboard/Patient.aspx");
         }
         else if (Roles.IsUserInRole(user.UserName, "Doctor"))
         {
-            Response.Redirect("Doctor-Dashboard/Doctor.aspx");
+            Response.Redirect("~/Doctor-Dashboard/Doctor.aspx");
         }
     }
 }
