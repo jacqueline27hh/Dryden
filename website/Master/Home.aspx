@@ -31,7 +31,7 @@
                                  </ul>
                                 </div>
 
-                                    <span id="slide_prev">  Prev </span>
+                                    <span id="slide_prev"> Prev </span>
                                     <span id="slide_next"> Next  </span>
                       
                             </ItemTemplate>
