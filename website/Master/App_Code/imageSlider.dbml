@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dryden_database" Class="imageSliderDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=184.168.194.62;Initial Catalog=dryden_database;User ID=dryden" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dryden_databaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Imageslider" Member="Imagesliders">
+    <Type Name="Imageslider">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="imageurl1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="imageurl2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="imageurl3" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="caption1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="caption2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="caption3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
