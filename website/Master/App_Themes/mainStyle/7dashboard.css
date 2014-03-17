@@ -129,7 +129,33 @@ input[type="submit"] {
 /* --------------------------------------
    Image Slider
    -------------------------------------- */
+.slider_row {
+    margin-top: 25px;
+    overflow: hidden;   
+}
 
+.slider_left {
+    float:left;
+    width:70%; 
+}
+
+    .slider_left img {
+        width: 100%; 
+    }
+
+.slider_right {
+    float:right;
+    width:25%; 
+}
+
+    .slider_right input[type=text] {
+        width:100%; 
+    }
+
+#save {
+    clear:both; 
+    margin-top: 25px; 
+}
 
 /* --------------------------------------
    Alert
