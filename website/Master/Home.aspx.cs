@@ -10,6 +10,7 @@ public partial class _Default : System.Web.UI.Page
     alertClass objALert = new alertClass();
 
     protected void Page_Load(object sender, EventArgs e)
+
     {
         if (!Page.IsPostBack)
         {
@@ -22,9 +23,22 @@ public partial class _Default : System.Web.UI.Page
         //hl_carouselleft.Attributes.Add("data-slide", "prev");
         //hl_carouselright.Attributes.Add("data-slide", "next");
         btn_alert.Attributes.Add("data-dismiss", "alert");
-        
+       
         rpt_display_alert.DataSource = objALert.getRecentAlerts();
+<<<<<<< HEAD
         rpt_display_alert.DataBind();
         
     }
+=======
+
+        rpt_display_alert.DataBind();
+
+    }
+
+
+
+
+
+
+>>>>>>> FETCH_HEAD
 }
