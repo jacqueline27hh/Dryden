@@ -42,7 +42,49 @@
 
                                     <asp:MultiView ID="mv_tabs" runat="server" ActiveViewIndex="0">
                                         <asp:View ID="view1" runat="server">
-                                            <p>Location</p>
+                                            
+                                            <asp:Label runat="server" ID="lbl_test2" /> 
+
+                                                <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAxx1u6ymP3zxZSUvdMcX2WE21HtsVjjXg&sensor=false">
+</script>
+
+                             <asp:SqlDataSource runat="server" ID="sds_contact" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [google_map]" /> 
+
+                                            <asp:Repeater ID="rpt_gmap" runat="server" DataSourceID="sds_contact">
+                                                <ItemTemplate>
+
+
+                                                    <script>
+                                                                                                               
+                                                        var mapCenter = new google.maps.LatLng(<%#Eval("lat") %>, <%#Eval("lng") %>);
+
+                                                        function initialize() {
+                                                            var mapProp = {
+                                                                center: mapCenter,
+                                                                zoom: 15,
+                                                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                                                            };
+
+                                                            var map = new google.maps.Map(document.getElementById("gMap"), mapProp);
+
+                                                            var marker = new google.maps.Marker({
+                                                                position: mapCenter,
+                                                            });
+
+                                                            marker.setMap(map);
+                                                        }
+
+                                                        google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+               
+                                                    <div id="gMap" style="width:550px;height:400px;"></div>
+
+                                                </ItemTemplate>
+
+                                            </asp:Repeater>
+
+             
+
                                         </asp:View>
                                         <asp:View ID="view2" runat="server">
                                             <h1>Join Our Mailing List!</h1>
