@@ -25,20 +25,9 @@ public partial class _Default : System.Web.UI.Page
         btn_alert.Attributes.Add("data-dismiss", "alert");
        
         rpt_display_alert.DataSource = objALert.getRecentAlerts();
-<<<<<<< HEAD
         rpt_display_alert.DataBind();
         
     }
-=======
+  
 
-        rpt_display_alert.DataBind();
-
-    }
-
-
-
-
-
-
->>>>>>> FETCH_HEAD
 }

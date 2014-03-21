@@ -98,7 +98,7 @@
                                             <br /><br />
                                             <asp:Label ID="lblLen" runat="server" Text="Length of stay" AssociatedControlID="txtLen" />
                                             <br />--%>
-                                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" ValidationGroup="I" />
+                                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnCommand="subSubmit" ValidationGroup="I" />
                                             
 
                                                
