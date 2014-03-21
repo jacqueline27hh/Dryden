@@ -14,6 +14,11 @@
         <asp:LinkButton ID="admin_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="~/Home.aspx" />
         </div>
         
+        <asp:SqlDataSource runat="server" ID="sds_search" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [search_API]" /> 
+
+        <asp:Repeater runat="server" ID="rpt_search" DataSourceID="sds_search">
+
+        </asp:Repeater>
 
         
 

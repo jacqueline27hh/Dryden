@@ -19,7 +19,7 @@ public partial class main : System.Web.UI.MasterPage
 
     protected void subSearch(object sender, EventArgs e)
     {
-        Response.Redirect("~/SearchResult.aspx?name=" + "'" + txt_search.Text.ToString() + "'"); 
+        Response.Redirect("~/SearchResult.aspx?name=" + "'" + txt_search.Text.ToString() + "'" + "&" + "filter=" + rb_options.SelectedValue.ToString()); 
     }
     
 

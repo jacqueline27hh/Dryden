@@ -10,7 +10,7 @@ public partial class Default2 : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-            sds_search.SelectCommand = "SELECT * FROM [search_API] WHERE fname = " + Request.QueryString["name"];
+            sds_search.SelectCommand = "SELECT * FROM [search_API] WHERE " + Request.QueryString["filter"] + " = " + Request.QueryString["name"];
             rpt_search.DataSourceID = "sds_search";
             rpt_search.DataBind();
            
