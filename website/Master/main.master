@@ -34,9 +34,10 @@
                                             <asp:Label ID="lbl_password" runat="server" Text="Password" AssociatedControlID="password" />
                                             <asp:TextBox runat="server" ID="Password" ValidationGroup="login" TextMode="Password" />
                                             <asp:Button runat="server" ID="Login" CommandName="Login" Text="Submit" ValidationGroup="login" />
-                                            <asp:Button runat="server" ID="btn_reset" Text="Reset" CausesValidation="false" /><br />
+                                            <asp:Button runat="server" ID="btn_reset" Text="Reset" CausesValidation="false" />
+                                            <br />
                                         </fieldset>
-                                     </LayoutTemplate>
+                                    </LayoutTemplate>
                                 </asp:Login>
 
                                 
@@ -75,8 +76,6 @@
                                 </asp:Login>--%>
           
                             </div>
-
-
                         </div>
                         <!-- close #contactform -->
 
@@ -84,7 +83,7 @@
                         <div id="master_contactLink">
                             <p>
                                 <span id="master_login_p">
-                                    <asp:Label runat="server" ID="lbl_loginMaster" Text="Login | Register" />
+                                <asp:Label runat="server" ID="lbl_loginMaster" Text="Login | Register" />
                                 </span><i class="fa fa-user"></i>
                             </p>
                         </div>
@@ -96,63 +95,45 @@
 
 
 
-                    <div class="clear"></div>
-
+                    <div class="clear">
+                    </div>
                     <asp:HyperLink runat="server" CssClass="navbar-brand" ImageUrl="App_Themes/images/logo.png" NavigateUrl="#" />
-
-                   
                     <ul class="pull-right" id="master_sub_nav">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-phone">
-                                    <p id="master_call_number">&nbsp; 807-223-8201</p>
-                                    
-                                </i>
-
-
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-dollar">
-                                    <p id="master_donate">&nbsp; Donate</p>
-                                </i>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-map-marker">
-                                    <p id="master_location">&nbsp; Location</p>
-                                </i>
-                            </a>
-                        </li>
-
+                        <li><a href="#"><i class="fa fa-phone">
+                            <p id="master_call_number">
+                                &nbsp; 807-223-8201</p>
+                            </i></a></li>
+                        <li><a href="#"><i class="fa fa-dollar">
+                            <p id="master_donate">
+                                &nbsp; Donate</p>
+                            </i></a></li>
+                        <li><a href="#"><i class="fa fa-map-marker">
+                            <p id="master_location">
+                                &nbsp; Location</p>
+                            </i></a></li>
                     </ul>
-                      
-                    <div class="clear"></div>
+                    <div class="clear">
+                    </div>
 
+                            <div class="navbar-form pull-right" id="master_search">
+                                <asp:TextBox runat="server" ID="txt_search" CssClass="form-control" placeholder="Search for a doctor..." /> 
+                                <asp:Button runat="server" ID="btn_submit" CssClass="btn btn-default" OnClick="subSearch" PostBackUrl="~/SearchResult.aspx"
+                                    Text="Search"  />
+                                
+                            
+                            </div>
 
-                    <div class="navbar-form pull-right" id="master_search">
-                        <input type="text" class="form-control" placeholder="Search for a doctor..." id="searchInput">
-
-                        <button type="submit" class="btn btn-default">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
+                       
                     </div>
                     <!-- end navbar-form -->
 
-                    <div class="clear"></div>
-
-
+                    <div class="clear">
+                    </div>
                     <nav class="navbar navbar-default">
                         <div class="container">
-                        <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+                            <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                            </button>
                      
                                   
                                    
@@ -167,15 +148,10 @@
                                             <Items>
                                                 <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
                                                 <asp:MenuItem Text="About" NavigateUrl="About.aspx">
-
-
                                                     <asp:MenuItem Text="Public Report" NavigateUrl="About.aspx?tabIndex=0" />
                                                     <asp:MenuItem Text="Meet the Board" NavigateUrl="About.aspx?tabIndex=1" />
                                                     <asp:MenuItem Text="Strategic Plan" NavigateUrl="About.aspx?tabIndex=2" />
                                                     <asp:MenuItem Text="Donate Now" NavigateUrl="About.aspx?tabIndex=3" />
-
-
-
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Patients & Visitors" NavigateUrl="~/patient-visitor.aspx">
                                                     <asp:MenuItem Text="Accessibility" NavigateUrl="patient-visitor.aspx?tabIndex=0"/>
@@ -185,12 +161,8 @@
                                                     <asp:MenuItem Text="Identify Your Symptoms" NavigateUrl="patient-visitor.aspx?tabIndex=4"/>
                                                     <asp:MenuItem Text="E-card" NavigateUrl="patient-visitor.aspx?tabIndex=5"/>
                                                     <asp:MenuItem Selectable="false" />
-                                     
-									            
                                                 </asp:MenuItem>
-
                                                 <asp:MenuItem Text="Programs & Services" ToolTip="Movies" NavigateUrl="~/program-service.aspx">
-                                                   
                                                     <asp:MenuItem Text="Emergency Services" NavigateUrl="program-service.aspx?tabIndex=0" />
                                                     <asp:MenuItem Text="ER Wait Time" NavigateUrl="program-service.aspx?tabIndex=1" />
                                                     <asp:MenuItem Text="Inpatient Services" NavigateUrl="program-service.aspx?tabIndex=2" />
@@ -198,13 +170,12 @@
                                                     <asp:MenuItem Text="Laboratory" NavigateUrl="program-service.aspx?tabIndex=4" />
                                                     <asp:MenuItem Text="Other Services" NavigateUrl="program-service.aspx?tabIndex=5" />
                                                 </asp:MenuItem>
+                                             
                                                 <asp:MenuItem Text="Careers" ToolTip="Movies" NavigateUrl="~/Career.aspx">
                                                     <asp:MenuItem Text="Employment Opportunities" NavigateUrl="Career.aspx?tabIndex=0" />
                                                     <asp:MenuItem Text="Apply for Career" NavigateUrl="Career.aspx?tabIndex=1" />
                                                     <asp:MenuItem Text="Why Work Here" NavigateUrl="Career.aspx?tabIndex=2" />
                                                     <asp:MenuItem Text="Volunteer Program" NavigateUrl="Career.aspx?tabIndex=3" />
-  
-                                                    
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Contact" ToolTip="Movies" NavigateUrl="~/Contact.aspx">
                                                     <asp:MenuItem Text="Location" NavigateUrl="Contact.aspx?tabIndex=0" />
@@ -213,8 +184,9 @@
                                                 </asp:MenuItem>
                                             </Items>
                                         </asp:Menu>
-                                    </div>
-                            </div> <%--end of container--%>
+                            </div>
+                        </div>
+                        <%--end of container--%>
                                                                         
                     </nav>
 

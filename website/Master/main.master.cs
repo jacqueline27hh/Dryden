@@ -16,4 +16,12 @@ public partial class main : System.Web.UI.MasterPage
     {
         Response.Redirect("Default.aspx");
     }
+
+    protected void subSearch(object sender, EventArgs e)
+    {
+        Response.Cookies["search"].Value = txt_search.Text.ToString();
+        Response.Cookies["search"].Expires = DateTime.Now.AddMinutes(1); 
+    }
+    
+
 }
