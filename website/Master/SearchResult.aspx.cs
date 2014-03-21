@@ -9,12 +9,11 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (PreviousPage != null)
-        {
-            sds_search.SelectCommand = "SELECT * FROM [search_API] WHERE fname = '" + Response.Cookies["search"].Value.ToString() + "'";
-            rpt_search.DataSourceID = "sds_search";   
-            rpt_search.DataBind(); 
-            Response.Cookies["search"].Expires = DateTime.Now.AddMinutes(-1); 
-        }
+
+            sds_search.SelectCommand = "SELECT * FROM [search_API] WHERE fname = " + Request.QueryString["name"];
+            rpt_search.DataSourceID = "sds_search";
+            rpt_search.DataBind();
+           
     }
+
 }

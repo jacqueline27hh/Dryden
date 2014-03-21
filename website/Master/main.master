@@ -117,7 +117,7 @@
 
                             <div class="navbar-form pull-right" id="master_search">
                                 <asp:TextBox runat="server" ID="txt_search" CssClass="form-control" placeholder="Search for a doctor..." /> 
-                                <asp:Button runat="server" ID="btn_submit" CssClass="btn btn-default" OnClick="subSearch" PostBackUrl="~/SearchResult.aspx"
+                                <asp:Button runat="server" ID="btn_submit" CssClass="btn btn-default" OnClick="subSearch" 
                                     Text="Search"  />
                                 
                             

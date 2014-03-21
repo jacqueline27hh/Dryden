@@ -19,8 +19,7 @@ public partial class main : System.Web.UI.MasterPage
 
     protected void subSearch(object sender, EventArgs e)
     {
-        Response.Cookies["search"].Value = txt_search.Text.ToString();
-        Response.Cookies["search"].Expires = DateTime.Now.AddMinutes(1); 
+        Response.Redirect("~/SearchResult.aspx?name=" + "'" + txt_search.Text.ToString() + "'"); 
     }
     
 

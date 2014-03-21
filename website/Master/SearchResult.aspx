@@ -7,6 +7,8 @@
         <asp:SqlDataSource runat="server" ID="sds_search"
              ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" /> 
 
+
+        <asp:Label runat="server" ID="lbl_test" /> 
         
         <asp:Repeater ID="rpt_search" runat="server">
         
