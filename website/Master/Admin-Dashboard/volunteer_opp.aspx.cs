@@ -22,7 +22,7 @@ public partial class volunteer_opp : System.Web.UI.Page
         lst_update.DataBind();
     }
     
-     protected void subupDel(object sender, ListViewCommandEventArgs e)
+     protected void subupdel(object sender, ListViewCommandEventArgs e)
      {
          switch (e.CommandName)
          {
@@ -32,10 +32,18 @@ public partial class volunteer_opp : System.Web.UI.Page
                  TextBox txtemail = (TextBox)e.Item.FindControl("txtemailU");
                  HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_id");
                  
-                  int Id = int.Parse(hdf_id.Value.ToString());
-                _strMessage(objVol.commitUpdate(Id, txtfname.Text, txtlname.Text,txtemail.Text), "update");
-                _subRebind();
+                  int volId = int.Parse(hdfID.Value.ToString());
+                lblmsg.Text=objvolunteer.commitUpdate(volId, txtfname.Text.ToString(), txtlname.Text.ToString(),txtemail.Text.ToString());
+                subRebind();
                 break;
+             case "Delete":
+                int Id = int.Parse(((HiddenField)e.Item.FindControl("hdf_idD")).Value);
+                subRebind();
+                break;
+             case "Cancel":
+                subRebind();
+                break;
+                 
 
          }
     }

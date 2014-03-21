@@ -24,7 +24,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <asp:ListView ID="lst_update" runat="server" OnItemCommand="subUpdel">
+                    <asp:Label ID="lblmsg" runat="server" />
+                    <asp:ListView ID="lst_update" runat="server" OnItemCommand="subupdel">
                         <ItemTemplate>
                             <tr>
                                 <td>
@@ -53,6 +54,43 @@
                                 <td>
                                     <asp:Button ID="btn_update" runat="server" Text="Update" CommandName="Update" ValidationGroup="update" />
                                    
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                    </asp:ListView>
+                </tbody>
+            </table>
+        </asp:Panel>
+
+        <asp:Panel ID="pnl_delete" runat="server" GroupingText="Delete Record">
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+                            <asp:Label ID="lbl_del" runat="server" Text="Are you sure you want to delete the selected record?" />
+                        </td>
+                    </tr>
+                   
+                </thead>
+                <tbody>
+                    <asp:ListView ID="lst_delete" runat="server" OnItemCommand="subupdel">
+                        <ItemTemplate>
+                            <tr>
+                                <td>
+                                    <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval("Id") %>' />
+                                      <asp:TextBox ID="txtfnameU" runat="server" Text='<%#Eval("firstname") %>' />
+
+                                </td>
+                                <td>  <asp:TextBox ID="txtlnameU" runat="server" Text='<%#Eval("lastname") %>' /> </td>
+                                 <td>
+                                    <asp:TextBox ID="txtemailU" runat="server" Text='<%#Eval("email") %>' />
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Button ID="btndel" runat="server" Text="Delete" CommandName="Delete" />
+                                    <asp:Button ID="btncancel" runat="server" Text="Cancel" CommandName="Cancel" />
                                 </td>
                             </tr>
                         </ItemTemplate>

@@ -42,4 +42,18 @@ public class volunteerOpp
 
     //    }
     //}
+
+    public string commitUpdate(int id, string firstname, string lastname, string email)
+    {
+        volunteerclassDataContext objVolunteer = new volunteerclassDataContext();
+        using (objVolunteer)
+        {
+            var objupvol = objVolunteer.volunteers.Single(x => x.Id == 1);
+            objupvol.firstname = firstname;
+            objupvol.lastname = lastname;
+            objupvol.email = email;
+            objVolunteer.SubmitChanges();
+            return "Your update was successful";
+        }
+    }
 }
