@@ -113,7 +113,31 @@
                                                 Contact Us
 							
                                             </p>
-                                        </asp:View>
+
+                                            <asp:Label ID="lblfname" runat="server" AssociatedControlID="txtfname" />
+                                            <asp:TextBox ID="txtfname" runat="server" />
+                                            <br /><br />
+                                            <asp:Label ID="lbllname" runat="server" AssociatedControlID="txtlname" />
+                                            <asp:TextBox ID="txtlname" runat="server" />
+                                            <br /><br />
+                                            <asp:Label ID="lbldept" runat="server" AssociatedControlID="ddl_dept" />
+                                            <asp:DropDownList ID="ddl_dept" runat="server">
+                                                <asp:ListItem Value="Administrative" />
+                                                <asp:ListItem Value="General" />
+                                                <asp:ListItem Value="Special" />
+                                                <asp:ListItem Value="Emergency" />
+                                            </asp:DropDownList>
+                                            <br /><br />
+                                            <asp:Label ID="lblemail" runat="server" Text="Email" AssociatedControlID="txtemail" />
+                                            <asp:TextBox ID="txtemail" runat="server" />
+                                            <br /><br />
+                                            <asp:Label ID="lblmessage" runat="server" Text="Message" AssociatedControlID="txtmsg" />
+                                            <asp:TextBox ID="txtmsg" runat="server" />
+                                            <br />
+
+                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />
+                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancelmsg" />
+                                        </asp:View> 
                                      
                                     </asp:MultiView>
 
