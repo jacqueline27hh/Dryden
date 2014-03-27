@@ -84,7 +84,7 @@
                                                                 <td><%#Eval("title") %></td>
                                                                 <td><%#Eval("description") %></td>
                                                                 <td><%#Eval("last_date_apply") %></td>
-                                                                <td><asp:Button ID="btn_apply" runat="server" Text="Apply" /></td>
+                                                                <td><asp:Button ID="btn_apply" runat="server" Text="Apply" CommandName="Insert" OnCommand="subApply" /></td>
                                                             </tr>
                                                         </ItemTemplate>
                                                     </asp:Repeater>
