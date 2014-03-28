@@ -186,8 +186,8 @@
         <asp:ListItem Text="Sunday" />
     </asp:CheckBoxList>
     <br /><br />
-    <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subApply" />
-    <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>
+ <%--   <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subApply" />
+    <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
                                         </asp:View>
                                      
 
