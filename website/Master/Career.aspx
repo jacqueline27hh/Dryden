@@ -84,7 +84,7 @@
                                                                 <td><%#Eval("title") %></td>
                                                                 <td><%#Eval("description") %></td>
                                                                 <td><%#Eval("last_date_apply") %></td>
-                                                                <td><asp:Button ID="btn_apply" runat="server" Text="Apply" /></td>
+                                                                <td><asp:Button ID="btn_apply" runat="server" Text="Apply" CommandName="Insert" OnCommand="subApply" /></td>
                                                             </tr>
                                                         </ItemTemplate>
                                                     </asp:Repeater>
@@ -145,7 +145,7 @@
                                         <asp:View ID="view4" runat="server">
                                            
 							
-                                            
+                                            <asp:Label ID="lbl_msgV" runat="server" />
                                                                               <asp:Label ID="lblfname" runat="server" Text="First Name" AssociatedControlID="txtfname" />
     <asp:TextBox ID="txtfname" runat="server" />
     <br /><br />
@@ -172,8 +172,9 @@
     <br /><br />
     <asp:Label ID="lbl_title" runat="server" Text="Upload your Resume" /><br />
     <asp:Label ID="lblresume" runat="server" Text="Resume" />
-    <asp:TextBox ID="txtresume" runat="server" />
-    <asp:Button ID="btnbrowse" runat="server" Text="Browse" />
+    <asp:FileUpload ID="file_up" runat="server" />
+ <%--   <asp:TextBox ID="txtresume" runat="server" />--%>
+    <asp:Button ID="btnbrowse" runat="server" Text="Browse" OnClick="subupload" />
     <br />
     <asp:Label ID="lblavailable" runat="server" Text="Availability" />
     <asp:CheckBoxList ID="chk_availability" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
@@ -186,10 +187,15 @@
         <asp:ListItem Text="Sunday" />
     </asp:CheckBoxList>
     <br /><br />
+<<<<<<< HEAD
  <%--   <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subApply" />
     <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
+=======
+    <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subVolunteer" />
+    <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>  
+>>>>>>> FETCH_HEAD
                                         </asp:View>
-                                     
+                                  
 
                                         
                                      

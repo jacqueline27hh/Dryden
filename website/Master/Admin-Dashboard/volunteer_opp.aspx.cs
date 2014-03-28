@@ -37,7 +37,7 @@ public partial class volunteer_opp : System.Web.UI.Page
                 subRebind();
                 break;
              case "Delete":
-                int Id = int.Parse(((HiddenField)e.Item.FindControl("hdf_idD")).Value);
+                int vol_Id = int.Parse(((HiddenField)e.Item.FindControl("hdf_idD")).Value);
                 subRebind();
                 break;
              case "Cancel":
