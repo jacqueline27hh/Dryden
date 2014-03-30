@@ -65,6 +65,8 @@
                                         <asp:View ID="view4" runat="server">
                                             <h1>Patient Feedback</h1>
                                             <br />
+                                            <asp:Label ID="lbl_message" runat="server" />
+                                            <br />
                                             <asp:Label ID="lblFname" runat="server" Text="First Name" AssociatedControlID="txtFname" />
                                             <br />
                                             <asp:TextBox ID="txtFname" runat="server" />
@@ -78,7 +80,7 @@
                                             <asp:Label ID="lblEmail" runat="server" Text="Email" AssociatedControlID="txtEmail" />
                                             <br />
                                             <asp:TextBox ID="txtEmail" runat="server" />
-                                            <asp:RegularExpressionValidator ID="revEmail" runat="server" Text="*Invalid email" ControlToValidate="txtEmail" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$" />
+                                            <asp:RegularExpressionValidator ID="revEmail" runat="server" Text="*Invalid email" ControlToValidate="txtEmail" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$" ValidationGroup="I" />
                                             <%--src: www.regxlib.com/REDetails.aspx?regexp_id=3122 --%>
                                             <br /><br />
                                             <asp:Label ID="lblReview" runat="server" Text="Review of" AssociatedControlID="txtReview" />
@@ -98,7 +100,7 @@
                                             <br /><br />
                                             <asp:Label ID="lblLen" runat="server" Text="Length of stay" AssociatedControlID="txtLen" />
                                             <br />--%>
-                                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnCommand="subSubmit" ValidationGroup="I" />
+                                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" CommandName="Insert" OnCommand="subSubmit" ValidationGroup="I" />
                                             
 
                                                
