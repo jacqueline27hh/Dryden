@@ -37,7 +37,7 @@ public partial class admin_imageslider : System.Web.UI.Page
                 Image fup1Img = (Image)e.Item.FindControl("item_img1");
                 string fup1SavePath = fup1Img.ImageUrl.ToString(); 
                                
-                if (fup1.HasFile)z
+                if (fup1.HasFile)
                 {
                     try
                     {
