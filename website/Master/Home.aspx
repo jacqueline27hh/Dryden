@@ -8,13 +8,9 @@
 		
 	  <asp:SqlDataSource runat="server" ID="sds_carousel" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [Imageslider]" />     
 
-           <asp:DetailsView runat="server" ID="dv_sliders" DataSourceID="sds_carousel" AutoGenerateRows="False" DataKeyNames="Id"
-                     AllowPaging="false" GridLines="None" PageIndex="0">
-                    <Fields>
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                            <div id="display">
-
+           <asp:Repeater runat="server" ID="rpt_sliders" DataSourceID="sds_carousel">
+               <ItemTemplate>
+                          <div id="display">
                                 <ul id="slideshow">
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img1" ImageUrl='<%#Eval("imageurl1") %>' CssClass="active" /> 
@@ -26,19 +22,17 @@
                                     </li>
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img3" ImageUrl='<%#Eval("imageurl3") %>' />
-                                    </li> />
-                                    </li>
-
+                                    </li> 
+                                    
                                  </ul>
-                                </div>
-
+                           </div>    
                                     <span id="slide_prev"> Prev </span>
                                     <span id="slide_next"> Next  </span>
-                      
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                    </Fields>
-                 </asp:DetailsView>
+                               
+               </ItemTemplate>
+           </asp:Repeater>
+
+         
 
 		<div class="row" id="home_alert">
 				<div class="col-12">

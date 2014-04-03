@@ -27,8 +27,8 @@ public class appointmentClass
         {
             Appointment objNewAppointment = new Appointment();
             objNewAppointment.appointment_title = _title;
-            objNewAppointment.doctor_name = _doc;
-            objNewAppointment.date - time = _date;
+          //  objNewAppointment.doctor_name = _doc;
+          //  objNewAppointment.date - time = _date;
 
             objAppointmentDC.Appointments.InsertOnSubmit(objNewAppointment);
             objAppointmentDC.SubmitChanges();
@@ -43,8 +43,8 @@ public class appointmentClass
         {
             var objUpAppointment = objAppointmentDC.Appointments.Single(x => x.Id == _id);
             objUpAppointment.appointment_title = _title;
-            objUpAppointment.doctor_name = _doc;
-            objUpAppointment.date - time = _date;
+          //  objUpAppointment.doctor_name = _doc;
+          //  objUpAppointment.date - time = _date;
 
             objAppointmentDC.SubmitChanges();
             return true;

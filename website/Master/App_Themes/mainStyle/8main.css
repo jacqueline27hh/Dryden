@@ -10,7 +10,7 @@
 
 
 #display {
-    width:1135px;
+    width:100%;
     overflow: hidden;    
     float:left; 
     border:0px;
@@ -18,7 +18,7 @@
 }
 
 #slideshow {
-    width: 3410px;
+    width: 3425px; 
     height:430px; 
     list-style: none; 
     margin:0px;
@@ -31,7 +31,7 @@
 
 
 .slide {
-    width:1135px;
+    width: 1140px; 
     height: 430px; 
     border:1px solid blue; 
     float: left; 
@@ -42,7 +42,7 @@
 
 
     .slide img {
-        width:1135px;
+        width: 1140px;
         height:430px; 
         float: left; 
         border:0px;

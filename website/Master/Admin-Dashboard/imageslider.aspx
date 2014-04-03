@@ -33,8 +33,8 @@
                   <div class="slider_row">
                     <div class="slider_left">
                         <asp:Image runat="server" ID="item_img1" ImageUrl='<%#Eval("imageurl1") %>' />
-                                 <br /> <asp:Button runat="server" ID="btn_upload1" CommandName="btn_upload" Text="Upload New" CommandArgument="1" />
-                                <asp:Button runat="server" ID="Button1" Text="Delete" OnClientClick="return confirm('this will permanenetly delete this image from the database, proceed?');" /> 
+                                 <br /> <asp:FileUpload id="fup1" runat="server" />
+                             <asp:Button runat="server" ID="Button1" Text="Delete" OnClientClick="return confirm('this will permanenetly delete this image from the database, proceed?');" /> 
 
                     </div> 
                     <div class="slider_right">
@@ -45,7 +45,7 @@
                     <div class="slider_row">
                     <div class="slider_left">
                         <asp:Image runat="server" ID="item_img2" ImageUrl='<%#Eval("imageurl2") %>' />
-                                 <br /> <asp:Button runat="server" ID="Button2" CommandName="btn_upload" Text="Upload New" CommandArgument="1" />
+                                 <br /> <asp:FileUpload id="fup2" runat="server" />
                                 <asp:Button runat="server" ID="Button3" Text="Delete" OnClientClick="return confirm('this will permanenetly delete this image from the database, proceed?');" /> 
 
                     </div> 
@@ -57,7 +57,7 @@
                     <div class="slider_row">
                     <div class="slider_left">
                         <asp:Image runat="server" ID="item_img3" ImageUrl='<%#Eval("imageurl3") %>' />
-                                 <br /> <asp:Button runat="server" ID="Button4" CommandName="btn_upload" Text="Upload New" CommandArgument="1" />
+                                 <br /> <asp:FileUpload id="fup3" runat="server" />
                                 <asp:Button runat="server" ID="Button5" Text="Delete" OnClientClick="return confirm('this will permanenetly delete this image from the database, proceed?');" /> 
 
                     </div> 
