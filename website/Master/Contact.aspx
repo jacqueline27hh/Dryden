@@ -105,8 +105,10 @@
                                             <asp:TextBox ID="txt_email" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_email" runat="server" Text="*Required" ControlToValidate="txt_email" ValidationGroup="insert" />
                                             <br /><br />
-                                            <asp:Button ID="btn_subscribe" runat="server" Text="Subscribe" />
-                                            <asp:Button ID="btn_unscubscribe" runat="server" Text="Unsubscribe" />
+                                            <asp:Button ID="btn_subscribe" runat="server" Text="Subscribe" CommandName="Insert" OnCommand="subAddSubscriber" ValidationGroup="insert" />
+                                            <%--<asp:Button ID="btn_unscubscribe" runat="server" Text="Unsubscribe" />--%>
+                                            <asp:Label ID="lbl_thankYou" runat="server" />
+
                                         </asp:View>
                                         <asp:View ID="view3" runat="server">
                                             <p>
@@ -135,8 +137,10 @@
                                             <asp:TextBox ID="txtmsg" runat="server" />
                                             <br />
 
-                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />
-                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancelmsg" />
+                                            <%--<asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />--%>
+                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" />
+                                            <%--<asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancelmsg" />--%>
+                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" />
                                         </asp:View> 
                                      
                                     </asp:MultiView>

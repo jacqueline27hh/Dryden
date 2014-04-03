@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dryden_database" Class="appointmentsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=184.168.194.62;Initial Catalog=dryden_database;User ID=dryden" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dryden_databaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Appointments" Member="Appointments">
+    <Type Name="Appointment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="patient_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doctor_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[date-time]" Member="date_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="appointment_title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
