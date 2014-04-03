@@ -14,14 +14,15 @@
                                 <ul id="slideshow">
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img1" ImageUrl='<%#Eval("imageurl1") %>' CssClass="active" /> 
-                                         
+                                         <asp:Label runat="server" ID="lbl1" Text='<%#Eval("caption1") %>' /> 
                                     </li>
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img2" ImageUrl='<%#Eval("imageurl2") %>' /> 
-                                      
+                                          <asp:Label runat="server" ID="lbl2" Text='<%#Eval("caption2") %>' /> 
                                     </li>
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img3" ImageUrl='<%#Eval("imageurl3") %>' />
+                                        <asp:Label runat="server" ID="lbl3" Text='<%#Eval("caption3") %>' /> 
                                     </li> 
                                     
                                  </ul>

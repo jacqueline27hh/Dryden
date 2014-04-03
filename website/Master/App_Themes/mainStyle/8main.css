@@ -42,17 +42,21 @@
 
 
     .slide img {
-        width: 1140px;
+        width: 70%;
         height:430px; 
-        float: left; 
+        float: right; 
         border:0px;
         padding:0px; 
     }
-
+        
     .slide span {
-        width:150px;
-        height:400px;
-        float: left; 
+        width:30%;
+        height:430px;
+        color: #ffffff; 
+        font-size: 18px; 
+        padding: 50px 15px 15px 15px;
+        background-color: #97bf2a; 
+        float: left;
     }
 
 

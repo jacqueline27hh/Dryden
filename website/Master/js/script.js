@@ -13,15 +13,15 @@ $("document").ready(function () {
 
 
 $("#slide_prev").click(function () {
-    $("#slideshow").animate({ left: "+=1135px" }, 700, function () {
+    $("#slideshow").animate({ left: "+=1140px" }, 700, function () {
         $("#display li:first").before($("#display li:last"));
-        $("#slideshow").css({ left: "-=1135px" });
+        $("#slideshow").css({ left: "-=1140px" });
     });
 });
 
 $("#slide_next").click(function () {
-    $("#slideshow").animate({ left: "-=1135px" }, 700, function () {
+    $("#slideshow").animate({ left: "-=1140px" }, 700, function () {
         $("#display li:last").after($("#display li:first"));
-        $("#slideshow").css({ left: "+=1135px" });
+        $("#slideshow").css({ left: "+=1140px" });
     });
 });
