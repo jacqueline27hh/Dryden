@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="googleMap">
+  <DataContextMoniker Name="/googleMapDataContext" />
+  <nestedChildShapes>
+    <classShape Id="99b9c9d8-d774-4aac-8cb4-ce3c955be44f" absoluteBounds="1, 1.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/googleMapDataContext/google_map" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7342379d-0cf2-464e-99bc-57641affc7f4" absoluteBounds="1.0150000000000001, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

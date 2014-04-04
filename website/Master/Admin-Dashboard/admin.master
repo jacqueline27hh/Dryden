@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="dashboard" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- font face -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <title>DRHC Admin Dashboard</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="admin_body">
+    <form id="form1" runat="server">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="admin_dashboard">
+
+
+
+            <div class=" row navbar-header">
+
+
+
+                <div class="navbar-brand col-xs-7 col-sm-8" id="admin_d_image">
+                    <a href="home.aspx">
+                        <img src="../App_Themes/images/logo1.png" alt="DRHC Logo" width="100" /></a>
+                </div>
+
+                <div class="btnWrapper col-xs-3 col-sm-2 visible-xs">
+                    <button type="button" class="navbar-toggle" data-toggle="offcanvas">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="btnWrapper col-xs-2 col-sm-2">
+                    <button type="button" class=" navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span><i class="fa fa-user"></i></span>
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="navbar-collapse collapse">
+
+
+
+
+
+                <ul class="nav navbar-nav pull-right" id="admin_profile">
+                    <li><a href="#"><i class="fa fa-user"></i>Hello Admin!</a></li>
+                    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+                </ul>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="row col-sm-3 row-offcanvas row-offcanvas-left">
+
+
+                <div class="sidebar-offcanvas" id="admin_d_sidebar">
+
+                    <ul class="nav nav-sidebar placeholders">
+                        <li><a href="search.aspx"><i class="fa fa-search fa-2x"></i>Search Feature</a></li>
+                    
+
+                        <li><a href="imageslider.aspx"><i class="fa fa-picture-o fa-2x"></i>Image Slider</a></li>
+
+                        <li><a href="alert.aspx"><i class="fa fa-warning fa-2x"></i>Alert!</a></li>
+
+                        <li><a href="news-event.aspx"><i class="fa fa-archive fa-2x"></i>News & Event</a></li>
+
+                        <li><a href="donate.aspx"><i class="fa fa-dollar fa-2x"></i>Donate Now</a></li>
+
+                        <li><a href="ecard.aspx"><i class="fa fa-envelope-o fa-2x"></i>Send E-Card</a></li>
+
+                        <li><a href="patients_survey.aspx"><i class="fa fa-tags fa-2x"></i>Patient Survey</a></li>
+
+                        <li><a href="symptomChecker.aspx"><i class="fa fa-check fa-2x"></i>Symptom Checker</a></li>
+
+                        <li><a href="erWaitTime.aspx"><i class="fa fa-clock-o fa-2x"></i>ER Wait Time</a></li>
+
+                        <li><a href="career.aspx"><i class="fa fa-folder-open-o fa-2x"></i>Apply for Career</a></li>
+
+                        <li><a href="volunteer_opp.aspx"><i class="fa fa-pencil fa-2x"></i>Volunteer Opportunities</a></li>
+
+                        <li><a href="googlemap.aspx"><i class="fa fa-map-marker fa-2x"></i>Google maps API</a></li>
+
+                        <li><a href="mailingList.aspx"><i class="fa fa-list-ul fa-2x"></i>Mailing List</a></li>
+
+                        <li><a href="admincontact.aspx"><i class="fa fa-phone fa-2x"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <!--/span-->
+            </div>
+
+
+            <asp:ContentPlaceHolder ID="cph_admin_d" runat="server">
+                <!-- The content for other pages apart from header and footer will be shown here -->
+
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <%--end row--%>
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- First try for the online version of jQuery-->
+        <script src="http://code.jquery.com/jquery.js"></script>
+
+        <!-- If no online access, fallback to our hardcoded version of jQuery -->
+        <script>window.jQuery || document.write('<script src="../js/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/script.js"></script>
+
+    </form>
+</body>
+</html>

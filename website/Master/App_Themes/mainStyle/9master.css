@@ -245,6 +245,18 @@ margin-top: 90px;
    Navbar
    -------------------------------------- */
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.navbar-default .navbar-toggle {
+border-color: #FFF;
+}
+
+#master_menu {
+    display:none;
+}
+
 #master_main_nav > li > a {
  
    padding: 15px;
@@ -417,6 +429,13 @@ font-size: 14px;
 
 @media (max-width: 769px) {
 
+ #master_menu {
+    display:inline-block;
+    color:#fff;
+    margin-bottom: 0;
+    padding: 4px;
+}
+
    #master_sub_nav {
   width: 27%;
   margin-top: 0px;
@@ -539,6 +558,11 @@ font-size: 14px;
 /* Portrait & landscape phone */
 
 @media (max-width: 480px) {
+
+     #master_menu {
+    display:none;
+    
+    }
 
  
 
@@ -672,13 +696,24 @@ width: 200px;
 
   }
 
-  #master_call_number {
+  /*#master_call_number {
     display:none !important;
-  }
+  }*/
 
    #master_call_us {
       display:inline-block !important;
   }
    
   
+}
+
+
+@media (max-width: 320px) {
+    #master_sub_nav li:nth-child(1) a {
+        width:10em;
+    }
+
+    #master_sub_nav li:nth-child(1) a p {
+    font-size: 12px;
+    }
 }

@@ -63,17 +63,73 @@
                                             </p>
                                         </asp:View>
                                         <asp:View ID="view4" runat="server">
-                                            <p>
-                                               Patient Feedback
+                                            <h1>Patient Feedback</h1>
+                                            <br />
+                                            <asp:Label ID="lbl_message" runat="server" />
+                                            <br />
+                                            <asp:Label ID="lblFname" runat="server" Text="First Name" AssociatedControlID="txtFname" />
+                                            <br />
+                                            <asp:TextBox ID="txtFname" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvFname" runat="server" Text="*Required" ControlToValidate="txtFname" ValidationGroup="I" />
+                                            <br /><br />
+                                            <asp:Label ID="lblLname" runat="server" Text="Last Name" AssociatedControlID="txtLname" />
+                                            <br />
+                                            <asp:TextBox ID="txtLname" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvLname" runat="server" Text="*Required" ControlToValidate="txtLname" ValidationGroup="I" />
+                                            <br /><br />
+                                            <asp:Label ID="lblEmail" runat="server" Text="Email" AssociatedControlID="txtEmail" />
+                                            <br />
+                                            <asp:TextBox ID="txtEmail" runat="server" />
+                                            <asp:RegularExpressionValidator ID="revEmail" runat="server" Text="*Invalid email" ControlToValidate="txtEmail" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$" ValidationGroup="I" />
+                                            <%--src: www.regxlib.com/REDetails.aspx?regexp_id=3122 --%>
+                                            <br /><br />
+                                            <asp:Label ID="lblReview" runat="server" Text="Review of" AssociatedControlID="txtReview" />
+                                            <br />
+                                            <asp:TextBox ID="txtReview" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvReview" runat="server" Text="*Required" ControlToValidate="txtReview" ValidationGroup="I" />
+                                            <br /><br />
+                                            <asp:Label ID="lblMsg" runat="server" Text="Message" AssociatedControlID="txtMsg" />
+                                            <br />
+                                            <asp:TextBox ID="txtMsg" TextMode="multiline" Columns="50" Rows="5" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvMsg" runat="server" Text="*Required" ControlToValidate="txtMsg" ValidationGroup="I" />
+                                            <br /><br />
+                                            <%--<asp:Label ID="lblDate" runat="server" Text="Day of Visit" AssociatedControlID="txtDate" />
+                                            <br />
+                                             <asp:TextBox ID="txtDate" runat="server"  />
+                                            <asp:RangeValidator ID="ravDate" runat="server" Text="*Invalid Date" ControlToValidate="txtDate" SetFocusOnError="true" Type="Date" ValidationGroup="I" />
+                                            <br /><br />
+                                            <asp:Label ID="lblLen" runat="server" Text="Length of stay" AssociatedControlID="txtLen" />
+                                            <br />--%>
+                                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" CommandName="Insert" OnCommand="subSubmit" ValidationGroup="I" />
+                                            
+
+                                               
 							
-                                            </p>
+                                            
                                         </asp:View>
                                         <asp:View ID="view5" runat="server">
-                                            <p>
-                                               Identify Your Symptoms
-							
-                                            </p>
-                                        </asp:View>
+                                            <asp:SqlDataSource ID="sql_qf" runat="server" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [quiz]"></asp:SqlDataSource>
+                                            <br />
+                                            <br />
+                                            <h3><span>F&Q: </span>Should I Go to the Emergency Room?</h3>
+                                            <br />
+                                            <br />
+                                            <asp:Repeater ID="rpt_qf" runat="server" DataSourceID="sql_qf">
+                                                <ItemTemplate>
+                                                    <asp:Label id="lbl_quiz_q" runat="server" Text='<%#Eval("Questions") %>' />   
+                                                    <asp:RadioButtonList runat="server" ID="rbl_questions">
+                                                       
+                                                        <asp:ListItem Value="Y"> Yes </asp:ListItem>
+                                                        <asp:ListItem Value="N"> No </asp:ListItem>
+                                                        
+                                                    </asp:RadioButtonList> <br /><br /> 
+                                                </ItemTemplate>
+                                                <FooterTemplate>
+                                                    <asp:Button CssClass="btn_pv" runat="server" Text="Submit" OnClick="subProcess" /> 
+                                                </FooterTemplate>
+                                            </asp:Repeater>
+                                 <asp:Label runat="server" ID="lbl_test2" />    
+                                     </asp:View>
                                         <asp:View ID="view6" runat="server">
                                             <p>
                                                E-card

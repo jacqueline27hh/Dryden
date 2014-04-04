@@ -35,6 +35,8 @@
 
 }
 
+
+
 /*--------------Header ENDS here---------------*/
 /*--------------Nav STARTS here---------------*/
 #admin_d_sidebar {
@@ -72,13 +74,103 @@
 
 #admin_d_sidebar .nav-sidebar > li {
   font-size: 1.3rem;
-  padding: 0; }
+  padding: 0;
 
-
+  
+}
 
 #admin_body .navbar {
     margin-top:0px;
 }
+
+#patient_d_sidebar {
+  margin-top: 14px;
+
+}
+
+
+#patient_d_sidebar ul {
+    background-color:#f3ab35;
+    height: 1000px;
+}
+
+#patient_d_sidebar ul li {
+  text-align:left;
+}
+
+#patient_d_sidebar ul li a {
+  padding: 20px;
+  color:#fff;
+}
+
+#patient_d_sidebar ul li a:hover {
+  background-color:#535453;
+}
+
+#patient_d_sidebar .fa-2x  {
+  width:40px;
+}
+
+#patient_d_sidebar .nav-sidebar {
+
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.5rem; 
+}
+
+#patient_d_sidebar .nav-sidebar > li {
+  font-size: 1.3rem;
+  padding: 0;
+
+  
+}
+
+#doctor_d_sidebar {
+  margin-top: 14px;
+
+}
+
+
+#doctor_d_sidebar ul {
+    background-color:#7bceda;
+    height: 1000px;
+}
+
+#doctor_d_sidebar ul li {
+  text-align:left;
+}
+
+#doctor_d_sidebar ul li a {
+  padding: 20px;
+  color:#fff;
+}
+
+#doctor_d_sidebar ul li a:hover {
+  background-color:#535453;
+}
+
+#doctor_d_sidebar .fa-2x  {
+  width:40px;
+}
+
+#doctor_d_sidebar .nav-sidebar {
+
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.5rem; 
+}
+
+#doctor_d_sidebar .nav-sidebar > li {
+  font-size: 1.3rem;
+  padding: 0;
+
+  
+}
+
+
+
+
+
 /*--------------NAV ENDS here---------------*/
 
 /* --------------------------------------
@@ -87,6 +179,8 @@
 
 .alert_textarea {
     width:200px;
+    color:#535453;
+    height:7rem;
 }
 
 
@@ -126,7 +220,39 @@ input[type="submit"] {
 /* --------------------------------------
    Image Slider
    -------------------------------------- */
+table#admin_wrap {
+    width: 100%; 
+}
 
+.slider_row {
+    margin-top: 25px;
+    overflow: hidden;   
+}
+
+.slider_left {
+    float:left;
+    width:60%; 
+}
+
+    .slider_left img {
+        width: 100%; 
+        height:200px; 
+        border:1px solid black; 
+    }
+
+.slider_right {
+    float:right;
+    width:35%; 
+}
+
+    .slider_right input[type=text] {
+        width:100%; 
+    }
+
+#save {
+    clear:both; 
+    margin-top: 25px; 
+}
 
 /* --------------------------------------
    Alert
@@ -239,6 +365,10 @@ input[type="text"].alert_up_title {
     #admin_d_sidebar {
       width: 33%;
     }
+
+  .row-offcanvas-left{
+    z-index: 1000;
+  }
 /*--------------NAV ENDS here---------------*/
 
     
