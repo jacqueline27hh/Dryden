@@ -20,7 +20,7 @@
            
             <asp:DataList ID="dl_slideradmin" runat="server" OnItemCommand="subCommand">
                 <ItemTemplate>    
-                     <table>
+                     <table id="admin_wrap">
                          <div class="slider_row">
                         <div class="slider_left">
                             <asp:Label ID="Label1" runat="server" Text="IMAGES:" /> 
@@ -34,8 +34,7 @@
                     <div class="slider_left">
                         <asp:Image runat="server" ID="item_img1" ImageUrl='<%#Eval("imageurl1") %>' />
                                  <br /> <asp:FileUpload id="fup1" runat="server" />
-                             <asp:Button runat="server" ID="Button1" Text="Delete" OnClientClick="return confirm('this will permanenetly delete this image from the database, proceed?');" /> 
-
+                           
                     </div> 
                     <div class="slider_right">
                         <asp:TextBox runat="server" id="txt_caption1" Text='<%#Eval("caption1") %>'  /> 
@@ -46,8 +45,7 @@
                     <div class="slider_left">
                         <asp:Image runat="server" ID="item_img2" ImageUrl='<%#Eval("imageurl2") %>' />
                                  <br /> <asp:FileUpload id="fup2" runat="server" />
-                                <asp:Button runat="server" ID="Button3" Text="Delete" OnClientClick="return confirm('this will permanenetly delete this image from the database, proceed?');" /> 
-
+                               
                     </div> 
                     <div class="slider_right">
                         <asp:TextBox runat="server" id="txt_caption2" Text='<%#Eval("caption2") %>'  /> 
@@ -58,8 +56,7 @@
                     <div class="slider_left">
                         <asp:Image runat="server" ID="item_img3" ImageUrl='<%#Eval("imageurl3") %>' />
                                  <br /> <asp:FileUpload id="fup3" runat="server" />
-                                <asp:Button runat="server" ID="Button5" Text="Delete" OnClientClick="return confirm('this will permanenetly delete this image from the database, proceed?');" /> 
-
+                               
                     </div> 
                     <div class="slider_right">
                         <asp:TextBox runat="server" id="txt_caption3" Text='<%#Eval("caption3") %>'  /> 

@@ -26,9 +26,9 @@ public class appointmentClass
         using (objAppointmentDC)
         {
             Appointment objNewAppointment = new Appointment();
-            objNewAppointment.patient_name = _patient;
-            objNewAppointment.doctor_name = _doc;
-            objNewAppointment.date-time = _date;
+       //     objNewAppointment.patient_name = _patient;
+       //     objNewAppointment.doctor_name = _doc;
+       //     objNewAppointment.date-time = _date;
             objNewAppointment.appointment_title = _title;
 
             objAppointmentDC.Appointments.InsertOnSubmit(objNewAppointment);
@@ -43,9 +43,9 @@ public class appointmentClass
         using (objAppointmentDC)
         {
             var objUpAppointment = objAppointmentDC.Appointments.Single(x => x.Id == _id);
-            objUpAppointment.patient_name = _patient;
-            objUpAppointment.doctor_name = _doc;
-            objUpAppointment.date-time = _date;
+         //   objUpAppointment.patient_name = _patient;
+         //   objUpAppointment.doctor_name = _doc;
+         //   objUpAppointment.date-time = _date;
             objUpAppointment.appointment_title = _title;
 
             objAppointmentDC.SubmitChanges();

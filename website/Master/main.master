@@ -120,11 +120,14 @@
                                 <asp:Button runat="server" ID="btn_submit" CssClass="btn btn-default" OnClick="subSearch" 
                                     Text="Search"  />
                                 
-                                <asp:RadioButtonList runat="server" ID="rb_options">
-                                    <asp:ListItem Selected="True" Text="First name" Value="fname" /> 
-                                    <asp:ListItem Text="Last name" Value="lname" /> 
-                                    <asp:ListItem Text="Department" Value="Department" /> 
-                                </asp:RadioButtonList>
+                                <asp:Button runat="server" ID="btn_advanced" CssClass="btn btn-default advancedSearch" Text="Adv" />
+                                <div id="advanced_search">
+                                  <asp:RadioButtonList runat="server" ID="rb_options">
+                                     <asp:ListItem Selected="True" Text="First name" Value="fname" /> 
+                                     <asp:ListItem Text="Last name" Value="lname" /> 
+                                     <asp:ListItem Text="Department" Value="Department" /> 
+                                  </asp:RadioButtonList>
+                                </div>
                             
                             </div>
 
@@ -328,12 +331,22 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
+
                 $("#master_contactLink").click(function () {
                     if ($("#master_login_form").is(":hidden")) {
                         $("#master_login_form").slideDown("slow");
                     }
                     else {
                         $("#master_login_form").slideUp("slow");
+                    }
+                });
+
+                $(".advancedSearch").click(function () {
+                    if ($("#advanced_search").(":hidden")) {
+                        $("#advanced_search").slideDown("slow");
+                    }
+                    else {
+                        $("#advanced_search").slideUp("slow");
                     }
                 });
             });
