@@ -7,23 +7,19 @@ using System.Web.UI.WebControls;
 
 public partial class Patient_Dashoboard_Default : System.Web.UI.Page
 {
+    appointmentClass objJob = new appointmentClass();
     protected void Page_Load(object sender, EventArgs e)
     {
-        appointmentClass objAppointment = new appointmentClass();
-        protected void Page_Load(object sender, EventArgs e)
+        if (!IsPostBack)
         {
-            if (!IsPostBack)
-            {
-                appointmentsDataContext dataContext =
-                    new appointmentsDataContext();
+            appointmentsDataContext dataContext =
+                new appointmentsDataContext();
 
-                var query = from appointment in dataContext.Appointments
-                            select appointment;
+            var query = from Appointment in dataContext.Appointments
+                        select Appointment;
 
-                rpt_all.DataSource = query;
-                rpt_all.DataBind();
-            }
+            rpt_all.DataSource = query;
+            rpt_all.DataBind();
         }
-
     }
 }

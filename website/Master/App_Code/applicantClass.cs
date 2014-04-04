@@ -37,29 +37,30 @@ public class applicantClass
         }
     }
 
-    public bool commitUpdate(int _id, string _title, string _desc, DateTime _date)
+    public bool commitUpdate(int _id, string _fname, string _lname, string _email, int _phone)
     {
-        jobsDataContext objJobDC = new jobsDataContext();
-        using (objJobDC)
+        applicantsDataContext objApplicantDC = new applicantsDataContext();
+        using (objApplicantDC)
         {
-            var objUpJob = objJobDC.jobs.Single(x => x.Id == _id);
-            objUpJob.title = _title;
-            objUpJob.description = _desc;
-            objUpJob.last_date_apply = _date;
+            var objUpApplicant = objApplicantDC.applicants.Single(x => x.Id == _id);
+            objUpApplicant.firstname = _fname;
+            objUpApplicant.lastname = _lname;
+            objUpApplicant.email = _email;
+            objUpApplicant.phone = _phone;
 
-            objJobDC.SubmitChanges();
+            objApplicantDC.SubmitChanges();
             return true;
         }
     }
 
     public bool commitDelete(int _id)
     {
-        jobsDataContext objJobDC = new jobsDataContext();
-        using (objJobDC)
+        applicantsDataContext objApplicantDC = new applicantsDataContext();
+        using (objApplicantDC)
         {
-            var objDelJob = objJobDC.jobs.Single(x => x.Id == _id);
-            objJobDC.jobs.DeleteOnSubmit(objDelJob);
-            objJobDC.SubmitChanges();
+            var objDelApplicant = objApplicantDC.applicants.Single(x => x.Id == _id);
+            objApplicantDC.applicants.DeleteOnSubmit(objDelApplicant);
+            objApplicantDC.SubmitChanges();
             return true;
         }
     }

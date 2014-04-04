@@ -174,7 +174,8 @@
     <asp:Label ID="lblresume" runat="server" Text="Resume" />
     <asp:FileUpload ID="file_up" runat="server" />
  <%--   <asp:TextBox ID="txtresume" runat="server" />--%>
-    <asp:Button ID="btnbrowse" runat="server" Text="Browse" OnClick="subupload" />
+    <%--<asp:Button ID="btnbrowse" runat="server" Text="Browse" OnClick="subupload" />--%>
+                                            <asp:Button ID="btnbrowse" runat="server" Text="Browse" />
     <br />
     <asp:Label ID="lblavailable" runat="server" Text="Availability" />
     <asp:CheckBoxList ID="chk_availability" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
@@ -187,13 +188,12 @@
         <asp:ListItem Text="Sunday" />
     </asp:CheckBoxList>
     <br /><br />
-<<<<<<< HEAD
  <%--   <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subApply" />
     <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
-=======
     <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subVolunteer" />
-    <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>  
->>>>>>> FETCH_HEAD
+    <%--<asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
+                                            <asp:Button ID="btncancel" runat="server"/>  
+
                                         </asp:View>
                                   
 

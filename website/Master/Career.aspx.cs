@@ -37,32 +37,32 @@ public partial class _Default : System.Web.UI.Page
 
     protected void subApply(object sender, CommandEventArgs e)
     {
-        _strMessage(objApplicant.commitInsert(txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text, txt_phoneI.Text, "insert");
-        _subRebind();
+        //_strMessage(objApplicant.commitInsert(txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text, txt_phoneI.Text, "insert");
+        //_subRebind();
     }
 
-    protected void _subRebind()
-    {
-        txt_fnameI.Text = string.Empty;
-        txt_lnameI.Text = string.Empty;
-        txt_emailI.Text = string.Empty;
-        txt_phoneI.Text = string.Empty;
-        rpt_all.DataSource = objApplicant.getApplicants();
-        rpt_all.DataBind();
-    }
+    //protected void _subRebind()
+    //{
+    //    txt_fnameI.Text = string.Empty;
+    //    txt_lnameI.Text = string.Empty;
+    //    txt_emailI.Text = string.Empty;
+    //    txt_phoneI.Text = string.Empty;
+    //    rpt_all.DataSource = objApplicant.getApplicants();
+    //    rpt_all.DataBind();
+    //}
 
-    private void _strMessage(bool flag, string struct)
-    {
-        if (flag)
-            lbl_msg.Text = "Your application was submitted successfully!";
-        else
-            lbl_msg.Text = "Something went wrong. Please try again.";
-    }
+    //private void _strMessage(bool flag, string struct)
+    //{
+    //    if (flag)
+    //        lbl_msg.Text = "Your application was submitted successfully!";
+    //    else
+    //        lbl_msg.Text = "Something went wrong. Please try again.";
+    //}
 
-    protected void subView(object sender, EventArgs e)
-    {
-        Response.Redirect "Career.aspx:view2";
-    }
+    //protected void subView(object sender, EventArgs e)
+    //{
+    //    Response.Redirect "Career.aspx:view2";
+    //}
 
     volunteerOpp objvol = new volunteerOpp();
     protected void subVolunteer(object sender, CommandEventArgs e)
