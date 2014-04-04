@@ -117,10 +117,13 @@
 
                             <div class="navbar-form pull-right" id="master_search">
                                 <asp:TextBox runat="server" ID="txt_search" CssClass="form-control" placeholder="Search for a doctor..." /> 
-                                <asp:Button runat="server" ID="btn_submit" CssClass="btn btn-default" OnClick="subSearch" 
-                                    Text="Search"  />
+                                <%--<asp:Button runat="server" ID="btn_submit" CssClass="btn btn-default" OnClick="subSearch" 
+                                    Text="<i class='icon-camera-retro'></i> Search"/>--%>
+                                <button runat="server" id="btnRun" class="btn btn-mini" title="Search" onserverclick="subSearch">
+    <i class='fa fa-play'></i> Search
+</button>
                                 
-                                <span id="advancedSearch"> Advanced </span>
+                                <span id="advancedSearch"> Adv </span>
                                 <div id="advanced_search">
                                   <asp:RadioButtonList runat="server" ID="rb_options">
                                      <asp:ListItem Selected="True" Text="First name" Value="fname" /> 
