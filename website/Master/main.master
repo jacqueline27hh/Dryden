@@ -120,7 +120,7 @@
                                 <asp:Button runat="server" ID="btn_submit" CssClass="btn btn-default" OnClick="subSearch" 
                                     Text="Search"  />
                                 
-                                <asp:Button runat="server" ID="btn_advanced" CssClass="btn btn-default advancedSearch" Text="Adv" />
+                                <span id="advancedSearch"> Advanced </span>
                                 <div id="advanced_search">
                                   <asp:RadioButtonList runat="server" ID="rb_options">
                                      <asp:ListItem Selected="True" Text="First name" Value="fname" /> 
@@ -341,8 +341,8 @@
                     }
                 });
 
-                $(".advancedSearch").click(function () {
-                    if ($("#advanced_search").(":hidden")) {
+                $("#advancedSearch").click(function () {
+                    if ($("#advanced_search").is(":hidden")) {
                         $("#advanced_search").slideDown("slow");
                     }
                     else {
