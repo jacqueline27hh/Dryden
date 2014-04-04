@@ -14,7 +14,7 @@ public partial class Login : System.Web.UI.Page
         if (Roles.IsUserInRole(user.UserName, "Admin"))
         {
             // Here is the page where to redirect 
-            Response.Redirect("~/Admin-Dashboard/alert.aspx");
+            Response.Redirect("~/Admin-Dashboard/Admin.aspx");
         }
         else if (Roles.IsUserInRole(user.UserName, "Patient"))
         {
