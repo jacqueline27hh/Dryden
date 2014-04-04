@@ -21,7 +21,7 @@ public partial class Doctor_Dashboard_Default : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Insert":
-                _strMessage(objAppointment.commitInsert(txt_pnameI.Text, txt_dnameI.Text, txt_dateI.Text, txt_titleI.Text), "insert");
+                _strMessage(objAppointments.commitInsert(txt_pnameI.Text, txt_dnameI.Text, txt_dateI.Text, txt_titleI.Text), "insert");
                 _subRebind();
                 break;
             case "Update":
