@@ -68,72 +68,23 @@
     }
 
 
-/*.carousel-caption {
-   font-size: 24px;
-}
 
-.carousel-caption h4 {
-   font-size: 32px;
-}
-
-
-#home_myCarousel  .item {
-   height: 400px; /*medium size as default
-} */
-
-/*#home_myCarousel .carousel-caption {
-  font-size: 18px;
-  text-align: left;
-  width: 250px;
-  bottom: 74px;
-  right: 28px;
-  left: 118px;
-  text-shadow:none;
-
-}
-
-
-#home_myCarousel h4 {
-  
-  text-align: left;
-  font-size:50px;
-  padding-bottom:15px;
-  
-}
-
-
-#home_slide1 {
-   background: url('../images/ni_carousel_medium_01.jpg') top center no-repeat;
-}*/
-
-/*#home_slide2 {
-   background: url('../images/ni_carousel_medium_02.jpg') top center no-repeat;
-}
-
-#home_slide3 {
-   background: url('../images/ni_carousel_medium_03.jpg') top center no-repeat;
-}
-
-.carousel-indicators {
-   
-   left: 15%;
-   
-   text-align: left;
-   
-}
-.carousel-control.left {
-
-background-image: none;
-
-}
-
-.carousel-control.right {
-
-background-image: none;
-
-}*/*/
 
 /*--------------Slide Show ENDS here---------------*/
+
+/*--------------Search feature STARTS here---------------*/
+
+#advanced_search {
+  height: auto;
+  width: 100%;
+  display: none;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+}
+
+
+
+/*--------------Search feature ENDS here---------------*/
 
 /*--------------Alert Show STARTS here---------------*/
 
