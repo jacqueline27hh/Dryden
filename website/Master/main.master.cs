@@ -9,10 +9,7 @@ public partial class main : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-<<<<<<< HEAD
-       // txt_username.Focus(); 
-    }
-=======
+
         //txt_username.Focus(); 
     }
 
@@ -27,5 +24,5 @@ public partial class main : System.Web.UI.MasterPage
     }
     
 
->>>>>>> 5832de9ea7e6669a743189c7fd0ceb7aadefb1aa
+
 }
