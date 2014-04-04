@@ -108,11 +108,28 @@
                                             
                                         </asp:View>
                                         <asp:View ID="view5" runat="server">
-                                            <p>
-                                               Identify Your Symptoms
-							
-                                            </p>
-                                        </asp:View>
+                                            <asp:SqlDataSource ID="sql_qf" runat="server" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [quiz]"></asp:SqlDataSource>
+                                            <br />
+                                            <br />
+                                            <h3><span>F&Q: </span>Should I Go to the Emergency Room?</h3>
+                                            <br />
+                                            <br />
+                                            <asp:Repeater ID="rpt_qf" runat="server" DataSourceID="sql_qf">
+                                                <ItemTemplate>
+                                                    <asp:Label id="lbl_quiz_q" runat="server" Text='<%#Eval("Questions") %>' />   
+                                                    <asp:RadioButtonList runat="server" ID="rbl_questions">
+                                                       
+                                                        <asp:ListItem Value="Y"> Yes </asp:ListItem>
+                                                        <asp:ListItem Value="N"> No </asp:ListItem>
+                                                        
+                                                    </asp:RadioButtonList> <br /><br /> 
+                                                </ItemTemplate>
+                                                <FooterTemplate>
+                                                    <asp:Button CssClass="btn_pv" runat="server" Text="Submit" OnClick="subProcess" /> 
+                                                </FooterTemplate>
+                                            </asp:Repeater>
+                                 <asp:Label runat="server" ID="lbl_test2" />    
+                                     </asp:View>
                                         <asp:View ID="view6" runat="server">
                                             <p>
                                                E-card

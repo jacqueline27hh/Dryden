@@ -139,6 +139,7 @@
                             <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
                                 <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                             </button>
+                            <p id="master_menu">MENU</p>
                      
                                   
                                    
@@ -337,10 +338,10 @@
                 });
             });
 
-            function closeForm() {
-                $("#messageSent").show("slow");
-                setTimeout('$("#messageSent").hide();$("#master_login_form").slideUp("slow")', 2000);
-            }
+            //function closeForm() {
+            //    $("#messageSent").show("slow");
+            //    setTimeout('$("#messageSent").hide();$("#master_login_form").slideUp("slow")', 2000);
+            //}
         </script>
 
 

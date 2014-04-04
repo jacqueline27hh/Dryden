@@ -134,7 +134,7 @@
 					
 						
 
-				</div><!-- end list-group -->
+				</div> <!-- end list-group -->
 
 					
 				</div> <!-- end col-5 -->

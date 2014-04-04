@@ -49,5 +49,26 @@ public partial class _Default : System.Web.UI.Page
         else
             lbl_message.Text = "Sorry, unable to submit your review. Please try again";
     }
+
+    protected void subProcess(object sender, EventArgs e)
+    {
+        var totalCount = 0; 
+        foreach (RepeaterItem item in rpt_qf.Items)
+        {
+            var rbl_q = (RadioButtonList)item.FindControl("rbl_questions");
+            if (rbl_q.SelectedValue.ToString() == "Y")
+            {
+                totalCount++; 
+            }
+        }
+        if (totalCount >= 7)
+        {
+            lbl_test2.Text = "Get your ass to the hospital!" + " You had " + totalCount + "yeses";
+        }
+        else
+        {
+            lbl_test2.Text = "All good" + "There were this many yeses: " + totalCount; 
+        }
+    }
 }
     

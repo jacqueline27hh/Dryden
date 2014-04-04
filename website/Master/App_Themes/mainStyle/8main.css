@@ -8,6 +8,14 @@
 
 /*--------------Slide Show STARTS here---------------*/
 
+/*#main {
+    width: 1165px;
+}
+
+#cph_main_dv_sliders tbody tr td:first-child {
+    display:none;
+}*/
+
 
 #display {
     width:100%;
@@ -339,6 +347,32 @@ border-color: #97bf28;
 
 
 /*--------------Identify Your Symptom Program STARTS here---------------*/
+
+#cph_main_up_main .btn_pv {
+    background-color:#7cd0dc;
+}
+
+#cph_main_rpt_qf_lbl_quiz_q_0,#cph_main_rpt_qf_lbl_quiz_q_1, #cph_main_rpt_qf_lbl_quiz_q_2, #cph_main_rpt_qf_lbl_quiz_q_3, #cph_main_rpt_qf_lbl_quiz_q_4, #cph_main_rpt_qf_lbl_quiz_q_5, #cph_main_rpt_qf_lbl_quiz_q_6, #cph_main_rpt_qf_lbl_quiz_q_7, #cph_main_rpt_qf_lbl_quiz_q_8, #cph_main_rpt_qf_lbl_quiz_q_9, #cph_main_rpt_qf_lbl_quiz_q_10, #cph_main_rpt_qf_lbl_quiz_q_11{
+    background-color:#cbecf1;
+    padding:5px;
+    /*margin-bottom:20px;*/
+}
+
+
+#cph_main_rpt_qf_rbl_questions_0, #cph_main_rpt_qf_rbl_questions_1, #cph_main_rpt_qf_rbl_questions_2, #cph_main_rpt_qf_rbl_questions_3, #cph_main_rpt_qf_rbl_questions_4, #cph_main_rpt_qf_rbl_questions_5, #cph_main_rpt_qf_rbl_questions_6, #cph_main_rpt_qf_rbl_questions_7, #cph_main_rpt_qf_rbl_questions_8,
+#cph_main_rpt_qf_rbl_questions_9,
+#cph_main_rpt_qf_rbl_questions_10,
+#cph_main_rpt_qf_rbl_questions_11 {
+    margin-top:20px;
+}
+
+h3 span {
+    color:#7cd0dc;
+    font-size:28px;
+
+}
+
+
 
 /*--------------Identify Your Symptom Program ENDS here---------------*/
 
