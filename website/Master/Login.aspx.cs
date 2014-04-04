@@ -10,25 +10,39 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        MembershipUser user = Membership.GetUser();
+        if (Roles.IsUserInRole(user.UserName, "Admin"))
+        {
+            // Here is the page where to redirect 
+            Response.Redirect("~/Admin-Dashboard/alert.aspx");
+        }
+        else if (Roles.IsUserInRole(user.UserName, "Patient"))
+        {
+            Response.Redirect("~/Patient-Dashboard/p_view_app.aspx");
+        }
+        else if (Roles.IsUserInRole(user.UserName, "Doctor"))
+        {
+            Response.Redirect("~/Doctor-Dashboard/doctor_view_app.aspx");
+        }
 
     }
 
-    protected void main_login_Authenticate(object sender, AuthenticateEventArgs e)
-    {
-    //    if (Membership.ValidateUser(main_login.UserName, main_login.Password))
+    //protected void lgn_main_Authenticate(object sender, AuthenticateEventArgs e)
+    //{
+    //    if (Membership.ValidateUser(lgn_main.UserName, lgn_main.Password))
     //    {
 
-    //        if (Roles.IsUserInRole(main_login.UserName, "Admin"))
+    //        if (Roles.IsUserInRole(lgn_main.UserName, "Admin"))
     //        {
-    //            main_login.DestinationPageUrl = "~/Admin-Dashboard/Admin.aspx";
+    //            lgn_main.DestinationPageUrl = "~/Admin-Dashboard/alert.aspx";
     //        }
-    //        else if (Roles.IsUserInRole(main_login.UserName, "Doctor"))
+    //        else if (Roles.IsUserInRole(lgn_main.UserName, "Doctor"))
     //        {
-    //            main_login.DestinationPageUrl = "~/Doctor-Dashboard/Doctor.aspx";
+    //            lgn_main.DestinationPageUrl = "~/Doctor-Dashboard/doctor_view_app.aspx";
     //        }
-    //        else if (Roles.IsUserInRole(main_login.UserName, "Patient"))
+    //        else if (Roles.IsUserInRole(lgn_main.UserName, "Patient"))
     //        {
-    //            main_login.DestinationPageUrl = "~/Patient-Dashboard/Patient.aspx";
+    //            lgn_main.DestinationPageUrl = "~/Patient-Dashboard/p_view_app.aspx";
     //        }
     //        else
     //        {
@@ -39,5 +53,5 @@ public partial class Login : System.Web.UI.Page
     //    {
     //        Response.Write("Invalid login");
     //    }
-    }
+    //}
 }

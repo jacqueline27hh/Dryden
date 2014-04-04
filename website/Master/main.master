@@ -25,7 +25,7 @@
                                 <!-- switch to Repeater or something later, as this form should not use div as
                         a wrap and should be database driven.  More on this during the database conversion -->
 
-                                <asp:Login ID="lgn_main" runat="server" DestinationPageUrl="~/Default.aspx">
+                                <asp:Login ID="lgn_main" runat="server" DestinationPageUrl="~/Login.aspx">
                                     <LayoutTemplate>
                                         <fieldset>
                                             <legend>Login</legend>

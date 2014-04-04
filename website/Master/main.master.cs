@@ -16,10 +16,10 @@ public partial class main : System.Web.UI.MasterPage
         //txt_username.Focus(); 
     }
 
-    protected void subLogin(object sender, EventArgs e)
-    {
-        Response.Redirect("Default.aspx");
-    }
+    //protected void subLogin(object sender, EventArgs e)
+    //{
+    //    Response.Redirect("Login.aspx");
+    //}
 
     protected void subSearch(object sender, EventArgs e)
     {
