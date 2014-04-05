@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dryden_database" Class="searchClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=184.168.194.62;Initial Catalog=dryden_database;User ID=dryden" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dryden_databaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.search_API" Member="search_APIs">
+    <Type Name="search_API">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="criteria" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="department_list" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
