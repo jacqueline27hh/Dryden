@@ -16,10 +16,41 @@
         
         <asp:SqlDataSource runat="server" ID="sds_search" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [search_API]" /> 
 
-        <asp:Repeater runat="server" ID="rpt_search" DataSourceID="sds_search">
+        <asp:Label runat="server" ID="lbl_results" /> 
 
+        <table> 
+            <tr>
+                <td> First name: </td>
+                <td> Last name: </td>
+                <td> Department: </td>
+                <td> Phone: </td>
+                <td> Email: </td>
+            </tr>
+        <asp:Repeater runat="server" ID="rpt_search" DataSourceID="sds_search" OnItemCommand="subCommand">
+            <ItemTemplate>
+                <tr>
+                    <td> <asp:TextBox runat="server" id="txt_fname" Text='<%#Eval ("fname") %>' /> </td>
+                    <td> <asp:TextBox runat="server" ID="txt_lname" Text='<%#Eval ("lname") %>' /> </td>
+                    <td> <asp:TextBox runat="server" ID="txt_department" Text='<%#Eval ("department") %>' /></td>
+                    <td> <asp:TextBox runat="server" ID="txt_phone" Text='<%#Eval("phone") %>' /></td>
+                    <td> <asp:TextBox runat="server" ID="txt_email" Text='<%#Eval("email") %>' /></td>
+                    <td> <asp:Button runat="server" ID="btn_update" Text="Update" CommandName="sub_update" CommandArgument='<%#Eval("Id") %>' />
+                        <asp:Button runat="server" ID="btn_delete" OnClientClick="return confirm('This will permanently delete this entry from the database, are you sre?')" Text="Delete" CommandName="sub_delete" CommandArgument='<%#Eval("Id") %>' />
+                    </td>
+                </tr>
+            </ItemTemplate>
+            <FooterTemplate>
+                 <tr>
+                    <td> <asp:TextBox runat="server" id="txt_fnameI" Text='<%#Eval ("fname") %>' /> </td>
+                    <td> <asp:TextBox runat="server" ID="txt_lnameI" Text='<%#Eval ("lname") %>' /> </td>
+                    <td> <asp:TextBox runat="server" ID="txt_departmentI" Text='<%#Eval ("department") %>' /></td>
+                    <td> <asp:TextBox runat="server" ID="txt_phoneI" Text='<%#Eval("phone") %>' /></td>
+                    <td> <asp:TextBox runat="server" ID="txt_emailI" Text='<%#Eval("email") %>' /></td>
+                    <td> <asp:Button runat="server" ID="btn_insert" Text="Insert New" CommandName="sub_insert" /> </td>
+                </tr>
+            </FooterTemplate>
         </asp:Repeater>
-
+        </table>
         
 
     </div>
