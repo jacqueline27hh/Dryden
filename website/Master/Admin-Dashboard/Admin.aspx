@@ -1,21 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Admin.aspx.cs" Inherits="Admin_Dashboard_Admin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin-Dashboard/admin.master" AutoEventWireup="true" CodeFile="Admin.aspx.cs" Inherits="Admin_Dashboard_Admin" Theme="mainStyle" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:LoginName ID="main_login" FormatString="Welcome, {0}!" runat="server" />
-        <br /><br />
-        <asp:LoginStatus ID="main_login2" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Login.aspx" />
-        <br /><br />
-        <h1>Admin Dashboard</h1>
-        <asp:Label ID="lbl_adminTitle" runat="server" Text="This is where administrators can update content." />
+<asp:Content ID="Content2" ContentPlaceHolderID="cph_admin_d" runat="Server">
+
+    <div class="col-sm-8 admin_form">
+   
+       
+
+        <div class="row" id="admin_header_wrapper">
+        <asp:Label ID="admin_lbl_header" runat="server" CssClass="col-lg-9 admin_header"/>
+            <asp:Label ID="lbl_welcome" runat="server" Text="Welcome Admin! Please select from the left sidebar the feature you wish to view and/or edit." CssClass="col-lg-9 admin_header" />
+        </div>
     </div>
-    </form>
-</body>
-</html>
+    <%--end admin_form--%>
+</asp:Content>
