@@ -47,7 +47,7 @@
 						
 						<asp:Repeater ID="rpt_display_alert" runat="server">
                             <ItemTemplate>
-                                <h4><i class="fa fa-warning"></i><%#Eval("Title") %></h4>
+                                <h4><i class="fa fa-warning"></i>&nbsp;<%#Eval("Title") %></h4>
 
                         <asp:Label runat="server" ID="lbl_alert" Text='<%#Eval("Message") %>' /> 
                             </ItemTemplate>

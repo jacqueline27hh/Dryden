@@ -18,8 +18,40 @@ body {
 /* --------------------------------------
    Header
    -------------------------------------- */
+/*--------------Search feature STARTS here---------------*/
+
+#cph_header_rb_options label {
+    font-weight:lighter;
+}
+
+#advanced_search {
+  height: auto;
+  width: 100%;
+  display: none;
+  font-size: 15px;
+  font-family: Nunito;
+    color: #999;
+
+}
+
+#advancedSearch {
+    color:rgba(50, 50, 50, 0.4);
+    font-size: 13px;
+    margin-left: 96px
+}
 
 
+
+
+
+/*--------------Search feature ENDS here---------------*/
+
+
+.btn-mini {
+
+    background-color:#7cd0dc;
+    color:#fff;
+}
 
 #cph_header_NavigationMenu ul li a {
     padding-top:15px;
