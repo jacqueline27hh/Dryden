@@ -197,9 +197,11 @@ input {
 
 
 input[type="text"] {
-    width: 50%;
+    /*width: 50%;*/
 min-height: 27px;
 }
+
+
 
 input[type="submit"] {
     padding: 7px 18px;
@@ -303,6 +305,30 @@ input[type="text"].alert_up_title {
 
 #cph_admin_d_alert_pnl_insert legend {
     color:#fff;
+}
+
+/* --------------------------------------
+   Should I go To Emergency Room
+   -------------------------------------- */
+
+#cph_admin_d_ddl_edit option {
+    color:#535453;
+    /*font-size: 24px !important;*/
+}
+
+#quiz_td_edit {
+}
+
+#quiz_td_edit input[type="text"] {
+    width:500px;
+}
+
+#quiz_td_edit_btn {
+    float:left;
+}
+
+#cph_admin_d_txt_nameI {
+    width:400px;
 }
 
 
