@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Patient-Dashoboard/patient.master" AutoEventWireup="true" CodeFile="p_view_app.aspx.cs" Inherits="Patient_Dashoboard_Default" Theme="mainStyle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Patient-Dashboard/patient.master" AutoEventWireup="true" CodeFile="p_view_app.aspx.cs" Inherits="Patient_Dashboard_Default" Theme="mainStyle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -8,8 +8,9 @@
    
        
 
-        <div class="row" id="admin_header_wrapper">
+        <div class="row col-lg-8" id="admin_header_wrapper">
         <asp:Label ID="admin_lbl_header" runat="server" Text="View My Appointment" CssClass="col-lg-9 admin_header"/>
+        <br /><br />
         <table border="1">
             <thead>
                 <tr>
@@ -23,8 +24,8 @@
                     <ItemTemplate>
                         <tr>
                             <td><%#Eval("appointment_title") %></td>
-                            <td><%#Eval("date-time") %></td>
-                            <td><%#Eval("doctor") %></td>
+                            <td><%#Eval("date_time") %></td>
+                            <td><%#Eval("firstname") %></td>
                          </tr>
                     </ItemTemplate>
                  </asp:Repeater>

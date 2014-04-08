@@ -20,16 +20,16 @@ public class appointmentClass
         return allAppointments;
 
     }
-    public bool commitInsert(string _patient, string _doc, DateTime _date, string _title)
+    public bool commitInsert(int _patient, int _doc, DateTime _date, string _title)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
             Appointment objNewAppointment = new Appointment();
 
-       //     objNewAppointment.patient_name = _patient;
-       //     objNewAppointment.doctor_name = _doc;
-       //     objNewAppointment.date-time = _date;
+            objNewAppointment.patient_name = _patient;
+            objNewAppointment.doctor_name = _doc;
+            objNewAppointment.date_time = _date;
 
             objNewAppointment.appointment_title = _title;
 
@@ -39,17 +39,16 @@ public class appointmentClass
         }
     }
 
-    public bool commitUpdate(int _id, string _patient, string _doc, DateTime _date, string _title)
+    public bool commitUpdate(int _id, int _patient, int _doc, DateTime _date, string _title)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
             var objUpAppointment = objAppointmentDC.Appointments.Single(x => x.Id == _id);
 
-         //   objUpAppointment.patient_name = _patient;
-         //   objUpAppointment.doctor_name = _doc;
-         //   objUpAppointment.date-time = _date;
-
+            objUpAppointment.patient_name = _patient;
+            objUpAppointment.doctor_name = _doc;
+            objUpAppointment.date_time = _date;
             objUpAppointment.appointment_title = _title;
 
             objAppointmentDC.SubmitChanges();
