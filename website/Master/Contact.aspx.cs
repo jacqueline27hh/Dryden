@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    contactClass objContact = new contactClass();
+  
     mailingListClass objMailingList = new mailingListClass();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -41,5 +43,41 @@ public partial class _Default : System.Web.UI.Page
         txt_lname.Text = "";
         txt_email.Text = "";
         lbl_thankYou.Text = "Thank you for subscribing! A confirmation email will be sent to you shortly.";
+    }
+
+    protected void subSubmitMsg(object sender, EventArgs e)
+    {
+
+
+        _strMessage(objContact.commitInsert(txtfname.Text, txtlname.Text, ddl_dept.SelectedItem.Text, txtemail.Text, txtmsg.Text), "insert");
+        _subRebind();
+
+    }
+    protected void subCancel(object sender, EventArgs e)
+    {
+        contactClass objContactDC = new contactClass();
+        txt_fname.Text = string.Empty;
+        txt_lname.Text = string.Empty;
+        ddl_dept.Items.ToString();
+        txtemail.Text = string.Empty;
+        txtmsg.Text = string.Empty;
+    }
+    private void _strMessage(bool flag, string str)
+    {
+        if (flag)
+            lbl_output.Text = "Message" + str + "submitted";
+        else
+            lbl_output.Text = "Sorry, unable to " + str + "submit message";
+
+    }
+    private void _subRebind()
+    {
+
+        contactClass objContactDC = new contactClass();
+        //txt_fname.Text = string.Empty;
+        //txt_lname.Text = string.Empty;
+        //txtemail.Text = string.Empty;
+        //ddl_dept.SelectedItem.Text = string.Empty;
+        //txtmsg.Text = string.Empty;
     }
 }

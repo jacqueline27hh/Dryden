@@ -116,13 +116,13 @@
 							
                                             </p>
 
-                                            <asp:Label ID="lblfname" runat="server" AssociatedControlID="txtfname" />
+                                            <asp:Label ID="lblfname" runat="server" AssociatedControlID="txtfname"  Text="First Name"/>
                                             <asp:TextBox ID="txtfname" runat="server" />
                                             <br /><br />
-                                            <asp:Label ID="lbllname" runat="server" AssociatedControlID="txtlname" />
+                                            <asp:Label ID="lbllname" runat="server" AssociatedControlID="txtlname" Text="Last Name" />
                                             <asp:TextBox ID="txtlname" runat="server" />
                                             <br /><br />
-                                            <asp:Label ID="lbldept" runat="server" AssociatedControlID="ddl_dept" />
+                                            <asp:Label ID="lbldept" runat="server" AssociatedControlID="ddl_dept" Text="Department" />
                                             <asp:DropDownList ID="ddl_dept" runat="server">
                                                 <asp:ListItem Value="Administrative" />
                                                 <asp:ListItem Value="General" />
@@ -137,10 +137,11 @@
                                             <asp:TextBox ID="txtmsg" runat="server" />
                                             <br />
 
+                                            <asp:Label ID="lbl_output" runat="server" />
                                             <%--<asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />--%>
-                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" />
+                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />
                                             <%--<asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancelmsg" />--%>
-                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" />
+                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancel" />
                                         </asp:View> 
                                      
                                     </asp:MultiView>
