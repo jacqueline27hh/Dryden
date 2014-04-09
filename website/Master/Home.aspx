@@ -26,13 +26,11 @@
                                     </li> 
                                     
                                  </ul>
-                           </div>    
-                                    <span id="slide_prev"> Prev </span>
-                                    <span id="slide_next"> Next  </span>
-                               
+                           </div>                              
                </ItemTemplate>
            </asp:Repeater>
-
+           <a id="slide_prev"> </a>
+           <a id="slide_next"> </a>     
          
 
 		<div class="row" id="home_alert">
