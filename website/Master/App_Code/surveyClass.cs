@@ -25,14 +25,14 @@ public class surveyClass
         surveyDataContext objSurveyDC = new surveyDataContext();
         using (objSurveyDC)
         {
-            patient_survey objNewSurvey = new patient_survey();
-            objNewSurvey.firstname = _fname;
-            objNewSurvey.lastname = _lname;
-            objNewSurvey.email = _email;
-            objNewSurvey.reviewof = _review;
-            objNewSurvey.message = _msg;
+            patient_survey objSurvey = new patient_survey();
+            objSurvey.firstname = _fname;
+            objSurvey.lastname = _lname;
+            objSurvey.email = _email;
+            objSurvey.reviewof = _review;
+            objSurvey.message = _msg;
 
-            objSurveyDC.patient_surveys.InsertOnSubmit(objNewSurvey);
+            objSurveyDC.patient_surveys.InsertOnSubmit(objSurvey);
             objSurveyDC.SubmitChanges();
             return true;
         }

@@ -11,10 +11,10 @@ public partial class _Default : System.Web.UI.Page
     surveyClass objSurvey = new surveyClass();
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Page.IsPostBack)
-        {
-            _subRebind();
-        }
+        //if (!Page.IsPostBack)
+        //{
+         //   _subRebind();
+        //}
         string urlPost = HttpContext.Current.Request.Url.AbsoluteUri;
         string[] indexNum = urlPost.Split('=');
         if (indexNum.Length > 1)
@@ -29,26 +29,46 @@ public partial class _Default : System.Web.UI.Page
     {
         mv_tabs.ActiveViewIndex = Convert.ToInt32(pv_nav_menu.SelectedValue);
     }
-    protected void subSubmit(object sender, EventArgs e)
+    //protected void subSubmit(object sender, EventArgs e)
+    //{
+    //    _strMessage(objSurvey.commitInsert(txtFname.Text, txtLname.Text, txtEmail.Text, txtReview.Text, txtMsg.Text), "insert");
+    //    _subRebind();
+    //}
+    protected void subAddReview(object sender, CommandEventArgs e)
     {
-        _strMessage(objSurvey.commitInsert(txtFname.Text, txtLname.Text, txtEmail.Text, txtReview.Text, txtMsg.Text), "insert");
-        _subRebind();
+        surveyDataContext objsurveyDC = new surveyDataContext();
+        patient_survey objSurvey = new patient_survey();
+        objSurvey.firstname = txtFname.Text;
+        objSurvey.lastname = txtLname.Text;
+        objSurvey.email = txtEmail.Text;
+        objSurvey.reviewof = txtReview.Text;
+        objSurvey.message = txtMsg.Text;
+
+        objsurveyDC.patient_surveys.InsertOnSubmit(objSurvey);
+        objsurveyDC.SubmitChanges();
+        txtFname.Text = "";
+        txtLname.Text = "";
+        txtEmail.Text = "";
+        txtReview.Text = "";
+        txtMsg.Text = "";
+        lbl_ty.Text = "Thank you for your review! It has been submitted.";
+
     }
-    private void _subRebind()
-    {
-        txtFname.Text = string.Empty;
-        txtLname.Text = string.Empty;
-        txtEmail.Text = string.Empty;
-        txtReview.Text = string.Empty;
-        txtMsg.Text = string.Empty;
-    }
-    private void _strMessage(bool flag, string str)
-    {
-        if (flag)
-            lbl_message.Text = "Thank you for your review. It has been submitted.";
-        else
-            lbl_message.Text = "Sorry, unable to submit your review. Please try again";
-    }
+    //private void _subRebind()
+    //{
+      // txtFname.Text = string.Empty;
+       //txtLname.Text = string.Empty;
+      // txtEmail.Text = string.Empty;
+       //txtReview.Text = string.Empty;
+       //txtMsg.Text = string.Empty;
+    //}
+    //private void _strMessage(bool flag, string str)
+    //{
+      //  if (flag)
+        //    lbl_message.Text = "Thank you for your review. It has been submitted.";
+        //else
+          //  lbl_message.Text = "Sorry, unable to submit your review. Please try again";
+    //}
 
     protected void subProcess(object sender, EventArgs e)
     {
