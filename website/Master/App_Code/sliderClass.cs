@@ -15,7 +15,8 @@ public class sliderClass
         return allSlides;
     }
 
-    public string updateSlides(string cap1, string cap2, string cap3, string url1, string url2, string url3)
+    public string updateSlides(string cap1, string cap2, string cap3, string url1, string url2, string url3, string title1, 
+        string title2, string title3)
     {
         imageSliderDataContext objImgDC = new imageSliderDataContext();
         using (objImgDC)
@@ -26,7 +27,10 @@ public class sliderClass
             objSliderInstance.caption3 = cap3;
             objSliderInstance.imageurl1 = url1;
             objSliderInstance.imageurl2 = url2;
-            objSliderInstance.imageurl3 = url3; 
+            objSliderInstance.imageurl3 = url3;
+            objSliderInstance.title1 = title1;
+            objSliderInstance.title2 = title2;
+            objSliderInstance.title3 = title3; 
             objImgDC.SubmitChanges();
             return "Your update was successful";
         }

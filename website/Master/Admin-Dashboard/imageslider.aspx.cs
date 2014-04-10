@@ -32,6 +32,9 @@ public partial class admin_imageslider : System.Web.UI.Page
                 TextBox caption1 = (TextBox)e.Item.FindControl("txt_caption1");
                 TextBox caption2 = (TextBox)e.Item.FindControl("txt_caption2");
                 TextBox caption3 = (TextBox)e.Item.FindControl("txt_caption3");
+                TextBox title1 = (TextBox)e.Item.FindControl("txt_title1");
+                TextBox title2 = (TextBox)e.Item.FindControl("txt_title2");
+                TextBox title3 = (TextBox)e.Item.FindControl("txt_title3"); 
                
                 FileUpload fup1 = (FileUpload)e.Item.FindControl("fup1");
                 Image fup1Img = (Image)e.Item.FindControl("item_img1");
@@ -87,7 +90,8 @@ public partial class admin_imageslider : System.Web.UI.Page
                     }
                 }
 
-                 lbl_results.Text = scObj.updateSlides(caption1.Text.ToString(), caption2.Text.ToString(), caption3.Text.ToString(), fup1SavePath, fup2SavePath, fup3SavePath);
+                 lbl_results.Text = scObj.updateSlides(caption1.Text.ToString(), caption2.Text.ToString(), caption3.Text.ToString(), fup1SavePath, fup2SavePath, fup3SavePath, title1.Text.ToString(),
+                     title2.Text.ToString(), title3.Text.ToString());
                 
                 break;
         }

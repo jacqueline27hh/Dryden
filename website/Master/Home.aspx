@@ -14,15 +14,24 @@
                                 <ul id="slideshow">
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img1" ImageUrl='<%#Eval("imageurl1") %>' CssClass="active" /> 
-                                         <asp:Label runat="server" ID="lbl1" Text='<%#Eval("caption1") %>' />
+                                        <div class="slideshow_left">
+                                           <asp:Label runat="server" ID="title1" Text='<%#Eval("title1") %>' CssClass="slideshow_title" />  
+                                           <asp:Label runat="server" ID="lbl1" Text='<%#Eval("caption1") %>' CssClass="slideshow_caption" />
+                                        </div> 
                                     </li>
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img2" ImageUrl='<%#Eval("imageurl2") %>' /> 
-                                          <asp:Label runat="server" ID="lbl2" Text='<%#Eval("caption2") %>' /> 
+                                         <div class="slideshow_left">
+                                           <asp:Label runat="server" ID="title2" Text='<%#Eval("title2") %>' CssClass="slideshow_title" />
+                                           <asp:Label runat="server" ID="lbl2" Text='<%#Eval("caption2") %>' CssClass="slideshow_caption" />
+                                         </div>
                                     </li>
                                     <li class="slide">
-                                         <asp:Image runat="server" ID="img3" ImageUrl='<%#Eval("imageurl3") %>' />
-                                        <asp:Label runat="server" ID="lbl3" Text='<%#Eval("caption3") %>' /> 
+                                        <asp:Image runat="server" ID="img3" ImageUrl='<%#Eval("imageurl3") %>' />
+                                        <div class="slideshow_left">
+                                          <asp:Label runat="server" ID="title3" Text='<%#Eval("title3") %>' CssClass="slideshow_title" /> 
+                                          <asp:Label runat="server" ID="lbl3" Text='<%#Eval("caption3") %>' CssClass="slideshow_caption" />                                          
+                                        </div>
                                     </li> 
                                     
                                  </ul>

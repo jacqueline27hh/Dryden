@@ -57,15 +57,27 @@
         padding:0px; 
     }
         
-    .slide span {
+    .slideshow_left {
         width:30%;
         height:430px;
-        color: #ffffff; 
-        font-size: 18px; 
-        padding: 50px 15px 15px 15px;
         background-color: #97bf2a; 
         float: left;
     }
+
+         .slideshow_title {
+             display:block;
+             color: #ffffff; 
+             font-size: 24px;
+             text-align: center; 
+             margin: 50px 35px 15px 50px; 
+          }
+
+         .slideshow_caption {
+           display:block;  
+           color: #ffffff; 
+           font-size: 18px; 
+           margin: 35px 5px 15px 50px;
+         }
 
 #slide_prev {
     background-image: url("../images/slider_prev.png");

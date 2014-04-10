@@ -26,16 +26,16 @@ public class ecardClass
         ecardDataContext objEcardDC = new ecardDataContext();
         using (objEcardDC)
         {
-            ecardClass objEcard = new ecardClass();
-            objEcard.name = _name;
-            objEcard.email = _email;
-            objEcard.recipient = _rec;
-            objEcard.background = _bg;
-            objEcard.tagline = _tag;
-            objEcard.msg = _msg;
+            //ecardClass objEcard = new ecardClass();
+            //objEcard.name = _name;
+            //objEcard.email = _email;
+            //objEcard.recipient = _rec;
+            //objEcard.background = _bg;
+            //objEcard.tagline = _tag;
+            //objEcard.msg = _msg;
 
-            objEcardDC.E_cards.InsertOnSubmit(objEcard);
-            objEcardDC.SubmitChanges();
+            //objEcardDC.E_cards.InsertOnSubmit(objEcard);
+            //objEcardDC.SubmitChanges();
             return true;
             //return "Insert complete";
         }
@@ -46,15 +46,15 @@ public class ecardClass
         surveyDataContext objSurveyDC = new surveyDataContext();
         using (objSurveyDC)
         {
-            var objUpSurvey = objSurveyDC.patient_surveys.Single(x => x.Id == _id);
-            objUpSurvey.firstname = _name;
-            objUpSurvey.lastname = _email;
-            objUpSurvey.email = _rec;
-            objUpSurvey.reviewof = _bg;
-            objUpSurvey.message = _tag;
-            objSurvey
+            //var objUpSurvey = objSurveyDC.patient_surveys.Single(x => x.Id == _id);
+            //objUpSurvey.firstname = _name;
+            //objUpSurvey.lastname = _email;
+            //objUpSurvey.email = _rec;
+            //objUpSurvey.reviewof = _bg;
+            //objUpSurvey.message = _tag;
+            //objSurvey
 
-            objSurveyDC.SubmitChanges();
+            //objSurveyDC.SubmitChanges();
             return true;
             //return "Update successful";
         }

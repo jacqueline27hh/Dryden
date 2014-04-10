@@ -9,6 +9,9 @@
       <Column Name="caption1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="caption2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="caption3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="title1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="title2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="title3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
