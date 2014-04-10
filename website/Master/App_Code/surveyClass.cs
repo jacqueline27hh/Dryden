@@ -5,7 +5,7 @@ using System.Web;
 
 public class surveyClass
 {
-    public IQueryable<patient_survey> getPatient_surveys()
+    public IQueryable<patient_survey> getpatient_survey()
     {
         
         surveyDataContext objSurveyDC = new surveyDataContext();
@@ -13,7 +13,7 @@ public class surveyClass
         return allSurveys;
     }
 
-    public IQueryable<patient_survey> getSurveyByID(int _id)
+    public IQueryable<patient_survey> getpatient_surveyByID(int _id)
     {
         surveyDataContext objSurveyDC = new surveyDataContext();
         var allSurveys = objSurveyDC.patient_surveys.Where(x => x.Id == _id).Select(x => x);
@@ -35,6 +35,7 @@ public class surveyClass
             objSurveyDC.patient_surveys.InsertOnSubmit(objSurvey);
             objSurveyDC.SubmitChanges();
             return true;
+            //return "Insert complete";
         }
     }
 
@@ -52,6 +53,7 @@ public class surveyClass
 
             objSurveyDC.SubmitChanges();
             return true;
+            //return "Update successful";
         }
     }
 
@@ -64,6 +66,7 @@ public class surveyClass
             objSurveyDC.patient_surveys.DeleteOnSubmit(objDelSurvey);
             objSurveyDC.SubmitChanges();
             return true;
+            //return "Delete successful";
         }
     }
 }

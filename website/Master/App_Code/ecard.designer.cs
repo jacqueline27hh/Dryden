@@ -22,72 +22,72 @@ using System.Reflection;
 
 
 [global::System.Data.Linq.Mapping.DatabaseAttribute(Name="dryden_database")]
-public partial class directcontactDataContext : System.Data.Linq.DataContext
+public partial class ecardDataContext : System.Data.Linq.DataContext
 {
 	
 	private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 	
   #region Extensibility Method Definitions
   partial void OnCreated();
-  partial void Insertdirect_contact(direct_contact instance);
-  partial void Updatedirect_contact(direct_contact instance);
-  partial void Deletedirect_contact(direct_contact instance);
+  partial void InsertE_card(E_card instance);
+  partial void UpdateE_card(E_card instance);
+  partial void DeleteE_card(E_card instance);
   #endregion
 	
-	public directcontactDataContext() : 
+	public ecardDataContext() : 
 			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["dryden_databaseConnectionString"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public directcontactDataContext(string connection) : 
+	public ecardDataContext(string connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public directcontactDataContext(System.Data.IDbConnection connection) : 
+	public ecardDataContext(System.Data.IDbConnection connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public directcontactDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public ecardDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public directcontactDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public ecardDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public System.Data.Linq.Table<direct_contact> direct_contacts
+	public System.Data.Linq.Table<E_card> E_cards
 	{
 		get
 		{
-			return this.GetTable<direct_contact>();
+			return this.GetTable<E_card>();
 		}
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.direct_contact")]
-public partial class direct_contact : INotifyPropertyChanging, INotifyPropertyChanged
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.E_cards")]
+public partial class E_card : INotifyPropertyChanging, INotifyPropertyChanged
 {
 	
 	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 	
 	private int _Id;
 	
-	private string _firstname;
+	private string _name;
 	
-	private string _lastname;
+	private string _recipient;
 	
-	private string _department;
+	private string _background;
 	
-	private string _email;
+	private string _tagline;
 	
 	private string _message;
 	
@@ -97,19 +97,19 @@ public partial class direct_contact : INotifyPropertyChanging, INotifyPropertyCh
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnfirstnameChanging(string value);
-    partial void OnfirstnameChanged();
-    partial void OnlastnameChanging(string value);
-    partial void OnlastnameChanged();
-    partial void OndepartmentChanging(string value);
-    partial void OndepartmentChanged();
-    partial void OnemailChanging(string value);
-    partial void OnemailChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnrecipientChanging(string value);
+    partial void OnrecipientChanged();
+    partial void OnbackgroundChanging(string value);
+    partial void OnbackgroundChanged();
+    partial void OntaglineChanging(string value);
+    partial void OntaglineChanged();
     partial void OnmessageChanging(string value);
     partial void OnmessageChanged();
     #endregion
 	
-	public direct_contact()
+	public E_card()
 	{
 		OnCreated();
 	}
@@ -134,82 +134,82 @@ public partial class direct_contact : INotifyPropertyChanging, INotifyPropertyCh
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_firstname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-	public string firstname
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string name
 	{
 		get
 		{
-			return this._firstname;
+			return this._name;
 		}
 		set
 		{
-			if ((this._firstname != value))
+			if ((this._name != value))
 			{
-				this.OnfirstnameChanging(value);
+				this.OnnameChanging(value);
 				this.SendPropertyChanging();
-				this._firstname = value;
-				this.SendPropertyChanged("firstname");
-				this.OnfirstnameChanged();
+				this._name = value;
+				this.SendPropertyChanged("name");
+				this.OnnameChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lastname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-	public string lastname
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_recipient", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string recipient
 	{
 		get
 		{
-			return this._lastname;
+			return this._recipient;
 		}
 		set
 		{
-			if ((this._lastname != value))
+			if ((this._recipient != value))
 			{
-				this.OnlastnameChanging(value);
+				this.OnrecipientChanging(value);
 				this.SendPropertyChanging();
-				this._lastname = value;
-				this.SendPropertyChanged("lastname");
-				this.OnlastnameChanged();
+				this._recipient = value;
+				this.SendPropertyChanged("recipient");
+				this.OnrecipientChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_department", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-	public string department
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_background", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+	public string background
 	{
 		get
 		{
-			return this._department;
+			return this._background;
 		}
 		set
 		{
-			if ((this._department != value))
+			if ((this._background != value))
 			{
-				this.OndepartmentChanging(value);
+				this.OnbackgroundChanging(value);
 				this.SendPropertyChanging();
-				this._department = value;
-				this.SendPropertyChanged("department");
-				this.OndepartmentChanged();
+				this._background = value;
+				this.SendPropertyChanged("background");
+				this.OnbackgroundChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-	public string email
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tagline", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+	public string tagline
 	{
 		get
 		{
-			return this._email;
+			return this._tagline;
 		}
 		set
 		{
-			if ((this._email != value))
+			if ((this._tagline != value))
 			{
-				this.OnemailChanging(value);
+				this.OntaglineChanging(value);
 				this.SendPropertyChanging();
-				this._email = value;
-				this.SendPropertyChanged("email");
-				this.OnemailChanged();
+				this._tagline = value;
+				this.SendPropertyChanged("tagline");
+				this.OntaglineChanged();
 			}
 		}
 	}

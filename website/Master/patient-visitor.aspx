@@ -93,15 +93,9 @@
                                             <asp:TextBox ID="txtMsg" TextMode="multiline" Columns="50" Rows="5" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfvMsg" runat="server" Text="*Required" ControlToValidate="txtMsg" ValidationGroup="insert" />
                                             <br /><br />
-                                            <%--<asp:Label ID="lblDate" runat="server" Text="Day of Visit" AssociatedControlID="txtDate" />
-                                            <br />
-                                             <asp:TextBox ID="txtDate" runat="server"  />
-                                            <asp:RangeValidator ID="ravDate" runat="server" Text="*Invalid Date" ControlToValidate="txtDate" SetFocusOnError="true" Type="Date" ValidationGroup="I" />
-                                            <br /><br />
-                                            <asp:Label ID="lblLen" runat="server" Text="Length of stay" AssociatedControlID="txtLen" />
-                                            <br />--%>
+                                            
                                             <asp:Button ID="btnSubmit" runat="server" Text="Submit" CommandName="Insert" OnCommand="subAddReview" ValidationGroup="insert" />
-                                            <br /><asp:Label ID="lbl_ty" runat="server" /> 
+                                            <br /><br /><asp:Label ID="lbl_ty" runat="server" /> 
                                             
 
                                                
