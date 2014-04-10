@@ -101,6 +101,31 @@
 /*--------------Slide Show ENDS here---------------*/
 
 
+/*--------------Search feature presentation side BEGINS here---------------*/
+
+#results_wrap {
+    margin-top: 35px; 
+}
+
+#search_results {
+    margin: 0 auto;
+    width: 80%; 
+}
+
+    #search_results td.first {
+        border-bottom:1px solid grey; 
+    }
+
+    #search_results td {
+      padding: 8px; 
+      border-right:1px solid grey; 
+      text-align: center; 
+    }
+
+
+/*--------------Search feature presentation side ENDS here---------------*/
+
+
 
 /*--------------Alert Show STARTS here---------------*/
 

@@ -34,14 +34,19 @@
                      <div class="slider_row">
                         <div class="slider_left">
                             <asp:textbox ID="txt_lat" runat="server" Text='<%#Eval("lat") %>' /> 
+                            <asp:RequiredFieldValidator runat="server" ID="rfv_txtlat" ControlToValidate="txt_lat" Display="None" ErrorMessage="*Latitude is required" ValidationGroup="admin_map" /> 
+                            <asp:CompareValidator runat="server" Display="None" ID="cv_txtlat" ControlToValidate="txt_lat" Operator="DataTypeCheck" Type="Double" ValidationGroup="admin_map" ErrorMessage="*Latitude must be a decimal number (i.e. 49.769634)" />  
                         </div>
                         <div class="slider_right">
                             <asp:textbox ID="txt_lng" runat="server" Text='<%#Eval("lng") %>'  /> 
+                             <asp:RequiredFieldValidator runat="server" ID="rfv_txtlng" ControlToValidate="txt_lng" Display="None" ErrorMessage="*Longitude is required" ValidationGroup="admin_map" /> 
+                            <asp:CompareValidator runat="server" Display="None" ID="cv_txtlng" ControlToValidate="txt_lng" Operator="DataTypeCheck" Type="Double" ValidationGroup="admin_map" ErrorMessage="*Longitude must be a decimal number (i.e. -92.837907)" />  
                         </div>
                     </div>
                                            
                     <div id="save">
-                        <asp:Button runat="server" ID="btn_save" Text="Save All Changes" CommandName="btn_save" />
+                        <asp:Button runat="server" ID="btn_save" Text="Save All Changes" CommandName="btn_save" ValidationGroup="admin_map" />
+                        <asp:ValidationSummary runat="server" ID="vs_main" DisplayMode="List" ShowMessageBox="true" ShowSummary="false" ValidationGroup="admin_map" /> 
                     </div>
 
         

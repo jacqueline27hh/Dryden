@@ -10,16 +10,17 @@
 
         <asp:Label runat="server" ID="lbl_test" /> 
         
+        <div id="results_wrap">
         <asp:Repeater ID="rpt_search" runat="server">
         
             <HeaderTemplate>
-                <table>
+                <table id="search_results">
                 <tr>
-                    <td> First: </td>
-                    <td> Last: </td>
-                    <td> Department: </td>
-                    <td> Phone: </td>
-                    <td> Email: </td>
+                    <td class="first"> First: </td>
+                    <td class="first"> Last: </td>
+                    <td class="first"> Department: </td>
+                    <td class="first"> Phone: </td>
+                    <td class="first"> Email: </td>
                 </tr>
             </HeaderTemplate>
             
@@ -35,6 +36,7 @@
             </ItemTemplate>
         </asp:Repeater>
             </table>
+            </div>
     </div>
 </asp:Content>
 

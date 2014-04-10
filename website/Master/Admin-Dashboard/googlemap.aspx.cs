@@ -28,12 +28,19 @@ public partial class google_map : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "btn_save":
-                googleMap gmObj = new googleMap();
-                TextBox lat = (TextBox)e.Item.FindControl("txt_lat");
-                TextBox lng = (TextBox)e.Item.FindControl("txt_lng");
-                lbl_results.Text = gmObj.updateData(lat.Text.ToString(), lng.Text.ToString());
-                subRebind(); 
-                break;
+                try
+                {
+                    googleMap gmObj = new googleMap();
+                    TextBox lat = (TextBox)e.Item.FindControl("txt_lat");
+                    TextBox lng = (TextBox)e.Item.FindControl("txt_lng");
+                    lbl_results.Text = gmObj.updateData(lat.Text.ToString(), lng.Text.ToString());
+                    subRebind();
+                }
+                catch (Exception err)
+                {
+                    lbl_results.Text = "We're sorry, but the following error occured: " + err.Message.ToString();
+                }
+                break; 
         }
     }
 }

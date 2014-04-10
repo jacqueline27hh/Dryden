@@ -14,7 +14,7 @@
                                 <ul id="slideshow">
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img1" ImageUrl='<%#Eval("imageurl1") %>' CssClass="active" /> 
-                                         <asp:Label runat="server" ID="lbl1" Text='<%#Eval("caption1") %>' /> 
+                                         <asp:Label runat="server" ID="lbl1" Text='<%#Eval("caption1") %>' />
                                     </li>
                                     <li class="slide">
                                          <asp:Image runat="server" ID="img2" ImageUrl='<%#Eval("imageurl2") %>' /> 
