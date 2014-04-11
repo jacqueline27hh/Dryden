@@ -129,6 +129,7 @@
 							
                                             </p>
                                         </asp:View>
+                                        <%--Volunteer feature--%>
                                         <asp:View ID="view4" runat="server">
 
 
@@ -164,14 +165,19 @@
                                             <asp:TextBox ID="txtschool" runat="server" />
                                             <br />
                                             <br />
+                                            <asp:Label ID="lblvoltype" runat="server" Text="Volunteer Type" />
+                                            <asp:DropDownList ID="ddl_voltype" runat="server" >
+                                                <asp:ListItem Value="Administrative" />
+                                                <asp:ListItem Value="General" />
+                                            </asp:DropDownList><br /><br />
                                             <asp:Label ID="lbl_title" runat="server" Text="Upload your Resume" /><br />
                                             <asp:Label ID="lblresume" runat="server" Text="Resume" />
                                             <asp:FileUpload ID="file_up" runat="server" />
                                             <%--   <asp:TextBox ID="txtresume" runat="server" />--%>
                                             <%--<asp:Button ID="btnbrowse" runat="server" Text="Browse" OnClick="subupload" />--%>
-                                            <asp:Button ID="btnbrowse" runat="server" Text="Browse" />
+                                           <%-- <asp:Button ID="btnbrowse" runat="server" Text="Browse" />--%>
                                             <br />
-                                            <asp:Label ID="lblavailable" runat="server" Text="Availability" />
+                                          <%--  <asp:Label ID="lblavailable" runat="server" Text="Availability" />
                                             <asp:CheckBoxList ID="chk_availability" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
                                                 <asp:ListItem Text="Monday" />
                                                 <asp:ListItem Text="Tuesday" />
@@ -180,14 +186,14 @@
                                                 <asp:ListItem Text="Friday" />
                                                 <asp:ListItem Text="Saturday" />
                                                 <asp:ListItem Text="Sunday" />
-                                            </asp:CheckBoxList>
+                                            </asp:CheckBoxList>--%>
                                             <br />
                                             <br />
                                             <%--   <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subApply" />
     <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
                                             <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subVolunteer" />
                                             <%--<asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
-                                            <asp:Button ID="btncancel" runat="server" />
+                                            <asp:Button ID="btncancel" runat="server" Text="Cancel" />
 
                                         </asp:View>
 

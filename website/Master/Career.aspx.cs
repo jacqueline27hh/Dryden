@@ -141,8 +141,21 @@ public partial class _Default : System.Web.UI.Page
     volunteerOpp objvol = new volunteerOpp();
     protected void subVolunteer(object sender, CommandEventArgs e)
     {
-       
-      
+
+        _strMessage(objvol.commitInsert(txtfname.Text, txtlname.Text, int.Parse(txtage.Text.ToString()), rdb_gender.SelectedItem.Text, txtschool.Text, ddl_voltype.SelectedItem.Text, txtemail.Text, char.Parse(txtcontact.Text.ToString())), "insert");
+        _subRebind();
+    }
+    private void _strMessage(bool flag, string str)
+    {
+        if (flag)
+            lbl_msgV.Text = "Application" + str + "submitted";
+        else
+            lbl_msgV.Text = "Sorry, unable to " + str + "submit message";
+
+    }
+    private void _subRebind()
+    {
+        volunteerOpp objvol = new volunteerOpp();
     }
 
     protected void rpt_all_ItemCommand(object source, RepeaterCommandEventArgs e)

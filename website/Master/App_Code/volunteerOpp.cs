@@ -22,28 +22,28 @@ public class volunteerOpp
         return allvolunteers;
     }
 
-    //public string commitInsert(string firstname, string lastname, int age, string gender, string school_name, string volunteer_type, string email, string phone, string available_days)
-    //{
-    //    volunteerclassDataContext objVolunteer = new volunteerclassDataContext();
-    //    {
-    //        //volunteer objnewVolunteer = new volunteer();
-    //        //objnewVolunteer.firstname = _firstname;
-    //        //objnewVolunteer.lastname = _lastname;
-    //        //objnewVolunteer.age = _age;
-    //        //objnewVolunteer.gender = _gender;
-    //        //objnewVolunteer.school_name = _school_name;
-    //        //objnewVolunteer.volunteer_type = _volunteer_type;
-    //        //objnewVolunteer.email = _email;
-    //        //objnewVolunteer.phone = _phone;
-    //        //objnewVolunteer.available_days = _available_days;
-    //        //objVolunteer.volunteers.InsertOnSubmit(objnewVolunteer);
-    //        //objVolunteer.SubmitChanges();
-    //        //return "Application submitted";
+    public bool commitInsert(string _fname, string _lname, int _age, string _gender, string _school_name, string _volunteertype, string _email, char _contact)
+    {
+        volunteerclassDataContext objVolunteer = new volunteerclassDataContext();
+        using (objVolunteer)
+        {
+            volunteer objnewVolunteer = new volunteer();
+            objnewVolunteer.firstname = _fname;
+            objnewVolunteer.lastname = _lname;
+            objnewVolunteer.age = _age;
+            objnewVolunteer.gender = _gender;
+            objnewVolunteer.school_name = _school_name;
+            objnewVolunteer.volunteer_type = _volunteertype;
+            objnewVolunteer.email = _email;
+            objnewVolunteer.phone = _contact;
+            objVolunteer.volunteers.InsertOnSubmit(objnewVolunteer);
+            objVolunteer.SubmitChanges();
+            return true;
 
-    //    }
-    //}
+        }
+    }
 
-    public string commitUpdate(int id, string firstname, string lastname, string email)
+    public string commitUpdate(int vol_Id, string firstname, string lastname, string email)
     {
         volunteerclassDataContext objVolunteer = new volunteerclassDataContext();
         using (objVolunteer)
