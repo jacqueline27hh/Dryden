@@ -57,15 +57,55 @@
         padding:0px; 
     }
         
-    .slide span {
+    .slideshow_left {
         width:30%;
         height:430px;
-        color: #ffffff; 
-        font-size: 18px; 
-        padding: 50px 15px 15px 15px;
         background-color: #97bf2a; 
         float: left;
     }
+
+         .slideshow_title {
+             display:block;
+             color: #ffffff; 
+             font-size: 24px;
+             text-align: center; 
+             margin: 50px 35px 15px 50px; 
+          }
+
+         .slideshow_caption {
+           display:block;  
+           color: #ffffff; 
+           font-size: 18px; 
+           margin: 35px 5px 15px 50px;
+         }
+
+#slide_prev {
+    background-image: url("../images/slider_prev.png");
+    height: 38px;
+    width: 22px; 
+    overflow:hidden;
+    display: block;
+    position: relative;
+    top: -215px; 
+    left: 10px; 
+}
+
+#slide_next {
+    background-image: url("../images/slider_next.png");
+    height: 38px;
+    width: 22px; 
+    overflow:hidden;
+    display: block; 
+    float: right;
+    position: relative;
+    right: 10px;
+    top:-262px;   
+}
+
+#slide_prev:hover, #slide_next:hover{
+    background-position: 0 -38px; 
+}
+
 
 
 
@@ -73,8 +113,37 @@
 /*--------------Slide Show ENDS here---------------*/
 
 
+/*--------------Search feature presentation side BEGINS here---------------*/
+
+#results_wrap {
+    margin-top: 35px; 
+}
+
+#search_results {
+    margin: 0 auto;
+    width: 80%; 
+}
+
+    #search_results td.first {
+        border-bottom:1px solid grey; 
+    }
+
+    #search_results td {
+      padding: 8px; 
+      border-right:1px solid grey; 
+      text-align: center; 
+    }
+
+
+/*--------------Search feature presentation side ENDS here---------------*/
+
+
 
 /*--------------Alert Show STARTS here---------------*/
+
+#home_successAlert {
+    clear: both; 
+}
 
 .alert h4 {
 margin-top: 0;
@@ -458,10 +527,6 @@ h3 span {
   padding: 20px;
 }
 
-
-
-
-
 #cph_main_contact_nav_menu a.static {
     padding:5px;
     color:#545554;
@@ -476,6 +541,10 @@ h3 span {
     padding:5px;
 }
 
+#btn_subscribe {
+    background-color:#f3ab35;
+}
+
 
 /*--------------Location STARTS here---------------*/
 
@@ -483,6 +552,10 @@ h3 span {
 
 
 /*--------------Mailing List STARTS here---------------*/
+
+.moveOver {
+    padding-right: 50px;
+}
 
 /*--------------Mailing List ENDS here---------------*/
 

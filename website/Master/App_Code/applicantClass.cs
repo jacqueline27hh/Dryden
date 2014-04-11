@@ -20,7 +20,7 @@ public class applicantClass
         return allApplicants;
 
     }
-    public bool commitInsert(string _fname, string _lname, string _email, int _phone)
+    public bool commitInsert(int _jobID, string _fname, string _lname, string _email)
     {
         applicantsDataContext objApplicantDC = new applicantsDataContext();
         using (objApplicantDC)
@@ -29,7 +29,7 @@ public class applicantClass
             objNewApplicant.firstname = _fname;
             objNewApplicant.lastname = _lname;
             objNewApplicant.email = _email;
-            objNewApplicant.phone = _phone;
+            objNewApplicant.job_id = _jobID;
 
             objApplicantDC.applicants.InsertOnSubmit(objNewApplicant);
             objApplicantDC.SubmitChanges();
@@ -37,7 +37,7 @@ public class applicantClass
         }
     }
 
-    public bool commitUpdate(int _id, string _fname, string _lname, string _email, int _phone)
+    public bool commitUpdate(int _id, string _fname, string _lname, string _email)
     {
         applicantsDataContext objApplicantDC = new applicantsDataContext();
         using (objApplicantDC)
@@ -46,7 +46,6 @@ public class applicantClass
             objUpApplicant.firstname = _fname;
             objUpApplicant.lastname = _lname;
             objUpApplicant.email = _email;
-            objUpApplicant.phone = _phone;
 
             objApplicantDC.SubmitChanges();
             return true;

@@ -26,7 +26,7 @@
                             <asp:Label ID="Label1" runat="server" Text="IMAGES:" /> 
                         </div>
                         <div class="slider_right">
-                            <asp:Label ID="Label2" runat="server" Text="CAPTION:" /> 
+                            <asp:Label ID="Label2" runat="server" Text="TITLE & CAPTION:" /> 
                         </div>
                     </div>
 
@@ -37,6 +37,7 @@
                            
                     </div> 
                     <div class="slider_right">
+                        <asp:TextBox runat="server" ID="txt_title1" Text='<%#Eval("title1") %>' /> 
                         <asp:TextBox runat="server" id="txt_caption1" Text='<%#Eval("caption1") %>'  /> 
                     </div>
                 </div>
@@ -48,6 +49,7 @@
                                
                     </div> 
                     <div class="slider_right">
+                         <asp:TextBox runat="server" ID="txt_title2" Text='<%#Eval("title2") %>' />
                         <asp:TextBox runat="server" id="txt_caption2" Text='<%#Eval("caption2") %>'  /> 
                     </div>
                         </div>
@@ -59,6 +61,7 @@
                                
                     </div> 
                     <div class="slider_right">
+                         <asp:TextBox runat="server" ID="txt_title3" Text='<%#Eval("title3") %>' />
                         <asp:TextBox runat="server" id="txt_caption3" Text='<%#Eval("caption3") %>'  /> 
                     </div>
                         </div>

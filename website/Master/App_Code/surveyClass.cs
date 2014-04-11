@@ -5,7 +5,7 @@ using System.Web;
 
 public class surveyClass
 {
-    public IQueryable<patient_survey> getPatient_surveys()
+    public IQueryable<patient_survey> getpatient_survey()
     {
         
         surveyDataContext objSurveyDC = new surveyDataContext();
@@ -13,7 +13,7 @@ public class surveyClass
         return allSurveys;
     }
 
-    public IQueryable<patient_survey> getSurveyByID(int _id)
+    public IQueryable<patient_survey> getpatient_surveyByID(int _id)
     {
         surveyDataContext objSurveyDC = new surveyDataContext();
         var allSurveys = objSurveyDC.patient_surveys.Where(x => x.Id == _id).Select(x => x);
@@ -25,16 +25,17 @@ public class surveyClass
         surveyDataContext objSurveyDC = new surveyDataContext();
         using (objSurveyDC)
         {
-            patient_survey objNewSurvey = new patient_survey();
-            objNewSurvey.firstname = _fname;
-            objNewSurvey.lastname = _lname;
-            objNewSurvey.email = _email;
-            objNewSurvey.reviewof = _review;
-            objNewSurvey.message = _msg;
+            patient_survey objSurvey = new patient_survey();
+            objSurvey.firstname = _fname;
+            objSurvey.lastname = _lname;
+            objSurvey.email = _email;
+            objSurvey.reviewof = _review;
+            objSurvey.message = _msg;
 
-            objSurveyDC.patient_surveys.InsertOnSubmit(objNewSurvey);
+            objSurveyDC.patient_surveys.InsertOnSubmit(objSurvey);
             objSurveyDC.SubmitChanges();
             return true;
+            //return "Insert complete";
         }
     }
 
@@ -52,6 +53,7 @@ public class surveyClass
 
             objSurveyDC.SubmitChanges();
             return true;
+            //return "Update successful";
         }
     }
 
@@ -64,6 +66,7 @@ public class surveyClass
             objSurveyDC.patient_surveys.DeleteOnSubmit(objDelSurvey);
             objSurveyDC.SubmitChanges();
             return true;
+            //return "Delete successful";
         }
     }
 }

@@ -22,59 +22,59 @@ using System.Reflection;
 
 
 [global::System.Data.Linq.Mapping.DatabaseAttribute(Name="dryden_database")]
-public partial class mailingListDataContext : System.Data.Linq.DataContext
+public partial class patientsDataContext : System.Data.Linq.DataContext
 {
 	
 	private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 	
   #region Extensibility Method Definitions
   partial void OnCreated();
-  partial void InsertMailing_list(Mailing_list instance);
-  partial void UpdateMailing_list(Mailing_list instance);
-  partial void DeleteMailing_list(Mailing_list instance);
+  partial void Insertpatient(patient instance);
+  partial void Updatepatient(patient instance);
+  partial void Deletepatient(patient instance);
   #endregion
 	
-	public mailingListDataContext() : 
+	public patientsDataContext() : 
 			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["dryden_databaseConnectionString"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public mailingListDataContext(string connection) : 
+	public patientsDataContext(string connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public mailingListDataContext(System.Data.IDbConnection connection) : 
+	public patientsDataContext(System.Data.IDbConnection connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public mailingListDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public patientsDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public mailingListDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public patientsDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public System.Data.Linq.Table<Mailing_list> Mailing_lists
+	public System.Data.Linq.Table<patient> patients
 	{
 		get
 		{
-			return this.GetTable<Mailing_list>();
+			return this.GetTable<patient>();
 		}
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Mailing-list]")]
-public partial class Mailing_list : INotifyPropertyChanging, INotifyPropertyChanged
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.patients")]
+public partial class patient : INotifyPropertyChanging, INotifyPropertyChanged
 {
 	
 	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -84,6 +84,12 @@ public partial class Mailing_list : INotifyPropertyChanging, INotifyPropertyChan
 	private string _firstname;
 	
 	private string _lastname;
+	
+	private string _username;
+	
+	private string _passwd;
+	
+	private int _phone;
 	
 	private string _email;
 	
@@ -97,11 +103,17 @@ public partial class Mailing_list : INotifyPropertyChanging, INotifyPropertyChan
     partial void OnfirstnameChanged();
     partial void OnlastnameChanging(string value);
     partial void OnlastnameChanged();
+    partial void OnusernameChanging(string value);
+    partial void OnusernameChanged();
+    partial void OnpasswdChanging(string value);
+    partial void OnpasswdChanged();
+    partial void OnphoneChanging(int value);
+    partial void OnphoneChanged();
     partial void OnemailChanging(string value);
     partial void OnemailChanged();
     #endregion
 	
-	public Mailing_list()
+	public patient()
 	{
 		OnCreated();
 	}
@@ -162,6 +174,66 @@ public partial class Mailing_list : INotifyPropertyChanging, INotifyPropertyChan
 				this._lastname = value;
 				this.SendPropertyChanged("lastname");
 				this.OnlastnameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string username
+	{
+		get
+		{
+			return this._username;
+		}
+		set
+		{
+			if ((this._username != value))
+			{
+				this.OnusernameChanging(value);
+				this.SendPropertyChanging();
+				this._username = value;
+				this.SendPropertyChanged("username");
+				this.OnusernameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_passwd", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string passwd
+	{
+		get
+		{
+			return this._passwd;
+		}
+		set
+		{
+			if ((this._passwd != value))
+			{
+				this.OnpasswdChanging(value);
+				this.SendPropertyChanging();
+				this._passwd = value;
+				this.SendPropertyChanged("passwd");
+				this.OnpasswdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="Int NOT NULL")]
+	public int phone
+	{
+		get
+		{
+			return this._phone;
+		}
+		set
+		{
+			if ((this._phone != value))
+			{
+				this.OnphoneChanging(value);
+				this.SendPropertyChanging();
+				this._phone = value;
+				this.SendPropertyChanged("phone");
+				this.OnphoneChanged();
 			}
 		}
 	}

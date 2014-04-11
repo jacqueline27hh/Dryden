@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="_Default" Theme="mainStyle" %>
 
 
@@ -111,6 +112,63 @@
 
                     <ul id="issues">
                         <asp:Repeater ID="rpt_info" runat="server" DataSourceID="sds_timeline">
+=======
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/main.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="_Default" Theme="mainStyle" %>
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="cph_main" Runat="Server">
+
+      
+	<div class="container" id="main">
+		
+	  <asp:SqlDataSource runat="server" ID="sds_carousel" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [Imageslider]" />     
+
+           <asp:Repeater runat="server" ID="rpt_sliders" DataSourceID="sds_carousel">
+               <ItemTemplate>
+                          <div id="display">
+                                <ul id="slideshow">
+                                    <li class="slide">
+                                         <asp:Image runat="server" ID="img1" ImageUrl='<%#Eval("imageurl1") %>' CssClass="active" /> 
+                                        <div class="slideshow_left">
+                                           <asp:Label runat="server" ID="title1" Text='<%#Eval("title1") %>' CssClass="slideshow_title" />  
+                                           <asp:Label runat="server" ID="lbl1" Text='<%#Eval("caption1") %>' CssClass="slideshow_caption" />
+                                        </div> 
+                                    </li>
+                                    <li class="slide">
+                                         <asp:Image runat="server" ID="img2" ImageUrl='<%#Eval("imageurl2") %>' /> 
+                                         <div class="slideshow_left">
+                                           <asp:Label runat="server" ID="title2" Text='<%#Eval("title2") %>' CssClass="slideshow_title" />
+                                           <asp:Label runat="server" ID="lbl2" Text='<%#Eval("caption2") %>' CssClass="slideshow_caption" />
+                                         </div>
+                                    </li>
+                                    <li class="slide">
+                                        <asp:Image runat="server" ID="img3" ImageUrl='<%#Eval("imageurl3") %>' />
+                                        <div class="slideshow_left">
+                                          <asp:Label runat="server" ID="title3" Text='<%#Eval("title3") %>' CssClass="slideshow_title" /> 
+                                          <asp:Label runat="server" ID="lbl3" Text='<%#Eval("caption3") %>' CssClass="slideshow_caption" />                                          
+                                        </div>
+                                    </li> 
+                                    
+                                 </ul>
+                           </div>                              
+               </ItemTemplate>
+           </asp:Repeater>
+           <a id="slide_prev"> </a>
+           <a id="slide_next"> </a>     
+         
+
+		<div class="row" id="home_alert">
+				<div class="col-12">
+
+
+					
+					<div class="alert alert-danger alert-dismissable" id="home_successAlert">
+                        <asp:Button runat="server" ID="btn_alert" CssClass="close" Text="&times;" />
+						
+                        <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> --> 
+						
+						<asp:Repeater ID="rpt_display_alert" runat="server">
+>>>>>>> FETCH_HEAD
                             <ItemTemplate>
                                 <li id="">
                                     <img src='<%#Eval("image") %>' />

@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 public partial class _Default : System.Web.UI.Page
 {
     jobClass objJob = new jobClass();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -18,8 +19,9 @@ public partial class _Default : System.Web.UI.Page
             var query = from job in dataContext.jobs
                         select job;
 
-            rpt_all.DataSource = query;
-            rpt_all.DataBind();
+            rpt_allJobs.DataSource = query;
+            rpt_allJobs.DataBind();
+            _subRefresh();
         }
         string urlPost = HttpContext.Current.Request.Url.AbsoluteUri;
         string[] indexNum = urlPost.Split('=');
@@ -35,40 +37,129 @@ public partial class _Default : System.Web.UI.Page
         mv_tabs.ActiveViewIndex = Convert.ToInt32(career_nav_menu.SelectedValue);
     }
 
-    protected void subApply(object sender, CommandEventArgs e)
+    applicantClass objApplicant = new applicantClass();
+    protected void subJobs(object sender, RepeaterCommandEventArgs e)
     {
-        //_strMessage(objApplicant.commitInsert(txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text, txt_phoneI.Text, "insert");
-        //_subRebind();
+        switch (e.CommandName)
+        {
+            //case "addApplicant": // This is similar to insert commandName
+            //    TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameApp");
+            //    TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameApp");
+            //    TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
+            //    HiddenField hdfJobID = (HiddenField)e.Item.FindControl("hdf_jobID");
+            //    _confirmApply(objApplicant.commitInsert(int.Parse(hdfJobID.Value.ToString()), txtFname.Text, txtLname.Text, txtEmail.Text), "insert");
+            //    _subRefresh();
+            //    break;
+            case "ApplyNow": // This is similar to update commandName
+                _showApply(int.Parse(e.CommandArgument.ToString()));
+                break;
+        }
     }
 
-    //protected void _subRebind()
-    //{
-    //    txt_fnameI.Text = string.Empty;
-    //    txt_lnameI.Text = string.Empty;
-    //    txt_emailI.Text = string.Empty;
-    //    txt_phoneI.Text = string.Empty;
-    //    rpt_all.DataSource = objApplicant.getApplicants();
-    //    rpt_all.DataBind();
-    //}
+    protected void subApply(object sender, RepeaterCommandEventArgs e) // similar to subUpDel
+    {
+        switch (e.CommandName)
+        {
+            case "ApplyNow": //This is similar to the update command
+                applicantsDataContext objApplicantDC = new applicantsDataContext();
+                applicant objNewApplicant = new applicant();
+                TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameApp");
+                TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameApp");
+                TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
+                TextBox txtPhone = (TextBox)e.Item.FindControl("txt_phoneApp");
+                TextBox txtMsgBox = (TextBox)e.Item.FindControl("txt_msgBox");
+                HiddenField hdfJobID = (HiddenField)e.Item.FindControl("hdf_jobID");
+                objNewApplicant.firstname = txtFname.Text;
+                objNewApplicant.lastname = txtLname.Text;
+                objNewApplicant.email = txtEmail.Text;
+                //objNewApplicant.phone = int.Parse(txtPhone.Value.ToString());
+                objNewApplicant.job_id = int.Parse(hdfJobID.Value.ToString());
 
-    //private void _strMessage(bool flag, string struct)
-    //{
-    //    if (flag)
-    //        lbl_msg.Text = "Your application was submitted successfully!";
-    //    else
-    //        lbl_msg.Text = "Something went wrong. Please try again.";
-    //}
+                objApplicantDC.applicants.InsertOnSubmit(objNewApplicant);
+                objApplicantDC.SubmitChanges();
+                txtFname.Text = "";
+                txtLname.Text = "";
+                txtEmail.Text = "";
+                txtPhone.Text = "";
+                txtMsgBox.Text = "";
+                lbl_confirmApply.Text = "Your applicantion was sent successfully!";
+                //_confirmApply(objApplicant.commitInsert(int.Parse(hdfJobID.Value.ToString()), txtFname.Text, txtLname.Text, txtEmail.Text), "insert");
+                //_subRefresh();
+                break;
+            case "Cancel":
+                _subRefresh();
+                break;
+        }
+    }
+    // This is where I am requesting that the application form become visible, carrying the jobID to this form
+    private void _showApply(int id)
+    {
+        _panelControl(pnl_apply);
+        jobClass _job = new jobClass();
+        rpt_applyNow.DataSource = _job.getJobByID(id);
+        rpt_applyNow.DataBind();
+    }
+    // Here is where a control which panels are visible
+    private void _panelControl(Panel pnl)
+    {
+        pnl_jobs.Visible = false;
+        pnl_apply.Visible = false;
+        pnl.Visible = true;
+    }
+    // This is where I reset the form
+    private void _subRefresh()
+    {
+        //TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameApp");
+        //TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameApp");
+        //TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
+        //txtFname.Text = string.Empty;
+        //txtLname.Text = string.Empty;
+        //txtEmail.Text = string.Empty;
+        //txt_fnameApp.Text = string.Empty;
+        //txt_lnameApp.Text = string.Empty;
+        //txt_emailApp.Text = string.Empty;
 
-    //protected void subView(object sender, EventArgs e)
-    //{
-    //    Response.Redirect "Career.aspx:view2";
-    //}
+        //rpt_allJobs.DataSource = objJob.getJobs();
+        //rpt_allJobs.DataBind();
+        //_panelControl(pnl_jobs);
+    }
+
+     // This is where I declare what the confirmation msg will display once the user has completed application
+    private void _confirmApply(bool flag, string str)
+    {
+        //Label lblMsg = (Label)FindControl("lbl_confirmApply");
+        //if (flag)
+        //    lblMsg.Text = "Your applicantion was sent successfully";
+        //else
+        //    lblMsg.Text = "Sorry, we were unable to process your applicantion";
+    }
+
+//****************************************************************
+//            Shalini's Volunteer Feature
+//****************************************************************
 
     volunteerOpp objvol = new volunteerOpp();
     protected void subVolunteer(object sender, CommandEventArgs e)
     {
-       
-      
+
+        _strMessage(objvol.commitInsert(txtfname.Text, txtlname.Text, int.Parse(txtage.Text.ToString()), rdb_gender.SelectedItem.Text, txtschool.Text, ddl_voltype.SelectedItem.Text, txtemail.Text, char.Parse(txtcontact.Text.ToString())), "insert");
+        _subRebind();
     }
-     
+    private void _strMessage(bool flag, string str)
+    {
+        if (flag)
+            lbl_msgV.Text = "Application" + str + "submitted";
+        else
+            lbl_msgV.Text = "Sorry, unable to " + str + "submit message";
+
+    }
+    private void _subRebind()
+    {
+        volunteerOpp objvol = new volunteerOpp();
+    }
+
+    protected void rpt_all_ItemCommand(object source, RepeaterCommandEventArgs e)
+    {
+
+    }
 }
