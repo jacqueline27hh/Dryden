@@ -39,8 +39,8 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><asp:Label ID="lbl_fname" runat="server" Text="First Name" /></th>
-                            <th><asp:Label ID="lbl_lname" runat="server" Text="Last Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lbl_fname" runat="server" Text="First Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lbl_lname" runat="server" Text="Last Name" /></th>
                             <th><asp:Label ID="lbl_email" runat="server" Text="Email" /></th>
                         </tr>
                     </thead>
@@ -48,7 +48,9 @@
                         <asp:Repeater ID="rpt_all" runat="server">
                             <ItemTemplate>
                                 <tr>
-                                    <td><%#Eval ("firstname") %></td>
+                                    <td class="moveOver"><%#Eval ("firstname") %></td>
+                                    <td class="moveOver"><%#Eval ("lastname") %></td>
+                                    <td class="moveOver"><%#Eval ("email") %></td>
                                     <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                     <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                 </tr>

@@ -11,7 +11,7 @@
         <div class="row col-lg-8" id="admin_header_wrapper">
         <asp:Label ID="admin_lbl_header" runat="server" Text="View My Appointments" CssClass="col-lg-9 admin_header"/>
         <br /><br />
-        <%--<table border="1">
+        <table border="1">
             <thead>
                 <tr>
                     <th><asp:Label ID="lbl_appTitle" runat="server" Text="Appointment" /></th>
@@ -29,8 +29,8 @@
                     </ItemTemplate>
                  </asp:Repeater>
               </tbody>
-           </table>       --%>
-            <asp:GridView ID="grd_all" runat="server" GridLines="None" CellPadding="6" CellSpacing="6">
+           </table>       
+            <%--<asp:GridView ID="grd_all" runat="server" GridLines="None" CellPadding="6" CellSpacing="6">
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
@@ -44,10 +44,10 @@
                                     <td><%#Eval("date_time") %></td>
                                 </tr>--%>
                             <%--</table>--%>
-                        </ItemTemplate>
+                       <%-- </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
-            </asp:GridView>
+            </asp:GridView>--%>
         </div>
     </div>
 
