@@ -91,7 +91,7 @@
             </table>
         </asp:Panel>
 
-        <asp:Panel ID="pnl_delete" runat="server" GroupingText="Delete Record">
+        <asp:Panel ID="pnl_delete" runat="server" GroupingText="Delete Records">
             <table>
                 <thead>
                     <tr>
