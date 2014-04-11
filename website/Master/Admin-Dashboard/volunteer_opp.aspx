@@ -13,6 +13,34 @@
         <asp:Label ID="admin_lbl_header" runat="server" Text="Volunteer Opportunities " CssClass="col-lg-9 admin_header"/>
         <asp:LinkButton ID="admin_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="~/Career.aspx?tabIndex=3" />
         </div>
+
+        <asp:Panel ID="pnl_all" runat="server" GroupingText="All Volunteer Applicants">
+               <table>
+                    <thead>
+                        <tr>
+                            <th><asp:Label ID="lbl_fname" runat="server" Text="First Name" /></th>
+                            <th><asp:Label ID="lbl_lname" runat="server" Text="Last Name" /></th>
+                            <th><asp:Label ID="lbl_email" runat="server" Text="Email" /></th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                       <asp:ListView ID="lst_all" runat="server">
+                            <ItemTemplate>
+                                <tr>
+                                    <td><asp:Label ID="lblfname" runat="server" Text="First Name" />
+                                <asp:Label ID="lbl_fname" runat="server" Text='<%#Eval ("firstname") %>' /></td>
+                                    <td><asp:Label ID="lbllname" runat="server" Text="Last Name" />
+                       <asp:Label ID="lbl_lname" runat="server" Text='<%#Eval ("lastname") %>' /></td>
+                                    <td><asp:Label ID="lblemail" runat="server" Text="Email" />
+                                   <asp:Label ID="lbl_email" runat="server" Text='<%#Eval ("email") %>' /></td>
+                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("vol_Id") %>' OnCommand="subAdmin" /></td>
+                                    <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("vol_Id") %>' OnCommand="subAdmin" /></td>
+                                </tr>
+                            </ItemTemplate>
+                       </asp:ListView>
+                   </tbody>
+                  </table>
+        </asp:Panel>
         <asp:Panel ID="update_pnl" runat="server">
             <table>
                 <thead>
@@ -25,11 +53,12 @@
                 </thead>
                 <tbody>
                     <asp:Label ID="lblmsg" runat="server" />
+
                     <asp:ListView ID="lst_update" runat="server" OnItemCommand="subupdel">
                         <ItemTemplate>
                             <tr>
                                 <td>
-                                    <asp:HiddenField ID="hdf_id" runat="server" Value='<%#Eval("Id") %>' />
+                                    <asp:HiddenField ID="hdf_id" runat="server" Value='<%#Eval("vol_Id") %>' />
                                     <asp:TextBox ID="txtfnameU" runat="server" Text='<%#Eval("firstname") %>' />
                                 </td>
                                 <td>
@@ -77,7 +106,7 @@
                         <ItemTemplate>
                             <tr>
                                 <td>
-                                    <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval("Id") %>' />
+                                    <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval("vol_Id") %>' />
                                       <asp:TextBox ID="txtfnameU" runat="server" Text='<%#Eval("firstname") %>' />
 
                                 </td>
