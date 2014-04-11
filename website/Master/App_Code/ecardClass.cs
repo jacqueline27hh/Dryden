@@ -21,40 +21,39 @@ public class ecardClass
         return allEcards;
 
     }
-    public bool commitInsert(string _name, string _email, string _rec, string _bg, string _tag, string _msg)
+    public bool commitInsert(string _name, string _recipient, string _background, string _tagline, string _message)
     {
         ecardDataContext objEcardDC = new ecardDataContext();
         using (objEcardDC)
         {
-            //ecardClass objEcard = new ecardClass();
-            //objEcard.name = _name;
+            E_card objEcard = new E_card();
+            objEcard.name = _name;
             //objEcard.email = _email;
-            //objEcard.recipient = _rec;
-            //objEcard.background = _bg;
-            //objEcard.tagline = _tag;
-            //objEcard.msg = _msg;
+            objEcard.recipient = _recipient; 
+            objEcard.background = _background;
+            objEcard.tagline = _tagline;
+            objEcard.message = _message;
 
-            //objEcardDC.E_cards.InsertOnSubmit(objEcard);
-            //objEcardDC.SubmitChanges();
+            objEcardDC.E_cards.InsertOnSubmit(objEcard);
+            objEcardDC.SubmitChanges();
             return true;
             //return "Insert complete";
         }
     }
 
-    public bool commitUpdate(int _id, string _name, string _email, string _rec, string _bg, string _tag, string _msg)
+    public bool commitUpdate(int _id, string _name, string _recipient, string _background, string _tagline, string _message)
     {
-        surveyDataContext objSurveyDC = new surveyDataContext();
-        using (objSurveyDC)
-        {
-            //var objUpSurvey = objSurveyDC.patient_surveys.Single(x => x.Id == _id);
-            //objUpSurvey.firstname = _name;
-            //objUpSurvey.lastname = _email;
-            //objUpSurvey.email = _rec;
-            //objUpSurvey.reviewof = _bg;
-            //objUpSurvey.message = _tag;
-            //objSurvey
+        ecardDataContext objEcardDC = new ecardDataContext();
+        using (objEcardDC)
+        {   var objUpEcard = objEcardDC.E_cards.Single(x => x.Id == _id);
+            objUpEcard.name = _name;
+            objUpEcard.recipient = _recipient;
+            objUpEcard.background = _background;
+            objUpEcard.tagline = _tagline;
+            objUpEcard.message = _message;
 
-            //objSurveyDC.SubmitChanges();
+
+            objEcardDC.SubmitChanges();
             return true;
             //return "Update successful";
         }
@@ -62,12 +61,12 @@ public class ecardClass
 
     public bool commitDelete(int _id)
     {
-        surveyDataContext objSurveyDC = new surveyDataContext();
-        using (objSurveyDC)
+        ecardDataContext objEcardDC = new ecardDataContext();
+        using (objEcardDC)
         {
-            var objDelSurvey = objSurveyDC.patient_surveys.Single(x => x.Id == _id);
-            objSurveyDC.patient_surveys.DeleteOnSubmit(objDelSurvey);
-            objSurveyDC.SubmitChanges();
+            var objDelEcard = objEcardDC.E_cards.Single(x => x.Id == _id);
+            objEcardDC.E_cards.DeleteOnSubmit(objDelEcard);
+            objEcardDC.SubmitChanges();
             return true;
             //return "Delete successful";
         }
