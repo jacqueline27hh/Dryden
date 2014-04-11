@@ -20,7 +20,7 @@ public class timelineClass
         return allTimelines;
     }
 
-    public bool commitInsert(string _image, string _text, DateTime _date)
+    public bool commitInsert(string _image, string _text, string _date)
     {
         timelineDataContext objtimeDC = new timelineDataContext();
         using (objtimeDC)
@@ -38,7 +38,7 @@ public class timelineClass
 
 
     }
-    public bool commitUpdate(int _id, string _image, string _text, DateTime _date)
+    public bool commitUpdate(int _id, string _image, string _text, string _date)
     {
         timelineDataContext objtimeDC = new timelineDataContext();
         using (objtimeDC)

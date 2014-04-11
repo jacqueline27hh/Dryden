@@ -22,7 +22,7 @@ public partial class news_event : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Insert":
-                _strMessage(objTime.commitInsert(timeline_txt_imageI.Text, timeline_txt_textI.Text, DateTime.Parse(timeline_txt_dateI.Text.ToString())), "insert");
+                _strMessage(objTime.commitInsert(timeline_txt_imageI.Text, timeline_txt_textI.Text, timeline_txt_dateI.Text), "insert");
                 _subRebind();
                 break;
             case "Update":
@@ -44,7 +44,7 @@ public partial class news_event : System.Web.UI.Page
                 HiddenField hdfID = (HiddenField)e.Item.FindControl("timeline_hdf_idU");
 
                 int timelineID = int.Parse(hdfID.Value.ToString());
-                _strMessage(objTime.commitUpdate(timelineID, txtImage.Text, txtText.Text, DateTime.Parse(txtDate.Text.ToString())), "udpate");
+                _strMessage(objTime.commitUpdate(timelineID, txtImage.Text, txtText.Text, timeline_txt_dateI.Text), "udpate");
                 _subRebind();
                 break;
             case "Delete":
@@ -98,6 +98,6 @@ public partial class news_event : System.Web.UI.Page
             timeline_lbl_output.Text = "Sorry, unable to" + str + "News";
 
     }
-    
+
 }
 

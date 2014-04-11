@@ -26,6 +26,10 @@ public partial class _Default : System.Web.UI.Page
        
         rpt_display_alert.DataSource = objALert.getRecentAlerts();
         rpt_display_alert.DataBind();
+
+        //foreach (RepeaterItem item in rpt_timeline.Items) { 
+            
+        //}
         
     }
   

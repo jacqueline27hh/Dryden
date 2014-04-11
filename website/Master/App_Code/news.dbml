@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dryden_database" Class="newsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=184.168.194.62;Initial Catalog=dryden_database;User ID=dryden" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dryden_databaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.News" Member="News">
+    <Type Name="New">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="title1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="title2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="title3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="title4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="text1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="text2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="text3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="text4" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="image1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="image2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="image3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="image4" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
