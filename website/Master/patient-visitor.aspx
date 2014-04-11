@@ -126,10 +126,63 @@
                                  <asp:Label runat="server" ID="lbl_test2" />    
                                      </asp:View>
                                         <asp:View ID="view6" runat="server">
-                                            <p>
-                                               E-card
-							
-                                            </p>
+                                            <h1>E-card</h1>
+                                            <p>Send an e-card to a someone special staying at Dryden Regional</p>
+                                            <!-- Here are the controls: -->
+
+        <asp:Label ID="lblName" runat="server" Text="To:" AssociatedControlID="txtName" />
+        <br />
+        <asp:TextBox ID="txtName" runat="server" />
+        <asp:RequiredFieldValidator ID="rfvName" runat="server" Text="*Required" ControlToValidate="txtName" Display="Dynamic" ValidationGroup="Jinsert" />
+        <br />
+        <asp:Label ID="lblRec" runat="server" Text="From:" AssociatedControlID="txtRec" />
+        <br />
+        <asp:TextBox ID="txtRec" runat="server" />
+        <asp:RequiredFieldValidator ID="rfvRec" runat="server" Text="*Required" ControlToValidate="txtRec" Display="Dynamic" ValidationGroup="Jinsert" />
+        <br />
+        <asp:Label ID="lblBg" runat="server" Text="Choose a background:" />
+        <br />
+        <asp:DropDownList ID="ddlBg" runat="server" >
+            <asp:ListItem Text="Birthday" Value="~/App_Themes/images/birthday.jpg" />
+            <asp:ListItem Text="Congratulations!" Value="~/App_Themes/images/congrats.jpg" />
+            <asp:ListItem Text="Get Well Soon" Value="~/App_Themes/images/getwell.jpg" />
+            <asp:ListItem Text="Clouds" Value="~/App_Themes/images/clouds2.jpg" />
+        </asp:DropDownList>
+        <br />
+        <asp:Label ID="lblFont" runat="server" Text="Choose a font:" />
+        <br />
+        <asp:DropDownList ID="ddlFont" runat="server" >
+            <asp:ListItem Text="Times New Roman" Value="Times New Roman" /> 
+            <asp:ListItem Text="Arial" Value="Arial" />                     
+        </asp:DropDownList>                                                 
+        <br />
+        <asp:Label ID="lblSize" runat="server" Text="Choose a font size:" />
+        <br />
+        <asp:DropDownList ID="ddlSize" runat="server" >
+            
+            <asp:ListItem Text="24" Value="24" />
+            <asp:ListItem Text="32" Value="32" />
+            <asp:ListItem Text="36" Value="36" />
+            <asp:ListItem Text="40" Value="40" />
+            <asp:ListItem Text="48" Value="48" />
+        </asp:DropDownList>
+        <br />
+        <asp:Label ID="lblGreeting2" runat="server" Text="Enter the greeting below:" />
+        <br />
+        <asp:TextBox ID="txtGreeting" runat="server" Width="240px" Height="85px" TextMode="MultiLine" />
+        <br />
+        <asp:Button ID="cmdUpdate" OnClick="cmdUpdate_Click" runat="server" Text="Preview" ValidationGroup="Jinsert" />
+                                            <asp:Button ID="btnSub" runat="server" Text="Submit" CommandName="Insert" OnCommand="subAddEcard" ValidationGroup="Jinsert" />
+                                            <br /><br /><asp:Label ID="lblTy" runat="server" />
+    
+    
+        <!-- Here is the card: -->
+        <asp:Panel ID="pnlCard" runat="server" Width="339px" Height="481px">
+        <br />&nbsp;
+        <asp:Label ID="lblGreeting" runat="server" Width="256px" Height="150px" />
+        <br />
+        </asp:Panel>
+
                                         </asp:View>
                                        
                                      

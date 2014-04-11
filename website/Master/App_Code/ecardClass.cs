@@ -21,17 +21,17 @@ public class ecardClass
         return allEcards;
 
     }
-    public bool commitInsert(string _name, string _recipient, string _background, string _tagline, string _message)
+    public bool commitInsert(string _name, string _recipient, string _background, string _font, string _size, string _message)
     {
         ecardDataContext objEcardDC = new ecardDataContext();
         using (objEcardDC)
         {
             E_card objEcard = new E_card();
             objEcard.name = _name;
-            //objEcard.email = _email;
             objEcard.recipient = _recipient; 
             objEcard.background = _background;
-            objEcard.tagline = _tagline;
+            //objEcard.font = _font;
+            //objEcard.size = _size;
             objEcard.message = _message;
 
             objEcardDC.E_cards.InsertOnSubmit(objEcard);
@@ -41,7 +41,7 @@ public class ecardClass
         }
     }
 
-    public bool commitUpdate(int _id, string _name, string _recipient, string _background, string _tagline, string _message)
+    public bool commitUpdate(int _id, string _name, string _recipient, string _background, string _font, string _size, string _message)
     {
         ecardDataContext objEcardDC = new ecardDataContext();
         using (objEcardDC)
@@ -49,7 +49,8 @@ public class ecardClass
             objUpEcard.name = _name;
             objUpEcard.recipient = _recipient;
             objUpEcard.background = _background;
-            objUpEcard.tagline = _tagline;
+            //objUpEcard.font = _font;
+            //objUpEcard.size = _size;
             objUpEcard.message = _message;
 
 
