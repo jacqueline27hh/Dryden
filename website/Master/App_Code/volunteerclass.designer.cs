@@ -79,7 +79,7 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 	
-	private int _Id;
+	private int _vol_Id;
 	
 	private string _firstname;
 	
@@ -95,16 +95,14 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _email;
 	
-	private int _phone;
-	
-	private string _available_days;
+	private string _phone;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
+    partial void Onvol_IdChanging(int value);
+    partial void Onvol_IdChanged();
     partial void OnfirstnameChanging(string value);
     partial void OnfirstnameChanged();
     partial void OnlastnameChanging(string value);
@@ -119,10 +117,8 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
     partial void Onvolunteer_typeChanged();
     partial void OnemailChanging(string value);
     partial void OnemailChanged();
-    partial void OnphoneChanging(int value);
+    partial void OnphoneChanging(string value);
     partial void OnphoneChanged();
-    partial void Onavailable_daysChanging(string value);
-    partial void Onavailable_daysChanged();
     #endregion
 	
 	public volunteer()
@@ -130,27 +126,27 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 		OnCreated();
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int Id
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vol_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+	public int vol_Id
 	{
 		get
 		{
-			return this._Id;
+			return this._vol_Id;
 		}
 		set
 		{
-			if ((this._Id != value))
+			if ((this._vol_Id != value))
 			{
-				this.OnIdChanging(value);
+				this.Onvol_IdChanging(value);
 				this.SendPropertyChanging();
-				this._Id = value;
-				this.SendPropertyChanged("Id");
-				this.OnIdChanged();
+				this._vol_Id = value;
+				this.SendPropertyChanged("vol_Id");
+				this.Onvol_IdChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_firstname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_firstname", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
 	public string firstname
 	{
 		get
@@ -170,7 +166,7 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lastname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lastname", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
 	public string lastname
 	{
 		get
@@ -210,7 +206,7 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gender", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gender", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
 	public string gender
 	{
 		get
@@ -250,7 +246,7 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_volunteer_type", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_volunteer_type", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
 	public string volunteer_type
 	{
 		get
@@ -270,7 +266,7 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
 	public string email
 	{
 		get
@@ -290,8 +286,8 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="Int NOT NULL")]
-	public int phone
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="Char(15) NOT NULL", CanBeNull=false)]
+	public string phone
 	{
 		get
 		{
@@ -306,26 +302,6 @@ public partial class volunteer : INotifyPropertyChanging, INotifyPropertyChanged
 				this._phone = value;
 				this.SendPropertyChanged("phone");
 				this.OnphoneChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_available_days", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-	public string available_days
-	{
-		get
-		{
-			return this._available_days;
-		}
-		set
-		{
-			if ((this._available_days != value))
-			{
-				this.Onavailable_daysChanging(value);
-				this.SendPropertyChanging();
-				this._available_days = value;
-				this.SendPropertyChanged("available_days");
-				this.Onavailable_daysChanged();
 			}
 		}
 	}
