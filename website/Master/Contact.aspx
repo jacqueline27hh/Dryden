@@ -88,9 +88,9 @@
                                         </asp:View>
                                         <asp:View ID="view2" runat="server">
                                             <div class="row">
-                                                <div class="col-xs-12 col-lg-6">
+                                                <div class="col-xs-12 col-lg-6 mailingList">
                                                     <h1 style="float:left;">Join Our Mailing List!</h1>
-                                                    <p>Join our mailing list and stay up-to-date with what's happening at Dyrden Regional Health Care Centre. Be the first to know about any community health alerts and conerns. Stay connected!</p>
+                                                    <p class="ml_p">Join our mailing list and stay up-to-date with what's happening at Dyrden Regional Health Care Centre. Be the first to know about any community health alerts and conerns. Stay connected!</p>
                                                 </div>
                                                 <div class="col-xs-12 col-lg-6">
                                                     <asp:Label ID="lbl_fname" runat="server" Text="First Name" AssociatedControlID="txt_fname" />

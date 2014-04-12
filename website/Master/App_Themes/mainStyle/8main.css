@@ -600,6 +600,11 @@ h3 span {
     background-color: #f3ab35;
 }
 
+#cph_main_up_main .ml_p {
+   float: left;
+   padding-left: 0px; 
+}
+
 
 /*--------------Mailing List ENDS here---------------*/
 
