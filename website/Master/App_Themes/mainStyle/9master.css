@@ -725,6 +725,9 @@ width: 200px;
   .navbar-brand {
   text-align: center;
   margin-top:20px;
+  margin: 0;
+width: 100%;
+}
 
   }
 

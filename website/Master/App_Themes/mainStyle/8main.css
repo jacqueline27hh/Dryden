@@ -64,19 +64,26 @@
         float: left;
     }
 
+   .slideshow_left:first-child {
+       background-color: #00aae0; 
+
+   }
+
          .slideshow_title {
-             display:block;
-             color: #ffffff; 
-             font-size: 24px;
-             text-align: center; 
-             margin: 50px 35px 15px 50px; 
+             line-height: 1;
+             display: block;
+            color: #ffffff;
+            font-size: 44px;
+            text-align: left;
+            margin: 90px 45px 10px 78px;
           }
 
          .slideshow_caption {
+            width: 69%;
            display:block;  
            color: #ffffff; 
            font-size: 18px; 
-           margin: 35px 5px 15px 50px;
+           margin: 26px 5px 15px 78px;
          }
 
 #slide_prev {
@@ -106,6 +113,13 @@
     background-position: 0 -38px; 
 }
 
+#timeline-quicklinks h3 {
+    padding-bottom:20px;
+}
+
+#home_program_highlights h3 {
+    padding-bottom:20px;
+}
 
 
 
@@ -141,8 +155,12 @@
 
 /*--------------Alert Show STARTS here---------------*/
 
+#home_alert {
+    margin-top:-30px;
+}
+
 #home_successAlert {
-    clear: both; 
+    /*clear: both;*/ 
 }
 
 .alert h4 {
@@ -322,6 +340,7 @@ border-color: #97bf28;
 .about_avatar {
     width:215px;
 }
+
 
 /*.about_text_wrapper {
     padding-left:20px;
@@ -940,49 +959,43 @@ h3 span {
    -------------------------------------- */
 /*--------------Slide Show STARTS here---------------*/
 
+.slide img {
+width: 20%;
+height: 430px;
+/* float: right; */
+border: 0px;
+padding: 0px;
+position: absolute;
+}
 
+.slideshow_left {
+width: 30%;
+position: absolute;
+height: 180px;
+top: 100;
+margin-top: 252px;
+background-color: #97bf2a;
+/* float: left; */
+}
 
-  #home_myCarousel .item {
-     height: 463px; /*small size as default*/
-  }
+.slideshow_title {
+line-height: 1;
+display: block;
+color: #ffffff;
+font-size: 44px;
+text-align: left;
+margin: 22px 0px 10px 78px;
+width: 177px;
+}
 
-  #home_slide1 {
-     background: url('../images/carousel_xs_small_01.jpg') top center no-repeat;
-  }
-
-  #home_slide2 {
-     background: url('../images/carousel_xs_small_02.jpg') top center no-repeat;
-  }
-
-  #home_slide3 {
-     background: url('../images/carousel_xs_small_03.jpg') top center no-repeat;
-  }
-
-
-  #home_myCarousel .carousel-caption {
-    
-    text-align:left !important;
-    top:255px !important;
-    width:200px !important;
-   
-    font-size:14px !important;
-    
-
-  }
-
-  .carousel-indicators {
-  left: 30%;
-
-
-  bottom: 0;
-  }
-
-  #home_myCarousel h4 {
-    
-    text-align: left;
-    font-size:30px;
-    padding-bottom:5px;
-  }
+.slideshow_caption {
+width: 28%;
+display: block;
+color: #ffffff;
+font-size: 18px;
+margin: 12px 5px 15px 78px;
+}
+ 
   /*--------------Slide Show ENDS here---------------*/
 
   /*--------------Alert STARTS here---------------*/
