@@ -14,6 +14,8 @@
         <table border="1">
             <thead>
                 <tr>
+                    
+                    <th><asp:Label ID="lbl_patient" runat="server" Text="Patient Name" /></th>
                     <th><asp:Label ID="lbl_appTitle" runat="server" Text="Appointment" /></th>
                     <th><asp:Label ID="lbl_date" runat="server" Text="Date" /></th>
                     <th><asp:Label ID="lbl_doctor" runat="server" Text="Doctor" /></th>
@@ -23,8 +25,10 @@
                 <asp:Repeater ID="rpt_all" runat="server" >
                     <ItemTemplate>
                         <tr>
+                            <td><%#Eval("patientName") %></td>
                             <td><%#Eval("appointment_title") %></td>
                             <td><%#Eval("date_time") %></td>
+                            <td><%#Eval("firstname") %></td>
                          </tr>
                     </ItemTemplate>
                  </asp:Repeater>

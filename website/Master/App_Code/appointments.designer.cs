@@ -78,6 +78,13 @@ public partial class appointmentsDataContext : System.Data.Linq.DataContext
 		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pId);
 		return ((ISingleResult<sp_getPatientByIdResult>)(result.ReturnValue));
 	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_getDoctorById")]
+	public ISingleResult<sp_getDoctorByIdResult> sp_getDoctorById([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dId)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dId);
+		return ((ISingleResult<sp_getDoctorByIdResult>)(result.ReturnValue));
+	}
 }
 
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Appointments")]
@@ -269,6 +276,122 @@ public partial class sp_getPatientByIdResult
 			if ((this._patientName != value))
 			{
 				this._patientName = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
+	public int Id
+	{
+		get
+		{
+			return this._Id;
+		}
+		set
+		{
+			if ((this._Id != value))
+			{
+				this._Id = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_patient_name", DbType="Int NOT NULL")]
+	public int patient_name
+	{
+		get
+		{
+			return this._patient_name;
+		}
+		set
+		{
+			if ((this._patient_name != value))
+			{
+				this._patient_name = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doctor_name", DbType="Int NOT NULL")]
+	public int doctor_name
+	{
+		get
+		{
+			return this._doctor_name;
+		}
+		set
+		{
+			if ((this._doctor_name != value))
+			{
+				this._doctor_name = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[date-time]", Storage="_date_time", DbType="DateTime NOT NULL")]
+	public System.DateTime date_time
+	{
+		get
+		{
+			return this._date_time;
+		}
+		set
+		{
+			if ((this._date_time != value))
+			{
+				this._date_time = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_title", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+	public string appointment_title
+	{
+		get
+		{
+			return this._appointment_title;
+		}
+		set
+		{
+			if ((this._appointment_title != value))
+			{
+				this._appointment_title = value;
+			}
+		}
+	}
+}
+
+public partial class sp_getDoctorByIdResult
+{
+	
+	private string _doctorName;
+	
+	private int _Id;
+	
+	private int _patient_name;
+	
+	private int _doctor_name;
+	
+	private System.DateTime _date_time;
+	
+	private string _appointment_title;
+	
+	public sp_getDoctorByIdResult()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doctorName", DbType="VarChar(101) NOT NULL", CanBeNull=false)]
+	public string doctorName
+	{
+		get
+		{
+			return this._doctorName;
+		}
+		set
+		{
+			if ((this._doctorName != value))
+			{
+				this._doctorName = value;
 			}
 		}
 	}

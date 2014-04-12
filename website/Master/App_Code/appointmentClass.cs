@@ -67,4 +67,24 @@ public class appointmentClass
             return true;
         }
     }
+
+    public List<sp_getPatientByIdResult> getPatient(int _id)
+    {
+        appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
+        using (objAppointmentDC)
+        {
+            var patientById = objAppointmentDC.sp_getPatientById(_id);
+            return patientById.ToList();
+        }
+    }
+
+    public List<sp_getDoctorByIdResult> getDoctor(int _id)
+    {
+        appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
+        using (objAppointmentDC)
+        {
+            var doctorById = objAppointmentDC.sp_getDoctorById(_id);
+            return doctorById.ToList();
+        }
+    }
 }
