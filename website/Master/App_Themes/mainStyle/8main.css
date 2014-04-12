@@ -314,6 +314,19 @@ border-color: #97bf28;
     padding:5px;
 }
 
+
+#cph_main_up_main .avatar_p {
+    padding:0px;
+}
+
+.about_avatar {
+    width:215px;
+}
+
+/*.about_text_wrapper {
+    padding-left:20px;
+}*/
+
 /*--------------Donate STARTS here---------------*/
 
 /*--------------Donate ENDS here---------------*/
@@ -354,6 +367,7 @@ border-color: #97bf28;
     color:#fff;
     padding:5px;
 }
+
 
 /*--------------Patient Feedbacks Program STARTS here---------------*/
 
@@ -556,6 +570,7 @@ h3 span {
 .moveOver {
     padding-right: 50px;
 }
+
 
 /*--------------Mailing List ENDS here---------------*/
 

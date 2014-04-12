@@ -35,6 +35,7 @@
                                             <asp:MenuItem Text="Meet the Board" Value="1" />
                                             <asp:MenuItem Text="Mission Statement" Value="2" />
                                             <asp:MenuItem Text="Donate Now" Value="3" />
+                                            <asp:MenuItem Text="About the team" Value="4" />
                                         </Items>
                                     </asp:Menu>
 
@@ -61,6 +62,74 @@
                                                 Donate Now
 							
                                             </p>
+                                        </asp:View>
+
+                                        <asp:View ID="view5" runat="server">
+                                            <br />
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <asp:Image ID="img_kate" runat="server" ImageUrl="App_Themes/images/me.jpg" CssClass="about_avatar" />
+                                                </div>
+                                                <%-- end col-md-4--%>
+                                                <div class="col-md-6">
+                                                    <div class="about_text_wrapper">
+
+                                                        <h3>Kate Gollogly</h3>
+
+                                                        <p class="avatar_p">
+                                                            Kate Gollogly is our team leader and front-end developer. She has a great appreciation for organization and an eye for detail. With a background in Sociology, Kate has a great understanding for individuals and our society as a whole. This gives her an extra edge when it comes to creating the very best user experience possible.
+                                                        </p>
+                                                    </div>
+                                                    <%--end about_text_wrapper--%>
+                                                </div>
+                                                <%-- end col-md-2--%>
+                                            </div>
+                                            <%--end row--%>
+                                            <br />
+                                            <br />
+
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <asp:Image ID="Image1" runat="server" ImageUrl="App_Themes/images/Michaeljdu20105348763defc9b.png" CssClass="about_avatar" />
+                                                </div>
+                                                <%-- end col-md-4--%>
+                                                <div class="col-md-6">
+                                                    <div class="about_text_wrapper">
+
+                                                        <h3>Michael Du</h3>
+
+                                                        <p class="avatar_p">
+                                                            Mike is 70% coder, 30% designer.  He's most comfortable working in his native habitat of front end Javascript or backend ASP.net, munching on a healthy diet of projects in an agile team environment.  He is also graduate of the Humber Web Development Program. possible.
+                                                        </p>
+                                                    </div>
+                                                    <%--end about_text_wrapper--%>
+                                                </div>
+                                                <%-- end col-md-2--%>
+                                            </div>
+                                            <%--end row--%>
+                                            <br />
+                                            <br />
+
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <asp:Image ID="Image2" runat="server" ImageUrl="App_Themes/images/avatar_Jackie.png" CssClass="about_avatar" />
+                                                </div>
+                                                <%-- end col-md-4--%>
+                                                <div class="col-md-6">
+                                                    <div class="about_text_wrapper">
+
+                                                        <h3>Jacqueline Liu</h3>
+
+                                                        <p class="avatar_p">
+                                                            Jacqueline currently works as a junior graphic and web designer at Clarkhuot and also attends Humber College for web development.  She strives to create and new ideas and break the rules in creativity (if there were any rules). She is known for having a soft spot for dogs and cats and having fears towards insects.
+                                                        </p>
+                                                    </div>
+                                                    <%--end about_text_wrapper--%>
+                                                </div>
+                                                <%-- end col-md-2--%>
+                                            </div>
+                                            <%--end row--%>
                                         </asp:View>
                                     </asp:MultiView>
 

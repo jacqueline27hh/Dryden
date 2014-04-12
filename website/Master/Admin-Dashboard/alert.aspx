@@ -5,7 +5,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_admin_d" runat="Server">
 
-    <div class="col-sm-8 admin_form">
+    <di
+        
+        v class="col-sm-8 admin_form">
    
        
 
@@ -140,7 +142,7 @@
 
         
 
-    </div>
+    </di>
     <%--end admin_form--%>
 </asp:Content>
 
