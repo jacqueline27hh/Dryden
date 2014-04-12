@@ -130,6 +130,27 @@
                                                 <%-- end col-md-2--%>
                                             </div>
                                             <%--end row--%>
+                                            <br />
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <asp:Image ID="Image4" runat="server" ImageUrl="App_Themes/images/justinog.png" CssClass="about_avatar" />
+                                                </div>
+                                                <%-- end col-md-4--%>
+                                                <div class="col-md-6">
+                                                    <div class="about_text_wrapper">
+
+                                                        <h3>Justin O'Gorman</h3>
+
+                                                        <p class="avatar_p">
+                                                            Justin is a web developer currently going to Humber. He loves learning new things, and enjoys staying up to date on the latest trends around the web. He's most passionate about front end development and building cool things with emerging technologies. When not developing, he's a huge Toronto sports fan(unfortunately), plays softball, snowboards and loves to travel. 
+                                                        </p>
+                                                    </div>
+                                                    <%--end about_text_wrapper--%>
+                                                </div>
+                                                <%-- end col-md-2--%>
+                                            </div>
+                                            <%--end row--%>
                                         </asp:View>
                                     </asp:MultiView>
 
