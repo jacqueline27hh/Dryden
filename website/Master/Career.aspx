@@ -132,8 +132,6 @@
                                         <%--Volunteer feature--%>
                                         <asp:View ID="view4" runat="server">
 
-
-                                            <asp:Label ID="lbl_msgV" runat="server" />
                                             <asp:Label ID="lblfname" runat="server" Text="First Name" AssociatedControlID="txtfname" />
                                             <asp:TextBox ID="txtfname" runat="server" />
                                             <br />
@@ -194,7 +192,7 @@
                                             <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subVolunteer" />
                                             <%--<asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
                                             <asp:Button ID="btncancel" runat="server" Text="Cancel" />
-
+                                            <asp:Label ID="lbl_msgV" runat="server" />
                                         </asp:View>
 
 

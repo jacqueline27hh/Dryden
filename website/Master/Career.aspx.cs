@@ -138,11 +138,33 @@ public partial class _Default : System.Web.UI.Page
 //            Shalini's Volunteer Feature
 //****************************************************************
 
-    volunteerOpp objvol = new volunteerOpp();
+    volunteer objNewVolunteer = new volunteer();
     protected void subVolunteer(object sender, CommandEventArgs e)
     {
 
-        _strMessage(objvol.commitInsert(txtfname.Text, txtlname.Text, int.Parse(txtage.Text.ToString()), rdb_gender.SelectedItem.Text, txtschool.Text, ddl_voltype.SelectedItem.Text, txtemail.Text, char.Parse(txtcontact.Text.ToString())), "insert");
+        //_strMessage(objvol.commitInsert(txtfname.Text, txtlname.Text, int.Parse(txtage.Text.ToString()), rdb_gender.SelectedItem.Text, txtschool.Text, ddl_voltype.SelectedItem.Text, txtemail.Text, char.Parse(txtcontact.Text.ToString())), "insert");
+        volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
+        volunteer objNewVolunteer = new volunteer();
+        objNewVolunteer.firstname = txtfname.Text;
+        objNewVolunteer.lastname = txtlname.Text;
+        objNewVolunteer.age = int.Parse(txtage.Text.ToString());
+        objNewVolunteer.gender = rdb_gender.Text;
+        objNewVolunteer.school_name = txtschool.Text;
+        objNewVolunteer.volunteer_type = ddl_voltype.Text;
+        objNewVolunteer.email = txtemail.Text;
+        objNewVolunteer.phone = txtcontact.Text;
+
+        objVolunteerDC.volunteers.InsertOnSubmit(objNewVolunteer);
+        objVolunteerDC.SubmitChanges();
+        txtfname.Text = "";
+        txtlname.Text = "";
+        txtemail.Text = "";
+        txtage.Text = "";
+        txtschool.Text = "";
+        txtcontact.Text = "";
+        ddl_voltype.Text = "";
+        rdb_gender.Text = "";
+        lbl_msgV.Text = "Your volunteer was sent successfully!";
         _subRebind();
     }
     private void _strMessage(bool flag, string str)
@@ -155,7 +177,7 @@ public partial class _Default : System.Web.UI.Page
     }
     private void _subRebind()
     {
-        volunteerOpp objvol = new volunteerOpp();
+        volunteer objNewVolunteer = new volunteer();
     }
 
     protected void rpt_all_ItemCommand(object source, RepeaterCommandEventArgs e)

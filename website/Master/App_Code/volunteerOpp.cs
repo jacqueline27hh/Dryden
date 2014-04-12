@@ -3,57 +3,73 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-/// <summary>
-/// Summary description for volunteer
-/// </summary>
-public class volunteerOpp
+
+public class volunteerOppClass
 {
     public IQueryable<volunteer> getVolunteers()
     {
-        volunteerclassDataContext objVolunteer=new volunteerclassDataContext();
-        var allvolunteers = objVolunteer.volunteers.Select(x=>x);
-        return allvolunteers;
+        volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
+        var allVolunteers = objVolunteerDC.volunteers.Select(x => x);
+        return allVolunteers;
     }
 
-    public IQueryable<volunteer> getVolunteerbyId(int _id)
+    public IQueryable<volunteer> getVolunteerByID(int _id)
     {
-        volunteerclassDataContext objVolunteer = new volunteerclassDataContext();
-        var allvolunteers = objVolunteer.volunteers.Where(x => x.Id == _id).Select(x => x);
-        return allvolunteers;
-    }
+        volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
+        var allVolunteers = objVolunteerDC.volunteers.Where(x => x.vol_Id == _id).Select(x => x);
+        return allVolunteers;
 
-    public bool commitInsert(string _fname, string _lname, int _age, string _gender, string _school_name, string _volunteertype, string _email, char _contact)
+    }
+    public bool commitInsert(string _fname, string _lname, int _age, string _gender, string _schoolname, string _voltype, string _email, string _phone)
     {
-        volunteerclassDataContext objVolunteer = new volunteerclassDataContext();
-        using (objVolunteer)
+        volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
+        using (objVolunteerDC)
         {
-            volunteer objnewVolunteer = new volunteer();
-            objnewVolunteer.firstname = _fname;
-            objnewVolunteer.lastname = _lname;
-            objnewVolunteer.age = _age;
-            objnewVolunteer.gender = _gender;
-            objnewVolunteer.school_name = _school_name;
-            objnewVolunteer.volunteer_type = _volunteertype;
-            objnewVolunteer.email = _email;
-            objnewVolunteer.phone = _contact;
-            objVolunteer.volunteers.InsertOnSubmit(objnewVolunteer);
-            objVolunteer.SubmitChanges();
-            return true;
+            volunteer objNewVolunteer = new volunteer();
+            objNewVolunteer.firstname = _fname;
+            objNewVolunteer.lastname = _lname;
+            objNewVolunteer.age = _age;
+            objNewVolunteer.gender = _gender;
+            objNewVolunteer.school_name = _schoolname;
+            objNewVolunteer.volunteer_type = _voltype;
+            objNewVolunteer.email = _email;
+            objNewVolunteer.phone = _phone;
 
+            objVolunteerDC.volunteers.InsertOnSubmit(objNewVolunteer);
+            objVolunteerDC.SubmitChanges();
+            return true;
         }
     }
 
-    public string commitUpdate(int vol_Id, string firstname, string lastname, string email)
+    public bool commitUpdate(int _id, string _fname, string _lname, int _age, string _gender, string _schoolname, string _voltype, string _email, string _phone)
     {
-        volunteerclassDataContext objVolunteer = new volunteerclassDataContext();
-        using (objVolunteer)
+        volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
+        using (objVolunteerDC)
         {
-            var objupvol = objVolunteer.volunteers.Single(x => x.Id == 1);
-            objupvol.firstname = firstname;
-            objupvol.lastname = lastname;
-            objupvol.email = email;
-            objVolunteer.SubmitChanges();
-            return "Your update was successful";
+            var objUpVolunteer = objVolunteerDC.volunteers.Single(x => x.vol_Id == _id);
+            objUpVolunteer.firstname = _fname;
+            objUpVolunteer.lastname = _lname;
+            objUpVolunteer.age = _age;
+            objUpVolunteer.gender = _gender;
+            objUpVolunteer.school_name = _schoolname;
+            objUpVolunteer.volunteer_type = _voltype;
+            objUpVolunteer.email = _email;
+            objUpVolunteer.phone = _phone;
+
+            objVolunteerDC.SubmitChanges();
+            return true;
+        }
+    }
+
+    public bool commitDelete(int _id)
+    {
+        volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
+        using (objVolunteerDC)
+        {
+            var objDelVolunteer = objVolunteerDC.volunteers.Single(x => x.vol_Id == _id);
+            objVolunteerDC.volunteers.DeleteOnSubmit(objDelVolunteer);
+            objVolunteerDC.SubmitChanges();
+            return true;
         }
     }
 }

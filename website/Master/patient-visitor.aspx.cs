@@ -5,10 +5,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
 
 public partial class _Default : System.Web.UI.Page
 {
     surveyClass objSurvey = new surveyClass();
+    ecardClass objEcard = new ecardClass();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         //if (!Page.IsPostBack)
@@ -89,6 +92,42 @@ public partial class _Default : System.Web.UI.Page
         {
             lbl_test2.Text = "All good" + "There were this many yeses: " + totalCount; 
         }
+    }
+
+    protected void cmdUpdate_Click(object sender, EventArgs e)
+    {
+        // Update the background.
+        pnlCard.BackImageUrl = ddlBg.SelectedItem.Value;
+        // Update the font.
+        lblGreeting.Font.Name = ddlFont.SelectedItem.Text;
+        // Update font size
+        lblGreeting.Font.Size = FontUnit.Point(Int32.Parse(ddlSize.SelectedItem.Text));
+        // Set the text.
+        lblGreeting.Text = txtGreeting.Text;
+
+    }
+
+    protected void subAddEcard(object sender, CommandEventArgs e)
+    {
+        ecardDataContext objEcardDC = new ecardDataContext();
+        E_card objEcard = new E_card();
+        objEcard.name = txtRec.Text;
+        objEcard.recipient = txtName.Text;
+        objEcard.background = ddlBg.SelectedItem.Value;
+        //objEcard.font = ddlFont.SelectedItem.Value;
+        //objEcard.size = ddlSize.SelectedItem.Value;
+        objEcard.message = txtMsg.Text;
+
+        objEcardDC.E_cards.InsertOnSubmit(objEcard);
+        objEcardDC.SubmitChanges();
+        txtRec.Text = "";
+        txtName.Text = "";
+        ddlBg.SelectedItem.Value = "";
+        ddlFont.SelectedItem.Value = "";
+        ddlSize.SelectedItem.Value = "";
+        txtGreeting.Text = "";
+        lblTy.Text = "Thank you! The Ecard has been submitted.";
+
     }
 }
     
