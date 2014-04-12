@@ -146,34 +146,12 @@
 
                     <asp:SqlDataSource runat="server" ID="sds_timeline" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [Timeline] ORDER BY [Id] DESC" />
 
-                    <%-- <asp:FormView ID="fv_timeline" runat="server" DataSourceID="sds_timeline">
-                            <ItemTemplate>
-                            --%>
                             <ul id="dates">
 
                     <asp:Repeater ID="rpt_timeline" runat="server" DataSourceID="sds_timeline">
                         <ItemTemplate>
                                 <li><a href='#<%#Eval("Id")%>'><%#Eval("date") %></a></li>
-                                <%--<li><a href="#1930"><%#Eval("date2") %></a></li>
-                                <li><a href="#1944"><%#Eval("date3") %></a></li>
-                                <li><a href="#1950"><%#Eval("date4") %></a></li>--%>
-
-                            
-                              <%--  <li id="1930">
-                                    <img src='<%#Eval("image2") %>' />
-                                    <h1><%#Eval("title2") %></h1>
-                                    <p><%#Eval("text2") %></p>
-                                </li>
-                                <li id="1944">
-                                    <img src='<%#Eval("image3") %>' />
-                                    <h1><%#Eval("title3") %></h1>
-                                    <p><%#Eval("text3") %></p>
-                                </li>
-                                <li id="1950">
-                                    <img src='<%#Eval("image4") %>' />
-                                    <h1><%#Eval("title4") %></h1>
-                                    <p><%#Eval("text4") %></p>
-                                </li>--%>
+                                
 
 
                             

@@ -130,6 +130,29 @@
                                                 <%-- end col-md-2--%>
                                             </div>
                                             <%--end row--%>
+                                            
+                                            <br />
+                                            <br />
+
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <asp:Image ID="Image4" runat="server" ImageUrl="App_Themes/images/20140412_221141_2855_Shalini.png" CssClass="about_avatar" />
+                                                </div>
+                                                <%-- end col-md-4--%>
+                                                <div class="col-md-6">
+                                                    <div class="about_text_wrapper">
+
+                                                        <h3>Shallu Patel</h3>
+
+                                                        <p class="avatar_p">
+                                                            Shalini Patel is a student at HumberCollege studying Web Development Program. She graduated with Bachelor of Computer Application from India. After her graduation, she studied Enterprise Database Management post-graduate certificate program from Sheridan College. She has worked on with.Net and MS SQL for her Automobile Management Project during her internship. In Web Development she worked with two major projects with ASP.NET and PHP as a backend.
+                                                        </p>
+                                                    </div>
+                                                    <%--end about_text_wrapper--%>
+                                                </div>
+                                                <%-- end col-md-2--%>
+                                            </div>
+                                            <%--end row--%>
                                         </asp:View>
                                     </asp:MultiView>
 

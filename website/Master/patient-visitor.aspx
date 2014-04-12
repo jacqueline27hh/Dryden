@@ -102,22 +102,29 @@
 							
                                             
                                         </asp:View>
+                                        <%--use sql data source to connect to quiz table--%>
                                         <asp:View ID="view5" runat="server">
                                             <asp:SqlDataSource ID="sql_qf" runat="server" ConnectionString="<%$ ConnectionStrings:dryden_databaseConnectionString %>" SelectCommand="SELECT * FROM [quiz]"></asp:SqlDataSource>
                                             <br />
                                             <br />
-                                            <h3><span>F&Q: </span>Should I Go to the Emergency Room?</h3>
+                                            <h3><span>Quiz: </span>Should I Go to the Emergency Room?</h3>
                                             <br />
                                             <br />
+                                         <%--   use repeater--%>
                                             <asp:Repeater ID="rpt_qf" runat="server" DataSourceID="sql_qf">
                                                 <ItemTemplate>
+                                                    <%--   connect to the questions field in database--%>
                                                     <asp:Label id="lbl_quiz_q" runat="server" Text='<%#Eval("Questions") %>' />   
+
                                                     <asp:RadioButtonList runat="server" ID="rbl_questions">
                                                        
                                                         <asp:ListItem Value="Y"> Yes </asp:ListItem>
                                                         <asp:ListItem Value="N"> No </asp:ListItem>
                                                         
-                                                    </asp:RadioButtonList> <br /><br /> 
+                                                    </asp:RadioButtonList>
+                                                     <%--   Required field validation--%>
+                                                    <asp:RequiredFieldValidator ID="rfv_radio" runat="server" 
+        ErrorMessage="Please answer all the questions" ControlToValidate="rbl_questions"></asp:RequiredFieldValidator> <br /><br /> 
                                                 </ItemTemplate>
                                                 <FooterTemplate>
                                                     <asp:Button CssClass="btn_pv" runat="server" Text="Submit" OnClick="subProcess" /> 
