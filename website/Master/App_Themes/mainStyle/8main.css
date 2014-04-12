@@ -519,6 +519,16 @@ h3 span {
     padding:5px;
 }
 
+#cph_main_up_main .moveDown {
+    padding-bottom: 20px;
+}
+
+#cph_main_up_main .btn_apply {
+    background-color: #b08ec1;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
 /*--------------Volunteer Program STARTS here---------------*/
 
 #cph_main_btnbrowse {
@@ -574,10 +584,6 @@ h3 span {
     padding:5px;
 }
 
-#btn_subscribe {
-    background-color:#f3ab35;
-}
-
 
 /*--------------Location STARTS here---------------*/
 
@@ -588,6 +594,10 @@ h3 span {
 
 .moveOver {
     padding-right: 50px;
+}
+
+#cph_main_up_main .btn_ml {
+    background-color: #f3ab35;
 }
 
 

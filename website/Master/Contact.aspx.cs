@@ -42,7 +42,7 @@ public partial class _Default : System.Web.UI.Page
         txt_fname.Text = "";
         txt_lname.Text = "";
         txt_email.Text = "";
-        lbl_thankYou.Text = "Thank you for subscribing! A confirmation email will be sent to you shortly.";
+        lbl_thankYou.Text = "Thank you for subscribing!";
     }
 
     protected void subSubmitMsg(object sender, EventArgs e)

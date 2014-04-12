@@ -51,7 +51,7 @@
                                     <td class="moveOver"><%#Eval ("firstname") %></td>
                                     <td class="moveOver"><%#Eval ("lastname") %></td>
                                     <td class="moveOver"><%#Eval ("email") %></td>
-                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
+                                    <td class="moveOver"><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                     <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                 </tr>
                             </ItemTemplate>

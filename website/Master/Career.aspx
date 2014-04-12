@@ -44,14 +44,14 @@
                                         <asp:View ID="view1" runat="server">
                                             <br />
                                             <asp:Panel ID="pnl_jobs" runat="server" GroupingText=" Employment Opportunities">
-                                                <table border="1">
+                                                <table>
                                                     <thead>
-                                                        <tr>
-                                                            <th>
+                                                        <tr class="moveDown">
+                                                            <th class="moveOver">
                                                                 <asp:Label ID="lbl_job" runat="server" Text="Title" /></th>
-                                                            <th>
+                                                            <th class="moveOver">
                                                                 <asp:Label ID="lbl_description" runat="server" Text="Description" /></th>
-                                                            <th>
+                                                            <th class="moveOver">
                                                                 <asp:Label ID="lbl_date" runat="server" Text="Last Date To Apply" /></th>
                                                             <th>&nbsp;</th>
                                                         </tr>
@@ -59,12 +59,12 @@
                                                     <tbody>
                                                         <asp:Repeater ID="rpt_allJobs" runat="server" OnItemCommand="subJobs">
                                                             <ItemTemplate>
-                                                                <tr>
-                                                                    <td><%#Eval("title") %></td>
-                                                                    <td><%#Eval("description") %></td>
-                                                                    <td><%#Eval("last_date_apply") %></td>
+                                                                <tr class="moveDown">
+                                                                    <td class="moveOver"><%#Eval("title") %></td>
+                                                                    <td class="moveOver"><%#Eval("description") %></td>
+                                                                    <td class="moveOver"><%#Eval("last_date_apply") %></td>
                                                                     <td>
-                                                                        <asp:LinkButton ID="btn_apply" runat="server" Text="Apply" CommandName="ApplyNow" CommandArgument='<%#Eval ("Id") %>' /></td>
+                                                                        <asp:LinkButton ID="btn_apply" runat="server" Text="Apply" CommandName="ApplyNow" CommandArgument='<%#Eval ("Id") %>' cssClass="btn_apply"/></td>
                                                                     </tr>
                                                             </ItemTemplate>
                                                         </asp:Repeater>
@@ -77,28 +77,35 @@
                                             <asp:Repeater ID="rpt_applyNow" runat="server" OnItemCommand="subApply">
                                             <ItemTemplate>
                                             <asp:HiddenField ID="hdf_jobID" runat="server" Value='<%#Eval ("Id") %>' />
+                                            <div class="row">
+                                            <div class="col-lg-6 col-sm-12">
                                             <asp:Label ID="lbl_youChose" runat="server" Text="You chose to apply for the job: " />
                                             <asp:Label ID="lbl_chosenJob" runat="server" Text='<%#Eval ("title") %>' />
                                             <br /><br />
                                             <asp:Label ID="lbl_fnameApp" runat="server" Text="First Name" AssociatedControlID="txt_fnameApp" />
+                                            <br />
                                             <asp:TextBox ID="txt_fnameApp" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_fnameApp" runat="server" Text="*Required" ControlToValidate="txt_fnameApp" ValidationGroup="insert" />
                                             <br /><br />
                                             <asp:Label ID="lbl_lnameApp" runat="server" Text="Last Name" AssociatedControlID="txt_lnameApp" />
+                                            <br />
                                             <asp:TextBox ID="txt_lnameApp" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_lnameApp" runat="server" Text="*Required" ControlToValidate="txt_lnameApp" ValidationGroup="insert" />
                                             <br /><br />
                                             <asp:Label ID="lbl_emailApp" runat="server" Text="Email" AssociatedControlID="txt_emailApp" />
+                                            <br />
                                             <asp:TextBox ID="txt_emailApp" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_emailApp" runat="server" Text="*Required" ControlToValidate="txt_emailApp" ValidationGroup="insert" />
                                             <br /><br />
-                                            <asp:Label ID="lbl_phoneApp" runat="server" Text="Phone Number" AssociatedControlID="txt_phoneApp" />
+                                            <asp:Label ID="lbl_phoneApp" runat="server" Text="Phone" AssociatedControlID="txt_phoneApp" />
+                                            <br />
                                             <asp:TextBox ID="txt_phoneApp" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_phoneApp" runat="server" Text="*Required" ControlToValidate="txt_phoneApp" ValidationGroup="insert" />
-                                            <br /><br />
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12">
                                             <asp:Label ID="lbl_cvr" runat="server" Text="Upload your cover letter and resume" />
                                             <br /><br />
-                                            <asp:Label ID="lbl_cv" runat="server" Text="Attached cover letter" />
+                                            <asp:Label ID="lbl_cv" runat="server" Text="Attach cover letter" />
                                             <asp:FileUpload id="ful_cv" runat="server" />
                                             <br /><br />
                                             <asp:Label ID="lbl_resume" runat="server" Text="Attach resume" />
@@ -108,12 +115,14 @@
                                             <br />
                                             <asp:TextBox id="txt_msgBox" TextMode="multiline" Columns="50" Rows="5" runat="server" />
                                             <br /><br />
-                                            <asp:Button ID="btn_applyJob" runat="server" Text="Apply" ValidationGroup="insert" CommandName="ApplyNow"/>
-                                            <asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Cancel" CausesValidation="false"/>
+                                            <asp:Button ID="btn_applyJob" runat="server" Text="Apply" ValidationGroup="insert" CommandName="ApplyNow" CssClass="btn_apply"/>
+                                            <asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Cancel" CausesValidation="false" CssClass="btn_apply"/>
                                             <%--<asp:Label ID="lbl_confirmApply" runat="server" />--%>
                                             </ItemTemplate>
                                             </asp:Repeater>
                                             <asp:Label ID="lbl_confirmApply" runat="server" />
+                                            </div>
+                                            </div>
                                             </asp:Panel>
                                         </asp:View>
                                         <!--************************************ View 2 ************************************-->

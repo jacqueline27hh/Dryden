@@ -87,28 +87,31 @@
 
                                         </asp:View>
                                         <asp:View ID="view2" runat="server">
-                                            <h1>Join Our Mailing List!</h1>
-                                            <p>Join our mailing list and stay up-to-date with what's happening at Dyrden Regional Health Care Centre. Be the first to know about any community health alerts and conerns. Stay connected!</p>
-                                            <br />
-                                            <asp:Label ID="lbl_fname" runat="server" Text="First Name" AssociatedControlID="txt_fname" />
-                                            <br />
-                                            <asp:TextBox ID="txt_fname" runat="server" />
-                                            <asp:RequiredFieldValidator ID="rfv_fname" runat="server" Text="*Required" ControlToValidate="txt_fname" ValidationGroup="insert" />
-                                            <br /><br />
-                                            <asp:Label ID="lbl_lname" runat="server" Text="Last Name" AssociatedControlID="txt_lname" />
-                                            <br />
-                                            <asp:TextBox ID="txt_lname" runat="server" />
-                                            <asp:RequiredFieldValidator ID="rfv_lname" runat="server" Text="*Required" ControlToValidate="txt_lname" ValidationGroup="insert" />
-                                            <br /><br />
-                                            <asp:Label ID="lbl_email" runat="server" Text="Email" AssociatedControlID="txt_email" />
-                                            <br />
-                                            <asp:TextBox ID="txt_email" runat="server" />
-                                            <asp:RequiredFieldValidator ID="rfv_email" runat="server" Text="*Required" ControlToValidate="txt_email" ValidationGroup="insert" />
-                                            <br /><br />
-                                            <asp:Button ID="btn_subscribe" runat="server" Text="Subscribe" CommandName="Insert" OnCommand="subAddSubscriber" ValidationGroup="insert" />
-                                            <%--<asp:Button ID="btn_unscubscribe" runat="server" Text="Unsubscribe" />--%>
-                                            <asp:Label ID="lbl_thankYou" runat="server" />
-
+                                            <div class="row">
+                                                <div class="col-xs-12 col-lg-6">
+                                                    <h1 style="float:left;">Join Our Mailing List!</h1>
+                                                    <p>Join our mailing list and stay up-to-date with what's happening at Dyrden Regional Health Care Centre. Be the first to know about any community health alerts and conerns. Stay connected!</p>
+                                                </div>
+                                                <div class="col-xs-12 col-lg-6">
+                                                    <asp:Label ID="lbl_fname" runat="server" Text="First Name" AssociatedControlID="txt_fname" />
+                                                    <br />
+                                                    <asp:TextBox ID="txt_fname" runat="server" />
+                                                    <asp:RequiredFieldValidator ID="rfv_fname" runat="server" Text="*Required" ControlToValidate="txt_fname" ValidationGroup="insert" />
+                                                    <br /><br />
+                                                    <asp:Label ID="lbl_lname" runat="server" Text="Last Name" AssociatedControlID="txt_lname" />
+                                                    <br />
+                                                    <asp:TextBox ID="txt_lname" runat="server" />
+                                                    <asp:RequiredFieldValidator ID="rfv_lname" runat="server" Text="*Required" ControlToValidate="txt_lname" ValidationGroup="insert" />
+                                                    <br /><br />
+                                                    <asp:Label ID="lbl_email" runat="server" Text="Email" AssociatedControlID="txt_email" />
+                                                    <br />
+                                                    <asp:TextBox ID="txt_email" runat="server" />
+                                                    <asp:RequiredFieldValidator ID="rfv_email" runat="server" Text="*Required" ControlToValidate="txt_email" ValidationGroup="insert" />
+                                                    <br /><br />
+                                                    <asp:Button ID="btn_subscribe" runat="server" Text="Subscribe" CommandName="Insert" OnCommand="subAddSubscriber" ValidationGroup="insert" CssClass="btn_ml" />
+                                                    <asp:Label ID="lbl_thankYou" runat="server" />
+                                                </div>
+                                            </div>
                                         </asp:View>
                                         <asp:View ID="view3" runat="server">
                                             <p>

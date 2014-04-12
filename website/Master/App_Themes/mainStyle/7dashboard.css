@@ -331,7 +331,13 @@ input[type="text"].alert_up_title {
     width:400px;
 }
 
+/* --------------------------------------
+   Mailing List
+   -------------------------------------- */
 
+#cph_admin_pnl_all legend {
+    color:#fff;
+}
 
 
 @media screen and (max-width: 1024px) {
