@@ -130,6 +130,7 @@
                                                 <%-- end col-md-2--%>
                                             </div>
                                             <%--end row--%>
+<<<<<<< HEAD
                                             
                                             <br />
                                             <br />
@@ -137,15 +138,29 @@
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <asp:Image ID="Image4" runat="server" ImageUrl="App_Themes/images/20140412_221141_2855_Shalini.png" CssClass="about_avatar" />
+=======
+                                            <br />
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <asp:Image ID="Image4" runat="server" ImageUrl="App_Themes/images/justinog.png" CssClass="about_avatar" />
+>>>>>>> FETCH_HEAD
                                                 </div>
                                                 <%-- end col-md-4--%>
                                                 <div class="col-md-6">
                                                     <div class="about_text_wrapper">
 
+<<<<<<< HEAD
                                                         <h3>Shallu Patel</h3>
 
                                                         <p class="avatar_p">
                                                             Shalini Patel is a student at HumberCollege studying Web Development Program. She graduated with Bachelor of Computer Application from India. After her graduation, she studied Enterprise Database Management post-graduate certificate program from Sheridan College. She has worked on with.Net and MS SQL for her Automobile Management Project during her internship. In Web Development she worked with two major projects with ASP.NET and PHP as a backend.
+=======
+                                                        <h3>Justin O'Gorman</h3>
+
+                                                        <p class="avatar_p">
+                                                            Justin is a web developer currently going to Humber. He loves learning new things, and enjoys staying up to date on the latest trends around the web. He's most passionate about front end development and building cool things with emerging technologies. When not developing, he's a huge Toronto sports fan(unfortunately), plays softball, snowboards and loves to travel. 
+>>>>>>> FETCH_HEAD
                                                         </p>
                                                     </div>
                                                     <%--end about_text_wrapper--%>
