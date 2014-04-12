@@ -153,7 +153,7 @@ public partial class _Default : System.Web.UI.Page
         objNewVolunteer.volunteer_type = ddl_voltype.Text;
         objNewVolunteer.email = txtemail.Text;
         objNewVolunteer.phone = txtcontact.Text;
-
+      
         objVolunteerDC.volunteers.InsertOnSubmit(objNewVolunteer);
         objVolunteerDC.SubmitChanges();
         txtfname.Text = "";
@@ -164,24 +164,35 @@ public partial class _Default : System.Web.UI.Page
         txtcontact.Text = "";
         ddl_voltype.Text = "";
         rdb_gender.Text = "";
-        lbl_msgV.Text = "Your volunteer was sent successfully!";
+        lbl_msgV.Text = "Your volunteer application was submitted successfully!";
         _subRebind();
     }
-    private void _strMessage(bool flag, string str)
-    {
-        if (flag)
-            lbl_msgV.Text = "Application" + str + "submitted";
-        else
-            lbl_msgV.Text = "Sorry, unable to " + str + "submit message";
+    //private void _strMessage(bool flag, string str)
+    //{
+    //    if (flag)
+    //        lbl_msgV.Text = "Application" + str + "submitted";
+    //    else
+    //        lbl_msgV.Text = "Sorry, unable to " + str + "submit message";
 
+    //}
+    protected void subVolCancel(object sender, CommandEventArgs e)
+    {
+        txtfname.Text = "";
+        txtlname.Text = "";
+        txtemail.Text = "";
+        txtage.Text = "";
+        txtschool.Text = "";
+        txtcontact.Text = "";
+        ddl_voltype.Text = "";
+        rdb_gender.Text = "";
     }
     private void _subRebind()
     {
         volunteer objNewVolunteer = new volunteer();
     }
 
-    protected void rpt_all_ItemCommand(object source, RepeaterCommandEventArgs e)
-    {
+    //protected void rpt_all_ItemCommand(object source, RepeaterCommandEventArgs e)
+    //{
 
-    }
+    //}
 }

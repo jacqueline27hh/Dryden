@@ -34,6 +34,7 @@ public class volunteerOppClass
             objNewVolunteer.volunteer_type = _voltype;
             objNewVolunteer.email = _email;
             objNewVolunteer.phone = _phone;
+            //objNewVolunteer.vol_Id = _id;
 
             objVolunteerDC.volunteers.InsertOnSubmit(objNewVolunteer);
             objVolunteerDC.SubmitChanges();
@@ -41,7 +42,7 @@ public class volunteerOppClass
         }
     }
 
-    public bool commitUpdate(int _id, string _fname, string _lname, int _age, string _gender, string _schoolname, string _voltype, string _email, string _phone)
+    public bool commitUpdate(int _id, string _fname, string _lname, string _voltype, string _email, string _phone)
     {
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
         using (objVolunteerDC)
@@ -49,9 +50,9 @@ public class volunteerOppClass
             var objUpVolunteer = objVolunteerDC.volunteers.Single(x => x.vol_Id == _id);
             objUpVolunteer.firstname = _fname;
             objUpVolunteer.lastname = _lname;
-            objUpVolunteer.age = _age;
-            objUpVolunteer.gender = _gender;
-            objUpVolunteer.school_name = _schoolname;
+            //objUpVolunteer.age = _age;
+            //objUpVolunteer.gender = _gender;
+            //objUpVolunteer.school_name = _schoolname;
             objUpVolunteer.volunteer_type = _voltype;
             objUpVolunteer.email = _email;
             objUpVolunteer.phone = _phone;

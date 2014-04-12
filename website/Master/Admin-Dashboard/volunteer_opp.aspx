@@ -25,23 +25,24 @@
                     </thead>
                    <tbody>
                        <asp:ListView ID="lst_all" runat="server">
-                            <ItemTemplate>
+                          <ItemTemplate>                             
                                 <tr>
                                     <td><asp:Label ID="lblfname" runat="server" Text="First Name" />
-                                <asp:Label ID="lbl_fname" runat="server" Text='<%#Eval ("firstname") %>' /></td>
+                                <asp:Label ID="lbl_fname" runat="server" Text='<%#Eval("firstname") %>' /></td>
                                     <td><asp:Label ID="lbllname" runat="server" Text="Last Name" />
-                       <asp:Label ID="lbl_lname" runat="server" Text='<%#Eval ("lastname") %>' /></td>
+                       <asp:Label ID="lbl_lname" runat="server" Text='<%#Eval("lastname") %>' /></td>
                                     <td><asp:Label ID="lblemail" runat="server" Text="Email" />
                                    <asp:Label ID="lbl_email" runat="server" Text='<%#Eval ("email") %>' /></td>
-                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("vol_Id") %>' OnCommand="subAdmin" /></td>
-                                    <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("vol_Id") %>' OnCommand="subAdmin" /></td>
+                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("vol_Id") %>' OnCommand="subAdmin" /></td>
+                                    <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("vol_Id") %>' OnCommand="subAdmin" />  </td>
                                 </tr>
-                            </ItemTemplate>
+                         </ItemTemplate>
+  
                        </asp:ListView>
                    </tbody>
                   </table>
         </asp:Panel>
-        <asp:Panel ID="update_pnl" runat="server">
+        <asp:Panel ID="update_pnl" runat="server" GroupingText="Update Applications">
             <table>
                 <thead>
                     <tr>
@@ -131,6 +132,6 @@
         
 
     </div>
-    <%--end admin_form--%>
+ <%-- end admin_form --%>
 </asp:Content>
 
