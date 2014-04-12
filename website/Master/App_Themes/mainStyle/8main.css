@@ -982,10 +982,10 @@ background-color: #97bf2a;
 line-height: 1;
 display: block;
 color: #ffffff;
-font-size: 44px;
+font-size: 30px;
 text-align: left;
 margin: 22px 0px 10px 78px;
-width: 177px;
+/* width: 179px; */
 }
 
 .slideshow_caption {
