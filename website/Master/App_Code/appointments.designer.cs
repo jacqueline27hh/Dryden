@@ -72,20 +72,6 @@ public partial class appointmentsDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_getPatientById")]
-	public ISingleResult<sp_getPatientByIdResult> sp_getPatientById([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> pId)
-	{
-		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pId);
-		return ((ISingleResult<sp_getPatientByIdResult>)(result.ReturnValue));
-	}
-	
-<<<<<<< HEAD
-	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_getDoctorById")]
-	public ISingleResult<sp_getDoctorByIdResult> sp_getDoctorById([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> dId)
-	{
-		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dId);
-		return ((ISingleResult<sp_getDoctorByIdResult>)(result.ReturnValue));
-=======
 	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_getUserPatientById")]
 	public ISingleResult<sp_getUserPatientByIdResult> sp_getUserPatientById([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="UniqueIdentifier")] System.Nullable<System.Guid> upID)
 	{
@@ -98,7 +84,6 @@ public partial class appointmentsDataContext : System.Data.Linq.DataContext
 	{
 		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), udID);
 		return ((ISingleResult<sp_getUserDoctorByIdResult>)(result.ReturnValue));
->>>>>>> FETCH_HEAD
 	}
 }
 
@@ -110,9 +95,9 @@ public partial class Appointment : INotifyPropertyChanging, INotifyPropertyChang
 	
 	private int _Id;
 	
-	private int _patient_name;
+	private System.Guid _patient_id;
 	
-	private int _doctor_name;
+	private System.Guid _doctor_id;
 	
 	private System.DateTime _date_time;
 	
@@ -124,10 +109,10 @@ public partial class Appointment : INotifyPropertyChanging, INotifyPropertyChang
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void Onpatient_nameChanging(int value);
-    partial void Onpatient_nameChanged();
-    partial void Ondoctor_nameChanging(int value);
-    partial void Ondoctor_nameChanged();
+    partial void Onpatient_idChanging(System.Guid value);
+    partial void Onpatient_idChanged();
+    partial void Ondoctor_idChanging(System.Guid value);
+    partial void Ondoctor_idChanged();
     partial void Ondate_timeChanging(System.DateTime value);
     partial void Ondate_timeChanged();
     partial void Onappointment_titleChanging(string value);
@@ -159,42 +144,42 @@ public partial class Appointment : INotifyPropertyChanging, INotifyPropertyChang
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_patient_name", DbType="Int NOT NULL")]
-	public int patient_name
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_patient_id", DbType="UniqueIdentifier NOT NULL")]
+	public System.Guid patient_id
 	{
 		get
 		{
-			return this._patient_name;
+			return this._patient_id;
 		}
 		set
 		{
-			if ((this._patient_name != value))
+			if ((this._patient_id != value))
 			{
-				this.Onpatient_nameChanging(value);
+				this.Onpatient_idChanging(value);
 				this.SendPropertyChanging();
-				this._patient_name = value;
-				this.SendPropertyChanged("patient_name");
-				this.Onpatient_nameChanged();
+				this._patient_id = value;
+				this.SendPropertyChanged("patient_id");
+				this.Onpatient_idChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doctor_name", DbType="Int NOT NULL")]
-	public int doctor_name
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doctor_id", DbType="UniqueIdentifier NOT NULL")]
+	public System.Guid doctor_id
 	{
 		get
 		{
-			return this._doctor_name;
+			return this._doctor_id;
 		}
 		set
 		{
-			if ((this._doctor_name != value))
+			if ((this._doctor_id != value))
 			{
-				this.Ondoctor_nameChanging(value);
+				this.Ondoctor_idChanging(value);
 				this.SendPropertyChanging();
-				this._doctor_name = value;
-				this.SendPropertyChanged("doctor_name");
-				this.Ondoctor_nameChanged();
+				this._doctor_id = value;
+				this.SendPropertyChanged("doctor_id");
+				this.Ondoctor_idChanged();
 			}
 		}
 	}
@@ -260,125 +245,6 @@ public partial class Appointment : INotifyPropertyChanging, INotifyPropertyChang
 	}
 }
 
-public partial class sp_getPatientByIdResult
-{
-	
-	private string _patientName;
-	
-	private int _Id;
-	
-	private int _patient_name;
-	
-	private int _doctor_name;
-	
-	private System.DateTime _date_time;
-	
-	private string _appointment_title;
-	
-	public sp_getPatientByIdResult()
-	{
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_patientName", DbType="VarChar(101) NOT NULL", CanBeNull=false)]
-	public string patientName
-	{
-		get
-		{
-			return this._patientName;
-		}
-		set
-		{
-			if ((this._patientName != value))
-			{
-				this._patientName = value;
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
-	public int Id
-	{
-		get
-		{
-			return this._Id;
-		}
-		set
-		{
-			if ((this._Id != value))
-			{
-				this._Id = value;
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_patient_name", DbType="Int NOT NULL")]
-	public int patient_name
-	{
-		get
-		{
-			return this._patient_name;
-		}
-		set
-		{
-			if ((this._patient_name != value))
-			{
-				this._patient_name = value;
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doctor_name", DbType="Int NOT NULL")]
-	public int doctor_name
-	{
-		get
-		{
-			return this._doctor_name;
-		}
-		set
-		{
-			if ((this._doctor_name != value))
-			{
-				this._doctor_name = value;
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[date-time]", Storage="_date_time", DbType="DateTime NOT NULL")]
-	public System.DateTime date_time
-	{
-		get
-		{
-			return this._date_time;
-		}
-		set
-		{
-			if ((this._date_time != value))
-			{
-				this._date_time = value;
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_title", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-	public string appointment_title
-	{
-		get
-		{
-			return this._appointment_title;
-		}
-		set
-		{
-			if ((this._appointment_title != value))
-			{
-				this._appointment_title = value;
-			}
-		}
-	}
-}
-
-<<<<<<< HEAD
-public partial class sp_getDoctorByIdResult
-=======
 public partial class sp_getUserPatientByIdResult
 {
 	
@@ -496,32 +362,21 @@ public partial class sp_getUserPatientByIdResult
 }
 
 public partial class sp_getUserDoctorByIdResult
->>>>>>> FETCH_HEAD
 {
 	
 	private string _doctorName;
 	
 	private int _Id;
 	
-<<<<<<< HEAD
-	private int _patient_name;
-	
-	private int _doctor_name;
-=======
 	private System.Guid _patient_id;
 	
 	private System.Guid _doctor_id;
->>>>>>> FETCH_HEAD
 	
 	private System.DateTime _date_time;
 	
 	private string _appointment_title;
 	
-<<<<<<< HEAD
-	public sp_getDoctorByIdResult()
-=======
 	public sp_getUserDoctorByIdResult()
->>>>>>> FETCH_HEAD
 	{
 	}
 	
@@ -557,20 +412,6 @@ public partial class sp_getUserDoctorByIdResult
 		}
 	}
 	
-<<<<<<< HEAD
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_patient_name", DbType="Int NOT NULL")]
-	public int patient_name
-	{
-		get
-		{
-			return this._patient_name;
-		}
-		set
-		{
-			if ((this._patient_name != value))
-			{
-				this._patient_name = value;
-=======
 	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_patient_id", DbType="UniqueIdentifier NOT NULL")]
 	public System.Guid patient_id
 	{
@@ -583,25 +424,10 @@ public partial class sp_getUserDoctorByIdResult
 			if ((this._patient_id != value))
 			{
 				this._patient_id = value;
->>>>>>> FETCH_HEAD
 			}
 		}
 	}
 	
-<<<<<<< HEAD
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doctor_name", DbType="Int NOT NULL")]
-	public int doctor_name
-	{
-		get
-		{
-			return this._doctor_name;
-		}
-		set
-		{
-			if ((this._doctor_name != value))
-			{
-				this._doctor_name = value;
-=======
 	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doctor_id", DbType="UniqueIdentifier NOT NULL")]
 	public System.Guid doctor_id
 	{
@@ -614,7 +440,6 @@ public partial class sp_getUserDoctorByIdResult
 			if ((this._doctor_id != value))
 			{
 				this._doctor_id = value;
->>>>>>> FETCH_HEAD
 			}
 		}
 	}

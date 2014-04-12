@@ -3,32 +3,12 @@
   <Table Name="dbo.Appointments" Member="Appointments">
     <Type Name="Appointment">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="patient_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="doctor_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="patient_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="doctor_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="[date-time]" Member="date_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="appointment_title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Function Name="dbo.sp_getPatientById" Method="sp_getPatientById">
-    <Parameter Name="pId" Type="System.Int32" DbType="Int" />
-    <ElementType Name="sp_getPatientByIdResult">
-      <Column Name="patientName" Type="System.String" DbType="VarChar(101) NOT NULL" CanBeNull="false" />
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="patient_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="doctor_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="[date-time]" Member="date_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="appointment_title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-<<<<<<< HEAD
-  <Function Name="dbo.sp_getDoctorById" Method="sp_getDoctorById">
-    <Parameter Name="dId" Type="System.Int32" DbType="Int" />
-    <ElementType Name="sp_getDoctorByIdResult">
-      <Column Name="doctorName" Type="System.String" DbType="VarChar(101) NOT NULL" CanBeNull="false" />
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="patient_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="doctor_name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-=======
   <Function Name="dbo.sp_getUserPatientById" Method="sp_getUserPatientById">
     <Parameter Name="upID" Type="System.Guid" DbType="UniqueIdentifier" />
     <ElementType Name="sp_getUserPatientByIdResult">
@@ -47,7 +27,6 @@
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="patient_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="doctor_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
->>>>>>> FETCH_HEAD
       <Column Name="[date-time]" Member="date_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="appointment_title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </ElementType>

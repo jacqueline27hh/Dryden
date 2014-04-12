@@ -20,15 +20,15 @@ public class appointmentClass
         return allAppointments;
 
     }
-    public bool commitInsert(int _patient, int _doc, DateTime _date, string _title)
+    public bool commitInsert(Guid _patient, Guid _doc, DateTime _date, string _title)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
             Appointment objNewAppointment = new Appointment();
 
-            objNewAppointment.patient_name = _patient;
-            objNewAppointment.doctor_name = _doc;
+            objNewAppointment.patient_id = _patient;
+            objNewAppointment.doctor_id = _doc;
             objNewAppointment.date_time = _date;
 
             objNewAppointment.appointment_title = _title;
@@ -39,15 +39,15 @@ public class appointmentClass
         }
     }
 
-    public bool commitUpdate(int _id, int _patient, int _doc, DateTime _date, string _title)
+    public bool commitUpdate(int _id, Guid _patient, Guid _doc, DateTime _date, string _title)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
             var objUpAppointment = objAppointmentDC.Appointments.Single(x => x.Id == _id);
 
-            objUpAppointment.patient_name = _patient;
-            objUpAppointment.doctor_name = _doc;
+            objUpAppointment.patient_id = _patient;
+            objUpAppointment.doctor_id = _doc;
             objUpAppointment.date_time = _date;
             objUpAppointment.appointment_title = _title;
 
@@ -68,22 +68,22 @@ public class appointmentClass
         }
     }
 
-    public List<sp_getPatientByIdResult> getPatient(int _id)
+    public List<sp_getUserPatientByIdResult> getPatient(Guid _id)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
-            var patientById = objAppointmentDC.sp_getPatientById(_id);
+            var patientById = objAppointmentDC.sp_getUserPatientById(_id);
             return patientById.ToList();
         }
     }
 
-    public List<sp_getDoctorByIdResult> getDoctor(int _id)
+    public List<sp_getUserDoctorByIdResult> getDoctor(Guid _id)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
-            var doctorById = objAppointmentDC.sp_getDoctorById(_id);
+            var doctorById = objAppointmentDC.sp_getUserDoctorById(_id);
             return doctorById.ToList();
         }
     }
