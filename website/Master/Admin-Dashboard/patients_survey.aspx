@@ -22,24 +22,24 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><asp:Label ID="lblFname" runat="server" Text="First Name    " /></th>
-                            <th><asp:Label ID="lbLname" runat="server" Text="Last Name    " /></th>
-                            <th><asp:Label ID="lblEmail" runat="server" Text="Email Address    " /></th>
-                            <th><asp:Label ID="lblRev" runat="server" Text="Review of    " /></th>
-                            <th><asp:Label ID="lblMsg" runat="server" Text="Message" /></th>
+                            <th class="moveOver"><asp:Label ID="lblFname" runat="server" Text="First Name    " /></th>
+                            <th class="moveOver"><asp:Label ID="lbLname" runat="server" Text="Last Name    " /></th>
+                            <th class="moveOver"><asp:Label ID="lblEmail" runat="server" Text="Email Address    " /></th>
+                            <th class="moveOver"><asp:Label ID="lblRev" runat="server" Text="Review of    " /></th>
+                            <th class="moveOver"><asp:Label ID="lblMsg" runat="server" Text="Message" /></th>
                         </tr>
                     </thead>
                     <tbody>
                         <asp:Repeater ID="rpt_all" runat="server">
                             <ItemTemplate>
                                 <tr>
-                                    <td><%#Eval ("firstname") %></td>
-                                    <td><%#Eval ("lastname") %></td>
-                                    <td><%#Eval ("email") %></td>
-                                    <td><%#Eval ("reviewof") %></td>
-                                    <td><%#Eval ("message") %></td>
-                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
-                                    <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
+                                    <td class="moveOver"><%#Eval ("firstname") %></td>
+                                    <td class="moveOver"><%#Eval ("lastname") %></td>
+                                    <td class="moveOver"><%#Eval ("email") %></td>
+                                    <td class="moveOver"><%#Eval ("reviewof") %></td>
+                                    <td class="moveOver"><%#Eval ("message") %></td>
+                                    <td class="moveOver"><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
+                                    <td class="moveOver"><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                 </tr>
                             </ItemTemplate>
                         </asp:Repeater>
@@ -52,29 +52,29 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><asp:Label ID="lblFnameU" runat="server" Text="First Name  " /></th>
-                            <th><asp:Label ID="lblLnameU" runat="server" Text="Last Name  " /></th>
-                            <th><asp:Label ID="lblEmailU" runat="server" Text="Email  " /></th>
-                            <th><asp:Label ID="lblRevU" runat="server" Text="Review of  " /></th>
-                            <th><asp:Label ID="lblMsgU" runat="server" Text="Message  " /></th>
+                            <th class="moveOver"><asp:Label ID="lblFnameU" runat="server" Text="First Name  " /></th>
+                            <th class="moveOver"><asp:Label ID="lblLnameU" runat="server" Text="Last Name  " /></th>
+                            <th class="moveOver"><asp:Label ID="lblEmailU" runat="server" Text="Email  " /></th>
+                            <th class="moveOver"><asp:Label ID="lblRevU" runat="server" Text="Review of  " /></th>
+                            <th class="moveOver"><asp:Label ID="lblMsgU" runat="server" Text="Message  " /></th>
                         </tr>
                     </thead>
                     <tbody>
                         <asp:Repeater ID="rpt_update" runat="server" OnItemCommand="subUpDel">
                             <ItemTemplate>
                                 <tr>
-                                    <td><asp:HiddenField ID="hdf_idU" runat="server" Value='<%#Eval ("Id") %>' />
+                                    <td class="moveOver"><asp:HiddenField ID="hdf_idU" runat="server" Value='<%#Eval ("Id") %>' />
                                         <asp:TextBox ID="txtFnameU" runat="server" Text='<%#Eval ("firstname") %>' />
                                     </td>
-                                    <td>
+                                    <td class="moveOver">
                                         <asp:TextBox ID="txtLnameU" runat="server" Text='<%#Eval ("lastname") %>' />
                                     </td>
-                                    <td>
+                                    <td class="moveOver">
                                         <asp:TextBox ID="txtEmailU" runat="server" Text='<%#Eval ("email") %>' />
-                                    </td><td>
+                                    </td><td class="moveOver">
                                         <asp:TextBox ID="txtRevU" runat="server" Text='<%#Eval ("reviewof") %>' />
                                     </td>
-                                    <td>
+                                    <td class="moveOver">
                                         <asp:TextBox ID="txtMsgU" runat="server" Text='<%#Eval ("message") %>' />
                                     </td>
                                 </tr>
@@ -106,18 +106,18 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><asp:Label ID="lblFnameD" runat="server" Text="First Name" /></th>
-                            <th><asp:Label ID="lblLnameD" runat="server" Text="Last Name" /></th>
-                            <th><asp:Label ID="lblEmailD" runat="server" Text="Email" /></th>
-                            <th><asp:Label ID="lblRevD" runat="server" Text="Review of  " /></th>
-                            <th><asp:Label ID="lblMsgD" runat="server" Text="Message  " /></th>
+                            <th class="moveOver"><asp:Label ID="lblFnameD" runat="server" Text="First Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lblLnameD" runat="server" Text="Last Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lblEmailD" runat="server" Text="Email" /></th>
+                            <th class="moveOver"><asp:Label ID="lblRevD" runat="server" Text="Review of  " /></th>
+                            <th class="moveOver"><asp:Label ID="lblMsgD" runat="server" Text="Message  " /></th>
                         </tr>
                     </thead>
                     <tbody>
                         <asp:Repeater ID="rpt_delete" runat="server" OnItemCommand="subUpDel">
                             <ItemTemplate>
                                 <tr>
-                                    <td>
+                                    <td class="moveOver">
                                         <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval ("Id") %>' />
                                         <asp:Label ID="lblFnameD" runat="server" Text='<%#Eval ("firstname") %>' />
                                         <asp:Label ID="lblLnameD" runat="server" Text='<%#Eval ("lastname") %>' />

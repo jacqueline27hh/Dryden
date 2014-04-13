@@ -6,7 +6,8 @@
       <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="recipient" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="background" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="tagline" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="font" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="size" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="message" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>

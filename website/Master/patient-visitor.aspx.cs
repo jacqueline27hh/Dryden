@@ -114,17 +114,17 @@ public partial class _Default : System.Web.UI.Page
         objEcard.name = txtRec.Text;
         objEcard.recipient = txtName.Text;
         objEcard.background = ddlBg.SelectedItem.Value;
-        //objEcard.font = ddlFont.SelectedItem.Value;
-        //objEcard.size = ddlSize.SelectedItem.Value;
-        objEcard.message = txtMsg.Text;
+        objEcard.font = ddlFont.SelectedItem.Value;
+        objEcard.size = ddlSize.SelectedItem.Value;
+        objEcard.message = txtGreeting.Text;
 
         objEcardDC.E_cards.InsertOnSubmit(objEcard);
         objEcardDC.SubmitChanges();
         txtRec.Text = "";
         txtName.Text = "";
-        ddlBg.SelectedItem.Value = "";
-        ddlFont.SelectedItem.Value = "";
-        ddlSize.SelectedItem.Value = "";
+        ddlBg.SelectedItem.Text = "";
+        ddlFont.SelectedItem.Text = "";
+        ddlSize.SelectedItem.Text = "";
         txtGreeting.Text = "";
         lblTy.Text = "Thank you! The Ecard has been submitted.";
 
