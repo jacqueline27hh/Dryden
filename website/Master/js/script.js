@@ -9,6 +9,12 @@ $("document").ready(function () {
     $("#slideshow li:first").before($("#slideshow li:last"));
     imgWidth = $("#slideshow li:first").width();
     $("#slideshow").css({ left: -imgWidth });
+
+
+    $('.navbar-toggle').click(function () {
+        $(".navbar .container").css("display", "block"); 
+    });
+
 });
 
 
@@ -24,4 +30,7 @@ $("#slide_next").click(function () {
         $("#display li:last").after($("#display li:first"));
         $("#slideshow").css({ left: "+=1140px" });
     });
+
 });
+
+
