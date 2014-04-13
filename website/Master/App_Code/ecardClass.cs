@@ -30,8 +30,8 @@ public class ecardClass
             objEcard.name = _name;
             objEcard.recipient = _recipient; 
             objEcard.background = _background;
-            //objEcard.font = _font;
-            //objEcard.size = _size;
+            objEcard.font = _font;
+            objEcard.size = _size;
             objEcard.message = _message;
 
             objEcardDC.E_cards.InsertOnSubmit(objEcard);
@@ -49,8 +49,8 @@ public class ecardClass
             objUpEcard.name = _name;
             objUpEcard.recipient = _recipient;
             objUpEcard.background = _background;
-            //objUpEcard.font = _font;
-            //objUpEcard.size = _size;
+            objUpEcard.font = _font;
+            objUpEcard.size = _size;
             objUpEcard.message = _message;
 
 

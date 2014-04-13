@@ -21,7 +21,7 @@ public partial class volunteer_opp : System.Web.UI.Page
         //lst_all.DataSource = objVol.getVolunteers();
         //lst_all.DataBind();
     }
-         protected void subAdmin(object sender, CommandEventArgs e)
+         protected void subAdmin(object sender, ListViewCommandEventArgs e)
          {
              switch (e.CommandName)
              {
@@ -80,7 +80,7 @@ public partial class volunteer_opp : System.Web.UI.Page
      }
      private void _panelControl(Panel pnl)
      {
-         //pnl_all.Visible = false;
+         pnl_all.Visible = false;
          pnl_delete.Visible = false;
          update_pnl.Visible = false;
          pnl.Visible = true;

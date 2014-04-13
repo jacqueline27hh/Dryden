@@ -42,7 +42,7 @@ public class volunteerOppClass
         }
     }
 
-    public bool commitUpdate(int _id, string _fname, string _lname, string _voltype, string _email, string _phone)
+    public string commitUpdate(int _id, string _fname, string _lname, string _voltype, string _email, string _phone)
     {
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
         using (objVolunteerDC)
@@ -58,7 +58,7 @@ public class volunteerOppClass
             objUpVolunteer.phone = _phone;
 
             objVolunteerDC.SubmitChanges();
-            return true;
+            return "Application Updated";
         }
     }
 
