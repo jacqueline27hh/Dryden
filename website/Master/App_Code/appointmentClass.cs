@@ -48,7 +48,7 @@ public class appointmentClass
         {
             Appointment objNewAppointment = new Appointment();
 
-            objNewAppointment.patientName = _pname;
+            //objNewAppointment.patientName = _pname;
             objNewAppointment.date_time = _date;
             objNewAppointment.appointment_title = _title;
 
@@ -65,7 +65,7 @@ public class appointmentClass
         {
             var objUpAppointment = objAppointmentDC.Appointments.Single(x => x.Id == _id);
 
-            objUpAppointment.patientName = _pname;
+            //objUpAppointment.patientName = _pname;
             objUpAppointment.date_time = _date;
             objUpAppointment.appointment_title = _title;
 
