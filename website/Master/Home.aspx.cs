@@ -15,7 +15,17 @@ public partial class _Default : System.Web.UI.Page
         if (!Page.IsPostBack)
         {
             _subRebind();
+            studentAlert(); 
         }
+        
+    }
+
+    public void studentAlert()
+    {
+        string alertmsg = "You are viewing a a student project.  The information represented here do not reflect nor are affiliated in any way with the real Dryden Hospital";
+        System.Text.StringBuilder strBld = new System.Text.StringBuilder();
+        strBld.Append("<script> window.onload=function(){ alert('" + alertmsg + "')}; </script>");
+        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", strBld.ToString());
     }
 
     private void _subRebind()
