@@ -28,7 +28,7 @@
                             <td><%#Eval("patientName") %></td>
                             <td><%#Eval("appointment_title") %></td>
                             <td><%#Eval("date_time") %></td>
-                            <td><%#Eval("firstname") %></td>
+                            <td></td>
                          </tr>
                     </ItemTemplate>
                  </asp:Repeater>

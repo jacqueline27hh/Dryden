@@ -8,7 +8,7 @@
        
 
         <div class="row" id="admin_header_wrapper">
-        <asp:Label ID="admin_lbl_header" runat="server" Text="View My Appointment" CssClass="col-lg-9 admin_header"/>       
+        <asp:Label ID="admin_lbl_header" runat="server" Text="View My Appointments" CssClass="col-lg-9 admin_header"/>       
         </div>
         
         <div>
@@ -42,7 +42,7 @@
                     <thead>
                         <tr>
                             <th><asp:Label ID="lbl_pname" runat="server" Text="Patient Name" /></th>
-                            <th><asp:Label ID="lbl_dname" runat="server" Text="Doctor" /></th>
+                            <%--<th><asp:Label ID="lbl_dname" runat="server" Text="Doctor" /></th>--%>
                             <th><asp:Label ID="lbl_date" runat="server" Text="Date" /></th>
                             <th><asp:Label ID="lbl_title" runat="server" Text="Appointment" /></th>
                         </tr>
@@ -51,7 +51,9 @@
                         <asp:Repeater ID="rpt_all" runat="server">
                             <ItemTemplate>
                                 <tr>
-                                    <td><%#Eval ("patient_name") %></td>
+                                    <td><%#Eval ("patientName") %></td>
+                                    <td><%#Eval ("date-time") %></td>
+                                    <td><%#Eval ("appointment_title") %></td>
                                     <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                     <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                 </tr>
