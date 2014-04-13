@@ -54,8 +54,9 @@
 
                 <ul class="nav navbar-nav pull-right" id="admin_profile">
                     <li><a href="#"><i class="fa fa-user"></i>Hello Doctor!</a></li>
-                    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+                    <%--<li><a href="#"><i class="fa fa-home"></i>Home</a></li>--%>
+                    <%--<li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>--%>
+                    <li><i class="fa fa-power-off"></i><asp:LoginStatus ID="lgn_main" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Home.aspx" /></li>
                 </ul>
 
 

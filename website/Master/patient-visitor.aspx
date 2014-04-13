@@ -33,11 +33,12 @@
                                         <Items>
                                             <asp:MenuItem Text="Accessibility" Selected="true" Value="0" />
                                             
-                                            <asp:MenuItem Text="Visiting & Staying" Value="1" />
-                                            <asp:MenuItem Text="Parking" Value="2" />
+                                            <asp:MenuItem Text="Planning Your Stay" Value="1" />
+                                            <asp:MenuItem Text="Visiting The Hospital" Value="2" />
                                             <asp:MenuItem Text="Patient Feedback" Value="3" />
                                             <asp:MenuItem Text="Identify Your Symptoms" Value="4" />
                                             <asp:MenuItem Text="E-card" Value="5" />
+                                            <asp:MenuItem Text="Parking" Value="6" />
         
                                             
                                           
@@ -52,13 +53,13 @@
                                         </asp:View>
                                         <asp:View ID="view2" runat="server">
                                             <p>
-                                                Visiting & Staying
+                                                Planning Your Stay
 								   
                                             </p>
                                         </asp:View>
                                         <asp:View ID="view3" runat="server">
                                             <p>
-                                                Parking
+                                                Visiting The Hospital
 							
                                             </p>
                                         </asp:View>
@@ -190,6 +191,13 @@
         <br />
         </asp:Panel>
 
+                                        </asp:View>
+
+                                        <asp:View ID="view7" runat="server">
+                                            <p>
+                                                Parking
+							
+                                            </p>
                                         </asp:View>
                                        
                                      

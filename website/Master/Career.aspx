@@ -32,9 +32,9 @@
                                     <asp:Menu ID="career_nav_menu" runat="server" CssClass="nav nav-tabs " Orientation="Horizontal" OnMenuItemClick="switchTabs" StaticSelectedStyle-CssClass="active">
                                         <Items>
                                             <asp:MenuItem Text="Employment Opportunities" Selected="true" Value="0" />
-                                            <asp:MenuItem Text="Apply for Career" Value="1" />
-                                            <asp:MenuItem Text="Why Work Here" Value="2" />
-                                            <asp:MenuItem Text="Volunteer Program" Value="3" />
+
+                                            <asp:MenuItem Text="Why Work Here" Value="1" />
+                                            <asp:MenuItem Text="Volunteer Program" Value="2" />
                                         </Items>
                                     </asp:Menu>
 
@@ -116,22 +116,19 @@
                                             <asp:TextBox id="txt_msgBox" TextMode="multiline" Columns="50" Rows="5" runat="server" />
                                             <br /><br />
                                             <asp:Button ID="btn_applyJob" runat="server" Text="Apply" ValidationGroup="insert" CommandName="ApplyNow" CssClass="btn_apply"/>
-                                            <asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Cancel" CausesValidation="false" CssClass="btn_apply"/>
+                                            <%--<asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Refresh" CausesValidation="false" CssClass="btn_apply"/>--%>
                                             <%--<asp:Label ID="lbl_confirmApply" runat="server" />--%>
                                             </ItemTemplate>
                                             </asp:Repeater>
+                                            <asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Refresh" CausesValidation="false" CssClass="btn_apply"/>
                                             <asp:Label ID="lbl_confirmApply" runat="server" />
                                             </div>
                                             </div>
                                             </asp:Panel>
                                         </asp:View>
                                         <!--************************************ View 2 ************************************-->
-                                        <asp:View ID="view2" runat="server">
-                                            <h1>Apply for Career</h1>
-                                            
-                                        </asp:View>
 
-                                        <asp:View ID="view3" runat="server">
+                                        <asp:View ID="view2" runat="server">
                                             <p>
                                                 Why Work Here
                                                
@@ -139,7 +136,7 @@
                                             </p>
                                         </asp:View>
                                         <%--Volunteer feature--%>
-                                        <asp:View ID="view4" runat="server">
+                                        <asp:View ID="view3" runat="server">
 
                                             <asp:Label ID="lblfname" runat="server" Text="First Name" AssociatedControlID="txtfname" />
                                             <asp:TextBox ID="txtfname" runat="server" />

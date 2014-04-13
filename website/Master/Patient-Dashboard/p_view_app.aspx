@@ -9,25 +9,25 @@
        
 
         <div class="row col-lg-8" id="admin_header_wrapper">
-        <asp:Label ID="admin_lbl_header" runat="server" Text="View My Appointments" CssClass="col-lg-9 admin_header"/>
-        <br /><br />
-        <table border="1">
+        <asp:Label ID="admin_lbl_header" runat="server" Text="View My Appointments" CssClass="col-lg-9 admin_header moveDown"/>
+        <br /><br /><br />
+        <table>
             <thead>
                 <tr>
                     
-                    <th><asp:Label ID="lbl_patient" runat="server" Text="Patient Name" /></th>
-                    <th><asp:Label ID="lbl_appTitle" runat="server" Text="Appointment" /></th>
-                    <th><asp:Label ID="lbl_date" runat="server" Text="Date" /></th>
-                    <th><asp:Label ID="lbl_doctor" runat="server" Text="Doctor" /></th>
+                    <th class="moveOver moveDown"><asp:Label ID="lbl_patient" runat="server" Text="Patient" /></th>
+                    <th class="moveOver moveDown"><asp:Label ID="lbl_appTitle" runat="server" Text="Appointment" /></th>
+                    <th class="moveOver moveDown"><asp:Label ID="lbl_date" runat="server" Text="Date" /></th>
+                    <%--<th class="moveDown"><asp:Label ID="lbl_doctor" runat="server" Text="Doctor" /></th>--%>
                 </tr>
             </thead>
             <tbody>
                 <asp:Repeater ID="rpt_all" runat="server" >
                     <ItemTemplate>
                         <tr>
-                            <td><%#Eval("patientName") %></td>
-                            <td><%#Eval("appointment_title") %></td>
-                            <td><%#Eval("date_time") %></td>
+                            <td class="moveOver"><%#Eval("patientName") %></td>
+                            <td class="moveOver"><%#Eval("appointment_title") %></td>
+                            <td class="moveOver"><%#Eval("date_time") %></td>
                             <td></td>
                          </tr>
                     </ItemTemplate>

@@ -42,14 +42,6 @@ public partial class _Default : System.Web.UI.Page
     {
         switch (e.CommandName)
         {
-            //case "addApplicant": // This is similar to insert commandName
-            //    TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameApp");
-            //    TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameApp");
-            //    TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
-            //    HiddenField hdfJobID = (HiddenField)e.Item.FindControl("hdf_jobID");
-            //    _confirmApply(objApplicant.commitInsert(int.Parse(hdfJobID.Value.ToString()), txtFname.Text, txtLname.Text, txtEmail.Text), "insert");
-            //    _subRefresh();
-            //    break;
             case "ApplyNow": // This is similar to update commandName
                 _showApply(int.Parse(e.CommandArgument.ToString()));
                 break;
@@ -83,11 +75,11 @@ public partial class _Default : System.Web.UI.Page
                 txtPhone.Text = "";
                 txtMsgBox.Text = "";
                 lbl_confirmApply.Text = "Your applicantion was sent successfully!";
-                //_confirmApply(objApplicant.commitInsert(int.Parse(hdfJobID.Value.ToString()), txtFname.Text, txtLname.Text, txtEmail.Text), "insert");
                 //_subRefresh();
                 break;
-            case "Cancel":
-                _subRefresh();
+            case "Refresh":
+                //_subRefresh();
+                Response.Redirect("Career.aspx?tabIndex=0");
                 break;
         }
     }
@@ -109,12 +101,21 @@ public partial class _Default : System.Web.UI.Page
     // This is where I reset the form
     private void _subRefresh()
     {
+        //TextBox txtFname = (TextBox)FindControl("txt_fnameApp");
+        //TextBox txtLname = (TextBox)FindControl("txt_lnameApp");
+        //TextBox txtEmail = (TextBox)FindControl("txt_emailApp");
         //TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameApp");
         //TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameApp");
         //TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
         //txtFname.Text = string.Empty;
         //txtLname.Text = string.Empty;
         //txtEmail.Text = string.Empty;
+        //txtFname.Text = "";
+        //txtLname.Text = "";
+        //txtEmail.Text = "";
+        //txtPhone.Text = "";
+        //txtMsgBox.Text = "";
+
         //txt_fnameApp.Text = string.Empty;
         //txt_lnameApp.Text = string.Empty;
         //txt_emailApp.Text = string.Empty;

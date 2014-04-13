@@ -31,13 +31,16 @@
 
                                     <asp:Menu ID="ps_nav_menu" runat="server" CssClass="nav nav-tabs " Orientation="Horizontal" OnMenuItemClick="switchTabs" StaticSelectedStyle-CssClass="active">
                                         <Items>
-                                            <asp:MenuItem Text="Emergency Services" Selected="true" Value="0" />
+                                            <asp:MenuItem Text="Diagnostic Imaging Services" Selected="true" Value="0" />
                                             
                                             <asp:MenuItem Text="ER Wait Time" Value="1" />
                                             <asp:MenuItem Text="Inpatient Services" Value="2" />
                                             <asp:MenuItem Text="Outpatient Services" Value="3" />
-                                            <asp:MenuItem Text="Laboratory" Value="4" />
-                                            <asp:MenuItem Text="Other Services" Value="5" />
+                                            <asp:MenuItem Text="Laboratory Services" Value="4" />
+                                            <asp:MenuItem Text="Mental Health & Addiction Services" Value="5" />
+                                            <asp:MenuItem Text="Oncology Services" Value="6" />
+                                            <asp:MenuItem Text="Rehabilitation" Value="7" />
+                                            <asp:MenuItem Text="Food Services" Value="8" />
         
 
                                           
@@ -48,7 +51,7 @@
 
                                     <asp:MultiView ID="mv_tabs" runat="server" ActiveViewIndex="0">
                                         <asp:View ID="view1" runat="server">
-                                            <p>Emergency Services</p>
+                                            <p>Diagnostic Imaging Services</p>
                                         </asp:View>
                                         <asp:View ID="view2" runat="server">
                                             <p>
@@ -71,13 +74,31 @@
                                         </asp:View>
                                         <asp:View ID="view5" runat="server">
                                             <p>
-                                               Laboratory
+                                               Laboratory Services
 							
                                             </p>
                                         </asp:View>
                                         <asp:View ID="view6" runat="server">
                                             <p>
-                                               Other Services
+                                               Mental Health & Addiction Services
+							
+                                            </p>
+                                        </asp:View>
+                                        <asp:View ID="view7" runat="server">
+                                            <p>
+                                               Oncology Services
+							
+                                            </p>
+                                        </asp:View>
+                                        <asp:View ID="view8" runat="server">
+                                            <p>
+                                               Rehabilitation Services
+							
+                                            </p>
+                                        </asp:View>
+                                        <asp:View ID="view9" runat="server">
+                                            <p>
+                                               Food Services
 							
                                             </p>
                                         </asp:View>

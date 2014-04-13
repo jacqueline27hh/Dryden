@@ -161,34 +161,36 @@
                             <Items>
                                 <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="About" NavigateUrl="About.aspx">
-                                    <asp:MenuItem Text="Public Report" NavigateUrl="About.aspx?tabIndex=0" />
+                                    <asp:MenuItem Text="Public Reports" NavigateUrl="About.aspx?tabIndex=0" />
                                     <asp:MenuItem Text="Meet the Board" NavigateUrl="About.aspx?tabIndex=1" />
-                                    <asp:MenuItem Text="Strategic Plan" NavigateUrl="About.aspx?tabIndex=2" />
+                                    <asp:MenuItem Text="Mission Statement" NavigateUrl="About.aspx?tabIndex=2" />
                                     <asp:MenuItem Text="Donate Now" NavigateUrl="About.aspx?tabIndex=3" />
                                 </asp:MenuItem>
                                 <asp:MenuItem Text="Patients & Visitors" NavigateUrl="~/patient-visitor.aspx">
                                     <asp:MenuItem Text="Accessibility" NavigateUrl="patient-visitor.aspx?tabIndex=0" />
-                                    <asp:MenuItem Text="Visiting & Staying" NavigateUrl="patient-visitor.aspx?tabIndex=1" />
-                                    <asp:MenuItem Text="Parking" NavigateUrl="patient-visitor.aspx?tabIndex=2" />
+                                    <asp:MenuItem Text="Planning Your Stay" NavigateUrl="patient-visitor.aspx?tabIndex=1" />
+                                    <asp:MenuItem Text="Visiting The Hospital" NavigateUrl="patient-visitor.aspx?tabIndex=2" />
                                     <asp:MenuItem Text="Patient Feedback" NavigateUrl="patient-visitor.aspx?tabIndex=3" />
                                     <asp:MenuItem Text="Identify Your Symptoms" NavigateUrl="patient-visitor.aspx?tabIndex=4" />
                                     <asp:MenuItem Text="E-card" NavigateUrl="patient-visitor.aspx?tabIndex=5" />
-                                    <asp:MenuItem Selectable="false" />
+                                    <asp:MenuItem Text="Parking" NavigateUrl="patient-visitor.aspx?tabIndex=6" />
                                 </asp:MenuItem>
                                 <asp:MenuItem Text="Programs & Services" ToolTip="Movies" NavigateUrl="~/program-service.aspx">
-                                    <asp:MenuItem Text="Emergency Services" NavigateUrl="program-service.aspx?tabIndex=0" />
+                                    <asp:MenuItem Text="Diagnostic Imaging Services" NavigateUrl="program-service.aspx?tabIndex=0" />
                                     <asp:MenuItem Text="ER Wait Time" NavigateUrl="program-service.aspx?tabIndex=1" />
                                     <asp:MenuItem Text="Inpatient Services" NavigateUrl="program-service.aspx?tabIndex=2" />
                                     <asp:MenuItem Text="Outpatient Services" NavigateUrl="program-service.aspx?tabIndex=3" />
-                                    <asp:MenuItem Text="Laboratory" NavigateUrl="program-service.aspx?tabIndex=4" />
-                                    <asp:MenuItem Text="Other Services" NavigateUrl="program-service.aspx?tabIndex=5" />
+                                    <asp:MenuItem Text="Laboratory Services" NavigateUrl="program-service.aspx?tabIndex=4" />
+                                    <asp:MenuItem Text="Mental Health & Addiction Services" NavigateUrl="program-service.aspx?tabIndex=5" />
+                                    <asp:MenuItem Text="Oncology Services" NavigateUrl="program-service.aspx?tabIndex=6" />
+                                    <asp:MenuItem Text="Rehabilitation Services" NavigateUrl="program-service.aspx?tabIndex=7" />
+                                    <asp:MenuItem Text="Food Services" NavigateUrl="program-service.aspx?tabIndex=8" />
                                 </asp:MenuItem>
 
                                 <asp:MenuItem Text="Careers" ToolTip="Movies" NavigateUrl="~/Career.aspx">
                                     <asp:MenuItem Text="Employment Opportunities" NavigateUrl="Career.aspx?tabIndex=0" />
-                                    <asp:MenuItem Text="Apply for Career" NavigateUrl="Career.aspx?tabIndex=1" />
-                                    <asp:MenuItem Text="Why Work Here" NavigateUrl="Career.aspx?tabIndex=2" />
-                                    <asp:MenuItem Text="Volunteer Program" NavigateUrl="Career.aspx?tabIndex=3" />
+                                    <asp:MenuItem Text="Why Work Here" NavigateUrl="Career.aspx?tabIndex=1" />
+                                    <asp:MenuItem Text="Volunteer Program" NavigateUrl="Career.aspx?tabIndex=2" />
                                 </asp:MenuItem>
                                 <asp:MenuItem Text="Contact" ToolTip="Movies" NavigateUrl="~/Contact.aspx">
                                     <asp:MenuItem Text="Location" NavigateUrl="Contact.aspx?tabIndex=0" />
@@ -226,10 +228,10 @@
 
                             <asp:Menu runat="server" ID="mnu1" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Public Reports</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Meet the Board</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Mission Statement</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Donate Now</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='About.aspx?tabIndex=0'>Public Reports</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='About.aspx?tabIndex=1'>Meet the Board</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='About.aspx?tabIndex=2'>Mission Statement</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='About.aspx?tabIndex=3'>Donate Now</a>" />
                                 </Items>
                             </asp:Menu>
                         </div>
@@ -240,11 +242,13 @@
 
                             <asp:Menu runat="server" ID="Menu2" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Accessibility</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Planning Your Stay</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Visiting the Hospital</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Parking</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>E-card</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='patient-visitor.aspx?tabIndex=0'>Accessibility</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='patient-visitor.aspx?tabIndex=1'>Planning Your Stay</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='patient-visitor.aspx?tabIndex=2'>Visiting the Hospital</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='patient-visitor.aspx?tabIndex=3'>Patient Feedback</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='patient-visitor.aspx?tabIndex=4'>Identify Your Symptoms</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='patient-visitor.aspx?tabIndex=5'>E-card</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='patient-visitor.aspx?tabIndex=6'>Parking</a>" />
                                 </Items>
                             </asp:Menu>
 
@@ -256,15 +260,15 @@
 
                             <asp:Menu runat="server" ID="Menu3" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Diagnostic Imaging Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Emergency Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Food Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Inpatient Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Outpatient Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Laboratory Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Mental Health and Addictions Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Oncology Services</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Rehabilitation Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=0'>Diagnostic Imaging Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=1'>Emergency Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=2'>Inpatient Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=3'>Outpatient Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=4'>Laboratory Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=5'>Mental Health and Addictions Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=6'>Oncology Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=7'>Rehabilitation Services</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='program-service.aspx?tabIndex=8'>Food Services</a>" />
                                 </Items>
                             </asp:Menu>
 
@@ -276,10 +280,9 @@
 
                             <asp:Menu runat="server" ID="Menu1" CssClass="unstyled">
                                 <Items>
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Employment Opportunities</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>How To Apply</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Why Work Here</a>" />
-                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='#'>Volunteer Program</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='Career.aspx?tabIndex=0'>Employment Opportunities</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='Career.aspx?tabIndex=1'>Why Work Here</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='Career.aspx?tabIndex=2'>Volunteer Program</a>" />
                                 </Items>
                             </asp:Menu>
                         </div>
@@ -287,7 +290,13 @@
 
                         <div class="col-sm-3">
                             <h6>Contact</h6>
-
+                            <asp:Menu runat="server" ID="Menu4" CssClass="unstyled">
+                                <Items>
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='Contact.aspx?tabIndex=0'>Location</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='Contact.aspx?tabIndex=1'>Mailing List</a>" />
+                                    <asp:MenuItem Text="<i class='fa fa-play'></i><a href='Contact.aspx?tabIndex=2'>Contact Us</a>" />
+                                </Items>
+                            </asp:Menu>
                             <asp:Label runat="server" Text="Address:58 Goodall Street" />
                             <br />
                             <asp:Label ID="Label1" runat="server" Text="Dryden, Ontario, P8N 2Z6" />
