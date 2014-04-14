@@ -58,6 +58,20 @@
                                                
 								                ER Wait Time
                                             </p>
+               
+                                            <asp:UpdatePanel ID="udp_time" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <asp:Label ID="lbl_waittimes" runat="server" Text="Wait Time" />
+                                                </ContentTemplate>
+                                                <Triggers>
+                                                    <asp:AsyncPostBackTrigger ControlID="btnwait" EventName="Click" />
+                                                </Triggers>
+                                            </asp:UpdatePanel>
+                                        <br />
+                                            <asp:Button ID="btnwait" runat="server" Text="Click to update" OnClick="subClick" />    
+
+
+
                                         </asp:View>
                                         <asp:View ID="view3" runat="server">
                                             <p>

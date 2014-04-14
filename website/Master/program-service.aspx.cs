@@ -24,4 +24,9 @@ public partial class _Default : System.Web.UI.Page
     {
         mv_tabs.ActiveViewIndex = Convert.ToInt32(ps_nav_menu.SelectedValue);
     }
+    protected void subClick(object sender, EventArgs e)
+    {
+        System.Threading.Thread.Sleep(20000);
+        lbl_waittimes.Text = DateTime.Now.ToString();
+    }
 }
