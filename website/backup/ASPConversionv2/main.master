@@ -141,17 +141,17 @@
                                             <Items>
                                                 <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
                                                 <asp:MenuItem Text="About" NavigateUrl="#">
-<<<<<<< HEAD
+
                                                     <asp:MenuItem Text="Public Reports" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Meet the Board" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Mission Statement" NavigateUrl="#" />
                                                     <asp:MenuItem Text="Donate Now" NavigateUrl="#" />
-=======
+
                                                     <asp:MenuItem Text="Public Report" NavigateUrl="About.aspx?tabIndex=1" />
                                                     <asp:MenuItem Text="Meet the Board" NavigateUrl="About.aspx?tabIndex=2" />
                                                     <asp:MenuItem Text="Strategic Plan" NavigateUrl="About.aspx?tabIndex=3" />
                                                     <asp:MenuItem Text="Donate Now" NavigateUrl="About.aspx?tabIndex=4" />
->>>>>>> 7d84db7f86d78f1cd03f52fceed51b245f9ea6bd
+
                                                 </asp:MenuItem>
                                                 <asp:MenuItem Text="Patients & Visitors" NavigateUrl="#">
                                                     <asp:MenuItem Text="Accessibility" NavigateUrl="#"/>
