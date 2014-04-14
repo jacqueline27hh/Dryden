@@ -51,7 +51,7 @@ public partial class volunteer_opp : System.Web.UI.Page
              case "Update":
                  TextBox txtfname = (TextBox)e.Item.FindControl("txtfnameU");
                  TextBox txtlname = (TextBox)e.Item.FindControl("txtlnameU");
-                 DropDownList ddlvolType = (DropDownList)e.Item.FindControl("ddlvoltype");
+                 DropDownList ddlvolType = (DropDownList)e.Item.FindControl("ddlvoltypeU");
                  TextBox txtemail = (TextBox)e.Item.FindControl("txtemailU");
                  TextBox txtcontact = (TextBox)e.Item.FindControl("txtcontact");
                  HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_id");

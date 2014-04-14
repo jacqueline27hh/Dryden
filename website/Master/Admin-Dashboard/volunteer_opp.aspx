@@ -21,6 +21,8 @@
                             <th><asp:Label ID="lbl_fname" runat="server" Text="First Name" /></th>
                             <th><asp:Label ID="lbl_lname" runat="server" Text="Last Name" /></th>
                             <th><asp:Label ID="lbl_email" runat="server" Text="Email" /></th>
+                            <th><asp:Label ID="lbl_contact" runat="server" Text="Contact" /></th>
+                            <th><asp:Label ID="lbl_voltype" runat="server" Text="Volunteer type" /></th>
                         </tr>
                     </thead>
                    <tbody>
@@ -40,10 +42,12 @@
                                     <td><asp:Label ID="lblvoltype" runat="server" Text="Volunteer type" />
                                         <asp:Label ID="lbl_voltype" runat="server" Text='<%#Eval("volunteer_type") %>' />
                                     </td>
-                                    <td><asp:Button ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("vol_Id") %>'  /></td>
-                                    <td><asp:Button ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("vol_Id") %>'  />  </td>
+                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("vol_Id") %>'  /></td>
+                                    <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("vol_Id") %>'  />  </td>
+                                 
                                 </tr>
                          </ItemTemplate>
+                         
   
                        </asp:ListView>
                    </tbody>
@@ -53,10 +57,12 @@
             <table>
                 <thead>
                     <tr>
-                        <th><asp:Label ID="lbl_IdU" runat="server" Text="Id" /></th>
+                        <%--<th><asp:Label ID="lbl_IdU" runat="server" Text="Id" /></th>--%>
                         <th><asp:Label ID="lblfnameU" runat="server" Text="Firstname" /></th>
                         <th><asp:Label ID="lbllnameU" runat="server" Text="Lastname" /></th>
                         <th><asp:Label ID="lblemailU" runat="server" Text="Email" /></th>
+                        <th><asp:Label ID="lblcontactU" runat="server" Text="Contact" /></th>
+                        <th><asp:Label ID="lblvoltypeU" runat="server" Text="Volunteer Type" /></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -79,7 +85,10 @@
                                     <asp:TextBox ID="txtcontactU" runat="server" Text='<%#Eval ("phone") %>' />
                                 </td>
                                 <td> 
-                                    <asp:DropDownList ID="ddlvoltypeU" runat="server" />
+                                    <asp:DropDownList ID="ddlvoltypeU" runat="server" DataTextField='<%#Eval("volunteer_type") %>'>
+                                        <asp:ListItem Value="General" />
+                                        <asp:ListItem Value="Administrative" />
+                                    </asp:DropDownList>
                                 </td>
                                 <td>
                                     <asp:RequiredFieldValidator ID="rfv_fname" runat="server" Text="*Required" ControlToValidate="txtfnameU" ValidationGroup="update" />
@@ -127,6 +136,9 @@
                                 <td>  <asp:TextBox ID="txtlnameU" runat="server" Text='<%#Eval("lastname") %>' /> </td>
                                  <td>
                                     <asp:TextBox ID="txtemailU" runat="server" Text='<%#Eval("email") %>' />
+                                </td>
+                                 <td>
+                                    <asp:TextBox ID="txtcontactU" runat="server" Text='<%#Eval ("phone") %>' />
                                 </td>
 
                             </tr>
