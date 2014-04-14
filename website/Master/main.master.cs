@@ -12,7 +12,7 @@ public partial class main : System.Web.UI.MasterPage
     {
 
         //txt_username.Focus(); 
-
+        NavigationMenu.Attributes.Add("class", "navbar-nav");
     }
 
     //protected void subLogin(object sender, EventArgs e)
