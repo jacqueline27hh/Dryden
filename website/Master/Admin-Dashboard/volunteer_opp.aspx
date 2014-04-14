@@ -24,8 +24,9 @@
                         </tr>
                     </thead>
                    <tbody>
-                       <asp:ListView ID="lst_all" runat="server">
-                          <ItemTemplate>                             
+                       <asp:ListView ID="lst_all" runat="server" OnItemCommand="subAdmin" OnItemUpdating="subUP" OnItemDeleting="subDel">
+                          <ItemTemplate>
+                                                           
                                 <tr>
                                     <td><asp:Label ID="lblfname" runat="server" Text="First Name" />
                                 <asp:Label ID="lbl_fname" runat="server" Text='<%#Eval("firstname") %>' /></td>
@@ -33,8 +34,14 @@
                        <asp:Label ID="lbl_lname" runat="server" Text='<%#Eval("lastname") %>' /></td>
                                     <td><asp:Label ID="lblemail" runat="server" Text="Email" />
                                    <asp:Label ID="lbl_email" runat="server" Text='<%#Eval ("email") %>' /></td>
-                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("vol_Id") %>' OnCommand="subAdmin" /></td>
-                                    <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("vol_Id") %>' OnCommand="subAdmin" />  </td>
+                                    
+                                    <td><asp:Label ID="lblcontact" runat="server" Text="Contact" />
+                                   <asp:Label ID="lbl_contact" runat="server" Text='<%#Eval ("phone") %>' /></td>
+                                    <td><asp:Label ID="lblvoltype" runat="server" Text="Volunteer type" />
+                                        <asp:Label ID="lbl_voltype" runat="server" Text='<%#Eval("volunteer_type") %>' />
+                                    </td>
+                                    <td><asp:Button ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("vol_Id") %>'  /></td>
+                                    <td><asp:Button ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("vol_Id") %>'  />  </td>
                                 </tr>
                          </ItemTemplate>
   
@@ -67,6 +74,12 @@
                                 </td>
                                 <td>
                                     <asp:TextBox ID="txtemailU" runat="server" Text='<%#Eval("email") %>' />
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtcontactU" runat="server" Text='<%#Eval ("phone") %>' />
+                                </td>
+                                <td> 
+                                    <asp:DropDownList ID="ddlvoltypeU" runat="server" />
                                 </td>
                                 <td>
                                     <asp:RequiredFieldValidator ID="rfv_fname" runat="server" Text="*Required" ControlToValidate="txtfnameU" ValidationGroup="update" />

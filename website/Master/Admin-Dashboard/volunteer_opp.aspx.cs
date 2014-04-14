@@ -18,8 +18,8 @@ public partial class volunteer_opp : System.Web.UI.Page
          private void _subRebind()
     {
         volunteerOppClass objVol = new volunteerOppClass();
-        //lst_all.DataSource = objVol.getVolunteers();
-        //lst_all.DataBind();
+        lst_all.DataSource = objVol.getVolunteers();
+        lst_all.DataBind();
     }
          protected void subAdmin(object sender, ListViewCommandEventArgs e)
          {
@@ -35,6 +35,14 @@ public partial class volunteer_opp : System.Web.UI.Page
 
              }
          }
+         protected void subUP(object sender,ListViewUpdateEventArgs e)
+         { 
+         }
+
+         protected void subDel(object sender,ListViewDeleteEventArgs e)
+         {
+         }
+    
     
      protected void subupdel(object sender, ListViewCommandEventArgs e)
      {
