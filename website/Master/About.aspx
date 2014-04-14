@@ -58,10 +58,40 @@
                                             </p>
                                         </asp:View>
                                         <asp:View ID="view4" runat="server">
-                                            <p>
-                                                Donate Now
-							
-                                            </p>
+                                            <%--Test Donation Account ID: dryden.dave.test@gmail.com
+                                                       PW: 8@4hIPmr4p4#
+                                 Test Hospital Account ID: dryden.donate.test@gmail.com
+                                                     PW: z40%CMA*^8Dx          --%>
+                                            <h3>Donate Now</h3>
+                                            <p>Make a donation and help build a stronger Dryden Regional Hospital</p>
+                                            <asp:Label ID="lbl_message" runat="server" />
+                                            
+                                            <asp:Label ID="lblFname" runat="server" Text="First Name:  " AssociatedControlID="txtFname" />
+                                            
+                                            <asp:TextBox ID="txtFname" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvFname" runat="server" Text="*Required" ControlToValidate="txtFname" ValidationGroup="insert" />
+                                            <br />
+                                            <asp:Label ID="lblLname" runat="server" Text="Last Name:  " AssociatedControlID="txtLname" />
+                                            
+                                            <asp:TextBox ID="txtLname" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvLname" runat="server" Text="*Required" ControlToValidate="txtLname" ValidationGroup="insert" />
+                                            <br />
+                                            <asp:Label ID="lblEmail" runat="server" Text="Email:  " AssociatedControlID="txtEmail" />
+                                            
+                                            <asp:TextBox ID="txtEmail" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Text="*Required" ControlToValidate="txtEmail" ValidationGroup="insert" />
+                                            <asp:RegularExpressionValidator ID="revEmail" runat="server" Text="*Please enter a valid email" ControlToValidate="txtEmail" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$" ValidationGroup="insert" />
+                                            <%--src: www.regxlib.com/REDetails.aspx?regexp_id=3122 --%>
+                                            <br />
+                                            <asp:Label ID="lblMsg" runat="server" Text="Message(Optional):  " AssociatedControlID="txtMsg" />
+                                            <br />
+                                            <asp:TextBox ID="txtMsg" TextMode="multiline" Columns="50" Rows="5" runat="server" />
+                                            <br /><br />
+                                             <input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="BPLVEGSAPXWPG">
+                                            <asp:ImageButton ID="imgBtn" runat="server"
+  ImageUrl="https://www.sandbox.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"
+  PostBackUrl="https://www.sandbox.paypal.com/cgi-bin/webscr" ValidationGroup="insert" />
                                         </asp:View>
 
                                         <asp:View ID="view5" runat="server">
