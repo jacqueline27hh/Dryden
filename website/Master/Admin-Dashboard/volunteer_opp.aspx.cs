@@ -53,11 +53,12 @@ public partial class volunteer_opp : System.Web.UI.Page
                  TextBox txtlname = (TextBox)e.Item.FindControl("txtlnameU");
                  DropDownList ddlvolType = (DropDownList)e.Item.FindControl("ddlvoltypeU");
                  TextBox txtemail = (TextBox)e.Item.FindControl("txtemailU");
-                 TextBox txtcontact = (TextBox)e.Item.FindControl("txtcontact");
+                 TextBox txtcontact = (TextBox)e.Item.FindControl("txtcontactU");
                  HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_id");
                  
                   int volId = int.Parse(hdfID.Value.ToString());
-                  lblmsg.Text = objvolunteer.commitUpdate(volId,txtfname.Text.ToString(), txtlname.Text.ToString(), ddlvolType.SelectedItem.Text.ToString(),txtemail.Text.ToString(), txtcontact.Text.ToString());
+                 lblmsg.Text = objvolunteer.commitUpdate(volId,txtfname.Text.ToString(), txtlname.Text.ToString(), ddlvolType.SelectedItem.Text.ToString(),txtemail.Text.ToString(), txtcontact.Text.ToString());
+                 
                 _subRebind();
                 break;
              case "Delete":

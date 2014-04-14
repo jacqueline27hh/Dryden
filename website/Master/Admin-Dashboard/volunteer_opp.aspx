@@ -68,7 +68,7 @@
                 <tbody>
                     <asp:Label ID="lblmsg" runat="server" />
 
-                    <asp:ListView ID="lst_update" runat="server" OnItemCommand="subupdel">
+                    <asp:ListView ID="lst_update" runat="server" OnItemCommand="subupdel" OnItemUpdating="subUP">
                         <ItemTemplate>
                             <tr>
                                 <td>
