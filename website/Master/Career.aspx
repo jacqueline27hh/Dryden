@@ -106,10 +106,10 @@
                                             <asp:Label ID="lbl_cvr" runat="server" Text="Upload your cover letter and resume" />
                                             <br /><br />
                                             <asp:Label ID="lbl_cv" runat="server" Text="Attach cover letter" />
-                                            <asp:FileUpload id="ful_cv" runat="server" />
+                                            <asp:FileUpload id="ful_cv" runat="server" ToolTip="Select Only Word Documents" />
                                             <br /><br />
                                             <asp:Label ID="lbl_resume" runat="server" Text="Attach resume" />
-                                            <asp:FileUpload id="ful_resume" runat="server" />
+                                            <asp:FileUpload id="ful_resume" runat="server" ToolTip="Select Only Word Documents" />
                                             <br /><br />
                                             <asp:Label ID="lbl_amsg" runat="server" Text="Leave a message" />
                                             <br />
