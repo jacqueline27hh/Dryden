@@ -117,10 +117,9 @@
                                             <br /><br />
                                             <asp:Button ID="btn_applyJob" runat="server" Text="Apply" ValidationGroup="insert" CommandName="ApplyNow" CssClass="btn_apply"/>
                                             <asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Refresh" CausesValidation="false" CssClass="btn_apply"/>
-                                            <%--<asp:Label ID="lbl_confirmApply" runat="server" />--%>
+                                            <asp:Label ID="lbl_confirmApply" runat="server" />
                                             </ItemTemplate>
                                             </asp:Repeater>
-                                            <asp:Label ID="lbl_confirmApply" runat="server" />
                                             </div>
                                             </div>
                                             </asp:Panel>

@@ -42,39 +42,30 @@ public partial class _Default : System.Web.UI.Page
     {
         switch (e.CommandName)
         {
-            case "ApplyNow": // This is similar to update commandName
+            case "ApplyNow":
                 _showApply(int.Parse(e.CommandArgument.ToString()));
                 break;
         }
     }
 
-    protected void subApply(object sender, RepeaterCommandEventArgs e) // similar to subUpDel
+    protected void subApply(object sender, RepeaterCommandEventArgs e)
     {
         switch (e.CommandName)
         {
-            case "ApplyNow": //This is similar to the update command
+            case "ApplyNow":
                 applicantsDataContext objApplicantDC = new applicantsDataContext();
                 applicant objNewApplicant = new applicant();
                 TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameApp");
                 TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameApp");
                 TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
                 TextBox txtPhone = (TextBox)e.Item.FindControl("txt_phoneApp");
-                TextBox txtMsgBox = (TextBox)e.Item.FindControl("txt_msgBox");
-                FileUpload txtFileUpRes = (FileUpload)e.Item.FindControl("ful_res");
-                FileUpload txtFileUpCV = (FileUpload)e.Item.FindControl("ful_cv");
+                TextBox txtMsg = (TextBox)e.Item.FindControl("txt_msgBox");
+                Label lblConfirm = (Label)e.Item.FindControl("lbl_confirmApply");
                 HiddenField hdfJobID = (HiddenField)e.Item.FindControl("hdf_jobID");
                 objNewApplicant.firstname = txtFname.Text;
                 objNewApplicant.lastname = txtLname.Text;
                 objNewApplicant.email = txtEmail.Text;
-                //objNewApplicant.phone = int.Parse(txtPhone.Value.ToString());
                 objNewApplicant.job_id = int.Parse(hdfJobID.Value.ToString());
-                //if (ful_cv.HasFile) 
-                //{ 
-                //objNewApplicant.filename_cv = txtFileUpCV.PostedFile.txtFileUpCV;
-                //objNewApplicant.extension_cv = Path.GetExtension(ful_cv.PostedFile.txtFileUpCV);
-                //objNewApplicant.content_cv = ful_cv.FileBytes;
-                //Label1.Text = objNewApplicant.SaveFileToDB(); 
-                //}
 
                 objApplicantDC.applicants.InsertOnSubmit(objNewApplicant);
                 objApplicantDC.SubmitChanges();
@@ -82,13 +73,12 @@ public partial class _Default : System.Web.UI.Page
                 txtLname.Text = "";
                 txtEmail.Text = "";
                 txtPhone.Text = "";
-                txtMsgBox.Text = "";
-                lbl_confirmApply.Text = "Your applicantion was sent successfully!";
-                //_subRefresh();
+                txtMsg.Text = "";
+                lblConfirm.Text = "Your applicantion was sent successfully!";
                 break;
             case "Refresh":
                 //_subRefresh();
-                Response.Redirect("Career.aspx?tabIndex=0");
+                //Response.Redirect("Career.aspx?tabIndex=0");
                 break;
         }
     }

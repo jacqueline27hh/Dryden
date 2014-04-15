@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 
 
 public class appointmentClass
@@ -21,25 +22,25 @@ public class appointmentClass
 
     }
 
-    public List<sp_getUserPatientByIdResult> getPatient(Guid _id)
-    {
-        appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
-        using (objAppointmentDC)
-        {
-            var patientById = objAppointmentDC.sp_getUserPatientById(_id);
-            return patientById.ToList();
-        }
-    }
+    //public List<sp_getPatientByIdResult> getPatientById(Guid _id)
+    //{
+    //    appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
+    //    using (objAppointmentDC)
+    //    {
+    //        var patientById = objAppointmentDC.sp_getPatientById(_id);
+    //        return patientById.ToList();
+    //    }
+    //}
 
-    public List<sp_getUserDoctorByIdResult> getDoctor(Guid _id)
-    {
-        appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
-        using (objAppointmentDC)
-        {
-            var doctorById = objAppointmentDC.sp_getUserDoctorById(_id);
-            return doctorById.ToList();
-        }
-    }
+    //public List<sp_getDoctorByIdResult> getDoctorById(Guid _id)
+    //{
+    //    appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
+    //    using (objAppointmentDC)
+    //    {
+    //        var doctorById = objAppointmentDC.sp_getDoctorById(_id);
+    //        return doctorById.ToList();
+    //    }
+    //}
 
     public bool commitInsert(string _pname, DateTime _date, string _title)
     {

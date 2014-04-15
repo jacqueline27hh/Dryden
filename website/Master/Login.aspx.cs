@@ -14,17 +14,14 @@ public partial class Login : System.Web.UI.Page
         if (Roles.IsUserInRole(user.UserName, "Admin"))
         {
             // Here is the page where to redirect 
-            //Response.Redirect(Server.MapPath("~/Admin-Dashboard/Admin.aspx"));
             Response.Redirect("~/Admin-Dashboard/Admin.aspx");
         }
         else if (Roles.IsUserInRole(user.UserName, "Patient"))
         {
-            //Response.Redirect(Server.MapPath("~/Patient-Dashboard/p_view_app.aspx"));
             Response.Redirect("~/Patient-Dashboard/p_view_app.aspx");
         }
         else if (Roles.IsUserInRole(user.UserName, "Doctor"))
         {
-            //Response.Redirect(Server.MapPath("~/Doctor-Dashboard/doctor_view_app.aspx"));
             Response.Redirect("~/Doctor-Dashboard/doctor_view_app.aspx");
         }
 

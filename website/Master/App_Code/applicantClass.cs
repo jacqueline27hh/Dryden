@@ -66,47 +66,47 @@ public class applicantClass
         }
     }
 
-    public string filename_res { set; get; } 
-    public string extension_res { set; get; } 
-    public string content_res { set; get; }
-    public string filename_cv { set; get; }
-    public string extension_cv { set; get; }
-    public string content_cv { set; get; }
+    //public string filename_res { set; get; } 
+    //public string extension_res { set; get; } 
+    //public string content_res { set; get; }
+    //public string filename_cv { set; get; }
+    //public string extension_cv { set; get; }
+    //public string content_cv { set; get; }
 
-    public string SaveFileToDB() 
-    { 
-        using (SqlConnection conn = new SqlConnection("Data Source=RAMILU-PC\\SQLEXPRESS;" + 
-            "Initial Catalog=ExampleDB;Integrated Security=True;Pooling=False")) 
-            { 
-                SqlCommand cmd = new SqlCommand(); 
-                cmd.CommandType = CommandType.StoredProcedure; 
-                cmd.CommandText = "SaveFilesProc"; 
-                cmd.Connection = conn;
+    //public string SaveFileToDB() 
+    //{ 
+    //    using (SqlConnection conn = new SqlConnection("Data Source=RAMILU-PC\\SQLEXPRESS;" + 
+    //        "Initial Catalog=ExampleDB;Integrated Security=True;Pooling=False")) 
+    //        { 
+    //            SqlCommand cmd = new SqlCommand(); 
+    //            cmd.CommandType = CommandType.StoredProcedure; 
+    //            cmd.CommandText = "SaveFilesProc"; 
+    //            cmd.Connection = conn;
  
-                cmd.Parameters.AddWithValue("@fileNameRes", filename_res); 
-                cmd.Parameters.AddWithValue("@fileExtensionRes", extension_res); 
-                cmd.Parameters.AddWithValue("@contentRes", content_res);
-                cmd.Parameters.AddWithValue("@fileNameCV", filename_cv);
-                cmd.Parameters.AddWithValue("@fileExtensionCV", extension_cv);
-                cmd.Parameters.AddWithValue("@contentCV", content_cv);
+    //            cmd.Parameters.AddWithValue("@fileNameRes", filename_res); 
+    //            cmd.Parameters.AddWithValue("@fileExtensionRes", extension_res); 
+    //            cmd.Parameters.AddWithValue("@contentRes", content_res);
+    //            cmd.Parameters.AddWithValue("@fileNameCV", filename_cv);
+    //            cmd.Parameters.AddWithValue("@fileExtensionCV", extension_cv);
+    //            cmd.Parameters.AddWithValue("@contentCV", content_cv);
             
-                try 
-                { 
-                    conn.Open(); 
-                    cmd.ExecuteNonQuery(); 
-                    return "File uploaded Successfully!!!"; 
-                } 
+    //            try 
+    //            { 
+    //                conn.Open(); 
+    //                cmd.ExecuteNonQuery(); 
+    //                return "File uploaded Successfully!!!"; 
+    //            } 
             
-                catch (Exception ex) 
-                { 
-                    return ex.Message; 
-                } 
+    //            catch (Exception ex) 
+    //            { 
+    //                return ex.Message; 
+    //            } 
             
-                finally 
-                { 
-                    conn.Close(); 
-                    cmd.Dispose(); conn.Dispose(); 
-                } 
-            } 
-        } 
+    //            finally 
+    //            { 
+    //                conn.Close(); 
+    //                cmd.Dispose(); conn.Dispose(); 
+    //            } 
+    //        } 
+    //    } 
 }
