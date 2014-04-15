@@ -116,11 +116,10 @@
                                             <asp:TextBox id="txt_msgBox" TextMode="multiline" Columns="50" Rows="5" runat="server" />
                                             <br /><br />
                                             <asp:Button ID="btn_applyJob" runat="server" Text="Apply" ValidationGroup="insert" CommandName="ApplyNow" CssClass="btn_apply"/>
-                                            <%--<asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Refresh" CausesValidation="false" CssClass="btn_apply"/>--%>
+                                            <asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Refresh" CausesValidation="false" CssClass="btn_apply"/>
                                             <%--<asp:Label ID="lbl_confirmApply" runat="server" />--%>
                                             </ItemTemplate>
                                             </asp:Repeater>
-                                            <asp:Button ID="btn_cancelApp" runat="server" Text="Cancel" CommandName="Refresh" CausesValidation="false" CssClass="btn_apply"/>
                                             <asp:Label ID="lbl_confirmApply" runat="server" />
                                             </div>
                                             </div>

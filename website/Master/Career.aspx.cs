@@ -60,12 +60,21 @@ public partial class _Default : System.Web.UI.Page
                 TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
                 TextBox txtPhone = (TextBox)e.Item.FindControl("txt_phoneApp");
                 TextBox txtMsgBox = (TextBox)e.Item.FindControl("txt_msgBox");
+                FileUpload txtFileUpRes = (FileUpload)e.Item.FindControl("ful_res");
+                FileUpload txtFileUpCV = (FileUpload)e.Item.FindControl("ful_cv");
                 HiddenField hdfJobID = (HiddenField)e.Item.FindControl("hdf_jobID");
                 objNewApplicant.firstname = txtFname.Text;
                 objNewApplicant.lastname = txtLname.Text;
                 objNewApplicant.email = txtEmail.Text;
                 //objNewApplicant.phone = int.Parse(txtPhone.Value.ToString());
                 objNewApplicant.job_id = int.Parse(hdfJobID.Value.ToString());
+                //if (ful_cv.HasFile) 
+                //{ 
+                //objNewApplicant.filename_cv = txtFileUpCV.PostedFile.txtFileUpCV;
+                //objNewApplicant.extension_cv = Path.GetExtension(ful_cv.PostedFile.txtFileUpCV);
+                //objNewApplicant.content_cv = ful_cv.FileBytes;
+                //Label1.Text = objNewApplicant.SaveFileToDB(); 
+                //}
 
                 objApplicantDC.applicants.InsertOnSubmit(objNewApplicant);
                 objApplicantDC.SubmitChanges();
