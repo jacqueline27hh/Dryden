@@ -154,7 +154,7 @@
                     <div class="nav-collapse collapse">
                         <asp:Menu ID="NavigationMenu" runat="server" EnableViewState="false"
                             IncludeStyleBlock="false" Orientation="Horizontal"
-                            CssClass="nav navbar-nav"
+                            CssClass="nav"
                             StaticMenuStyle-CssClass="nav"
                             StaticSelectedStyle-CssClass="active"
                             DynamicMenuStyle-CssClass="dropdown-menu">
@@ -380,8 +380,9 @@
         <script type="text/javascript">
             $("#cph_header_NavigationMenu li:nth-child(3) li:nth-child(7), #cph_header_NavigationMenu li:nth-child(5) li:nth-child(5)").addClass("divider");
             $("#cph_header_NavigationMenu li:nth-child(3) li:nth-child(8), #cph_header_NavigationMenu li:nth-child(5) li:nth-child(6)").addClass("dropdown-header");
-
-
+            $("#cph_header_NavigationMenu li").addClass("dropdown");
+            $("#cph_header_NavigationMenu li ul").addClass("dropdown-menu");
+ 
 
         </script>
 

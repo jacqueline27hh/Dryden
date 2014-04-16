@@ -52,9 +52,10 @@ public partial class admin_imageslider : System.Web.UI.Page
                 {
                     try
                     {
-                        fup1SavePath = "C:\\Users\\Michael\\Documents\\GitHub\\Dryden\\website\\Master\\App_Themes\\images\\" + fup1.FileName.ToString();
-                        fup1.SaveAs(fup1SavePath);
-                        fup1SavePath = "~/App_Themes/images/" + fup1.FileName.ToString(); 
+                        fup1SavePath = "www.michaeldu.com\\Master\\App_Themes\\images\\" + fup1.FileName.ToString();
+                        fup1.SaveAs(fup1SavePath); 
+                        fup1SavePath = "~/App_Themes/images/" + fup1.FileName.ToString();
+                        
                     }
                     catch (Exception err)
                     {
@@ -66,7 +67,7 @@ public partial class admin_imageslider : System.Web.UI.Page
                 {
                     try
                     {
-                        fup2SavePath = "C:\\Users\\Michael\\Documents\\GitHub\\Dryden\\website\\Master\\App_Themes\\images\\" + fup2.FileName.ToString();
+                        fup2SavePath = "www.michaeldu.com\\Master\\App_Themes\\images\\" + fup2.FileName.ToString();
                         fup2.SaveAs(fup2SavePath);
                         fup2SavePath = "~/App_Themes/images/" + fup2.FileName.ToString();
                     }
@@ -80,7 +81,7 @@ public partial class admin_imageslider : System.Web.UI.Page
                 {
                     try
                     {
-                        fup3SavePath = "C:\\Users\\Michael\\Documents\\GitHub\\Dryden\\website\\Master\\App_Themes\\images\\" + fup3.FileName.ToString();
+                        fup3SavePath = "www.michaeldu.com\\Master\\App_Themes\\images\\" + fup3.FileName.ToString();
                         fup3.SaveAs(fup3SavePath);
                         fup3SavePath = "~/App_Themes/images/" + fup3.FileName.ToString();
                     }

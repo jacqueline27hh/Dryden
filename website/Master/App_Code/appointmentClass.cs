@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 
 
 public class appointmentClass
@@ -21,27 +22,27 @@ public class appointmentClass
 
     }
 
-    public List<sp_getUserPatientByIdResult> getPatient(Guid _id)
+    public List<sp_getPatientByIdResult> getPatientById(Guid _id)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
-            var patientById = objAppointmentDC.sp_getUserPatientById(_id);
+            var patientById = objAppointmentDC.sp_getPatientById(_id);
             return patientById.ToList();
         }
     }
 
-    public List<sp_getUserDoctorByIdResult> getDoctor(Guid _id)
+    public List<sp_getDoctorByIdResult> getDoctorById(Guid _id)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
         {
-            var doctorById = objAppointmentDC.sp_getUserDoctorById(_id);
+            var doctorById = objAppointmentDC.sp_getDoctorById(_id);
             return doctorById.ToList();
         }
     }
 
-    public bool commitInsert(string _pname, DateTime _date, string _title)
+    public bool commitInsert(DateTime _date, string _title)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
@@ -58,7 +59,7 @@ public class appointmentClass
         }
     }
 
-    public bool commitUpdate(int _id, string _pname, DateTime _date, string _title)
+    public bool commitUpdate(int _id, DateTime _date, string _title)
     {
         appointmentsDataContext objAppointmentDC = new appointmentsDataContext();
         using (objAppointmentDC)
@@ -85,6 +86,8 @@ public class appointmentClass
             return true;
         }
     }
+
+    // I was going to use this and join 3 tables together to show both doctor and patient information buuut I guess I am still working on this one....
 
     //public List<sp_getUserPatientByIdResult> getPatient(Guid _id)
     //{

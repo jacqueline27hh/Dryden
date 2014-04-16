@@ -42,7 +42,7 @@ public class contactClass
         }
     }
 
-    public bool commitUpdate(int _id, string _fname, string _lname, string _dept, string _email, string _message)
+    public bool commitUpdate(int _id, string _fname, string _lname, string _email)
     {
         directcontactDataContext objContactDC = new directcontactDataContext();
         using (objContactDC)
@@ -50,9 +50,9 @@ public class contactClass
             var objupContact = objContactDC.direct_contacts.Single(x => x.Id == _id);
             objupContact.firstname = _fname;
             objupContact.lastname = _lname;
-            objupContact.department = _dept;
+            //objupContact.department = _dept;
             objupContact.email = _email;
-            objupContact.message = _message;
+            //objupContact.message = _message;
 
             objContactDC.SubmitChanges();
             return true;

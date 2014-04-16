@@ -11,6 +11,9 @@
       <Column Name="volunteer_type" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="email" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="phone" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="filename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="filetype" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="filedata" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

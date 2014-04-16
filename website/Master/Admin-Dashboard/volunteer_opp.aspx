@@ -22,7 +22,7 @@
                             <th><asp:Label ID="lbl_lname" runat="server" Text="Last Name" /></th>
                             <th><asp:Label ID="lbl_email" runat="server" Text="Email" /></th>
                             <th><asp:Label ID="lbl_contact" runat="server" Text="Contact" /></th>
-                            <th><asp:Label ID="lbl_voltype" runat="server" Text="Volunteer type" /></th>
+                           <%-- <th><asp:Label ID="lbl_voltype" runat="server" Text="Volunteer type" /></th>--%>
                         </tr>
                     </thead>
                    <tbody>
@@ -39,9 +39,9 @@
                                     
                                     <td><asp:Label ID="lblcontact" runat="server" Text="Contact" />
                                    <asp:Label ID="lbl_contact" runat="server" Text='<%#Eval ("phone") %>' /></td>
-                                    <td><asp:Label ID="lblvoltype" runat="server" Text="Volunteer type" />
+<%--                                    <td><asp:Label ID="lblvoltype" runat="server" Text="Volunteer type" />
                                         <asp:Label ID="lbl_voltype" runat="server" Text='<%#Eval("volunteer_type") %>' />
-                                    </td>
+                                    </td>--%>
                                     <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("vol_Id") %>'  /></td>
                                     <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("vol_Id") %>'  />  </td>
                                  
@@ -52,7 +52,9 @@
                        </asp:ListView>
                    </tbody>
                   </table>
+            <asp:Label ID="lbl_output" runat="server" />
         </asp:Panel>
+        <%--Update Panel--%>
         <asp:Panel ID="update_pnl" runat="server" GroupingText="Update Applications">
             <table>
                 <thead>
@@ -62,12 +64,12 @@
                         <th><asp:Label ID="lbllnameU" runat="server" Text="Lastname" /></th>
                         <th><asp:Label ID="lblemailU" runat="server" Text="Email" /></th>
                         <th><asp:Label ID="lblcontactU" runat="server" Text="Contact" /></th>
-                        <th><asp:Label ID="lblvoltypeU" runat="server" Text="Volunteer Type" /></th>
+                     <%--   <th><asp:Label ID="lblvoltypeU" runat="server" Text="Volunteer Type" /></th>--%>
                     </tr>
                 </thead>
                 <tbody>
-                    <asp:Label ID="lblmsg" runat="server" />
-
+                    <%--Listview for updating data--%>
+                
                     <asp:ListView ID="lst_update" runat="server" OnItemCommand="subupdel" OnItemUpdating="subUP">
                         <ItemTemplate>
                             <tr>
@@ -84,12 +86,7 @@
                                 <td>
                                     <asp:TextBox ID="txtcontactU" runat="server" Text='<%#Eval ("phone") %>' />
                                 </td>
-                                <td> 
-                                    <asp:DropDownList ID="ddlvoltypeU" runat="server" DataTextField='<%#Eval("volunteer_type") %>'>
-                                        <asp:ListItem Value="General" />
-                                        <asp:ListItem Value="Administrative" />
-                                    </asp:DropDownList>
-                                </td>
+                              
                                 <td>
                                     <asp:RequiredFieldValidator ID="rfv_fname" runat="server" Text="*Required" ControlToValidate="txtfnameU" ValidationGroup="update" />
                                 </td>
@@ -100,11 +97,16 @@
                                     <asp:RequiredFieldValidator ID="rfv_email" runat="server" Text="*Required" ControlToValidate="txtemailU" ValidationGroup="update" />
                                     <asp:RegularExpressionValidator ID="rev_email" runat="server" Text="Invalid Email Address" ControlToValidate="txtemailU" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ValidationGroup="update" />
                                 </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="rfv_phone" runat="server" Text="*Required" ControlToValidate="txtcontactU" ValidationGroup="update" />
+                                     <asp:RegularExpressionValidator ID="rgv_contact" runat="server" Text="Invalid contact number" ControlToValidate="txtcontactU" ValidationExpression="^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$" ValidationGroup="update" />
+                                </td>
 
                             </tr>
                             <tr>
                                 <td>
                                     <asp:Button ID="btn_update" runat="server" Text="Update" CommandName="Update" ValidationGroup="update" />
+                                     <asp:Button ID="btn_cancel" runat="server" Text="Cancel" CommandName="Cancel" CauseValidation="false" />
                                    
                                 </td>
                             </tr>
@@ -113,7 +115,7 @@
                 </tbody>
             </table>
         </asp:Panel>
-
+        <%---Panel Delete--%>
         <asp:Panel ID="pnl_delete" runat="server" GroupingText="Delete Records">
             <table>
                 <thead>
@@ -122,7 +124,13 @@
                             <asp:Label ID="lbl_del" runat="server" Text="Are you sure you want to delete the selected record?" />
                         </td>
                     </tr>
-                   
+                   <tr>
+                        <th><asp:Label ID="lbl_fnameD" runat="server" Text="First Name" /></th>
+                        <th><asp:Label ID="lbl_lnameD" runat="server" Text="Last Name" /></th>
+                     
+                        <th><asp:Label ID="lbl_emailD" runat="server" Text="Email" /></th>
+                        <th><asp:Label ID="lbl_contactD" runat="server" Text="Contact" /></th>
+                    </tr>
                 </thead>
                 <tbody>
                     <asp:ListView ID="lst_delete" runat="server" OnItemCommand="subupdel">

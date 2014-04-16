@@ -11,12 +11,14 @@
 
         <div class="row" id="admin_header_wrapper">
         <asp:Label ID="admin_lbl_header" runat="server" Text="Image Slider" CssClass="col-lg-9 admin_header"/>
+            
         <asp:LinkButton ID="admin_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="~/Home.aspx" />
         </div>
         
         <div id="slider_adminwrap">
 
             <asp:Label runat="server" ID="lbl_results" /> 
+            <asp:Label runat="server" ID="lbl_test" /> 
            
             <asp:DataList ID="dl_slideradmin" runat="server" OnItemCommand="subCommand">
                 <ItemTemplate>    

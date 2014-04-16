@@ -22,70 +22,68 @@ using System.Reflection;
 
 
 [global::System.Data.Linq.Mapping.DatabaseAttribute(Name="dryden_database")]
-public partial class jobsDataContext : System.Data.Linq.DataContext
+public partial class ERwaitClassDataContext : System.Data.Linq.DataContext
 {
 	
 	private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 	
   #region Extensibility Method Definitions
   partial void OnCreated();
-  partial void Insertjob(job instance);
-  partial void Updatejob(job instance);
-  partial void Deletejob(job instance);
+  partial void InsertER_waittime(ER_waittime instance);
+  partial void UpdateER_waittime(ER_waittime instance);
+  partial void DeleteER_waittime(ER_waittime instance);
   #endregion
 	
-	public jobsDataContext() : 
+	public ERwaitClassDataContext() : 
 			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["dryden_databaseConnectionString"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public jobsDataContext(string connection) : 
+	public ERwaitClassDataContext(string connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public jobsDataContext(System.Data.IDbConnection connection) : 
+	public ERwaitClassDataContext(System.Data.IDbConnection connection) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public jobsDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public ERwaitClassDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public jobsDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+	public ERwaitClassDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 			base(connection, mappingSource)
 	{
 		OnCreated();
 	}
 	
-	public System.Data.Linq.Table<job> jobs
+	public System.Data.Linq.Table<ER_waittime> ER_waittimes
 	{
 		get
 		{
-			return this.GetTable<job>();
+			return this.GetTable<ER_waittime>();
 		}
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.jobs")]
-public partial class job : INotifyPropertyChanging, INotifyPropertyChanged
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ER_waittimes")]
+public partial class ER_waittime : INotifyPropertyChanging, INotifyPropertyChanged
 {
 	
 	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 	
 	private int _Id;
 	
-	private string _title;
+	private System.TimeSpan _wait_time;
 	
-	private string _description;
-	
-	private System.DateTime _last_date_apply;
+	private System.DateTime _checked_in;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -93,15 +91,13 @@ public partial class job : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OntitleChanging(string value);
-    partial void OntitleChanged();
-    partial void OndescriptionChanging(string value);
-    partial void OndescriptionChanged();
-    partial void Onlast_date_applyChanging(System.DateTime value);
-    partial void Onlast_date_applyChanged();
+    partial void Onwait_timeChanging(System.TimeSpan value);
+    partial void Onwait_timeChanged();
+    partial void Onchecked_inChanging(System.DateTime value);
+    partial void Onchecked_inChanged();
     #endregion
 	
-	public job()
+	public ER_waittime()
 	{
 		OnCreated();
 	}
@@ -126,62 +122,42 @@ public partial class job : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-	public string title
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_wait_time", DbType="Time NOT NULL")]
+	public System.TimeSpan wait_time
 	{
 		get
 		{
-			return this._title;
+			return this._wait_time;
 		}
 		set
 		{
-			if ((this._title != value))
+			if ((this._wait_time != value))
 			{
-				this.OntitleChanging(value);
+				this.Onwait_timeChanging(value);
 				this.SendPropertyChanging();
-				this._title = value;
-				this.SendPropertyChanged("title");
-				this.OntitleChanged();
+				this._wait_time = value;
+				this.SendPropertyChanged("wait_time");
+				this.Onwait_timeChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-	public string description
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_checked_in", DbType="DateTime NOT NULL")]
+	public System.DateTime checked_in
 	{
 		get
 		{
-			return this._description;
+			return this._checked_in;
 		}
 		set
 		{
-			if ((this._description != value))
+			if ((this._checked_in != value))
 			{
-				this.OndescriptionChanging(value);
+				this.Onchecked_inChanging(value);
 				this.SendPropertyChanging();
-				this._description = value;
-				this.SendPropertyChanged("description");
-				this.OndescriptionChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_date_apply", DbType="Date NOT NULL")]
-	public System.DateTime last_date_apply
-	{
-		get
-		{
-			return this._last_date_apply;
-		}
-		set
-		{
-			if ((this._last_date_apply != value))
-			{
-				this.Onlast_date_applyChanging(value);
-				this.SendPropertyChanging();
-				this._last_date_apply = value;
-				this.SendPropertyChanged("last_date_apply");
-				this.Onlast_date_applyChanged();
+				this._checked_in = value;
+				this.SendPropertyChanged("checked_in");
+				this.Onchecked_inChanged();
 			}
 		}
 	}

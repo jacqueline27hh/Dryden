@@ -12,7 +12,7 @@ $("document").ready(function () {
 
 
     $('.navbar-toggle').click(function () {
-        $(".navbar .container").css("display", "block"); 
+        $(".nav-collapse").css("display", "block");
     });
 
 });

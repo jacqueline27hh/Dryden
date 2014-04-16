@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.IO;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -42,29 +44,29 @@ public partial class _Default : System.Web.UI.Page
     {
         switch (e.CommandName)
         {
-            case "ApplyNow": // This is similar to update commandName
+            case "ApplyNow":
                 _showApply(int.Parse(e.CommandArgument.ToString()));
                 break;
         }
     }
 
-    protected void subApply(object sender, RepeaterCommandEventArgs e) // similar to subUpDel
+    protected void subApply(object sender, RepeaterCommandEventArgs e)
     {
         switch (e.CommandName)
         {
-            case "ApplyNow": //This is similar to the update command
+            case "ApplyNow":
                 applicantsDataContext objApplicantDC = new applicantsDataContext();
                 applicant objNewApplicant = new applicant();
                 TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameApp");
                 TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameApp");
                 TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailApp");
                 TextBox txtPhone = (TextBox)e.Item.FindControl("txt_phoneApp");
-                TextBox txtMsgBox = (TextBox)e.Item.FindControl("txt_msgBox");
+                TextBox txtMsg = (TextBox)e.Item.FindControl("txt_msgBox");
+                Label lblConfirm = (Label)e.Item.FindControl("lbl_confirmApply");
                 HiddenField hdfJobID = (HiddenField)e.Item.FindControl("hdf_jobID");
                 objNewApplicant.firstname = txtFname.Text;
                 objNewApplicant.lastname = txtLname.Text;
                 objNewApplicant.email = txtEmail.Text;
-                //objNewApplicant.phone = int.Parse(txtPhone.Value.ToString());
                 objNewApplicant.job_id = int.Parse(hdfJobID.Value.ToString());
 
                 objApplicantDC.applicants.InsertOnSubmit(objNewApplicant);
@@ -73,13 +75,13 @@ public partial class _Default : System.Web.UI.Page
                 txtLname.Text = "";
                 txtEmail.Text = "";
                 txtPhone.Text = "";
-                txtMsgBox.Text = "";
-                lbl_confirmApply.Text = "Your applicantion was sent successfully!";
-                //_subRefresh();
+                txtMsg.Text = "";
+                lblConfirm.Text = "Your applicantion was sent successfully!";
+
                 break;
             case "Refresh":
                 //_subRefresh();
-                Response.Redirect("Career.aspx?tabIndex=0");
+                //Response.Redirect("Career.aspx?tabIndex=0");
                 break;
         }
     }
@@ -142,8 +144,6 @@ public partial class _Default : System.Web.UI.Page
     volunteer objNewVolunteer = new volunteer();
     protected void subVolunteer(object sender, CommandEventArgs e)
     {
-
-        //_strMessage(objvol.commitInsert(txtfname.Text, txtlname.Text, int.Parse(txtage.Text.ToString()), rdb_gender.SelectedItem.Text, txtschool.Text, ddl_voltype.SelectedItem.Text, txtemail.Text, char.Parse(txtcontact.Text.ToString())), "insert");
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
         volunteer objNewVolunteer = new volunteer();
         objNewVolunteer.firstname = txtfname.Text;
@@ -151,10 +151,13 @@ public partial class _Default : System.Web.UI.Page
         objNewVolunteer.age = int.Parse(txtage.Text.ToString());
         objNewVolunteer.gender = rdb_gender.Text;
         objNewVolunteer.school_name = txtschool.Text;
-        objNewVolunteer.volunteer_type = ddl_voltype.Text;
+        objNewVolunteer.volunteer_type = ddl_voltype.SelectedItem.Text;
         objNewVolunteer.email = txtemail.Text;
         objNewVolunteer.phone = txtcontact.Text;
-      
+        objNewVolunteer.filename = file_up.FileName.ToString();
+        objNewVolunteer.filedata = file_up.FileContent.ToString();
+        objNewVolunteer.filetype = file_up.FileBytes.ToString();
+
         objVolunteerDC.volunteers.InsertOnSubmit(objNewVolunteer);
         objVolunteerDC.SubmitChanges();
         txtfname.Text = "";
@@ -176,6 +179,20 @@ public partial class _Default : System.Web.UI.Page
     //        lbl_msgV.Text = "Sorry, unable to " + str + "submit message";
 
     //}
+
+    protected void subUploadClick(object sender, EventArgs e)
+    {
+        string filePath = Server.MapPath("APP_DATA/TestDoc.docx");
+
+        string filename = Path.GetFileName(filePath);
+
+        FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+
+        BinaryReader br = new BinaryReader(fs);
+
+        Byte[] bytes = br.ReadBytes((Int32)fs.Length);
+        
+    }
     protected void subVolCancel(object sender, CommandEventArgs e)
     {
         txtfname.Text = "";

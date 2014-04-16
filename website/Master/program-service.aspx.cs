@@ -24,4 +24,18 @@ public partial class _Default : System.Web.UI.Page
     {
         mv_tabs.ActiveViewIndex = Convert.ToInt32(ps_nav_menu.SelectedValue);
     }
+    protected void subClick(object sender, EventArgs e)
+    {
+        System.Threading.Thread.Sleep(20000);
+        lbl_waittimes.Text = DateTime.Now.ToString();
+    }
+
+    ERwaitTimeClass objtime = new ERwaitTimeClass();
+    private void _subRebind(object sender, EventArgs e)
+    {
+        btn_time.Attributes.Add("data-dismiss", "Waiting Time");
+
+        rpt_ERtime.DataSource = objtime.getlatestWaittimes();
+        rpt_ERtime.DataBind();
+    }
 }

@@ -18,7 +18,7 @@ public partial class Patient_Dashboard_Default : System.Web.UI.Page
 
             Guid _id = Guid.Parse(Membership.GetUser().ProviderUserKey.ToString());
 
-            rpt_all.DataSource = objAppointment.getPatient(_id);
+            rpt_all.DataSource = objAppointment.getPatientById(_id);
             rpt_all.DataBind();
         }
     }

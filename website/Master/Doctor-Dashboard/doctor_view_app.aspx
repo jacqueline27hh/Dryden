@@ -41,8 +41,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><asp:Label ID="lbl_pname" runat="server" Text="Patient Name" /></th>
-                            <%--<th><asp:Label ID="lbl_dname" runat="server" Text="Doctor" /></th>--%>
+                            <th><asp:Label ID="lbl_pname" runat="server" Text="Doctor Name" /></th>
                             <th><asp:Label ID="lbl_date" runat="server" Text="Date" /></th>
                             <th><asp:Label ID="lbl_title" runat="server" Text="Appointment" /></th>
                         </tr>
@@ -51,7 +50,7 @@
                         <asp:Repeater ID="rpt_all" runat="server">
                             <ItemTemplate>
                                 <tr>
-                                    <td><%#Eval ("patientName") %></td>
+                                    <td><%#Eval ("doctorName") %></td>
                                     <td><%#Eval ("date-time") %></td>
                                     <td><%#Eval ("appointment_title") %></td>
                                     <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
@@ -68,7 +67,6 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><asp:Label ID="lbl_pnameU" runat="server" Text="Patient Name" /></th>
                             <th><asp:Label ID="lbl_dnameU" runat="server" Text="Doctor" /></th>
                             <th><asp:Label ID="lbl_dateU" runat="server" Text="Date" /></th>
                             <th><asp:Label ID="lbl_titleU" runat="server" Text="Appointment" /></th>
@@ -79,8 +77,6 @@
                             <ItemTemplate>
                                 <tr>
                                     <td><asp:HiddenField ID="hdf_idU" runat="server" Value='<%#Eval ("Id") %>' />
-                                        <asp:TextBox ID="txt_pnameU" runat="server" Text='<%#Eval ("patient_name") %>' />
-                                    </td>
                                     <td>
                                         <asp:TextBox ID="txt_dnameU" runat="server" Text='<%#Eval ("doctor_name") %>' />
                                     </td>
@@ -91,8 +87,7 @@
                                         <asp:TextBox ID="txt_titleU" runat="server" Text='<%#Eval ("appointment_title") %>' />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td><asp:RequiredFieldValidator ID="rfv_pnameU" runat="server" Text="*Required" ControlToValidate="txt_pnameU" ValidationGroup="update" /></td>
+                                <tr>      
                                     <td><asp:RequiredFieldValidator ID="rfv_dnameU" runat="server" Text="*Required" ControlToValidate="txt_dnameU" ValidationGroup="update" /></td>
                                     <td><asp:RequiredFieldValidator ID="rfv_dateU" runat="server" Text="*Required" ControlToValidate="txt_dateU" ValidationGroup="update" /></td>
                                      <td><asp:RequiredFieldValidator ID="rfv_titleU" runat="server" Text="*Required" ControlToValidate="txt_titleU" ValidationGroup="update" /></td>
@@ -118,7 +113,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><asp:Label ID="lbl_pnameD" runat="server" Text="Patient Name" /></th>
                             <th><asp:Label ID="lbl_dnameD" runat="server" Text="Doctor" /></th>
                             <th><asp:Label ID="lbl_dateD" runat="server" Text="Date" /></th>
                             <th><asp:Label ID="lbl_titleD" runat="server" Text="Appointment" /></th>
@@ -130,7 +124,6 @@
                                 <tr>
                                     <td>
                                         <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval ("Id") %>' />
-                                        <asp:Label ID="lbl_pnameD" runat="server" Text='<%#Eval ("patient_name") %>' />
                                         <asp:Label ID="lbl_dnameD" runat="server" Text='<%#Eval ("doctor_name") %>' />
                                         <asp:Label ID="lbl_dateD" runat="server" Text='<%#Eval ("date-time") %>' />
                                         <asp:Label ID="lbl_titleD" runat="server" Text='<%#Eval ("appointment_title") %>' />

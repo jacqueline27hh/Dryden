@@ -9,9 +9,9 @@
       <Column Name="appointment_title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Function Name="dbo.sp_getUserPatientById" Method="sp_getUserPatientById">
-    <Parameter Name="upID" Type="System.Guid" DbType="UniqueIdentifier" />
-    <ElementType Name="sp_getUserPatientByIdResult">
+  <Function Name="dbo.sp_getPatientById" Method="sp_getPatientById">
+    <Parameter Name="pId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="sp_getPatientByIdResult">
       <Column Name="patientName" Type="System.String" DbType="VarChar(101) NOT NULL" CanBeNull="false" />
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="patient_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
@@ -20,9 +20,9 @@
       <Column Name="appointment_title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.sp_getUserDoctorById" Method="sp_getUserDoctorById">
-    <Parameter Name="udID" Type="System.Guid" DbType="UniqueIdentifier" />
-    <ElementType Name="sp_getUserDoctorByIdResult">
+  <Function Name="dbo.sp_getDoctorById" Method="sp_getDoctorById">
+    <Parameter Name="dId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="sp_getDoctorByIdResult">
       <Column Name="doctorName" Type="System.String" DbType="VarChar(101) NOT NULL" CanBeNull="false" />
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="patient_id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />

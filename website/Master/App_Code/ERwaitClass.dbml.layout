@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ERwaitClass">
+  <DataContextMoniker Name="/ERwaitClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7b8ae6fe-6bfc-42e7-9091-c82628ad9ebf" absoluteBounds="3.125, 2, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ERwaitClassDataContext/ER_waittime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a21e1476-e9bf-430b-9bbf-268505df96f0" absoluteBounds="3.14, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
