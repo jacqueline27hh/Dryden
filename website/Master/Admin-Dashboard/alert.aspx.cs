@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 public partial class admin_alert : System.Web.UI.Page
 {
     alertClass objAlert = new alertClass();
+    //when page first load go to sub rebind
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -16,11 +17,13 @@ public partial class admin_alert : System.Web.UI.Page
         }
 
     }
+    //switch case for subadmin event
     protected void subAdmin(object sender, CommandEventArgs e)
     {
         switch (e.CommandName)
         {
             case "Insert":
+                //pass DateTime ...so it knows the newest alert
                 _strMessage(objAlert.commitInsert(alert_txt_titleI.Text, alert_txt_messageI.Text, DateTime.Now), "insert");
                 _subRebind();
                 break;
@@ -33,7 +36,9 @@ public partial class admin_alert : System.Web.UI.Page
 
         }
     }
-    protected void subUpDel(object sender, RepeaterCommandEventArgs e)
+
+    //for updating and deleteing
+    protected void subUpDel(object sender, DataListCommandEventArgs e)
     {
         switch (e.CommandName)
         {
@@ -56,6 +61,7 @@ public partial class admin_alert : System.Web.UI.Page
                 break;
         }
     }
+
     private void _showUpdate (int id)
     {
         _panelControl(alert_pnl_update);
@@ -69,6 +75,8 @@ public partial class admin_alert : System.Web.UI.Page
         alert_rpt_delete.DataSource = objAlert.getAlertByID(id);
         alert_rpt_delete.DataBind();
     }
+
+    //turn panel control on and off
     private void _panelControl(Panel pnl)
     {
         alert_pnl_all.Visible = false;
@@ -77,6 +85,8 @@ public partial class admin_alert : System.Web.UI.Page
         pnl.Visible = true;
         
     }
+
+    //Empty text field
     private void _subRebind()
     {
         alert_txt_titleI.Text = string.Empty;
@@ -85,6 +95,8 @@ public partial class admin_alert : System.Web.UI.Page
         alert_rpt_all.DataBind();
         _panelControl(alert_pnl_all);
     }
+
+    //Message for Update delete and insert
     private void _strMessage(bool flag, string str)
     {
         if (flag)

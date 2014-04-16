@@ -26,15 +26,21 @@
         <br />
         <br />
         <asp:TextBox ID="timeline_txt_imageI" runat="server" />
+        <asp:RequiredFieldValidator ID="rfv_imageI" runat="server" Text="*" ErrorMessage="*Enter Message" ControlToValidate="timeline_txt_imageI" Display="Dynamic" SetFocusOnError="true" ForeColor="#60DFE5" ValidationGroup="insert" />
         <br />
         <br />
         <asp:Label ID="timeline_lbl_text"  runat="server" Text="Content" AssociatedControlID="timeline_txt_textI" CssClass="admin_label" />
+         
         <br />
         <asp:TextBox ID="timeline_txt_textI" TextMode="MultiLine" runat="server" />
         <br />
+            <asp:RequiredFieldValidator ID="rfv_text" runat="server" Text="*" ErrorMessage="*Enter Message" ControlToValidate="timeline_txt_textI" Display="Dynamic" SetFocusOnError="true" ForeColor="#60DFE5" ValidationGroup="insert" />
+
         <asp:Label ID="timeline_lbl_date" runat="server" Text="Date" AssociatedControlID="timeline_txt_dateI" CssClass="admin_label" />
+             
         <br />
         <asp:TextBox ID="timeline_txt_dateI" runat="server" />
+            <asp:RequiredFieldValidator ID="rfv_dateI" runat="server" Text="*" ErrorMessage="*Enter Message" ControlToValidate="timeline_txt_dateI" Display="Dynamic" SetFocusOnError="true" ForeColor="#60DFE5" ValidationGroup="insert" />
 
         <asp:Button ID="timeline_btn_insert" runat="server" Text="Insert" CommandName="Insert" Display="Dynamic" OnCommand="subAdmin" ValidationGroup="insert" />
         <br />
@@ -63,7 +69,7 @@
                                 <td>
                                     <asp:LinkButton ID="timeline_btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("id")%>' OnCommand="subAdmin" />
                                     <td>
-                                        <asp:LinkButton ID="timeline_btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("id")%>' OnCommand="subAdmin" />
+                                        <asp:LinkButton ID="timeline_btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("id")%>' OnCommand="subAdmin" CauseValidation="false" />
                                     </td>
                             </tr>
                         </ItemTemplate>
@@ -88,20 +94,24 @@
                                 <td id="timeline_title_td">
                                     <asp:HiddenField ID="timeline_hdf_idU" runat="server" Value='<%#Eval("id")%>'  />
                                     <asp:TextBox ID="timeline_txt_textU" CssClass="alert_up_title" runat="server" Text='<%#Eval("text")%>' />
+                                    <asp:RequiredFieldValidator ID="rfv_textU" runat="server" Text="*" ErrorMessage="*Enter Message" ControlToValidate="timeline_txt_textU" Display="Dynamic" SetFocusOnError="true" ForeColor="#60DFE5" ValidationGroup="update" />
+
 
                                 </td>
                                 <td id="timeline_image_td">
                                     <asp:TextBox ID="timeline_txt_imageU" runat="server" Text='<%#Eval("image")%>'  />
+                                    <asp:RequiredFieldValidator ID="rfv_imageU" runat="server" Text="*" ErrorMessage="*Enter Message" ControlToValidate="timeline_txt_imageU" Display="Dynamic" SetFocusOnError="true" ForeColor="#60DFE5" ValidationGroup="update" />
 
                                 </td>
                                 <td id="timeline_date_td">
                                     <asp:TextBox ID="timeline_txt_dateU" runat="server" Text='<%#Eval("date")%>'  />
+                                    <asp:RequiredFieldValidator ID="rfv_dateU" runat="server" Text="*" ErrorMessage="*Enter Message" ControlToValidate="timeline_txt_dateU" Display="Dynamic" SetFocusOnError="true" ForeColor="#60DFE5" ValidationGroup="update" />
 
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="3">
-                                    <asp:Button ID="timeline_btn_update" runat="server" Text="Update" CommandName="Update" ValidationGroup="update" />
+                                    <asp:Button ID="timeline_btn_update" runat="server" Text="Update" CommandName="Update" ValidationGroup="update"  />
                                     <asp:Button ID="timeline_btn_cancel" runat="server" Text="Cancel" CommandName="Cancel" CauseValidation="false" />
                                 </td>
                             </tr>
@@ -144,8 +154,8 @@
                             </tr>
                             <tr>
                                 <td colspan="3">
-                                    <asp:Button ID="timeline_btn_delete" runat="server" Text="Delete" CommandName="Delete" />
-                                    <asp:Button ID="timeline_btn_cancel" runat="server" Text="Cancel" CommandName="Cancel" />
+                                    <asp:Button ID="timeline_btn_delete" runat="server" Text="Delete" CommandName="Delete" CauseValidation="false"  />
+                                    <asp:Button ID="timeline_btn_cancel" runat="server" Text="Cancel" CommandName="Cancel" CauseValidation="false"  />
                                 </td>
                             </tr>
                         </ItemTemplate>
