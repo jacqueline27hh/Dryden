@@ -144,8 +144,6 @@ public partial class _Default : System.Web.UI.Page
     volunteer objNewVolunteer = new volunteer();
     protected void subVolunteer(object sender, CommandEventArgs e)
     {
-
-        //_strMessage(objvol.commitInsert(txtfname.Text, txtlname.Text, int.Parse(txtage.Text.ToString()), rdb_gender.SelectedItem.Text, txtschool.Text, ddl_voltype.SelectedItem.Text, txtemail.Text, char.Parse(txtcontact.Text.ToString())), "insert");
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
         volunteer objNewVolunteer = new volunteer();
         objNewVolunteer.firstname = txtfname.Text;
@@ -153,7 +151,7 @@ public partial class _Default : System.Web.UI.Page
         objNewVolunteer.age = int.Parse(txtage.Text.ToString());
         objNewVolunteer.gender = rdb_gender.Text;
         objNewVolunteer.school_name = txtschool.Text;
-        objNewVolunteer.volunteer_type = ddl_voltype.Text;
+        objNewVolunteer.volunteer_type = ddl_voltype.SelectedItem.Text;
         objNewVolunteer.email = txtemail.Text;
         objNewVolunteer.phone = txtcontact.Text;
         objNewVolunteer.filename = file_up.FileName.ToString();
@@ -193,7 +191,7 @@ public partial class _Default : System.Web.UI.Page
         BinaryReader br = new BinaryReader(fs);
 
         Byte[] bytes = br.ReadBytes((Int32)fs.Length);
-        lbl_upload.Text = "File uploaded";
+        
     }
     protected void subVolCancel(object sender, CommandEventArgs e)
     {
