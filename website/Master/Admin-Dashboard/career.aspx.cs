@@ -12,14 +12,6 @@ public partial class admin_career : System.Web.UI.Page
     {
         if (!Page.IsPostBack)
         {
-            applicantsDataContext dataContext =
-                new applicantsDataContext();
-
-            var query = from applicant in dataContext.applicants
-                        select applicant;
-
-            rpt_all.DataSource = query;
-            rpt_all.DataBind();
             _subRebind();
         }
     }
@@ -29,7 +21,7 @@ public partial class admin_career : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Insert":
-                _strMessage(objApplicant.commitInsert(int.Parse(txt_jobIDI.ToString()), txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text), "insert");
+                _strMessage(objApplicant.commitInsert(int.Parse(txt_jobIDI.Value.ToString()), txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text), "insert");
                 _subRebind();
                 break;
             case "Update":
@@ -49,9 +41,9 @@ public partial class admin_career : System.Web.UI.Page
                 TextBox txtFname = (TextBox)e.Item.FindControl("txt_fnameU");
                 TextBox txtLname = (TextBox)e.Item.FindControl("txt_lnameU");
                 TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailU");
-                HiddenField hdfJobID = (HiddenField)e.Item.FindControl("hdf_idU");
-                int JobID = int.Parse(hdfJobID.Value.ToString());
-                _strMessage(objApplicant.commitUpdate(JobID, txtFname.Text, txtLname.Text, txtEmail.Text), "update");
+                HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_idU");
+                int applicantID = int.Parse(hdfID.Value.ToString());
+                _strMessage(objApplicant.commitUpdate(applicantID, txtFname.Text, txtLname.Text, txtEmail.Text), "update");
                 _subRebind();
                 break;
             case "Delete":

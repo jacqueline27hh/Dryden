@@ -31,7 +31,7 @@ public class applicantClass
             objNewApplicant.firstname = _fname;
             objNewApplicant.lastname = _lname;
             objNewApplicant.email = _email;
-            objNewApplicant.job_id = _jobID;
+            objNewApplicant.Id = _jobID;
 
             objApplicantDC.applicants.InsertOnSubmit(objNewApplicant);
             objApplicantDC.SubmitChanges();
