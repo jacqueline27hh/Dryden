@@ -29,4 +29,13 @@ public partial class _Default : System.Web.UI.Page
         System.Threading.Thread.Sleep(20000);
         lbl_waittimes.Text = DateTime.Now.ToString();
     }
+
+    ERwaitTimeClass objtime = new ERwaitTimeClass();
+    private void _subRebind(object sender, EventArgs e)
+    {
+        btn_time.Attributes.Add("data-dismiss", "Waiting Time");
+
+        rpt_ERtime.DataSource = objtime.getlatestWaittimes();
+        rpt_ERtime.DataBind();
+    }
 }

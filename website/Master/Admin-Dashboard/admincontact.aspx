@@ -25,51 +25,30 @@
                         <th>
                             <asp:Label ID="contact_lname" runat="server" Text="Last Name" />
                             </th>
-                        <th><asp:Label ID="contact_dept" runat="server" Text="Department" /></th>
-<th><asp:Label ID="contact_email" runat="server" Text="Email" /></th>
+                        <th><asp:Label ID="contact_dept" runat="server" Text="Department" />                               </th>
+                  <th><asp:Label ID="contact_email" runat="server" Text="Email" /></th>
                     </tr>
                 </thead>
                 <tbody>
                   
                    
                     <asp:DataList ID="dtl_updel_all" runat="server">
-                        <ItemTemplate>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="lbl_id" runat="server" Text="ID" />
-                                    <asp:Label ID="lblid" runat="server" Text='<%#Eval("id") %>' /></td>
-                               <td>
-                                   <asp:Label ID="lbl_fname" runat="server" Text="First Name" />
-                                   <asp:Label ID="lblfname" runat="server" Text='<%#Eval("firstname") %>' />
-                               </td>
-                                <td>
-                                                   <asp:Label ID="lbl_lname" runat="server" Text="Last Name" />
-                                   <asp:Label ID="lbllname" runat="server" Text='<%#Eval("lastname") %>' />
-                                </td>
-                                <td>
-                                                   <asp:Label ID="lbl_dept" runat="server" Text="Department" />
-                                   <asp:Label ID="lbldepartment" runat="server" Text='<%#Eval("department") %>' />
-                                </td>
-                                <td>
-                                                   <asp:Label ID="lbl_email" runat="server" Text="Email" />
-                                   <asp:Label ID="lblemail" runat="server" Text='<%#Eval("email") %>' />
-                                </td>
-                                <td>
-                                                   <asp:Label ID="lbl_message" runat="server" Text="Message" />
-                                   <asp:Label ID="lblmessage" runat="server" Text='<%#Eval("message") %>' />
-                                </td>
-                            
-                            <td>
-                                    <asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval("id")%>' OnCommand="subAdmin" />
-                                    <td>
-                                        <asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval("id")%>' OnCommand="subAdmin" />
-                                        </td></tr>
-                        </ItemTemplate>
+                         <ItemTemplate>
+                                <tr>
+                                    <td class="moveOver"><%#Eval ("firstname") %></td>
+                                    <td class="moveOver"><%#Eval ("lastname") %></td>
+                                    <td class="moveOver"><%#Eval ("email") %></td>
+                                    
+                                    <td class="moveOver"><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
+                                    <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
+                                </tr>
+                            </ItemTemplate>
+
                     </asp:DataList>
                
                 </tbody>
-            </table>
-
+            </table><br /><br />
+             <asp:Label ID="lbl_output" runat="server" />
         </asp:Panel><%--end pnl_all--%>
 <%--Update Panel Starts here--%>
         <asp:Panel ID="pnl_update" runat="server" GroupingText="Update Contacts">
@@ -78,10 +57,10 @@
                     <tr>
                         <th><asp:Label ID="lbl_fnameU" runat="server" Text="First Name" /></th>
                         <th><asp:Label ID="lbl_lnameU" runat="server" Text="Last Name" /></th>
-                        <th><asp:Label ID="lbl_deptU" runat="server" Text="Department" />
-                        </th>
+                       <%-- <th><asp:Label ID="lbl_deptU" runat="server" Text="Department" />
+                        </th>--%>
                         <th><asp:Label ID="lbl_emailU" runat="server" Text="Email" /></th>
-                        <th><asp:Label ID="lbl_messageU" runat="server" Text="Message" /></th>
+                       <%-- <th><asp:Label ID="lbl_messageU" runat="server" Text="Message" /></th>--%>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,13 +68,13 @@
                         <ItemTemplate>
                             <tr>
                                 <td id="title_td">
-                                    <asp:HiddenField ID="hdf_idU" runat="server" Value='<%#Eval("id")%>'  />
+                                    <asp:HiddenField ID="hdf_idU" runat="server" Value='<%#Eval("Id")%>'  />
                                     <asp:TextBox ID="txt_fnameU" runat="server" Text='<%#Eval("firstname")%>' />
                                     <td>
                                     <asp:TextBox ID="txt_lnameU" runat="server" Text='<%#Eval("lastname") %>' /></td>
-                                  <td>  <asp:TextBox ID="txt_deptU" runat="server" Text='<%#Eval("department") %>' /></td>
+<%--                                  <td>  <asp:TextBox ID="txt_deptU" runat="server" Text='<%#Eval("department") %>' /></td>--%>
                                    <td> <asp:TextBox ID="txt_emailU" runat="server" Text='<%#Eval("email")%>' /></td>
-                                    <td><asp:TextBox ID="txt_messageU" runat="server" Text='<%#Eval("message") %>' />
+                                   <%-- <td><asp:TextBox ID="txt_messageU" runat="server" Text='<%#Eval("message") %>' />--%>
 
                                 </td>
                                
@@ -118,7 +97,7 @@
                 <thead>
                     <tr>
                         <td colspan="3">
-                            <asp:Label ID="lbl_delete" runat="server" Text="Are you sure you want to delete this item?" />
+                            <asp:Label ID="lbl_delete" runat="server" Text="Are you sure you want to delete this contact?" />
                         </td>
                     </tr>
                     <tr>
@@ -134,7 +113,7 @@
                        <ItemTemplate>
                              <tr>
                                 <td>
-                                    <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval("id")%>' />
+                                    <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval("Id")%>' />
                                     <asp:Label ID="txtfnameD" runat="server" Value='<%#Eval("firstname") %>' /></td>
                                  <td>
                                      <asp:Label ID="txtlnameD" runat="server" Value='<%#Eval("lastname") %>' />

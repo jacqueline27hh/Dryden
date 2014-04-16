@@ -42,7 +42,7 @@ public class volunteerOppClass
         }
     }
 
-    public string commitUpdate(int _id, string _fname, string _lname, string _voltype, string _email, string _phone)
+    public bool commitUpdate(int _id, string _fname, string _lname, string _email, string _phone)
     {
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
         using (objVolunteerDC)
@@ -53,12 +53,12 @@ public class volunteerOppClass
             //objUpVolunteer.age = _age;
             //objUpVolunteer.gender = _gender;
             //objUpVolunteer.school_name = _schoolname;
-            objUpVolunteer.volunteer_type = _voltype;
+            //objUpVolunteer.volunteer_type = _voltype;
             objUpVolunteer.email = _email;
             objUpVolunteer.phone = _phone;
 
             objVolunteerDC.SubmitChanges();
-            return "Application Updated";
+            return true;
         }
     }
 

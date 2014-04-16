@@ -58,14 +58,14 @@ public partial class _Default : System.Web.UI.Page
         contactClass objContactDC = new contactClass();
         txt_fname.Text = string.Empty;
         txt_lname.Text = string.Empty;
-        ddl_dept.Items.ToString();
+        //ddl_dept.Items.ToString();
         txtemail.Text = string.Empty;
         txtmsg.Text = string.Empty;
     }
     private void _strMessage(bool flag, string str)
     {
         if (flag)
-            lbl_output.Text = "Message" + str + "submitted";
+            lbl_output.Text = "Message submitted";
         else
             lbl_output.Text = "Sorry, unable to " + str + "submit message";
 

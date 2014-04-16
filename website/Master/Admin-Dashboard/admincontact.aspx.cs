@@ -36,14 +36,14 @@ public partial class adminContact : System.Web.UI.Page
         {
             case "Update":
                 TextBox txtfname = (TextBox)e.Item.FindControl("txt_fnameU");
-                TextBox txtMessage = (TextBox)e.Item.FindControl("txt_messageU");
+                //TextBox txtMessage = (TextBox)e.Item.FindControl("txt_messageU");
                 TextBox txtlname = (TextBox)e.Item.FindControl("txt_lnameU");
-                TextBox txtdept = (TextBox)e.Item.FindControl("txt_deptU");
+                //TextBox txtdept = (TextBox)e.Item.FindControl("txt_deptU");
                 TextBox txtemail = (TextBox)e.Item.FindControl("txt_emailU");
                 HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_idU");
 
                 int contactID = int.Parse(hdfID.Value.ToString());
-                _strMessage(objContact.commitUpdate(contactID, txtfname.Text, txtlname.Text, txtdept.Text, txtemail.Text, txtMessage.Text), "update");
+                _strMessage(objContact.commitUpdate(contactID, txtfname.Text, txtlname.Text, txtemail.Text), "update");
                 _subRebind();
                 break;
             case "Delete":
@@ -79,17 +79,18 @@ public partial class adminContact : System.Web.UI.Page
     }
     private void _subRebind()
     {
-
+        
         contactClass objContactDC = new contactClass();
         dtl_updel_all.DataSource = objContactDC.getContacts();
         dtl_updel_all.DataBind();
+        _panelControl(pnl_all);
     }
     private void _strMessage(bool flag, string str)
     {
-        //if (flag)
-        //    lbl_output.Text = "alert" + str + "was successful";
-        //else
-        //   lbl_output.Text = "Sorry, unable to " + str + "alert";
+        if (flag)
+            lbl_output.Text = "Contact" + " " + str +" "+ "was successful";
+        else
+            lbl_output.Text = "Sorry, unable to " + str + "Contact";
 
     }
 }

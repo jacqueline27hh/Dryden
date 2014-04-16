@@ -138,14 +138,17 @@
 
                                             <asp:Label ID="lblfname" runat="server" Text="First Name" AssociatedControlID="txtfname" />
                                             <asp:TextBox ID="txtfname" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_volfname" runat="server" Text="*Required" ControlToValidate="txtfname" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lbllname" runat="server" Text="Last Name" AssociatedControlID="txtlname" />
                                             <asp:TextBox ID="txtlname" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_vollname" runat="server" Text="*Required" ControlToValidate="txtlname" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lblage" runat="server" Text="Age" AssociatedControlID="txtage" />
                                             <asp:TextBox ID="txtage" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_age" runat="server" Text="*Required" ControlToValidate="txtage" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lblgender" runat="server" Text="Gender" />
@@ -157,20 +160,28 @@
                                             <br />
                                             <asp:Label ID="lblcontact" runat="server" Text="Contact No" AssociatedControlID="txtcontact" />
                                             <asp:TextBox ID="txtcontact" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_contact" runat="server" Text="*Required" ControlToValidate="txtcontact" ValidationGroup="submit" />
+                                            <asp:RegularExpressionValidator ID="rgv_contact" runat="server" Text="Invalid contact number" ControlToValidate="txtcontact" ValidationExpression="^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lblemail" runat="server" Text="E-mail" AssociatedControlID="txtemail" />
                                             <asp:TextBox ID="txtemail" runat="server" />
+                                             <asp:RequiredFieldValidator ID="rfv_email" runat="server" Text="*Required" ControlToValidate="txtemail" ValidationGroup="submit" />
+                                    <asp:RegularExpressionValidator ID="rev_email" runat="server" Text="Invalid Email Address" ControlToValidate="txtemail" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lblschool" runat="server" Text="High School" AssociatedControlID="txtschool" />
                                             <asp:TextBox ID="txtschool" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfvschool" runat="server" ControlToValidate="txtschool" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lblvoltype" runat="server" Text="Volunteer Type" />
                                             <asp:DropDownList ID="ddl_voltype" runat="server" >
                                                 <asp:ListItem Value="Administrative" />
                                                 <asp:ListItem Value="General" />
+                                                <asp:ListItem Value="Community Volunteer" />
+                                                <asp:ListItem Value="In House Volunteer" />
+                                                <asp:ListItem Value="Special Interest Volunteer" />
                                             </asp:DropDownList><br /><br />
                                             <asp:Label ID="lbl_title" runat="server" Text="Upload your Resume" /><br />
                     

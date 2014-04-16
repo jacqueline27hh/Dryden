@@ -58,7 +58,21 @@
                                                
 								                ER Wait Time
                                             </p>
-               
+                  <asp:Button runat="server" ID="btn_time" Text="times;" />
+                                              <asp:Repeater ID="rpt_ERtime" runat="server">
+
+                        <ItemTemplate>
+
+                            <h4>&nbsp;<%#Eval("wait_Time") %></h4>
+
+
+
+                            <asp:Label runat="server" ID="lbl_showtime" Text='<%#Eval("wait_time") %>' />
+
+                        </ItemTemplate>
+
+                    </asp:Repeater>
+
                                             <asp:UpdatePanel ID="udp_time" runat="server" UpdateMode="Conditional">
                                                 <ContentTemplate>
                                                     <asp:Label ID="lbl_waittimes" runat="server" Text="Wait Time" />

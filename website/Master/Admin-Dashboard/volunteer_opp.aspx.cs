@@ -15,13 +15,8 @@ public partial class volunteer_opp : System.Web.UI.Page
             _subRebind();
         }
     }
-         private void _subRebind()
-    {
-        volunteerOppClass objVol = new volunteerOppClass();
-        lst_all.DataSource = objVol.getVolunteers();
-        lst_all.DataBind();
-    }
-         protected void subAdmin(object sender, ListViewCommandEventArgs e)
+        
+         protected void subAdmin(object sender,CommandEventArgs e)
          {
              switch (e.CommandName)
              {
@@ -57,12 +52,13 @@ public partial class volunteer_opp : System.Web.UI.Page
                  HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_id");
                  
                   int volId = int.Parse(hdfID.Value.ToString());
-                 lblmsg.Text = objvolunteer.commitUpdate(volId,txtfname.Text.ToString(), txtlname.Text.ToString(), ddlvolType.SelectedItem.Text.ToString(),txtemail.Text.ToString(), txtcontact.Text.ToString());
+                  _strMessage(objvolunteer.commitUpdate(volId, txtfname.Text, txtlname.Text, txtemail.Text, txtcontact.Text), "update");
                  
                 _subRebind();
                 break;
              case "Delete":
                 int vol_Id = int.Parse(((HiddenField)e.Item.FindControl("hdf_idD")).Value);
+                _strMessage(objvolunteer.commitDelete(vol_Id), "delete");
                 _subRebind();
                 break;
              case "Cancel":
@@ -93,6 +89,21 @@ public partial class volunteer_opp : System.Web.UI.Page
          pnl_delete.Visible = false;
          update_pnl.Visible = false;
          pnl.Visible = true;
+
+     }
+     private void _subRebind()
+     {
+         volunteerOppClass objvolDC = new volunteerOppClass();
+         lst_all.DataSource = objvolDC.getVolunteers();
+         lst_all.DataBind();
+         _panelControl(pnl_all);
+     }
+     private void _strMessage(bool flag, string str)
+     {
+         if (flag)
+             lbl_output.Text = "Volunteer Applicant" + " " + str + " " + "was successful";
+         else
+             lbl_output.Text = "Sorry, unable to " + str + "Volunteer Applicant";
 
      }
     
