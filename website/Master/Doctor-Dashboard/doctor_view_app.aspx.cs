@@ -22,7 +22,7 @@ public partial class Doctor_Dashboard_Default : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Insert":
-                _strMessage(objAppointment.commitInsert(txt_pnameI.Text, DateTime.Parse(txt_dateI.Text.ToString()), txt_titleI.Text), "insert");
+                _strMessage(objAppointment.commitInsert(DateTime.Parse(txt_dateI.Text.ToString()), txt_titleI.Text), "insert");
                 _subRebind();
                 break;
             case "Update":
@@ -39,13 +39,12 @@ public partial class Doctor_Dashboard_Default : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Update":
-                TextBox txtPname = (TextBox)e.Item.FindControl("txt_pnameU");
                 TextBox txtDname = (TextBox)e.Item.FindControl("txt_dnameU");
                 TextBox txtDate = (TextBox)e.Item.FindControl("txt_dateU");
                 TextBox txtTitle = (TextBox)e.Item.FindControl("txt_titleU");
                 HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_idU");
                 int appointmentID = int.Parse(hdfID.Value.ToString());
-                _strMessage(objAppointment.commitUpdate(appointmentID, txtPname.Text, DateTime.Parse(txt_dateI.Text.ToString()), txtTitle.Text), "update");
+                _strMessage(objAppointment.commitUpdate(appointmentID, DateTime.Parse(txt_dateI.Text.ToString()), txtTitle.Text), "update");
                 _subRebind();
                 break;
             case "Delete":
@@ -70,7 +69,8 @@ public partial class Doctor_Dashboard_Default : System.Web.UI.Page
     private void _showDelete(int id)
     {
         _panelControl(pnl_delete);
-        rpt_delete.DataSource = objAppointment.getAppointmentByID(id);
+        appointmentClass _appointment = new appointmentClass();
+        rpt_update.DataSource = _appointment.getAppointmentByID(id);
         rpt_delete.DataBind();
     }
 
@@ -84,12 +84,11 @@ public partial class Doctor_Dashboard_Default : System.Web.UI.Page
 
     private void _subRebind()
     {
-        txt_pnameI.Text = string.Empty;
         txt_dnameI.Text = string.Empty;
         txt_dateI.Text = string.Empty;
         txt_titleI.Text = string.Empty;
         Guid _id = Guid.Parse(Membership.GetUser().ProviderUserKey.ToString());
-        rpt_all.DataSource = objAppointment.getDoctor(_id);
+        rpt_all.DataSource = objAppointment.getDoctorById(_id);
         rpt_all.DataBind();
         _panelControl(pnl_all);
     }

@@ -44,8 +44,8 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><asp:Label ID="lbl_fname" runat="server" Text="First Name" /></th>
-                            <th><asp:Label ID="lbl_lname" runat="server" Text="Last Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lbl_fname" runat="server" Text="First Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lbl_lname" runat="server" Text="Last Name" /></th>
                             <th><asp:Label ID="lbl_email" runat="server" Text="Email" /></th>
                         </tr>
                     </thead>
@@ -53,10 +53,10 @@
                         <asp:Repeater ID="rpt_all" runat="server">
                             <ItemTemplate>
                                 <tr>
-                                    <td><%#Eval ("firstname") %></td>
-                                    <td><%#Eval ("lastname") %></td>
-                                    <td><%#Eval ("email") %></td>
-                                    <td><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
+                                    <td class="moveOver"><%#Eval ("firstname") %></td>
+                                    <td class="moveOver"><%#Eval ("lastname") %></td>
+                                    <td class="moveOver"><%#Eval ("email") %></td>
+                                    <td class="moveOver"><asp:LinkButton ID="btn_update" runat="server" Text="Update" CommandName="Update" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                     <td><asp:LinkButton ID="btn_delete" runat="server" Text="Delete" CommandName="Delete" CommandArgument='<%#Eval ("Id") %>' OnCommand="subAdmin" /></td>
                                 </tr>
                             </ItemTemplate>
@@ -82,10 +82,10 @@
                                     <td><asp:HiddenField ID="hdf_idU" runat="server" Value='<%#Eval ("Id") %>' />
                                         <asp:TextBox ID="txt_fnameU" runat="server" Text='<%#Eval ("firstname") %>' />
                                     </td>
-                                    <td>
+                                    <td class="moveOver">
                                         <asp:TextBox ID="txt_lnameU" runat="server" Text='<%#Eval ("lastname") %>' />
                                     </td>
-                                    <td>
+                                    <td class="moveOver">
                                         <asp:TextBox ID="txt_emailU" runat="server" Text='<%#Eval ("email") %>' />
                                     </td>
                                 </tr>
@@ -115,9 +115,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <th><asp:Label ID="lbl_fnameD" runat="server" Text="First Name" /></th>
-                            <th><asp:Label ID="lbl_lnameD" runat="server" Text="Last Name" /></th>
-                            <th><asp:Label ID="lbl_emailD" runat="server" Text="Email" /></th>
+                            <th class="moveOver"><asp:Label ID="lbl_fnameD" runat="server" Text="First Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lbl_lnameD" runat="server" Text="Last Name" /></th>
+                            <th class="moveOver"><asp:Label ID="lbl_emailD" runat="server" Text="Email" /></th>
                         </tr>
                     </thead>
                     <tbody>

@@ -75,6 +75,7 @@ public partial class _Default : System.Web.UI.Page
                 txtPhone.Text = "";
                 txtMsg.Text = "";
                 lblConfirm.Text = "Your applicantion was sent successfully!";
+
                 break;
             case "Refresh":
                 //_subRefresh();
