@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.IO;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -154,7 +156,10 @@ public partial class _Default : System.Web.UI.Page
         objNewVolunteer.volunteer_type = ddl_voltype.Text;
         objNewVolunteer.email = txtemail.Text;
         objNewVolunteer.phone = txtcontact.Text;
-      
+        objNewVolunteer.filename = file_up.FileName.ToString();
+        objNewVolunteer.filedata = file_up.FileContent.ToString();
+        objNewVolunteer.filetype = file_up.FileBytes.ToString();
+
         objVolunteerDC.volunteers.InsertOnSubmit(objNewVolunteer);
         objVolunteerDC.SubmitChanges();
         txtfname.Text = "";
@@ -176,6 +181,20 @@ public partial class _Default : System.Web.UI.Page
     //        lbl_msgV.Text = "Sorry, unable to " + str + "submit message";
 
     //}
+
+    protected void subUploadClick(object sender, EventArgs e)
+    {
+        string filePath = Server.MapPath("APP_DATA/TestDoc.docx");
+
+        string filename = Path.GetFileName(filePath);
+
+        FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+
+        BinaryReader br = new BinaryReader(fs);
+
+        Byte[] bytes = br.ReadBytes((Int32)fs.Length);
+        lbl_upload.Text = "File uploaded";
+    }
     protected void subVolCancel(object sender, CommandEventArgs e)
     {
         txtfname.Text = "";

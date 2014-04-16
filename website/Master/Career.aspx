@@ -184,9 +184,11 @@
                                                 <asp:ListItem Value="Special Interest Volunteer" />
                                             </asp:DropDownList><br /><br />
                                             <asp:Label ID="lbl_title" runat="server" Text="Upload your Resume" /><br />
+                                           
                     
-                                            <asp:FileUpload ID="file_up" runat="server" />
- 
+                                            <asp:FileUpload ID="file_up" runat="server" /><br />
+ <asp:Button ID="btn_upload_file" runat="server" Text="Upload" OnClick="subUploadClick" />
+                                            <asp:Label ID="lbl_upload" runat="server" />
            
                                             <br />
                    
