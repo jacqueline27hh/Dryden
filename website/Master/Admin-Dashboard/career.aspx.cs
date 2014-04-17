@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+// this decided to stop working  - not sure why something isn't casting right??
 public partial class admin_career : System.Web.UI.Page
 {
-    applicantClass objApplicant = new applicantClass();
+    applicantClass objapplicant = new applicantClass();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -21,7 +21,7 @@ public partial class admin_career : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Insert":
-                _strMessage(objApplicant.commitInsert(Int32.Parse(txt_jobIDI.Text.ToString()), txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text), "insert");
+                _strMessage(objapplicant.commitInsert(int.Parse(txt_jobIDI.Text.ToString()), txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text), "insert");
                 _subRebind();
                 break;
             case "Update":
@@ -43,12 +43,12 @@ public partial class admin_career : System.Web.UI.Page
                 TextBox txtEmail = (TextBox)e.Item.FindControl("txt_emailU");
                 HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_idU");
                 int applicantID = int.Parse(hdfID.Value.ToString());
-                _strMessage(objApplicant.commitUpdate(applicantID, txtFname.Text, txtLname.Text, txtEmail.Text), "update");
+                _strMessage(objapplicant.commitUpdate(applicantID, txtFname.Text, txtLname.Text, txtEmail.Text), "update");
                 _subRebind();
                 break;
             case "Delete":
                 int _id = int.Parse(((HiddenField)e.Item.FindControl("hdf_idD")).Value);
-                _strMessage(objApplicant.commitDelete(_id), "delete");
+                _strMessage(objapplicant.commitDelete(_id), "delete");
                 _subRebind();
                 break;
             case "Cancel":
@@ -68,7 +68,7 @@ public partial class admin_career : System.Web.UI.Page
     private void _showDelete(int id)
     {
         _panelControl(pnl_delete);
-        rpt_delete.DataSource = objApplicant.getApplicantByID(id);
+        rpt_delete.DataSource = objapplicant.getApplicantByID(id);
         rpt_delete.DataBind();
     }
 
@@ -85,7 +85,7 @@ public partial class admin_career : System.Web.UI.Page
         txt_fnameI.Text = string.Empty;
         txt_lnameI.Text = string.Empty;
         txt_emailI.Text = string.Empty;
-        rpt_all.DataSource = objApplicant.getApplicants();
+        rpt_all.DataSource = objapplicant.getApplicants();
         rpt_all.DataBind();
         _panelControl(pnl_all);
     }

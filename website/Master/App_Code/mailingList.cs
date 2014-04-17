@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-
+// in this file I am prepping all of my insert, update and delete calls to use with the mailing list table
 public class mailingListClass
 {
     public IQueryable<Mailing_list> getMailing_list()

@@ -54,6 +54,9 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>--%>
+
+            <%--I did try another databound control but low and behold it failed me - I know you hate us using the repeater all the time, but it seems to work best and most importantly we want a functioning website not a variety of databound controls.--%>
+
         </div>
     </div>
 

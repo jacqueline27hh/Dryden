@@ -22,6 +22,7 @@ public class applicantClass
         return allApplicants;
 
     }
+    // this defines what will happen when admin chooses to insert a new applicant
     public bool commitInsert(int _jobID, string _fname, string _lname, string _email)
     {
         applicantsDataContext objApplicantDC = new applicantsDataContext();
@@ -38,7 +39,7 @@ public class applicantClass
             return true;
         }
     }
-
+    // this is what happens when admin chooses to update an existing applicant's details
     public bool commitUpdate(int _id, string _fname, string _lname, string _email)
     {
         applicantsDataContext objApplicantDC = new applicantsDataContext();
@@ -53,7 +54,7 @@ public class applicantClass
             return true;
         }
     }
-
+    // this is what happens when admin chooses to delete an applicant
     public bool commitDelete(int _id)
     {
         applicantsDataContext objApplicantDC = new applicantsDataContext();
@@ -65,6 +66,7 @@ public class applicantClass
             return true;
         }
     }
+    // Here I had the file upload set up - somewhere during merge conflicts this broke. I plan to fix it 
 
     //public string filename_res { set; get; } 
     //public string extension_res { set; get; } 
