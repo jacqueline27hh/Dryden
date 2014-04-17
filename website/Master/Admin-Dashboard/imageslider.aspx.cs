@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO; 
 
 public partial class admin_imageslider : System.Web.UI.Page
 {
@@ -52,14 +53,14 @@ public partial class admin_imageslider : System.Web.UI.Page
                 {
                     try
                     {
-                        fup1SavePath = "www.michaeldu.com\\Master\\App_Themes\\images\\" + fup1.FileName.ToString();
-                        fup1.SaveAs(fup1SavePath); 
-                        fup1SavePath = "~/App_Themes/images/" + fup1.FileName.ToString();
-                        
+                        fup1SavePath = Path.Combine(Server.MapPath("~/App_Themes/images"), fup1.FileName.ToString());
+                        fup1.SaveAs(fup1SavePath);
+                        fup1SavePath = "~/App_Themes/images/" + fup1.FileName.ToString(); 
                     }
                     catch (Exception err)
                     {
-                        lbl_results.Text = err.Message.ToString(); 
+                        lbl_results.Text = err.Message.ToString();
+                        break;
                     }
                 }
 
@@ -67,13 +68,14 @@ public partial class admin_imageslider : System.Web.UI.Page
                 {
                     try
                     {
-                        fup2SavePath = "www.michaeldu.com\\Master\\App_Themes\\images\\" + fup2.FileName.ToString();
+                        fup2SavePath = Path.Combine(Server.MapPath("~/App_Themes/images"), fup2.FileName.ToString()); ;
                         fup2.SaveAs(fup2SavePath);
                         fup2SavePath = "~/App_Themes/images/" + fup2.FileName.ToString();
                     }
                     catch (Exception err)
                     {
                         lbl_results.Text = err.Message.ToString();
+                        break;
                     }
                 }
 
@@ -81,19 +83,21 @@ public partial class admin_imageslider : System.Web.UI.Page
                 {
                     try
                     {
-                        fup3SavePath = "www.michaeldu.com\\Master\\App_Themes\\images\\" + fup3.FileName.ToString();
+                        fup3SavePath = Path.Combine(Server.MapPath("~/App_Themes/images"), fup3.FileName.ToString());
                         fup3.SaveAs(fup3SavePath);
                         fup3SavePath = "~/App_Themes/images/" + fup3.FileName.ToString();
                     }
                     catch (Exception err)
                     {
                         lbl_results.Text = err.Message.ToString();
+                        break;
+
                     }
                 }
 
                  lbl_results.Text = scObj.updateSlides(caption1.Text.ToString(), caption2.Text.ToString(), caption3.Text.ToString(), fup1SavePath, fup2SavePath, fup3SavePath, title1.Text.ToString(),
                      title2.Text.ToString(), title3.Text.ToString());
-                
+                subRebind(); 
                 break;
         }
     }

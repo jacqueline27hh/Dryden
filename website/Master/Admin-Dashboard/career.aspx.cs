@@ -21,7 +21,7 @@ public partial class admin_career : System.Web.UI.Page
         switch (e.CommandName)
         {
             case "Insert":
-                _strMessage(objApplicant.commitInsert(int.Parse(txt_jobIDI.Value.ToString()), txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text), "insert");
+                _strMessage(objApplicant.commitInsert(Int32.Parse(txt_jobIDI.Text.ToString()), txt_fnameI.Text, txt_lnameI.Text, txt_emailI.Text), "insert");
                 _subRebind();
                 break;
             case "Update":
