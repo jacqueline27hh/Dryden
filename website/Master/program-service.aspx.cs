@@ -27,7 +27,7 @@ public partial class _Default : System.Web.UI.Page
     {
         mv_tabs.ActiveViewIndex = Convert.ToInt32(ps_nav_menu.SelectedValue);
     }
-   
+  // bind the repeater control
     ERwaitTimeClass objtime = new ERwaitTimeClass();
     private void _subRebind(object sender, EventArgs e)
     {

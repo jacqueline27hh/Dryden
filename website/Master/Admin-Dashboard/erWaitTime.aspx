@@ -13,7 +13,7 @@
         <asp:Label ID="admin_lbl_header" runat="server" Text="ER Wait Time" CssClass="col-lg-9 admin_header"/>
         <asp:LinkButton ID="admin_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="~/program-service.aspx?tabIndex=1" />
         </div>
-        
+        <%--Insert Panel--%>
          <asp:Panel ID="pnl_insert" runat="server" GroupingText="Insert Waiting Time">
 
         <asp:Label ID="lbl_output" runat="server" />
@@ -33,6 +33,7 @@
         <br />
         <br />
         </asp:Panel>
+        <%--Panel to show all times--%>
         <asp:Panel ID="pnl_all" runat="server" GroupingText="All Waiting Times">
             <table>
                 <thead>

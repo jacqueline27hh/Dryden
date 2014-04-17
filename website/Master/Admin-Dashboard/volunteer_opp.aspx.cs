@@ -37,7 +37,11 @@ public partial class volunteer_opp : System.Web.UI.Page
          protected void subDel(object sender,ListViewDeleteEventArgs e)
          {
          }
-    
+         protected void subupCan(object sender,ListViewCancelEventArgs e)
+         {
+             lst_all.EditIndex = -1;
+             lst_all.DataBind();
+         }
     
      protected void subupdel(object sender, ListViewCommandEventArgs e)
      {

@@ -40,7 +40,7 @@ public class ERwaitTimeClass
         }
     }
 
-    public bool commitUpdate(int _id, DateTime _waititme, DateTime _checkedin)
+    public bool commitUpdate(int _id,DateTime _waititme, DateTime _checkedin)
     {
         ERwaitClassDataContext objERDC = new ERwaitClassDataContext();
         using (objERDC)
@@ -67,7 +67,7 @@ public class ERwaitTimeClass
         }
     }
 
-    //This function gets the most recent alert for public side
+    //This function gets latest wait time for public side
 
     public IQueryable<ER_waittime> getlatestWaittimes()
     {

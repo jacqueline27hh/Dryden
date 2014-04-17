@@ -30,6 +30,7 @@ public partial class adminContact : System.Web.UI.Page
 
         }
     }
+    //update delete function to update and delete contacts
     protected void subUpDel(object sender, DataListCommandEventArgs e)
     {
         switch (e.CommandName)
@@ -63,6 +64,7 @@ public partial class adminContact : System.Web.UI.Page
         dtl_update.DataSource = _contact.getContactByID(id);
         dtl_update.DataBind();
     }
+    //show delete function
     private void _showDelete(int id)
     {
         _panelControl(pnl_delete);
@@ -85,6 +87,7 @@ public partial class adminContact : System.Web.UI.Page
         dtl_updel_all.DataBind();
         _panelControl(pnl_all);
     }
+    //shows message that the selected operation was successful
     private void _strMessage(bool flag, string str)
     {
         if (flag)

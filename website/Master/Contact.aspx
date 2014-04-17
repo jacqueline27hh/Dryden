@@ -115,18 +115,18 @@
                                         </asp:View>
                                         <asp:View ID="view3" runat="server">
                                             <p>
-                                                Contact Us
+                                              Feel free to Contact Us Directly..!!!
 							
                                             </p>
-
+                                            <%--Contact us form--%>
                                             <asp:Label ID="lblfname" runat="server" AssociatedControlID="txtfname"  Text="First Name"/>
                                             <asp:TextBox ID="txtfname" runat="server" />
-                                            <br /><br />
-                                            <asp:RequiredFieldValidator ID="rfv_contactfname" runat="server" Text="*Required" ControlToValidate="txtfname" ValidationGroup="submit" />
+                                           
+                                            <asp:RequiredFieldValidator ID="rfv_contactfname" runat="server" Text="*Required" ControlToValidate="txtfname" ValidationGroup="submit" /><br /><br />
                                             <asp:Label ID="lbllname" runat="server" AssociatedControlID="txtlname" Text="Last Name" />
                                             <asp:TextBox ID="txtlname" runat="server" />
-                                            <br /><br />
-                                            <asp:RequiredFieldValidator ID="rfv_contactlname" runat="server" Text="*Required" ControlToValidate="txtlname" ValidationGroup="submit"  />
+                                           
+                                            <asp:RequiredFieldValidator ID="rfv_contactlname" runat="server" Text="*Required" ControlToValidate="txtlname" ValidationGroup="submit"  /> <br /><br />
                                             <asp:Label ID="lbldept" runat="server" AssociatedControlID="ddl_dept" Text="Department" />
                                             <asp:DropDownList ID="ddl_dept" runat="server">
                                                 <asp:ListItem Value="Administrative" />
@@ -137,19 +137,20 @@
                                             <br /><br />
                                             <asp:Label ID="lblemail" runat="server" Text="Email" AssociatedControlID="txtemail" />
                                             <asp:TextBox ID="txtemail" runat="server" />
+                                            <asp:RequiredFieldValidator ID="rfv_contactemail" runat="server" ControlToValidate="txtemail" Text="*Required" ValidationGroup="submit"/>
                                             <br /><br />
-                                            <asp:RequiredFieldValidator ID="rfv_contactemail" runat="server" ControlToValidate="txtemail" Text="*Required" ValidationGroup="submit"/><br />
+                                            <%--regular expression for valid email address--%>
                                             <asp:RegularExpressionValidator ID="rgv_email" runat="server" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"  ControlToValidate="txtemail" ValidationGroup="submit"/>
                                             <asp:Label ID="lblmessage" runat="server" Text="Message" AssociatedControlID="txtmsg" />
-                                            <asp:TextBox ID="txtmsg" runat="server" />
+                                            <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" /><br />
                                             <asp:RequiredFieldValidator ID="rfv_contactmsg" runat="server" Text="*Required" ControlToValidate="txtmsg" ValidationGroup="submit" />
                                             <br />
 
                                             <asp:Label ID="lbl_output" runat="server" />
                                             <%--<asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />--%>
-                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />
+                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" ValidationGroup="submit" />
                                             <%--<asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancelmsg" />--%>
-                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancel" />
+                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancel" CausesValidation="false" />
                                         </asp:View> 
                                      
                                     </asp:MultiView>

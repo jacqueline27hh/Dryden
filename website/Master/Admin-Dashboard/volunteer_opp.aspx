@@ -13,7 +13,7 @@
         <asp:Label ID="admin_lbl_header" runat="server" Text="Volunteer Opportunities " CssClass="col-lg-9 admin_header"/>
         <asp:LinkButton ID="admin_view_changes" CssClass="col-lg-2 admin_view_live" runat="server" Text="<i class='fa fa-eye'></i> View Live" PostBackUrl="~/Career.aspx?tabIndex=3" />
         </div>
-
+        <%--panel to show all applicants details--%>
         <asp:Panel ID="pnl_all" runat="server" GroupingText="All Volunteer Applicants">
                <table>
                     <thead>
@@ -26,7 +26,7 @@
                         </tr>
                     </thead>
                    <tbody>
-                       <asp:ListView ID="lst_all" runat="server" OnItemCommand="subAdmin" OnItemUpdating="subUP" OnItemDeleting="subDel">
+                       <asp:ListView ID="lst_all" runat="server" OnItemCommand="subAdmin" OnItemUpdating="subUP" OnItemDeleting="subDel" OnItemCanceling="subupCan">
                           <ItemTemplate>
                                                            
                                 <tr>
@@ -70,7 +70,7 @@
                 <tbody>
                     <%--Listview for updating data--%>
                 
-                    <asp:ListView ID="lst_update" runat="server" OnItemCommand="subupdel" OnItemUpdating="subUP">
+                    <asp:ListView ID="lst_update" runat="server" OnItemCommand="subupdel" OnItemUpdating="subUP" OnItemCanceling="subupCan">
                         <ItemTemplate>
                             <tr>
                                 <td>
@@ -107,7 +107,7 @@
                             <tr>
                                 <td>
                                     <asp:Button ID="btn_update" runat="server" Text="Update" CommandName="Update" ValidationGroup="update" />
-                                     <asp:Button ID="btn_cancel" runat="server" Text="Cancel" CommandName="Cancel" CauseValidation="false" />
+                                    <%-- <asp:Button ID="btn_cancel" runat="server" Text="Cancel" CommandName="Cancel" CauseValidation="false" />--%>
                                    
                                 </td>
                             </tr>
@@ -134,7 +134,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <asp:ListView ID="lst_delete" runat="server" OnItemCommand="subupdel">
+                    <asp:ListView ID="lst_delete" runat="server" OnItemCommand="subupdel" OnItemCanceling="subupCan">
                         <ItemTemplate>
                             <tr>
                                 <td>
@@ -154,7 +154,8 @@
                             <tr>
                                 <td>
                                     <asp:Button ID="btndel" runat="server" Text="Delete" CommandName="Delete" />
-                                    <asp:Button ID="btncancel" runat="server" Text="Cancel" CommandName="Cancel" />
+
+                                   <%-- <asp:Button ID="btncancel" runat="server" Text="Cancel" CommandName="Cancel" />--%>
                                 </td>
                             </tr>
                         </ItemTemplate>

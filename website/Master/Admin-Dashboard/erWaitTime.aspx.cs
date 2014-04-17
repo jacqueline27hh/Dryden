@@ -43,7 +43,7 @@ public partial class er_wt : System.Web.UI.Page
                 HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_idU");
 
                 int wait_ID = int.Parse(hdfID.Value.ToString());
-                //_strMessage(objwait.commitUpdate(wait_ID,txtwaititme.Text,txtcheckedin.Text), "update");
+                //_strMessage(objwait.commitUpdate(wait_ID,txtwaititme.Text.ToString(), txtcheckedin.Text.ToString()), "update");
                 _subRebind();
                 break;
             case "Delete":

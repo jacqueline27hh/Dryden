@@ -59,6 +59,7 @@
 								                ER Wait Time
                                             </p>
                   <asp:Button runat="server" ID="btn_time" Text="Times" />
+                                            <%--Repeater Control--%>
                                               <asp:Repeater ID="rpt_ERtime" runat="server">
 
                         <ItemTemplate>
