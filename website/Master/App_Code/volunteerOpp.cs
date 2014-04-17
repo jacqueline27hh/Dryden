@@ -8,6 +8,7 @@ public class volunteerOppClass
 {
     public IQueryable<volunteer> getVolunteers()
     {
+        //create instance of LINQ object
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
         var allVolunteers = objVolunteerDC.volunteers.Select(x => x);
         return allVolunteers;
@@ -20,11 +21,13 @@ public class volunteerOppClass
         return allVolunteers;
 
     }
+   //CommitInsert to save the data to the database
     public bool commitInsert(string _fname, string _lname, int _age, string _gender, string _schoolname, string _voltype, string _email, string _phone)
     {
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
         using (objVolunteerDC)
         {
+            //create an instance of the table
             volunteer objNewVolunteer = new volunteer();
             objNewVolunteer.firstname = _fname;
             objNewVolunteer.lastname = _lname;
@@ -41,7 +44,7 @@ public class volunteerOppClass
             return true;
         }
     }
-
+//commitUpdate to update the data
     public bool commitUpdate(int _id, string _fname, string _lname, string _email, string _phone)
     {
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();

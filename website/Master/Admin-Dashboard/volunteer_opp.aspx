@@ -30,14 +30,14 @@
                           <ItemTemplate>
                                                            
                                 <tr>
-                                    <td><asp:Label ID="lblfname" runat="server" Text="First Name" />
+                                    <td><asp:Label ID="lblfname" runat="server" Text="First Name" /><br />
                                 <asp:Label ID="lbl_fname" runat="server" Text='<%#Eval("firstname") %>' /></td>
-                                    <td><asp:Label ID="lbllname" runat="server" Text="Last Name" />
+                                    <td><asp:Label ID="lbllname" runat="server" Text="Last Name" /><br />
                        <asp:Label ID="lbl_lname" runat="server" Text='<%#Eval("lastname") %>' /></td>
-                                    <td><asp:Label ID="lblemail" runat="server" Text="Email" />
+                                    <td><asp:Label ID="lblemail" runat="server" Text="Email" /><br />
                                    <asp:Label ID="lbl_email" runat="server" Text='<%#Eval ("email") %>' /></td>
                                     
-                                    <td><asp:Label ID="lblcontact" runat="server" Text="Contact" />
+                                    <td><asp:Label ID="lblcontact" runat="server" Text="Contact" /><br />
                                    <asp:Label ID="lbl_contact" runat="server" Text='<%#Eval ("phone") %>' /></td>
 <%--                                    <td><asp:Label ID="lblvoltype" runat="server" Text="Volunteer type" />
                                         <asp:Label ID="lbl_voltype" runat="server" Text='<%#Eval("volunteer_type") %>' />
@@ -77,6 +77,7 @@
                                     <asp:HiddenField ID="hdf_id" runat="server" Value='<%#Eval("vol_Id") %>' />
                                     <asp:TextBox ID="txtfnameU" runat="server" Text='<%#Eval("firstname") %>' />
                                 </td>
+                                
                                 <td>
                                     <asp:TextBox ID="txtlnameU" runat="server" Text='<%#Eval("lastname") %>' />
                                 </td>
@@ -99,7 +100,7 @@
                                 </td>
                                 <td>
                                     <asp:RequiredFieldValidator ID="rfv_phone" runat="server" Text="*Required" ControlToValidate="txtcontactU" ValidationGroup="update" />
-                                     <asp:RegularExpressionValidator ID="rgv_contact" runat="server" Text="Invalid contact number" ControlToValidate="txtcontactU" ValidationExpression="^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$" ValidationGroup="update" />
+                                     <%--<asp:RegularExpressionValidator ID="rgv_contact" runat="server" Text="Invalid contact number" ControlToValidate="txtcontactU" ValidationExpression="^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$" ValidationGroup="update" />--%>
                                 </td>
 
                             </tr>

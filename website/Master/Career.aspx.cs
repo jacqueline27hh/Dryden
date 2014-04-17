@@ -141,10 +141,13 @@ public partial class _Default : System.Web.UI.Page
 //            Shalini's Volunteer Feature
 //****************************************************************
 
+
+    // inserts the data into the database when user submits the form
     volunteer objNewVolunteer = new volunteer();
     protected void subVolunteer(object sender, CommandEventArgs e)
     {
         volunteerclassDataContext objVolunteerDC = new volunteerclassDataContext();
+        //create instance of volunteer table
         volunteer objNewVolunteer = new volunteer();
         objNewVolunteer.firstname = txtfname.Text;
         objNewVolunteer.lastname = txtlname.Text;
@@ -160,6 +163,7 @@ public partial class _Default : System.Web.UI.Page
 
         objVolunteerDC.volunteers.InsertOnSubmit(objNewVolunteer);
         objVolunteerDC.SubmitChanges();
+        //after submitting form clears all fields
         txtfname.Text = "";
         txtlname.Text = "";
         txtemail.Text = "";
@@ -171,28 +175,23 @@ public partial class _Default : System.Web.UI.Page
         lbl_msgV.Text = "Your volunteer application was submitted successfully!";
         _subRebind();
     }
-    //private void _strMessage(bool flag, string str)
-    //{
-    //    if (flag)
-    //        lbl_msgV.Text = "Application" + str + "submitted";
-    //    else
-    //        lbl_msgV.Text = "Sorry, unable to " + str + "submit message";
+   
 
-    //}
-
+  //On the subUploadClick subroutine to upload the files
     protected void subUploadClick(object sender, EventArgs e)
     {
         string filePath = Server.MapPath("APP_DATA/TestDoc.docx");
-
+        //get the filename into the variable
         string filename = Path.GetFileName(filePath);
 
         FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-
+       // converts the string into Binary form
         BinaryReader br = new BinaryReader(fs);
 
         Byte[] bytes = br.ReadBytes((Int32)fs.Length);
         
     }
+    //clears all fields when clicks on cancel button
     protected void subVolCancel(object sender, CommandEventArgs e)
     {
         txtfname.Text = "";
@@ -209,8 +208,5 @@ public partial class _Default : System.Web.UI.Page
         volunteer objNewVolunteer = new volunteer();
     }
 
-    //protected void rpt_all_ItemCommand(object source, RepeaterCommandEventArgs e)
-    //{
-
-    //}
+    
 }

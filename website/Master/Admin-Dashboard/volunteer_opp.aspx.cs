@@ -15,7 +15,7 @@ public partial class volunteer_opp : System.Web.UI.Page
             _subRebind();
         }
     }
-        
+        //subAdmin to link to update and delete 
          protected void subAdmin(object sender,CommandEventArgs e)
          {
              switch (e.CommandName)
@@ -93,8 +93,9 @@ public partial class volunteer_opp : System.Web.UI.Page
      }
      private void _subRebind()
      {
-         volunteerOppClass objvolDC = new volunteerOppClass();
-         lst_all.DataSource = objvolDC.getVolunteers();
+        // volunteerOppClass objvolDC = new volunteerOppClass();
+        
+         lst_all.DataSource = objvolunteer.getVolunteers();
          lst_all.DataBind();
          _panelControl(pnl_all);
      }

@@ -7,8 +7,11 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+   ERwaitTimeClass objer = new ERwaitTimeClass();
     protected void Page_Load(object sender, EventArgs e)
     {
+        rpt_ERtime.DataSource = objer.getlatestWaittimes();
+        rpt_ERtime.DataBind();
 
         string urlPost = HttpContext.Current.Request.Url.AbsoluteUri;
         string[] indexNum  = urlPost.Split('=');
@@ -24,12 +27,7 @@ public partial class _Default : System.Web.UI.Page
     {
         mv_tabs.ActiveViewIndex = Convert.ToInt32(ps_nav_menu.SelectedValue);
     }
-    protected void subClick(object sender, EventArgs e)
-    {
-        System.Threading.Thread.Sleep(20000);
-        lbl_waittimes.Text = DateTime.Now.ToString();
-    }
-
+   
     ERwaitTimeClass objtime = new ERwaitTimeClass();
     private void _subRebind(object sender, EventArgs e)
     {

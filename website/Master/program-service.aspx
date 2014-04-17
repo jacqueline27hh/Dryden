@@ -58,7 +58,7 @@
                                                
 								                ER Wait Time
                                             </p>
-                  <asp:Button runat="server" ID="btn_time" Text="times;" />
+                  <asp:Button runat="server" ID="btn_time" Text="Times" />
                                               <asp:Repeater ID="rpt_ERtime" runat="server">
 
                         <ItemTemplate>
@@ -73,16 +73,7 @@
 
                     </asp:Repeater>
 
-                                            <asp:UpdatePanel ID="udp_time" runat="server" UpdateMode="Conditional">
-                                                <ContentTemplate>
-                                                    <asp:Label ID="lbl_waittimes" runat="server" Text="Wait Time" />
-                                                </ContentTemplate>
-                                                <Triggers>
-                                                    <asp:AsyncPostBackTrigger ControlID="btnwait" EventName="Click" />
-                                                </Triggers>
-                                            </asp:UpdatePanel>
-                                        <br />
-                                            <asp:Button ID="btnwait" runat="server" Text="Click to update" OnClick="subClick" />    
+                                          
 
 
 

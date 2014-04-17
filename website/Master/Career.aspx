@@ -135,15 +135,16 @@
                                         </asp:View>
                                         <%--Volunteer feature--%>
                                         <asp:View ID="view3" runat="server">
-
+                                            <%---volunteer application form --%>
                                             <asp:Label ID="lblfname" runat="server" Text="First Name" AssociatedControlID="txtfname" />
                                             <asp:TextBox ID="txtfname" runat="server" />
+                                            <%--Required field validator mentions the fields should not be empty--%>
                                             <asp:RequiredFieldValidator ID="rfv_volfname" runat="server" Text="*Required" ControlToValidate="txtfname" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lbllname" runat="server" Text="Last Name" AssociatedControlID="txtlname" />
                                             <asp:TextBox ID="txtlname" runat="server" />
-                                            <asp:RequiredFieldValidator ID="rfv_vollname" runat="server" Text="*Required" ControlToValidate="txtlname" ValidationGroup="submit" />
+                                            <asp:RequiredFieldValidator ID="rfv_vollname" runat="server" Text="*Required" ControlToValidate="txtlname" ValidationGroup="submit"/>
                                             <br />
                                             <br />
                                             <asp:Label ID="lblage" runat="server" Text="Age" AssociatedControlID="txtage" />
@@ -161,7 +162,8 @@
                                             <asp:Label ID="lblcontact" runat="server" Text="Contact No" AssociatedControlID="txtcontact" />
                                             <asp:TextBox ID="txtcontact" runat="server" />
                                             <asp:RequiredFieldValidator ID="rfv_contact" runat="server" Text="*Required" ControlToValidate="txtcontact" ValidationGroup="submit" />
-                                            <asp:RegularExpressionValidator ID="rgv_contact" runat="server" Text="Invalid contact number" ControlToValidate="txtcontact" ValidationExpression="^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$" ValidationGroup="submit" />
+                                         <%--The regular expression validator control to ensure the user doesnt input invalid number--%> 
+                                              <asp:RegularExpressionValidator ID="rgv_contact" runat="server" Text="Invalid contact number" ControlToValidate="txtcontact" ValidationExpression="^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$" ValidationGroup="submit" />
                                             <br />
                                             <br />
                                             <asp:Label ID="lblemail" runat="server" Text="E-mail" AssociatedControlID="txtemail" />
@@ -184,7 +186,7 @@
                                                 <asp:ListItem Value="Special Interest Volunteer" />
                                             </asp:DropDownList><br /><br />
                                             <asp:Label ID="lbl_title" runat="server" Text="Upload your Resume" /><br />
-                                           
+                                           <%--File upload control to upload files--%>
                     
                                             <asp:FileUpload ID="file_up" runat="server" /><br />
  <asp:Button ID="btn_upload_file" runat="server" Text="Upload" OnClick="subUploadClick" />
@@ -197,9 +199,9 @@
                                             <br />
                                             <%--   <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subApply" />
     <asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
-                                            <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subVolunteer" />
+                                            <asp:Button ID="btnapply" runat="server" Text="Submit" CommandName="Insert" OnCommand="subVolunteer"  ValidationGroup="submit"/>
                                             <%--<asp:Button ID="btncancel" runat="server" OnClick="subcancel"/>--%>
-                                            <asp:Button ID="btncancel" runat="server" Text="Cancel" CommandName="Cancel" OnCommand="subVolCancel" />
+                                            <asp:Button ID="btncancel" runat="server" Text="Cancel" CommandName="Cancel" OnCommand="subVolCancel" CausesValidation="false" />
                                             <asp:Label ID="lbl_msgV" runat="server" />
                                         </asp:View>
 
