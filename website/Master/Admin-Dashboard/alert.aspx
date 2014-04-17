@@ -5,17 +5,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_admin_d" runat="Server">
 
-<<<<<<< HEAD
     <div class="col-sm-8 admin_form">
 
 
-=======
-    <div
-        
-        v class="col-sm-8 admin_form">
-   
-       
->>>>>>> FETCH_HEAD
+
 
         <div class="row" id="alert_header_wrapper">
             <asp:Label ID="alert_lbl_header" runat="server" Text="Alert Admin" CssClass="col-lg-9 admin_header" />
@@ -172,12 +165,9 @@
 
 
 
-<<<<<<< HEAD
 
-        </di>
-=======
     </div>
->>>>>>> FETCH_HEAD
+
     <%--end admin_form--%>
 </asp:Content>
 
