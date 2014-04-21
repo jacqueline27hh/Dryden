@@ -207,6 +207,8 @@ text-align: left;
    margin-right: 287px;
    
    }
+
+
 /*--------------Timeline ENDS here---------------*/
 
  /*-------- Quicklinks STARTS here------------*/
@@ -289,7 +291,9 @@ border-color: #97bf28;
    }
 
 /*-------- Program Highlights ENDS Here------------*/
-
+/* --------------------------------------
+   Search Result
+   -------------------------------------- */
 
 
 /* --------------------------------------
@@ -650,6 +654,8 @@ h3 span {
 /*--------------Alert show ENDS here---------------*/
 
 /*--------------Timeline STARTS here---------------*/
+
+
 /*--------------Timeline show ENDS here---------------*/
 
 /* --------------------------------------
@@ -1017,6 +1023,19 @@ margin: 12px 5px 15px 78px;
   /*--------------Alert ENDS here---------------*/
 
    /*--------------Timeline STARTS here---------------*/
+
+   #issues li.selected img {
+    margin-right: 101px;
+margin-left: 100px;
+padding-bottom: 5px;
+}
+    #issues li h1 {
+        display:none;
+    }
+    #issues li p {
+width: 377px;
+font-family: sans-serif;
+}
   /*--------------Timeline ENDS here---------------*/
 
   /* --------------------------------------

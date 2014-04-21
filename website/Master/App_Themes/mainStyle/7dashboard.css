@@ -28,10 +28,13 @@
 
 #admin_profile li a {
   font-size:14px;
+  display: inline;
+  padding: 0px;
 }
 
 #admin_profile .fa {
   padding:10px;
+  display: inline;
 
 }
 
@@ -178,7 +181,7 @@
    -------------------------------------- */
 
 .alert_textarea {
-    width:200px;
+    width:400px;
     color:#535453;
     height:7rem;
 }
@@ -217,6 +220,75 @@ input[type="submit"] {
 
 .admin_form table {
     font-size:14px;
+}
+/* --------------------------------------
+   Search
+   -------------------------------------- */
+#search_table td {
+    padding-right: 3px;
+    padding-bottom: 7px;
+
+}
+/* --------------------------------------
+   News
+   -------------------------------------- */
+
+#news_table td {
+    padding-right: 22px;
+}
+
+.news_up_title {
+    width: 50%;
+height: 200px;
+color: #000;
+font-size: 14px;
+}
+
+#cph_admin_d_timeline_rpt_update_timeline_txt_imageU_0 {
+    width: 50%;
+    font-size: 14px;
+}
+
+#cph_admin_d_timeline_rpt_update_timeline_txt_dateU_0 {
+    width: 50%;
+    font-size: 14px;
+}
+
+#cph_admin_d_timeline_rpt_update_lbl_textU_0 {
+    font-size:14px;
+}
+#cph_admin_d_timeline_rpt_update_lbl_imageU_0 {
+    font-size:14px;
+}
+
+#cph_admin_d_timeline_rpt_update_lbl_dateU_0 {
+    font-size:14px;
+}
+
+#cph_admin_d_timeline_pnl_insert legend {
+    color:#fff;
+}
+
+#cph_admin_d_timeline_pnl_update legend {
+    color:#fff;
+}
+
+#cph_admin_d_timeline_pnl_all legend {
+    color:#fff;
+}
+
+#cph_admin_d_timeline_txt_textI {
+    color:#535453;
+}
+#cph_admin_d_timeline_txt_imageI {
+    width:50%;
+}
+#cph_admin_d_timeline_txt_textI {
+    width:50%;
+}
+
+#cph_admin_d_timeline_txt_dateI {
+    width:50%;
 }
 
 /* --------------------------------------
@@ -257,8 +329,24 @@ table#admin_wrap {
 }
 
 /* --------------------------------------
+   E-CARD
+   -------------------------------------- */
+
+#cph_admin_d_pnl_all legend {
+    color:#fff;
+}
+
+#cph_admin_d_pnl_update legend {
+    color:#fff;
+}
+
+/* --------------------------------------
    Alert
    -------------------------------------- */
+
+#cph_admin_d_alert_pnl_update legend {
+    color:#fff;
+}
 
 .admin_header {
    

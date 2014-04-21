@@ -78,9 +78,9 @@
                 <thead>
                     <tr>
                         <th>
-                            <asp:Label ID="alert_lbl_titleU" runat="server" Text="Title" /></th>
+                            <%--<asp:Label ID="alert_lbl_titleU" runat="server" Text="Title" />--%></th>
                         <th>
-                            <asp:Label ID="alert_lbl_messageU" runat="server" Text="Message" /></th>
+                            <%--<asp:Label ID="alert_lbl_messageU" runat="server" Text="Message" />--%></th>
                     </tr>
                 </thead>
                 <tbody>

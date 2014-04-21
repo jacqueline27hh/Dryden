@@ -114,6 +114,7 @@
                                             </div>
                                         </asp:View>
                                         <asp:View ID="view3" runat="server">
+                                            
                                             <p>
                                               Feel free to Contact Us Directly..!!!
 							
@@ -148,9 +149,10 @@
 
                                             <asp:Label ID="lbl_output" runat="server" />
                                             <%--<asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />--%>
-                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" ValidationGroup="submit" />
+                                            <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" ValidationGroup="submit" CssClass="btn_ml" />
                                             <%--<asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancelmsg" />--%>
-                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancel" CausesValidation="false" />
+                                            <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancel" CausesValidation="false" CssClass="btn_ml" />
+                                               
                                         </asp:View> 
                                      
                                     </asp:MultiView>

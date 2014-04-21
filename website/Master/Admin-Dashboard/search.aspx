@@ -18,13 +18,14 @@
 
         <asp:Label runat="server" ID="lbl_results" /> 
 
-        <table> 
+        <table id="search_table" class="col-sm-8" > 
             <tr>
                 <td> First name: </td>
                 <td> Last name: </td>
                 <td> Department: </td>
                 <td> Phone: </td>
                 <td> Email: </td>
+                <td></td>
             </tr>
         <asp:Repeater runat="server" ID="rpt_search" OnItemCommand="subCommand">
             <ItemTemplate>
@@ -53,11 +54,15 @@
                     <!-- no validation since email is optional --> 
                     <td> <asp:TextBox runat="server" ID="txt_email" Text='<%#Eval("email") %>' /></td>
                     <td> <asp:Button runat="server" ID="btn_update" Text="Update" CommandName="sub_update" CommandArgument='<%#Eval("Id") %>' ValidationGroup="edit_search" />
+                    </td>
+                    <td>
                         <asp:Button runat="server" ID="btn_delete" OnClientClick="return confirm('This will permanently delete this entry from the database, are you sre?')" Text="Delete" CommandName="sub_delete" CommandArgument='<%#Eval("Id") %>' CausesValidation="false" />
                     </td>
                 </tr>
             </ItemTemplate>
+          
             <FooterTemplate>
+                  <hr />
                  <tr>
                     <td> <asp:TextBox runat="server" id="txt_fnameI" Text='<%#Eval ("fname") %>' /> </td>
                       <asp:RequiredFieldValidator runat="server" ID="rfv_fnameI" ControlToValidate="txt_fnameI"

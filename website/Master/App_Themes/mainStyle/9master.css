@@ -327,6 +327,7 @@ font-size: 14px;
 
 
 
+
 /* --------------------------------------
    Footer Styles
    -------------------------------------- */
@@ -739,8 +740,36 @@ width: 100%;
    #master_call_us {
       display:inline-block !important;
   }
+
+
+@media screen and (max-width: 1024px) {
+    .nav > li {
+    position: relative;
+    display: block;
+    width: 97%;
+    text-align: center;
    
+    }
+     .nav > li  >a {
   
+    color:#fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav > li {
+    display: block;
+width: 51%;
+text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+
+width: 300%;
+
+    }
 }
 
 
