@@ -20,10 +20,10 @@
 
         <table id="search_table" class="col-sm-8" > 
             <tr>
-                <td> First name: </td>
-                <td> Last name: </td>
-                <td> Department: </td>
-                <td> Phone: </td>
+                <td> First name:* </td>
+                <td> Last name:* </td>
+                <td> Department:* </td>
+                <td> Phone:* </td>
                 <td> Email: </td>
                 <td></td>
             </tr>

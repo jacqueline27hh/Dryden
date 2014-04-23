@@ -132,6 +132,7 @@
                                 <asp:ListItem Selected="True" Text=" First name" Value="fname" />
                                 <asp:ListItem Text=" Last name" Value="lname" />
                                 <asp:ListItem Text=" Department" Value="Department" />
+                                <asp:ListItem Text=" All" Value="all" />
                             </asp:RadioButtonList>
                         </div>
 
