@@ -18,15 +18,15 @@
             <table>
                 <thead>
                     <tr>
-                        <th>
-                            <asp:Label ID="contact_fname" runat="server" Text="First Name" /></th>
-                        <th>
-                            </th>
-                        <th>
-                            <asp:Label ID="contact_lname" runat="server" Text="Last Name" />
+                        
+                        <th class="moveOver">
+                          <asp:Label ID="contact_fname" runat="server" Text="First Name" /><br /></th>
+                        
+                        <th class="moveOver">
+                            <asp:Label ID="contact_lname" runat="server" Text="Last Name" /><br />
                             </th>
                        <%-- <th><asp:Label ID="contact_dept" runat="server" Text="Department" />                               </th>--%>
-                  <th><asp:Label ID="contact_email" runat="server" Text="Email" /></th>
+                  <th class="moveOver"><asp:Label ID="contact_email" runat="server" Text="Email" /><br /></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,11 +55,11 @@
             <table id="update_table">
                 <thead>
                     <tr>
-                        <th><asp:Label ID="lbl_fnameU" runat="server" Text="First Name" /></th>
-                        <th><asp:Label ID="lbl_lnameU" runat="server" Text="Last Name" /></th>
+                        <th class="moveOver"><asp:Label ID="lbl_fnameU" runat="server" Text="First Name" /></th>
+                        <th class="moveOver"><asp:Label ID="lbl_lnameU" runat="server" Text="Last Name" /></th>
                        <%-- <th><asp:Label ID="lbl_deptU" runat="server" Text="Department" />
                         </th>--%>
-                        <th><asp:Label ID="lbl_emailU" runat="server" Text="Email" /></th>
+                        <th class="moveOver"><asp:Label ID="lbl_emailU" runat="server" Text="Email" /></th>
                        <%-- <th><asp:Label ID="lbl_messageU" runat="server" Text="Message" /></th>--%>
                     </tr>
                 </thead>
@@ -70,10 +70,10 @@
                                 <td id="title_td">
                                     <asp:HiddenField ID="hdf_idU" runat="server" Value='<%#Eval("Id")%>'  />
                                     <asp:TextBox ID="txt_fnameU" runat="server" Text='<%#Eval("firstname")%>' />
-                                    <td>
+                                    <td class="moveOver">
                                     <asp:TextBox ID="txt_lnameU" runat="server" Text='<%#Eval("lastname") %>' /></td>
                                 <%--  <td>  <asp:DropDownList ID="ddl_deptU" runat="server" DataValueField='<%#Eval("department") %>' /></td>--%>
-                                   <td> <asp:TextBox ID="txt_emailU" runat="server" Text='<%#Eval("email")%>' /></td>
+                                   <td class="moveOver"> <asp:TextBox ID="txt_emailU" runat="server" Text='<%#Eval("email")%>' /></td>
                                    <%-- <td><asp:TextBox ID="txt_messageU" runat="server" Text='<%#Eval("message") %>' />--%>
 
                                 </td>

@@ -120,39 +120,65 @@
 							
                                             </p>
                                             <%--Contact us form--%>
-                                            <asp:Label ID="lblfname" runat="server" AssociatedControlID="txtfname"  Text="First Name"/>
-                                            <asp:TextBox ID="txtfname" runat="server" />
-                                           
-                                            <asp:RequiredFieldValidator ID="rfv_contactfname" runat="server" Text="*Required" ControlToValidate="txtfname" ValidationGroup="submit" /><br /><br />
-                                            <asp:Label ID="lbllname" runat="server" AssociatedControlID="txtlname" Text="Last Name" />
-                                            <asp:TextBox ID="txtlname" runat="server" />
-                                           
-                                            <asp:RequiredFieldValidator ID="rfv_contactlname" runat="server" Text="*Required" ControlToValidate="txtlname" ValidationGroup="submit"  /> <br /><br />
-                                            <asp:Label ID="lbldept" runat="server" AssociatedControlID="ddl_dept" Text="Department" />
-                                            <asp:DropDownList ID="ddl_dept" runat="server">
+                                             <table> 
+                                                 <tr>
+                                                     <td>
+                                            <asp:Label ID="lblfname" runat="server" AssociatedControlID="txtfname"  Text="First Name"/></td>
+                                          <td>  <asp:TextBox ID="txtfname" runat="server" /></td>
+                                                     <td> <asp:RequiredFieldValidator ID="rfv_contactfname" runat="server" Text="*Required" ControlToValidate="txtfname" ValidationGroup="submit" /><br /><br /></td>
+                                           </tr>
+                                                 <tr>
+                                                     <td><asp:Label ID="lbllname" runat="server" AssociatedControlID="txtlname" Text="Last Name" /></td>
+                                                     <td> <asp:TextBox ID="txtlname" runat="server" /></td>
+                                                     <td> <asp:RequiredFieldValidator ID="rfv_contactlname" runat="server" Text="*Required" ControlToValidate="txtlname" ValidationGroup="submit"  /> <br /><br /></td>
+                                                 </tr>
+                                               
+                                           <tr>
+                                               <td> <asp:Label ID="lbldept" runat="server" AssociatedControlID="ddl_dept" Text="Department" /></td>
+                                               
+                                               <td> <asp:DropDownList ID="ddl_dept" runat="server">
                                                 <asp:ListItem Value="Administrative" />
                                                 <asp:ListItem Value="General" />
                                                 <asp:ListItem Value="Special" />
                                                 <asp:ListItem Value="Emergency" />
                                             </asp:DropDownList>
-                                            <br /><br />
-                                            <asp:Label ID="lblemail" runat="server" Text="Email" AssociatedControlID="txtemail" />
-                                            <asp:TextBox ID="txtemail" runat="server" />
-                                            <asp:RequiredFieldValidator ID="rfv_contactemail" runat="server" ControlToValidate="txtemail" Text="*Required" ValidationGroup="submit"/>
-                                            <br /><br />
-                                            <%--regular expression for valid email address--%>
-                                            <asp:RegularExpressionValidator ID="rgv_email" runat="server" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"  ControlToValidate="txtemail" ValidationGroup="submit"/>
-                                            <asp:Label ID="lblmessage" runat="server" Text="Message" AssociatedControlID="txtmsg" />
-                                            <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" /><br />
-                                            <asp:RequiredFieldValidator ID="rfv_contactmsg" runat="server" Text="*Required" ControlToValidate="txtmsg" ValidationGroup="submit" />
-                                            <br />
+                                            <br /><br /></td>
+                                            
+                                           </tr>
+                                            
+                                           
+                                            <tr>
+                                               <td>  <asp:Label ID="lblemail" runat="server" Text="Email" AssociatedControlID="txtemail" /></td>
+                                               <td>
+                                            <asp:TextBox ID="txtemail" runat="server" /></td>
+                                               <td>   <asp:RequiredFieldValidator ID="rfv_contactemail" runat="server" ControlToValidate="txtemail" Text="*Required" ValidationGroup="submit"/>
+                                            <br /><br /></td>
+                                                <td> <%--regular expression for valid email address--%>
+                                            <asp:RegularExpressionValidator ID="rgv_email" runat="server" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"  ControlToValidate="txtemail" ValidationGroup="submit"/></td>
+                                           </tr>
+                                                 
+                                                   <tr>
+                                               <td><asp:Label ID="lblmessage" runat="server" Text="Message" AssociatedControlID="txtmsg" /></td>
+                                               <td>  <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" /><br /></td>
+                                               <td> <asp:RequiredFieldValidator ID="rfv_contactmsg" runat="server" Text="*Required" ControlToValidate="txtmsg" ValidationGroup="submit" />
+                                            <br /></td>
+                                           </tr> 
+                                           
+                                           
+                                           
+                                           </table>
+                                         
+                                           
+                                            
+                                          
+                                           
 
                                             <asp:Label ID="lbl_output" runat="server" />
                                             <%--<asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" />--%>
                                             <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="subSubmitMsg" ValidationGroup="submit" CssClass="btn_ml" />
                                             <%--<asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancelmsg" />--%>
                                             <asp:Button ID="btn_cancel" runat="server" Text="Cancel" OnClick="subCancel" CausesValidation="false" CssClass="btn_ml" />
-                                               
+                                             
                                         </asp:View> 
                                      
                                     </asp:MultiView>
