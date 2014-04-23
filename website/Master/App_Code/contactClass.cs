@@ -42,7 +42,7 @@ public class contactClass
         }
     }
 
-    public bool commitUpdate(int _id, string _fname, string _lname, string _email)
+    public bool commitUpdate(int _id, string _fname, string _lname,string _email)
     {
         directcontactDataContext objContactDC = new directcontactDataContext();
         using (objContactDC)

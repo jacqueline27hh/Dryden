@@ -39,12 +39,15 @@ public partial class adminContact : System.Web.UI.Page
                 TextBox txtfname = (TextBox)e.Item.FindControl("txt_fnameU");
                 //TextBox txtMessage = (TextBox)e.Item.FindControl("txt_messageU");
                 TextBox txtlname = (TextBox)e.Item.FindControl("txt_lnameU");
+
+                //DropDownList ddldept = (DropDownList)e.Item.FindControl("ddl_deptU");
+                //ddldept.DataTextField = "ddl_deptU";
                 //TextBox txtdept = (TextBox)e.Item.FindControl("txt_deptU");
                 TextBox txtemail = (TextBox)e.Item.FindControl("txt_emailU");
                 HiddenField hdfID = (HiddenField)e.Item.FindControl("hdf_idU");
 
                 int contactID = int.Parse(hdfID.Value.ToString());
-                _strMessage(objContact.commitUpdate(contactID, txtfname.Text, txtlname.Text, txtemail.Text), "update");
+                _strMessage(objContact.commitUpdate(contactID, txtfname.Text, txtlname.Text,txtemail.Text), "update");
                 _subRebind();
                 break;
             case "Delete":
@@ -54,7 +57,8 @@ public partial class adminContact : System.Web.UI.Page
                 break;
             case "Cancel":
                 _subRebind();
-                break;
+                      break;
+                
         }
     }
     private void _showUpdate(int id)

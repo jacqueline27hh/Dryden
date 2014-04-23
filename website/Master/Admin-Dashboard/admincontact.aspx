@@ -25,7 +25,7 @@
                         <th>
                             <asp:Label ID="contact_lname" runat="server" Text="Last Name" />
                             </th>
-                        <th><asp:Label ID="contact_dept" runat="server" Text="Department" />                               </th>
+                       <%-- <th><asp:Label ID="contact_dept" runat="server" Text="Department" />                               </th>--%>
                   <th><asp:Label ID="contact_email" runat="server" Text="Email" /></th>
                     </tr>
                 </thead>
@@ -72,16 +72,24 @@
                                     <asp:TextBox ID="txt_fnameU" runat="server" Text='<%#Eval("firstname")%>' />
                                     <td>
                                     <asp:TextBox ID="txt_lnameU" runat="server" Text='<%#Eval("lastname") %>' /></td>
-<%--                                  <td>  <asp:TextBox ID="txt_deptU" runat="server" Text='<%#Eval("department") %>' /></td>--%>
+                                <%--  <td>  <asp:DropDownList ID="ddl_deptU" runat="server" DataValueField='<%#Eval("department") %>' /></td>--%>
                                    <td> <asp:TextBox ID="txt_emailU" runat="server" Text='<%#Eval("email")%>' /></td>
                                    <%-- <td><asp:TextBox ID="txt_messageU" runat="server" Text='<%#Eval("message") %>' />--%>
 
                                 </td>
                                
                             </tr>
+                            
+                             <tr>
+                                    <td><asp:RequiredFieldValidator ID="rfv_fnameU" runat="server" Text="*Required" ControlToValidate="txt_fnameU" ValidationGroup="update" /></td>
+                                    <td><asp:RequiredFieldValidator ID="rfv_lnameU" runat="server" Text="*Required" ControlToValidate="txt_lnameU" ValidationGroup="update" /></td>
+                                    <td><asp:RequiredFieldValidator ID="rfv_emailU" runat="server" Text="*Required" ControlToValidate="txt_emailU" ValidationGroup="update" /></td>
+                                 <td>  <asp:RegularExpressionValidator ID="rev_email" runat="server" Text="Invalid Email Address" ControlToValidate="txt_emailU" ValidationExpression="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" ValidationGroup="update" /></td>
+                                </tr>
+                             
                             <tr>
                                 <td colspan="3">
-                                    <asp:Button ID="btn_update" runat="server" Text="Update" CommandName="Update" />
+                                    <asp:Button ID="btn_update" runat="server" Text="Update" CommandName="Update"  ValidationGroup="update"/>
                                     <asp:Button ID="btn_cancel" runat="server" Text="Cancel" CommandName="Cancel" CauseValidation="false" />
                                 </td>
                             </tr>
@@ -129,8 +137,6 @@
                                     <asp:Label ID="txt_messageD" runat="server" Value='<%#Eval("Message")%>' />  
                                 </td>
                        
-                            
-                             
                             
                             
                                 <td colspan="3">

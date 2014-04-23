@@ -56,8 +56,8 @@ public partial class _Default : System.Web.UI.Page
     protected void subCancel(object sender, EventArgs e)
     {
         contactClass objContactDC = new contactClass();
-        txt_fname.Text = string.Empty;
-        txt_lname.Text = string.Empty;
+        txtfname.Text = string.Empty;
+        txtlname.Text = string.Empty;
         //ddl_dept.Items.ToString();
         txtemail.Text = string.Empty;
         txtmsg.Text = string.Empty;
@@ -74,10 +74,10 @@ public partial class _Default : System.Web.UI.Page
     {
 
         contactClass objContactDC = new contactClass();
-        //txt_fname.Text = string.Empty;
-        //txt_lname.Text = string.Empty;
-        //txtemail.Text = string.Empty;
-        //ddl_dept.SelectedItem.Text = string.Empty;
-        //txtmsg.Text = string.Empty;
+        txt_fname.Text = string.Empty;
+        txt_lname.Text = string.Empty;
+        txtemail.Text = string.Empty;
+        ddl_dept.SelectedItem.Text = string.Empty;
+        txtmsg.Text = string.Empty;
     }
 }
