@@ -122,19 +122,19 @@
                              <tr>
                                 <td>
                                     <asp:HiddenField ID="hdf_idD" runat="server" Value='<%#Eval("Id")%>' />
-                                    <asp:Label ID="txtfnameD" runat="server" Value='<%#Eval("firstname") %>' /></td>
+                                    <asp:Label ID="lbl_fnameD" runat="server" Value='<%#Eval("firstname") %>' /></td>
                                  <td>
-                                     <asp:Label ID="txtlnameD" runat="server" Value='<%#Eval("lastname") %>' />
+                                     <asp:Label ID="lbl_lnameD" runat="server" Value='<%#Eval("lastname") %>' />
                                  </td>
                                  <td>
-                                     <asp:Label ID="txtdeptD" runat="server" Value='<%#Eval("department") %>' />
+                                     <asp:Label ID="lbl_deptD" runat="server" Value='<%#Eval("department") %>' />
                                  </td>
                                  <td>
-                                     <asp:Label ID="txtemailD" runat="server" Value='<%#Eval("email") %>' />
+                                     <asp:Label ID="lbl_emailD" runat="server" Value='<%#Eval("email") %>' />
                                  </td>
                                   <td>
                                     
-                                    <asp:Label ID="txt_messageD" runat="server" Value='<%#Eval("Message")%>' />  
+                                    <asp:Label ID="lbl_messageD" runat="server" Value='<%#Eval("Message")%>' />  
                                 </td>
                        
                             
